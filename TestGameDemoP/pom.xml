@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.game.testgamedemo</groupId>
+    <artifactId>TestGameDemoP</artifactId>
+    <packaging>pom</packaging>
+    <version>1</version>
+    <name>TestGameDemoP</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <buildLabel>${version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+
+       <!--
+       <module>../../licensing/LicensedGameDemoJavaLibraryP</module>
+       <module>../TestGameDemoJ2MEJavaLibraryM</module>
+       -->
+
+        <module>../TestGameDemoResourceJavaLibraryM</module>
+        <module>../TestGameDemoWavSoundsJavaLibraryM</module>
+        <module>../TestGameDemoJavaLibraryM</module>
+        <module>../TestGameDemoBaseJavaLibraryM</module>
+        <module>../TestGameDemoGameAIJavaLibraryM</module>
+        <module>../TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
+        <module>../TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
+        <!--
+        <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
+        -->
+
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        
+    </dependencies>
+
+</project>
+

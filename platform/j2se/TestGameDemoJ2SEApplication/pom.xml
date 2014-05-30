@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <groupId>org.allbinary.game.testgamedemo</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>TestGameDemoJ2SEApplication</artifactId>
+    <packaging>jar</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>TestGameDemoJ2SEApplication</name>
+    <url>http://www.allbinary.com/</url>
+
+    <properties>
+        <buildLabel>${version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+
+        <outputPath>.\target\classes</outputPath>
+        <inputPath>..\..\..\Resources\images\release\</inputPath>
+        <inputPath2>..\..\..\Resources\sounds\release\</inputPath2>
+        <inputPath3>..\..\..\..\Resources\images\touchbuttons\64_64\</inputPath3>
+        <inputPath4>..\..\..\..\Resources\sounds\release\wav\</inputPath4>
+
+    </properties>
+
+    <dependencies>
+<!--
+        <dependency>
+            <groupId>com.sun.j2me</groupId>
+            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>-->
+
+<!--
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>special-microemu-javase</artifactId>
+            <version>0</version>
+            <optional>true</optional>
+        </dependency>
+-->    
+
+<!--
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>special-microemu-midp</artifactId>
+            <version>0</version>
+            <optional>true</optional>
+        </dependency>
+-->
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>        
+    </dependencies>
+ 
+    <build>
+
+        <plugins>
+
+<!-- Delete output directory
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-clean-plugin</artifactId>
+<version>2.4.1</version>
+<configuration>
+    <followSymLinks>false</followSymLinks>
+    <filesets>
+        <fileset>
+            <directory>.\tmp7624</directory>
+        </fileset>
+    </filesets>
+</configuration>
+</plugin>
+-->
+            
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4.3</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${outputPath}</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>${inputPath}</directory>
+                  <filtering>true</filtering>
+                </resource>
+                <resource>
+                  <directory>${inputPath2}</directory>
+                  <filtering>true</filtering>
+                </resource>
+                <resource>
+                  <directory>${inputPath3}</directory>
+                  <filtering>true</filtering>
+                </resource>
+                <resource>
+                  <directory>${inputPath4}</directory>
+                  <filtering>true</filtering>
+                </resource>                                             
+
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+   
+        </plugins>
+    </build>
+
+</project>

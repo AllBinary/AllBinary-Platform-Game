@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <groupId>org.allbinary.game.testgamedemo</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>TestGameDemoAndroidApplication</artifactId>
+    <packaging>apk</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>TestGameDemoAndroidApplication</name>
+    <url>http://www.allbinary.com/</url>
+
+    <properties>
+        <!--
+        <android.sdk.path></android.sdk.path>
+        -->
+    </properties>
+
+    <dependencies>
+        <dependency>
+  <groupId>org.allbinary</groupId>
+  <artifactId>XmlRpcJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+            <exclusions>
+                <exclusion>
+                    <artifactId>SimpleCryptLibrary</artifactId>
+                    <groupId>org.allbinary</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+                
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>special-microemu-javase</artifactId>
+            <version>0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>special-microemu-midp</artifactId>
+            <version>0</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>tv.ouya</groupId>
+            <artifactId>ouya</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>android</artifactId>
+            <version>17</version>
+            <scope>provided</scope>
+        </dependency>
+                
+    </dependencies>
+
+    <build>
+            
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        
+        <plugins>
+
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <!-- 3.5.1 worked with an older android sdk -->
+                <version>3.6.0</version>
+                <configuration>
+                    <sdk>
+                        <platform>7</platform>
+                    </sdk>                
+                </configuration>
+            </plugin>
+            
+        </plugins>
+    </build>
+
+</project>
