@@ -36,9 +36,8 @@
         <module>../TestGameDemoGameAIJavaLibraryM</module>
         <module>../TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
         <module>../TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
-        <!--
-        <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
-        -->
+        
+        <module>../platform/j2se/TestGameDemoPCClientInfoJavaLibraryM</module>
 
     </modules>
 
