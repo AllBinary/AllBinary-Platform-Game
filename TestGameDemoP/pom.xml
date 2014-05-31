@@ -24,6 +24,7 @@
         <module>../TestGameDemoJavaLibraryM</module>
         
         <module>../TestGameDemoNoTouchJavaLibraryM</module>
+        <module>../TestGameDemoTouchJavaLibraryM</module>
         <module>../platform/j2me/TestGameDemoJ2MEJavaLibraryM</module>
         <!--
         <module>../platform/j2se/TestGameDemoJ2SEJavaLibraryM</module>
