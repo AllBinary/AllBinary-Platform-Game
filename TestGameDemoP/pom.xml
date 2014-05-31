@@ -17,12 +17,19 @@
 
        <!--
        <module>../../licensing/LicensedGameDemoJavaLibraryP</module>
-       <module>../TestGameDemoJ2MEJavaLibraryM</module>
        -->
 
         <module>../TestGameDemoResourceJavaLibraryM</module>
         <module>../TestGameDemoWavSoundsJavaLibraryM</module>
         <module>../TestGameDemoJavaLibraryM</module>
+        
+        <module>../platform/j2me/TestGameDemoJ2MEJavaLibraryM</module>
+        <!--
+        <module>../platform/j2se/TestGameDemoJ2SEJavaLibraryM</module>
+        <module>../platform/html/TestGameDemoHTMLJavaLibraryM</module>
+        <module>../platform/android/TestGameDemoAndroidJavaLibraryM</module>
+        -->
+        
         <module>../TestGameDemoBaseJavaLibraryM</module>
         <module>../TestGameDemoGameAIJavaLibraryM</module>
         <module>../TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
