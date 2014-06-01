@@ -95,7 +95,7 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
+            <artifactId>NullCustomUIJavaLibrary</artifactId>
             <!--
             <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
             <artifactId>NullCustomUIJavaLibrary</artifactId>
