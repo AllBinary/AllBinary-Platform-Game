@@ -43,9 +43,9 @@ extends TestGameDemoStaticInitializer
         //GameOptionsForm.init(commandListener, new TestGameDemoGameFeatures(), "Game Options");
     }
     
-    protected void setPlatformGameInitialized(boolean androidGameInitialized)
+    protected void setPlatformGameInitialized(boolean platformGameInitialized)
     {
-        this.platformGameInitialized = androidGameInitialized;
+        this.platformGameInitialized = platformGameInitialized;
     }
 
     protected boolean isPlatformGameInitialized()

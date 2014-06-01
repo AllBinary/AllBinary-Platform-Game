@@ -13,25 +13,54 @@
 */
 package org.allbinary.game.testgamedemo.init;
 
-import org.allbinary.animation.image.TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory;
-
-import allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
 import allbinary.game.resource.ResourceInitialization;
-import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializer;
+import allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import javax.microedition.lcdui.CommandListener;
+import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
 
 public class J2METestGameDemoStaticInitializer
     extends TestGameDemoStaticInitializer
 {
+    private boolean platformGameInitialized;
+    
     public J2METestGameDemoStaticInitializer(
             ResourceInitialization[] resourceInitializationArray, int portion)
     {
         super(resourceInitializationArray, portion);
     }
 
-    protected void initFeatureResources() 
-    throws Exception
+    public void initKey(int portion) throws Exception
     {
-        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
-                new TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory());
+        super.initKey(portion);
+        
+        //new KeyFactoryInitializer().init();
+        //ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
+    }
+
+    public void init(CommandListener commandListener, int level) throws Exception
+    {
+        super.init(commandListener, level);
+
+        if(this.isPlatformGameInitialized())
+        {
+            return;
+        }
+        
+        this.setPlatformGameInitialized(true);
+        
+        ProgressCanvasFactory.getInstance().addPortion(50, "Game Options");
+        
+        new TestGameDemoGameFeatures().init();
+        //GameOptionsForm.init(commandListener, new TestGameDemoGameFeatures(), "Game Options");
+    }
+    
+    protected void setPlatformGameInitialized(boolean platformGameInitialized)
+    {
+        this.platformGameInitialized = platformGameInitialized;
+    }
+
+    protected boolean isPlatformGameInitialized()
+    {
+        return platformGameInitialized;
     }
 }
