@@ -37,4 +37,13 @@
         -->
     </modules>
 
+    <dependencies>
+        <!-- Only to get maven to download it -->
+        <dependency>
+            <groupId>net.sf.antenna</groupId>
+            <artifactId>antenna</artifactId>
+            <version>1.2.1-beta-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>        
+    </dependencies>
 </project>
