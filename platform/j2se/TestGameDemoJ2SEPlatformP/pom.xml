@@ -30,6 +30,8 @@
 
     <modules>
 
+        <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
+        
         <module>../TestGameDemoJ2SE</module>
         <module>../TestGameDemoJ2SEApplicationM</module>
         
