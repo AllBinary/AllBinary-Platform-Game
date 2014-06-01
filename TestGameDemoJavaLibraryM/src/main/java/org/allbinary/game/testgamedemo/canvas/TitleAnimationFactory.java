@@ -44,13 +44,13 @@ public class TitleAnimationFactory
                 VectorExplosionGenerator.getInstance();
         
         int[][][] points = vectorExplosionGenerator.getInstance(
-                titleVectorData.zeptoPoints, 6, 
+                titleVectorData.testPoints, 6, 
                 vectorExplosionGenerator.RANDOM);
 
         animationInterfaceArray[0] = new ColorLessVectorAnimation(points);
 
         points = vectorExplosionGenerator.getInstance(
-                titleVectorData.racerPoints, 6, 
+                titleVectorData.gamePoints, 6, 
                 vectorExplosionGenerator.RANDOM);
 
         animationInterfaceArray[1] = new ColorLessVectorAnimation(points);
