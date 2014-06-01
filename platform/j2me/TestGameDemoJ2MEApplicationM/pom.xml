@@ -15,88 +15,104 @@
         <buildLabel>${version}</buildLabel>
         <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
         <!-- 
-        G:\WTK\3.2\
-        G:\WTK\2.5.2_01\
         ${rootPath}
+        
+        \WTK\22\
+        \WTK\25\
+        \WTK\2.5.2_01\
+        \WTK\2_5_2_ML\
+        
+        Needs the newer Antenna:
+        \WTK\3.0.5\
+        \WTK\3.2\
+        \WTK\3_4\
+        
+        No lcdui so now what? Need LWUIT, lcdui emulation, or other.
+        \WTK\8_0
         -->
-        <WTK_HOME>\WTK\22\</WTK_HOME>
+        <WTK_HOME>\WTK\3_4\</WTK_HOME>
         <outputPath>.\target\classes</outputPath>
         <inputPath>..\..\..\Resources\images\</inputPath>
         <inputPath2>..\..\..\Resources\sounds\release\</inputPath2>
-        <inputPath3>..\..\..\..\Resources\sounds\release\wav\</inputPath3>
 
-                <j2me.midlet.version>2.0.0</j2me.midlet.version>
-                <j2me.midlet.configuration>CLDC-1.1</j2me.midlet.configuration>
-                <j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>        
-                <!-- 
-                ${WTK_HOME}/lib/cldc_1.1.jar${path.separator}${WTK_HOME}/lib/midp_2.0.jar${path.separator}${WTK_HOME}/lib/jsr135_1.2.jar
-                ${WTK_HOME}/lib/mmapi.jar${path.separator}${WTK_HOME}/lib/cldcapi11.jar${path.separator}${WTK_HOME}/lib/midpapi20.jar
-                -->
+        <j2me.midlet.version>2.0.0</j2me.midlet.version>
+        <j2me.midlet.configuration>CLDC-1.1</j2me.midlet.configuration>
+        <j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
+                
+        <!-- 
         <wtk.midpapi>${WTK_HOME}/lib/mmapi.jar${path.separator}${WTK_HOME}/lib/cldcapi11.jar${path.separator}${WTK_HOME}/lib/midpapi20.jar</wtk.midpapi>
+        <wtk.midpapi>${WTK_HOME}/lib/jsr135_1.2.jar${path.separator}${WTK_HOME}/lib/cldc_1.1.jar${path.separator}${WTK_HOME}/lib/midp_2.0.jar</wtk.midpapi>
+        -->
+        <wtk.midpapi>${WTK_HOME}/lib/jsr135_1.2.jar${path.separator}${WTK_HOME}/lib/cldc_1.1.jar${path.separator}${WTK_HOME}/lib/midp_2.0.jar</wtk.midpapi>
+
     </properties>
 
     <dependencies>
-<!--
+        
+        <dependency>
+            <groupId>org.allbinary.game.resources</groupId>
+            <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>        
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        
+        <!--
         <dependency>
             <groupId>com.sun.j2me</groupId>
             <artifactId>BouncyCastleDESJavaLibrary</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>-->
-
+        </dependency>
+        -->
+        
     </dependencies>
  
     <build>
 
         <plugins>
 
-<!-- Delete output directory
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-clean-plugin</artifactId>
-<version>2.4.1</version>
-<configuration>
-    <followSymLinks>false</followSymLinks>
-    <filesets>
-        <fileset>
-            <directory>.\tmp7624</directory>
-        </fileset>
-    </filesets>
-</configuration>
-</plugin>
--->
-            
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.4.3</version>
-        <executions>
-          <execution>
-            <id>copy-resources</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
+            <!-- Delete output directory
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>2.4.1</version>
             <configuration>
-              <outputDirectory>${outputPath}</outputDirectory>
-              <resources>          
-                <resource>
-                  <directory>${inputPath}</directory>
-                  <filtering>true</filtering>
-                </resource>
-                <resource>
-                  <directory>${inputPath2}</directory>
-                  <filtering>true</filtering>
-                </resource>
-                <resource>
-                  <directory>${inputPath3}</directory>
-                  <filtering>true</filtering>
-                </resource>                                
+                <followSymLinks>false</followSymLinks>
+                <filesets>
+                    <fileset>
+                        <directory>.\tmp7624</directory>
+                    </fileset>
+                </filesets>
+            </configuration>
+            </plugin>
+            -->
+            
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputPath}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>${inputPath2}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
 
-              </resources>              
-            </configuration>            
-          </execution>
-        </executions>
-      </plugin>
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
       
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -119,23 +135,30 @@
                 <artifactId>j2me-maven-plugin</artifactId>
                 <version>2.0.4</version>
                 <executions>
-                   <execution>
+                    <execution>
                         <goals>
                             <goal>package</goal>
                         </goals>
                     </execution>
                 </executions>
                 <dependencies>
-                <!--
-                Note: Antenna is an issue from time to time during the verify process.
-                The common error is Invalid Argument.
-                          <dependency>
-            <groupId>net.sf.antenna</groupId>
-            <artifactId>antenna</artifactId>
-            <version>0.9.14</version>
-        </dependency>
-                -->
-                   
+                    <!--
+                    Note: Antenna is an issue from time to time during the verify process.
+                    The common error is Invalid Argument.
+                    <dependency>
+                    <groupId>net.sf.antenna</groupId>
+                    <artifactId>antenna</artifactId>
+                    <version>0.9.14</version>
+                    </dependency>
+                    1.0.1
+                    1.0.2
+                    1.2.1-beta for 3.0 on up
+                    -->
+                    <dependency>
+                        <groupId>net.sf.antenna</groupId>
+                        <artifactId>antenna</artifactId>
+                        <version>1.2.1-beta</version>
+                    </dependency>                   
                 </dependencies>
                 <configuration>
                     <midletVendor>AllBinary</midletVendor>
