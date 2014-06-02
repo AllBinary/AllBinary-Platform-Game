@@ -149,7 +149,7 @@ Pointer.Listener
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "onPointerStart"));
             this.motionRecognizer.processStartMotionEvent(
-                (int) mouseEvent.x(), (int) mouseEvent.y(),
+                (int) mouseEvent.x(), (int) mouseEvent.y(), 0, 
                 0);
         }
         catch (Exception e)
@@ -164,7 +164,7 @@ Pointer.Listener
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "onPointerEnd"));
             this.motionRecognizer.processEndMotionEvent(
-                (int) mouseEvent.x(), (int) mouseEvent.y(),
+                (int) mouseEvent.x(), (int) mouseEvent.y(), 0, 
                 0);
         }
         catch (Exception e)
@@ -179,7 +179,7 @@ Pointer.Listener
         {
             //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "onPointerDrag"));
             this.motionRecognizer.processDraggedMotionEvent(
-                (int) mouseEvent.x(), (int) mouseEvent.y(),
+                (int) mouseEvent.x(), (int) mouseEvent.y(), 0, 
                 0);
         }
         catch (Exception e)
