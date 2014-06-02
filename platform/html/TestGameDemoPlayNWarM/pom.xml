@@ -4,18 +4,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.allbinary.gwt.forplayn</groupId>
-    <artifactId>AllBinaryPlaynGWT</artifactId>
-    <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+      <groupId>org.allbinary.gwt.forplayn</groupId>
+      <artifactId>AllBinaryPlaynGWT</artifactId>
+      <!-- AllBinary Platform Version Start -->
+      <version>1.0.0-SNAPSHOT</version>
+      <!-- AllBinary Platform Version End -->
   </parent>
   
   <groupId>org.allbinary.game.testgamedemo</groupId>
   <artifactId>TestGameDemoPlayNWar</artifactId>
-    <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
   
   <name>TestGameDemoPlayNWar</name>
   <packaging>war</packaging>
@@ -29,9 +29,9 @@
     <dependency>
       <groupId>org.allbinary.game.testgamedemo</groupId>
       <artifactId>TestGameDemoPlayN</artifactId>
-    <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+      <!-- AllBinary Platform Version Start -->
+      <version>1.0.0-SNAPSHOT</version>
+      <!-- AllBinary Platform Version End -->
     </dependency>
 
     <dependency>
@@ -91,94 +91,95 @@ deploy
                         <mapper type="glob" from="*.html" to="*-min.html"/>
                 </yuicompressor>
 
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>      
--->
+                          </target>
+                        </configuration>
+                        <goals>
+                          <goal>run</goal>
+                        </goals>
+                      </execution>
+                    </executions>
+                  </plugin>      
+            -->
 
-<!--
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <executable>java</executable>
-          <workingDirectory>/tmp</workingDirectory>
-          <mainClass>com.yahoo.platform.yui.compressor.Bootstrap</mainClass>
-          <arguments>
-            <argument>-jar</argument>
-            <argument>G:/mnt/bc/bin/obfuscators/javascript/yuicompressor/yuicompressor-2.4.6/build/yuicompressor-2.4.6.jar</argument>
-            <argument>G:/mnt/bc/mydev/construct/j2me/games/MiniSpaceWars/HTML/MiniSpaceWarVectorHTML/target/MiniSpaceWarVectorHTML-1.0-SNAPSHOT/minispacewar/*.html</argument>
-          </arguments>
-        </configuration>
-      </plugin>
--->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.1.1</version>
-        <configuration>
-          <!-- The Server does not need these as they are really just for GWT client compilation 
-          -->
-          <packagingExcludes>
-          WEB-INF/lib/MiniSpaceWarsHTMLMinimalTemp-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/MiniSpaceWarVectorCore-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/ABDKPlaynJavaLibrary-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/microemu-playn-1.jar,
-          WEB-INF/lib/asm-3.1.jar,
-          WEB-INF/lib/guava-r09.jar,
-          WEB-INF/lib/gwt-log-3.1.4.jar,
-          WEB-INF/lib/gwt-user-2.4.0.jar,
-          WEB-INF/lib/gwt-voices-2.1.2.jar,
-          WEB-INF/lib/jlayer-1.0.1.jar,
-          WEB-INF/lib/playn-core-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/playn-html-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/playn-java-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/playn-webgl-1.0-SNAPSHOT.jar,
-          WEB-INF/lib/pythagoras-1.1.jar
-          </packagingExcludes>
-          <warSourceDirectory>war</warSourceDirectory>
-        </configuration>
-      </plugin>
+            <!--
+                  <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <executions>
+                      <execution>
+                        <phase>package</phase>
+                        <goals>
+                          <goal>exec</goal>
+                        </goals>
+                      </execution>
+                    </executions>
+                    <configuration>
+                      <executable>java</executable>
+                      <workingDirectory>/tmp</workingDirectory>
+                      <mainClass>com.yahoo.platform.yui.compressor.Bootstrap</mainClass>
+                      <arguments>
+                        <argument>-jar</argument>
+                        <argument>G:/mnt/bc/bin/obfuscators/javascript/yuicompressor/yuicompressor-2.4.6/build/yuicompressor-2.4.6.jar</argument>
+                        <argument>G:/mnt/bc/mydev/construct/j2me/games/MiniSpaceWars/HTML/MiniSpaceWarVectorHTML/target/MiniSpaceWarVectorHTML-1.0-SNAPSHOT/minispacewar/*.html</argument>
+                      </arguments>
+                    </configuration>
+                  </plugin>
+            -->
+            
+                    <!-- The Server does not need these as they are really just for GWT client compilation 
+                    -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                    <packagingExcludes>
+                        WEB-INF/lib/MiniSpaceWarsHTMLMinimalTemp-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/MiniSpaceWarVectorCore-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/ABDKPlaynJavaLibrary-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/microemu-playn-1.jar,
+                        WEB-INF/lib/asm-3.1.jar,
+                        WEB-INF/lib/guava-r09.jar,
+                        WEB-INF/lib/gwt-log-3.1.4.jar,
+                        WEB-INF/lib/gwt-user-2.4.0.jar,
+                        WEB-INF/lib/gwt-voices-2.1.2.jar,
+                        WEB-INF/lib/jlayer-1.0.1.jar,
+                        WEB-INF/lib/playn-core-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/playn-html-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/playn-java-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/playn-webgl-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/pythagoras-1.1.jar
+                    </packagingExcludes>
+                    <warSourceDirectory>war</warSourceDirectory>
+                </configuration>
+            </plugin>
       
-      <!-- GWT 
-      2.3.0-2-playn
-      -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>gwt-maven-plugin</artifactId>
-        <version>${gwt.version}</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.8</version>
-        <configuration>
-          <downloadSources>true</downloadSources>
-          <downloadJavadocs>false</downloadJavadocs>
-          <wtpversion>2.0</wtpversion>
-          <additionalBuildcommands>
-            <buildCommand>
-              <name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
-            </buildCommand>
-          </additionalBuildcommands>
-          <additionalProjectnatures>
-            <projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
-          </additionalProjectnatures>
-        </configuration>
-      </plugin>
+            <!-- GWT 
+            2.3.0-2-playn
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>${gwt.version}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>false</downloadJavadocs>
+                    <wtpversion>2.0</wtpversion>
+                    <additionalBuildcommands>
+                        <buildCommand>
+                            <name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+                        </buildCommand>
+                    </additionalBuildcommands>
+                    <additionalProjectnatures>
+                        <projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
+                    </additionalProjectnatures>
+                </configuration>
+            </plugin>
       
-    </plugins>
-  </build>
+        </plugins>
+    </build>
 </project>
