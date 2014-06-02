@@ -21,6 +21,7 @@ import org.allbinary.playn.processors.MidletStartupProcessor;
 import org.allbinary.util.BasicArrayList;
 import playn.core.PlayN;
 import playn.core.TestGameDemoMidletFactory;
+import playn.core.TestGameDemoProcessor;
 
 public class TestGameDemoGameHtml extends HtmlGame {
 
@@ -31,7 +32,9 @@ public class TestGameDemoGameHtml extends HtmlGame {
     
     
     final BasicArrayList list = new BasicArrayList();
-    list.add(new MidletStartupProcessor(list));
+    
+    list.add(new TestGameDemoProcessor(list));
+
     final AllBinaryPlayNGameRunnable gameRunnable = 
             new AllBinaryPlayNGameRunnable(list);
     PlayN.run(
