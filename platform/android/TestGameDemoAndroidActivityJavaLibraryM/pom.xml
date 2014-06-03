@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidActivityJavaLibrary</artifactId>
-  <packaging>jar</packaging>
-  <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.game.testgamedemo</groupId>
+    <artifactId>TestGameDemoAndroidActivityJavaLibrary</artifactId>
+    <packaging>jar</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
 
-  <name>TestGameDemoAndroidActivityJavaLibrary</name>
-  <url>http://www.allbinary.com/</url>
+    <name>TestGameDemoAndroidActivityJavaLibrary</name>
+    <url>http://www.allbinary.com/</url>
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
@@ -56,8 +56,8 @@
         </dependency>
 
         <dependency>
-    <groupId>org.allbinary</groupId>
-    <artifactId>ClientInformationMobileLicensingRegistrationJavaLibrary</artifactId>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ClientInformationMobileLicensingRegistrationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -66,16 +66,24 @@
         </dependency>
 
         <dependency>
-    <groupId>org.allbinary.game.testgamedemo</groupId>
-    <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidResourcesTempJavaLibrary</artifactId>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidResourcesTempJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+            <optional>true</optional>
+        </dependency>        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -83,16 +91,16 @@
         </dependency>
         
         <dependency>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoJavaLibrary</artifactId>        
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoJavaLibrary</artifactId>        
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-    <dependency>
-          <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidJavaLibrary</artifactId>
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
