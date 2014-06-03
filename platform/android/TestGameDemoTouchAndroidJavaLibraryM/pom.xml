@@ -65,6 +65,14 @@
         </dependency>
 
         <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
             <groupId>org.allbinary.input</groupId>
             <artifactId>TouchButtonResourceOpenGLESAnimationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->

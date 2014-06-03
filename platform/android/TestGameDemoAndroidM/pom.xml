@@ -75,15 +75,15 @@
             <groupId>org.allbinary</groupId>
             <artifactId>MotionGestureBaseJavaLibrary</artifactId>
 
-        </dependency>
--->
+                </dependency>
+        -->
 
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AllBinaryOnAndroidPlatformJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
@@ -93,22 +93,22 @@
             <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
             <artifactId>NullCustomUIJavaLibrary</artifactId>
             -->
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
 
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>NoGameLicensingJavaLibrary</artifactId>
-        <!--
-            <artifactId>NoGameLicensingJavaLibrary</artifactId>
-            <artifactId>LicensedGameDemoJavaLibrary</artifactId>
-        -->
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!--
+                <artifactId>NoGameLicensingJavaLibrary</artifactId>
+                <artifactId>LicensedGameDemoJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
 
             <optional>true</optional>
             <exclusions>
@@ -122,13 +122,13 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
-        <!--
-            <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
-            <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
-        -->
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!--
+                <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
+                <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
 
         </dependency>
 
@@ -271,80 +271,81 @@ android.view.MotionEvent
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ClientInformationMobileLicensingRegistrationJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>  
           
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEGameMidletAsActivityJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>  
           
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEMidletAsActivityJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>  
           
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>MotionInputAndroidResourcesJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-        </dependency>  
-
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+                
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidActivityJavaLibrary</artifactId>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidResourceJavaLibrary</artifactId>    
-  <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidResourceJavaLibrary</artifactId>    
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidSoundsJavaLibrary</artifactId>    
-  <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidSoundsJavaLibrary</artifactId>    
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
-  <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
-                    <groupId>org.allbinary.game.testgamedemo</groupId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-   <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
-  <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
 <!--
@@ -393,7 +394,7 @@ SoundsBasicWeaponsJavaLibrary
 WeaponMineJavaLibrary
 NoTransitionAnimationJavaLibrary
 
--->
+        -->
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
@@ -405,9 +406,9 @@ NoTransitionAnimationJavaLibrary
         </dependency>
 
         <dependency>
-        	<groupId>tv.ouya</groupId>
-        	<artifactId>ouya</artifactId>
-        	<version>1.0.6</version>
+            <groupId>tv.ouya</groupId>
+            <artifactId>ouya</artifactId>
+            <version>1.0.6</version>
         </dependency>
     </dependencies>
 
@@ -435,47 +436,47 @@ NoTransitionAnimationJavaLibrary
                 </executions>
             </plugin>
                         
-<!-- Delete output directory -->
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-clean-plugin</artifactId>
-<version>2.4.1</version>
-<configuration>
-    <followSymLinks>false</followSymLinks>
-    <filesets>
-        <fileset>
-            <directory>${outputPath}</directory>
-        </fileset>
-    </filesets>
-</configuration>
-</plugin>
+            <!-- Delete output directory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <followSymLinks>false</followSymLinks>
+                    <filesets>
+                        <fileset>
+                            <directory>${outputPath}</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
       
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.4.3</version>
-        <executions>
-          <execution>
-            <id>copy-resources</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${outputPath}</outputDirectory>
-              <resources>          
-                <resource>
-                  <directory>${inputPath}</directory>
-                  <filtering>true</filtering>
-                </resource>
-                <resource>
-                  <directory>${inputPath2}</directory>
-                  <filtering>true</filtering>
-                </resource>
-              </resources>              
-            </configuration>            
-          </execution>
-        </executions>
-      </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputPath}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>${inputPath2}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
 
         </plugins>
     </build>

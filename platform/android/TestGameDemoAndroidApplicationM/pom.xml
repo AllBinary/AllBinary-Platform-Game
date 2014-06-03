@@ -19,8 +19,8 @@
 
     <dependencies>
         <dependency>
-  <groupId>org.allbinary</groupId>
-  <artifactId>XmlRpcJavaLibrary</artifactId>
+            <groupId>org.allbinary</groupId>
+            <artifactId>XmlRpcJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -59,13 +59,21 @@
             <version>1.0.10</version>
         </dependency>
         
+
         <dependency>
-            <groupId>android</groupId>
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>17</version>
+            <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
-                
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+                               
     </dependencies>
 
     <build>
@@ -74,7 +82,9 @@
             <plugins>
                 <plugin>
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <!-- Not working older: maven-android-plugin -->
                     <artifactId>android-maven-plugin</artifactId>
+                    <version>3.8.2</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
@@ -82,7 +92,6 @@
         
         <plugins>
 
-            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -94,16 +103,45 @@
             
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <!-- 3.5.1 worked with an older android sdk 
+                     3.6.0 worked for a while as well -->
                 <artifactId>android-maven-plugin</artifactId>
-                <!-- 3.5.1 worked with an older android sdk -->
-                <version>3.6.0</version>
+                <version>3.8.2</version>
                 <configuration>
                     <sdk>
                         <platform>7</platform>
                     </sdk>                
                 </configuration>
             </plugin>
-            
+<!-- Not real dependencies - hack to get netbeans to work with new version of android-maven-plugin -->
+<!--
+                                                    <dependency>
+	<groupId>org.eclipse.aether</groupId>
+	<artifactId>aether-api</artifactId>
+	<version>0.9.0.M2</version>
+        <optional>true</optional>
+</dependency>
+<dependency>
+	<groupId>org.eclipse.aether</groupId>
+	<artifactId>aether-spi</artifactId>
+	<version>0.9.0.M2</version>
+        <optional>true</optional>
+</dependency>
+                   <dependency>
+	<groupId>org.eclipse.aether</groupId>
+	<artifactId>aether-impl</artifactId>
+	<version>0.9.0.M2</version>
+        <optional>true</optional>
+</dependency>
+
+            <dependency>
+                    <groupId>org.eclipse.sisu</groupId>
+                    <artifactId>org.eclipse.sisu.plexus</artifactId>
+                    <version>0.0.0.M5</version>
+                    <optional>true</optional>
+            </dependency>                   
+            -->
+        
         </plugins>
     </build>
 
