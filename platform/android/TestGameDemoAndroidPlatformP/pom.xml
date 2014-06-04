@@ -31,6 +31,7 @@
         <module>../TestGameDemoAndroidJavaLibraryM</module>
         <module>../TestGameDemoAndroidActivityJavaLibraryM</module>
         <module>../TestGameDemoNoTouchAndroidJavaLibraryM</module>
+        <module>../TestGameDemoTouchAndroidJavaLibraryM</module>
         
         <module>../TestGameDemoAndroidM</module>
         <module>../TestGameDemoAndroidApplicationM</module>
