@@ -27,7 +27,6 @@
 
         
         <module>../TestGameDemoAndroidResourcesTempJavaLibraryM</module>
-        <module>../TestGameDemoAndroidResourceJavaLibraryM</module>
         <module>../TestGameDemoAndroidBaseJavaLibraryM</module>
         <module>../TestGameDemoAndroidJavaLibraryM</module>
         <module>../TestGameDemoAndroidActivityJavaLibraryM</module>
