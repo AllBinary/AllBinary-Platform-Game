@@ -30,14 +30,15 @@
     <modules>
 
         <!--
-        <module>../../TestGameDemoP</module>
+        
         -->
+        <module>../../TestGameDemoP</module>
 
-        <module>../android/TestGameDemoAndroidPlatformP</module>
-        <module>../html/TestGameDemoHTMLPlatformP</module>
         <module>../j2me/TestGameDemoJ2MEPlatformP</module>
         <module>../j2se/TestGameDemoJ2SEPlatformP</module>
-    
+        <module>../html/TestGameDemoHTMLPlatformP</module>
+        <module>../android/TestGameDemoAndroidPlatformP</module>
+        
     </modules>
 
 </project>

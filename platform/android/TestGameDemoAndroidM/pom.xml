@@ -400,7 +400,7 @@ NoTransitionAnimationJavaLibrary
         <dependency>
             <groupId>tv.ouya</groupId>
             <artifactId>ouya</artifactId>
-            <version>1.0.6</version>
+            <version>1.0.12-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

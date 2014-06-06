@@ -33,6 +33,9 @@
         <module>../TestGameDemoNoTouchAndroidJavaLibraryM</module>
         <module>../TestGameDemoTouchAndroidJavaLibraryM</module>
         
+        <module>../TestGameDemoAndroidClientInfoJavaLibraryM</module>
+        <module>../TestGameDemoAndroidSoundsJavaLibraryM</module>
+        
         <module>../TestGameDemoAndroidM</module>
         <module>../TestGameDemoAndroidApplicationM</module>
 
