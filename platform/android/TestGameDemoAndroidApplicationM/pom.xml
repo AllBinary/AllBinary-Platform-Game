@@ -108,7 +108,8 @@
                 <version>3.8.2</version>
                 <configuration>
                     <sdk>
-                        <platform>7</platform>
+                        <!-- 5 is fine but is not installed by default -->
+                        <platform>19</platform>
                     </sdk>                
                 </configuration>
             </plugin>
