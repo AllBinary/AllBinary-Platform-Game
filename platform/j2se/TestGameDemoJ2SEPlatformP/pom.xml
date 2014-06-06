@@ -29,8 +29,11 @@
     </properties>
 
     <modules>
-
+        
+        <!--
+        Shared
         <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
+        -->
         
         <module>../TestGameDemoJ2SEJavaLibraryM</module>
         <module>../TestGameDemoJ2SE</module>
