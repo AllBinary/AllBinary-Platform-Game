@@ -95,7 +95,7 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NullCustomUIJavaLibrary</artifactId>
+            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
             <!--
             <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
             <artifactId>NullCustomUIJavaLibrary</artifactId>
@@ -211,7 +211,7 @@
             <version>3.0.0-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
-    
+
     </dependencies>
 
 
@@ -229,12 +229,12 @@
                         <goals>
                             <goal>unpack-dependencies</goal>
                         </goals>
-                        <configuration>
+                        <configuration>-
                             <classifier>sources</classifier>
-                            <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
                             <outputDirectory>${project.build.directory}/sources</outputDirectory>
                             -->
+                            <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                         </configuration>
                     </execution>
                 </executions>

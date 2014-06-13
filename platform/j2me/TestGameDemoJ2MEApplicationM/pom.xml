@@ -31,8 +31,8 @@
         \WTK\8_0
         -->
         <WTK_HOME>\WTK\3_4\</WTK_HOME>
-        <outputPath>.\target\classes</outputPath>
-        <inputPath>..\..\..\Resources\images\</inputPath>
+        <outputPath>.\target\classes\</outputPath>
+        <inputPath>..\..\..\Resources\images\release\</inputPath>
         <inputPath2>..\..\..\Resources\sounds\release\</inputPath2>
 
         <j2me.midlet.version>2.0.0</j2me.midlet.version>
@@ -176,7 +176,7 @@
                     <midlets>
                         <MIDlet>
                             <name>TestGameDemoMobileApplication</name>
-                            <icon>/testdemogame_icon.png</icon>
+                            <icon>/testgamedemo_icon.png</icon>
                             <class>TestGameDemoMIDlet</class>
                         </MIDlet>
                     </midlets>
