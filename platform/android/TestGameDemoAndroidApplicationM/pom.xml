@@ -47,17 +47,11 @@
             <version>2.0.2-SPECIAL-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-midp</artifactId>
-            <version>2.0.2-SPECIAL-SNAPSHOT</version>
-            <optional>true</optional>
-        </dependency>
 
         <dependency>
             <groupId>tv.ouya</groupId>
             <artifactId>ouya</artifactId>
-            <version>1.0.12-SNAPSHOT</version>
+            <version>1.0.13-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -123,6 +117,35 @@
                 </configuration>
             </plugin>
         
+<!-- If proguard for the android-maven-plugin fails for work then use below -->
+            <!--
+            <plugin>
+                <groupId>com.pyx4me</groupId>
+                <artifactId>proguard-maven-plugin</artifactId>
+                <version>2.0.4</version>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>proguard</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <inJar>android-classes</inJar>
+                    <proguardInclude>G:/mnt/bc/mydev/work/j2me/games/All_Android.pro</proguardInclude>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.proguard</groupId>
+                        <artifactId>proguard</artifactId>
+                        <version>4.10</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>                
+            </plugin>
+            -->
+                        
         </plugins>
     </build>
 
