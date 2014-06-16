@@ -27,31 +27,10 @@
         <buildLabel>${version}</buildLabel>
         <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
 
-        <outputPath>.\war\testgamedemo\res</outputPath>
-        <inputPath>..\..\..\Resources\images\release\</inputPath>
-        <inputPath2>..\..\..\Resources\images\wait\</inputPath2>
-        <inputPath3>..\..\..\Resources\sounds\release\</inputPath3>
-        
     </properties>
 
     <dependencies>
-        
-        <dependency>
-            <groupId>org.allbinary.game.resources</groupId>
-            <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>        
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary.game.resources</groupId>
-            <artifactId>GameImageLowResourcesJavaLibrary</artifactId>        
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary.game.resources</groupId>
-            <artifactId>GameImageMediumResourcesJavaLibrary</artifactId>        
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-              
+             
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPlayN</artifactId>
@@ -139,72 +118,6 @@
                         <projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
                     </additionalProjectnatures>
                 </configuration>
-            </plugin>
-      
-            <!-- Delete output directory -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>2.4.1</version>
-                <configuration>
-                    <followSymLinks>false</followSymLinks>
-                    <filesets>
-                        <fileset>
-                            <directory>${outputPath}</directory>
-                        </fileset>
-                    </filesets>
-                </configuration>
-            </plugin>
-      
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${outputPath}</outputDirectory>
-                            <resources>          
-                                <resource>
-                                    <directory>${inputPath}</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                                <resource>
-                                    <directory>${inputPath2}</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                                <resource>
-                                    <directory>${inputPath3}</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>              
-                        </configuration>            
-                    </execution>
-                </executions>
-            </plugin>
-                  
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>sources</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includes>**\/*.wav, **\/*.png</includes>
-                            <excludes>**\com/**, **\j15r/**</excludes>
-                            <outputDirectory>${outputPath}</outputDirectory>
-                            <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
