@@ -35,7 +35,10 @@
 
     <uses-sdk android:minSdkVersion="1" />
 
-    <!-- android:xlargeScreens="true" -->
+    <!-- android:xlargeScreens="true" Note: Is automatically true for sdk 14+, 
+    but if you add it then you must use android:targetSdkVersion for when 
+    xlargeScreens was added. So, by not having it you can support sdk 1-14 but 
+    you lose xlargeScreens from sdk 11-13 of which none is known to exist -->
     <supports-screens android:largeScreens="true"
         android:normalScreens="true" android:smallScreens="true" android:anyDensity="true" />
 
@@ -50,17 +53,17 @@
 
     <!-- android:resizable="true" -->
 
-	<application android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon" >
-		<activity android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon"
-		    android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
-		    android:configChanges="keyboardHidden|orientation" >
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-				<category android:name="tv.ouya.intent.category.APP"/>
-			</intent-filter>
-		</activity>
-	</application>
+    <application android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon" >
+        <activity android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon"
+                          android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
+                          android:configChanges="keyboardHidden|orientation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="tv.ouya.intent.category.APP"/>
+            </intent-filter>
+        </activity>
+    </application>
 
     <uses-permission android:name="android.permission.INTERNET" />  
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

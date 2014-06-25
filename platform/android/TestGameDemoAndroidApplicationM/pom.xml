@@ -12,6 +12,7 @@
     <url>http://www.allbinary.com/</url>
 
     <properties>
+        <android.sdk.version>4.1.1.4</android.sdk.version>
         <!--
         <android.sdk.path></android.sdk.path>
         -->
@@ -57,13 +58,13 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
+            <version>${android.sdk.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
+            <version>${android.sdk.version}</version>
             <scope>provided</scope>
             <classifier>sources</classifier>
         </dependency>
