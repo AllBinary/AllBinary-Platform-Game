@@ -19,7 +19,7 @@
        <module>../../licensing/LicensedGameDemoJavaLibraryP</module>
        -->
 
-        <module>../TestGameDemoResourceJavaLibraryM</module>
+        <module>../resource/TestGameDemoResourceJavaLibraryM</module>
         <module>../TestGameDemoWavSoundsJavaLibraryM</module>
         <module>../TestGameDemoJavaLibraryM</module>
         
@@ -34,8 +34,8 @@
         
         <module>../TestGameDemoBaseJavaLibraryM</module>
         <module>../TestGameDemoGameAIJavaLibraryM</module>
-        <module>../TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
-        <module>../TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
+        <module>../resource/TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
+        <module>../resource/TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
         
         <module>../platform/j2se/TestGameDemoPCClientInfoJavaLibraryM</module>
 
