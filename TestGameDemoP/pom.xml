@@ -15,9 +15,8 @@
 
     <modules>
 
-       <!--
-       <module>../../licensing/LicensedGameDemoJavaLibraryP</module>
-       -->
+        <!--
+        -->
 
         <module>../resource/TestGameDemoResourceJavaLibraryM</module>
         <module>../TestGameDemoWavSoundsJavaLibraryM</module>
