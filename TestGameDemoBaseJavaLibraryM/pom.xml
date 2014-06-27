@@ -172,14 +172,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!--
-                <dependency>
-                    <groupId>org.allbinary.game.testgamedemo</groupId>
-                    <artifactId>MiniSpaceWarTouchJavaLibrary</artifactId>
-                    <optional>true</optional>
-                </dependency>
-        -->
-
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoJ2MEJavaLibrary</artifactId>
