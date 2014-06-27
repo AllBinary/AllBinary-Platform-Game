@@ -5,8 +5,8 @@
   <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
   <packaging>jar</packaging>
   <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
 
   <name>TestGameDemoTouchJavaLibrary</name>
   <url>http://www.allbinary.com/</url>
@@ -48,16 +48,6 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NoGyroSensorJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>NoSensorJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -69,6 +59,12 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>TouchButtonJavaLibrary</artifactId>
+            <!--
+            <artifactId>MotionGestureJavaLibrary</artifactId>
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <artifactId>TouchButtonJavaLibrary</artifactId>
+
+            -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -77,49 +73,6 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>TouchButtonMappingJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>MotionGestureJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.input</groupId>
-            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary.input</groupId>
-            <artifactId>TouchButtonResourceOpenGLESAnimationJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
