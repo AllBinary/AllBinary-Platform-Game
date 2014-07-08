@@ -79,6 +79,14 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
+        </dependency>      
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
@@ -88,32 +96,8 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
             <optional>true</optional>
-        </dependency>        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-            <optional>true</optional>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoJavaLibrary</artifactId>        
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
         </dependency>
 
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoAndroidJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midp</artifactId>

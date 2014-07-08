@@ -147,10 +147,6 @@
                     <artifactId>XmlRpcJavaLibrary</artifactId>
                     <groupId>org.allbinary</groupId>
                 </exclusion>
-                <exclusion>
-                    <artifactId>BasicPlayerJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
             </exclusions>
         </dependency>
 
@@ -209,21 +205,50 @@
         </dependency>
 
         <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <!--
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+        </dependency>
+                
+        <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPCClientInfoJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>AllBinaryGyroSensorJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>GameScoresLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
@@ -232,12 +257,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>BasicPlayerJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

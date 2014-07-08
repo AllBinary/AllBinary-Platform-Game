@@ -42,7 +42,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
 
@@ -52,10 +51,8 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
-
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -63,7 +60,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
 
@@ -73,63 +69,39 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>NoGyroSensorJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GameInputMEKeyOnlyJavaLibrary</artifactId>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
             <!--
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
-        </dependency>
+            <optional>true</optional>
+        </dependency>        
 
         <dependency>
-            <artifactId>NoTransitionAnimationJavaLibrary</artifactId>
-            <groupId>org.allbinary.animation.transition</groupId>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>TouchButtonResourceOpenGLESAnimationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>NotDeviceSpecificMIDP2JavaLibrary</artifactId>
-            <!--
-                        <artifactId>NotDeviceSpecificNoMediaMIDP1Library</artifactId>
-            -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
+        </dependency>        
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
-            
             <!--
-                        <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
-                        <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
             -->
-            
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
+            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -138,7 +110,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -147,7 +118,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -156,7 +126,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -165,7 +134,6 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>

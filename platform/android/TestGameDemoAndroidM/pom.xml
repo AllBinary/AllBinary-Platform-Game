@@ -47,32 +47,28 @@
                 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>AllBinaryOnAndroidPlatformJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
+            <!-- 
+            AllBinaryGyroSensorJavaLibrary is included
+            in the Platform project by default but is optional for final builds
+            -->            
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
+            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>
             <!--
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
-            <artifactId>NullCustomUIJavaLibrary</artifactId>
+            <artifactId>AndroidAdvertisementJavaLibrary</artifactId>            
+            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>           
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidAdvertisementJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -81,16 +77,8 @@
             <!--
                 <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
                 <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
+                <artifactId>GameLicensingInAppPurchaseJavaLibrary</artifactId>
             -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>LicenseClientJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -113,16 +101,64 @@
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GraphicsBasicImageJavaLibrary</artifactId>
+            <groupId>org.allbinary.game.multiplayer</groupId>
+            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary.game.multiplayer</groupId>
-            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidClientInfoJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidResourceJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidActivityJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidSoundsJavaLibrary</artifactId>    
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+                
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -142,13 +178,6 @@ android.content.pm.PackageManager
 android.view.MotionEvent
 
 -->
-
-        <!--
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AndroidAdvertisementJavaLibrary</artifactId>
-        </dependency>
-        -->
         
 <!--
 In Maven but not in Eclipse:
@@ -190,65 +219,6 @@ WeaponMineJavaLibrary
 NoTransitionAnimationJavaLibrary
 
         -->
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoAndroidClientInfoJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>AllBinaryGyroSensorJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>GameScoresLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-                
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoAndroidActivityJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoAndroidSoundsJavaLibrary</artifactId>    
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoAndroidBaseJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
 
     </dependencies>
 

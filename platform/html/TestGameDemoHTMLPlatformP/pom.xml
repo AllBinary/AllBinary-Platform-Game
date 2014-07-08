@@ -29,7 +29,7 @@
 
     <modules>
 
-        <module>../TestGameDemoTouchHTMLJavaLibraryM</module>
+        <module>../TestGameDemoHTMLJavaLibraryM</module>
         <module>../TestGameDemoHTMLM</module>
         <module>../TestGameDemoHTMLTempM</module>
         <module>../TestGameDemoPlayNM</module>

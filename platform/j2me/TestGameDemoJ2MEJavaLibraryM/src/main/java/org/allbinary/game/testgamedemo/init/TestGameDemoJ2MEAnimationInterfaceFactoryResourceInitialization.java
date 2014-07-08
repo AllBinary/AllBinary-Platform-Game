@@ -18,6 +18,8 @@ import org.allbinary.animation.image.TestGameDemoOpenGLESImageBasedAnimationInte
 
 import allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
 import allbinary.game.resource.ResourceInitialization;
+import allbinary.input.motion.button.TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory;
+import allbinary.input.motion.button.TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory;
 
 public class TestGameDemoJ2MEAnimationInterfaceFactoryResourceInitialization
 extends ResourceInitialization
@@ -30,22 +32,19 @@ extends ResourceInitialization
     throws Exception
     //throws Exception
     {
-        FeaturedAnimationInterfaceFactoryInterfaceFactory featuredAnimationInterfaceFactoryInterfaceFactory = 
-                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
-
         //Normal Loading Here
         
         //TWB - TouchButton
-        //featuredAnimationInterfaceFactoryInterfaceFactory.add(
-                //new TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory());
+        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+                new TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory());
         
-        featuredAnimationInterfaceFactoryInterfaceFactory.add(
+        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
                 new TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory());
 
-        //featuredAnimationInterfaceFactoryInterfaceFactory.add(
-          //      new TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory());
+        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+                new TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory());
         
-        featuredAnimationInterfaceFactoryInterfaceFactory.add(
+        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
                 new TestGameDemoOpenGLESImageBasedAnimationInterfaceFactoryInterfaceFactory());
     }
 }
