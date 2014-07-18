@@ -26,11 +26,12 @@
     <modules>
 
         
+        <module>../TestGameDemoAndroidResourceJavaLibraryM</module>
         <module>../TestGameDemoAndroidRawResourcesJavaLibraryM</module>
         <module>../TestGameDemoAndroidResourcesTempJavaLibraryM</module>
         
-        <module>../TestGameDemoAndroidBaseJavaLibraryM</module>
         <module>../TestGameDemoAndroidJavaLibraryM</module>
+        <module>../TestGameDemoAndroidBaseJavaLibraryM</module>
         <module>../TestGameDemoAndroidActivityJavaLibraryM</module>
         
         <module>../TestGameDemoAndroidSoundsJavaLibraryM</module>

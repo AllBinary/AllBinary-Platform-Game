@@ -22,59 +22,16 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>LoggingJ2MEAll</artifactId>
-
-<!--
-<artifactId>LoggingJ2MEAll</artifactId>
-<artifactId>LoggingNone</artifactId>
-<artifactId>LoggingJ2MEException</artifactId>
-<artifactId>LoggingRemoteException</artifactId>
-
+            <!--
+            <artifactId>LoggingJ2MEAll</artifactId>
+            <artifactId>LoggingNone</artifactId>
+            <artifactId>LoggingJ2MEException</artifactId>
+            <artifactId>LoggingRemoteException</artifactId>
             -->
-
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
             <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.multiplayer</groupId>
-            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>NoGyroSensorJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>TouchScreenJ2MEJavaLibrary</artifactId>
-<!-- 
-            <artifactId>TouchScreenJ2MEJavaLibrary</artifactId>
-            <artifactId>TouchScreenJ2MENoneJavaLibrary</artifactId>            
--->            
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
@@ -84,46 +41,27 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-    
+
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>J2SEMediaMIDPMinimalJavaLibrary</artifactId>
+            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>
+            <!--
+            <artifactId>AndroidAdvertisementJavaLibrary</artifactId>            
+            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>           
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidAdvertisementJavaLibrary</artifactId>
+            -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
-            <!--
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
-            <artifactId>NullCustomUIJavaLibrary</artifactId>
-            -->
+            <groupId>org.allbinary.game.multiplayer</groupId>
+            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>NoGameLicensingJavaLibrary</artifactId>
-            <!--
-                <artifactId>NoGameLicensingJavaLibrary</artifactId>
-                <artifactId>LicensedGameDemoJavaLibrary</artifactId>
-            -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-            <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <artifactId>XmlRpcJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
@@ -132,61 +70,55 @@
             <!--
                 <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
                 <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
+                <artifactId>GameLicensingInAppPurchaseJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>HardCodedLicenseInitInfoJavaLibrary</artifactId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
             <!--
-            <artifactId>HardCodedLicenseInitInfoJavaLibrary</artifactId>
-            <artifactId>FileLicenseInitInfoJavaLibrary</artifactId>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>FileJ2SEJavaLibrary</artifactId>
-        </dependency>
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>VectorAnimationJ2MEJavaLibrary</artifactId>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
-
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            <!--
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPCClientInfoJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>AllBinaryGyroSensorJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>GameScoresLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
@@ -214,7 +146,6 @@
 
     </dependencies>
 
-
     <build>
 
         <plugins>
@@ -229,12 +160,12 @@
                         <goals>
                             <goal>unpack-dependencies</goal>
                         </goals>
-                        <configuration>-
+                        <configuration>
                             <classifier>sources</classifier>
+                            <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
                             <outputDirectory>${project.build.directory}/sources</outputDirectory>
                             -->
-                            <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                         </configuration>
                     </execution>
                 </executions>

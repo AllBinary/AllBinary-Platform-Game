@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <groupId>org.allbinary.game.testgamedemo</groupId>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.game.testgamedemo</groupId>
     <artifactId>TestGameDemoHTML</artifactId>
     <packaging>jar</packaging>
-        <!-- AllBinary Platform Version Start -->
+    <!-- AllBinary Platform Version Start -->
     <version>1.0.0-SNAPSHOT</version>
     <!-- AllBinary Platform Version End -->
+    
     <name>TestGameDemoHTML</name>
     <url>http://maven.apache.org</url>
 
@@ -45,6 +46,12 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>
+            <!--
+            <artifactId>AndroidAdvertisementJavaLibrary</artifactId>            
+            <artifactId>AdvertisementClientNoneJavaLibrary</artifactId>           
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidAdvertisementJavaLibrary</artifactId>
+            -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -60,116 +67,66 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>MotionGestureBaseJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>TouchScreenJ2MEJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>TouchJ2MEJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
+            <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
             <!--
-            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
-            <artifactId>NullCustomUIJavaLibrary</artifactId>
+                <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
+                <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
+                <artifactId>GameLicensingInAppPurchaseJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NoGameLicensingJavaLibrary</artifactId>
-        <!--
-            <artifactId>NoGameLicensingJavaLibrary</artifactId>
-            <artifactId>LicensedGameDemoJavaLibrary</artifactId>
-        -->
-                <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-            <optional>true</optional>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
+            <!--
+            For HTML build it is already part of GameInputPCMotion
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <!--
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
             <exclusions>
                 <exclusion>
-                    <artifactId>XmlRpcJavaLibrary</artifactId>
+                    <artifactId>NoTouchButtonJavaLibrary</artifactId>
                     <groupId>org.allbinary</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
-        <!--
-            <artifactId>GameLicensingOnlyNormalJavaLibrary</artifactId>
-            <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
-        -->
-                <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>HardCodedLicenseInitInfoJavaLibrary</artifactId>
-            <!--
-            <artifactId>HardCodedLicenseInitInfoJavaLibrary</artifactId>
-            <artifactId>FileLicenseInitInfoJavaLibrary</artifactId>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
-        </dependency>
-
-            <dependency>
-                <groupId>org.allbinary</groupId>
-                <artifactId>FileJ2SEJavaLibrary</artifactId>
-            </dependency>
-            -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>VectorAnimationJ2MEJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
+        
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPCClientInfoJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-            <exclusions>
-                <exclusion>
-                    <artifactId>AllBinaryGyroSensorJavaLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>GameScoresLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
@@ -187,7 +144,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+        
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midp</artifactId>

@@ -1,12 +1,9 @@
 package org.allbinary.game.testgamedemo.init;
 
-import javax.microedition.lcdui.CommandListener;
-
-import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
-import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializer;
-
 import allbinary.game.resource.ResourceInitialization;
 import allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import javax.microedition.lcdui.CommandListener;
+import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
 
 public class TestGameDemoAndroidStaticInitializer 
 extends TestGameDemoStaticInitializer

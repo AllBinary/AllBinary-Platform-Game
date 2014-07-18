@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <groupId>org.allbinary.game.testgamedemo</groupId>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.game.testgamedemo</groupId>
     <artifactId>TestGameDemoAndroid</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
@@ -38,7 +38,6 @@
             <artifactId>LoggingRemoteException</artifactId>
             <artifactId>LoggingAndroidAll</artifactId>
             -->
-
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -72,6 +71,14 @@
         </dependency>
 
         <dependency>
+            <groupId>org.allbinary.game.multiplayer</groupId>
+            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>GameLicensingOnlyDemoJavaLibrary</artifactId>
             <!--
@@ -85,24 +92,36 @@
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary.animation</groupId>
-            <artifactId>AllBinaryImageAnimationRotationJavaLibrary</artifactId>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonJavaLibrary</artifactId>
+            <artifactId>TouchButtonMappingJavaLibrary</artifactId>
+            -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary.animation</groupId>
-            <artifactId>AllBinaryAndroidImageRotationJavaLibrary</artifactId>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            -->            
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+                        
         <dependency>
-            <groupId>org.allbinary.game.multiplayer</groupId>
-            <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            <!--
+            <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
+            <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
+            -->            
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -111,6 +130,22 @@
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidClientInfoJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -149,16 +184,16 @@
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
+            <groupId>org.allbinary.animation</groupId>
+            <artifactId>AllBinaryImageAnimationRotationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-                
+
         <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoTouchAndroidJavaLibrary</artifactId>
+            <groupId>org.allbinary.animation</groupId>
+            <artifactId>AllBinaryAndroidImageRotationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -180,16 +215,6 @@ android.view.MotionEvent
 -->
         
 <!--
-In Maven but not in Eclipse:
-
-Why are these not eclipse:
-
-Should these not be in either:
-
-
-In Platform Lib but should not be:
-
-
 In Platform Lib but is not used:
 
 MovementJavaLibrary
@@ -222,7 +247,8 @@ NoTransitionAnimationJavaLibrary
 
     </dependencies>
 
-    <build>        
+    <build>
+           
         <plugins>
 
             <plugin>
@@ -282,6 +308,8 @@ NoTransitionAnimationJavaLibrary
                                     <directory>${inputPath2}</directory>
                                     <filtering>true</filtering>
                                 </resource>
+                                <!--
+                                -->                
                             </resources>              
                         </configuration>            
                     </execution>
