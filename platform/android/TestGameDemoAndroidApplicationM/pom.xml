@@ -98,8 +98,12 @@
 
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                <!-- 3.5.1 worked with an older android sdk 
-                     3.6.0 worked for a while as well -->
+                <!-- 
+                3.5.1 worked with an older android sdk 
+                3.6.0 worked for a while as well 
+                3.8.2 works but you need to build in Eclipse first for NetBeans to work
+                since Eclipse has or gets the proper dependencies
+                -->
                 <artifactId>android-maven-plugin</artifactId>
                 <version>3.8.2</version>
                 <configuration>

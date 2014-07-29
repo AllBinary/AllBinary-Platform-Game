@@ -33,7 +33,7 @@
         Already in TestGameDemoP
         <module>../TestGameDemoJ2MEJavaLibraryM</module>
         -->
-        <module>../TestGameDemoJ2ME</module>
+        <module>../TestGameDemoJ2MEM</module>
         <module>../TestGameDemoJ2MEApplicationM</module>
         
         <!--

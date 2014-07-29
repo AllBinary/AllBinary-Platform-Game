@@ -36,8 +36,8 @@
         -->
         
         <module>../TestGameDemoJ2SEJavaLibraryM</module>
-        <module>../TestGameDemoJ2SE</module>
-        <module>../TestGameDemoJ2SEApplication</module>
+        <module>../TestGameDemoJ2SEM</module>
+        <module>../TestGameDemoJ2SEApplicationM</module>
         
         <!--
         <module>../TestGameDemoTouchJ2M=SE</module>

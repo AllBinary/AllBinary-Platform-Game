@@ -175,7 +175,7 @@
                     </archive>
                     <midlets>
                         <MIDlet>
-                            <name>TestGameDemoMobileApplication</name>
+                            <name>TestGameDemo</name>
                             <icon>/testgamedemo_icon.png</icon>
                             <class>TestGameDemoMIDlet</class>
                         </MIDlet>
