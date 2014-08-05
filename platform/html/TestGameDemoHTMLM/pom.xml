@@ -9,11 +9,10 @@
     <!-- AllBinary Platform Version End -->
     
     <name>TestGameDemoHTML</name>
-    <url>http://maven.apache.org</url>
+    <url>http://www.allbinary.com/</url>
 
     <properties>
-        <buildLabel>${version}</buildLabel>
-        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+        <buildLabel>${project.version}</buildLabel>
         <inputPath>target\dependency</inputPath>
         <outputPath>..\TestGameDemoHTMLTempM\src</outputPath>
     </properties>
