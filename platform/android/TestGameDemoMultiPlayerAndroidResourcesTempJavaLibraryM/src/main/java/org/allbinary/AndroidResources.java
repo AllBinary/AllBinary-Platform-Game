@@ -4,13 +4,23 @@ import org.allbinary.game.testgamedemo.R;
 
 public class AndroidResources
 {
-    public static R.drawable drawable = new R.drawable();
+    private static final AndroidResources instance = new AndroidResources();
+    
+    /**
+     * @return the instance
+     */
+    public static AndroidResources getInstance()
+    {
+        return instance;
+    }
+    
+    public R.drawable drawable = new R.drawable();
 
-    public static R.id id = new R.id();
+    public R.id id = new R.id();
 
-    public static R.layout layout = new R.layout();
+    public R.layout layout = new R.layout();
 
-    public static R.raw raw = new R.raw();
+    public R.raw raw = new R.raw();
 
-    public static R.string string = new R.string();
+    public R.string string = new R.string();
 }

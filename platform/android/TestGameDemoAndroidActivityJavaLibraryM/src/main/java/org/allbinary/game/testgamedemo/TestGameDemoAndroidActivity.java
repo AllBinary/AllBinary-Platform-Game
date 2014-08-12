@@ -62,26 +62,28 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     protected void initViewIds() 
     throws Exception
     {
+        final AndroidResources androidResources = AndroidResources.getInstance();
+        
         this.initViewIds(
                 new int[] {
-                        AndroidResources.id.testgamedemo,
-                        AndroidResources.id.testgamedemo_gl
+                        androidResources.id.testgamedemo,
+                        androidResources.id.testgamedemo_gl
                 }
                 ,
                 new int[] {
-                        AndroidResources.layout.testgamedemo_layout,
-                        AndroidResources.layout.testgamedemo_ad_overlay_layout,
+                        androidResources.layout.testgamedemo_layout,
+                        androidResources.layout.testgamedemo_ad_overlay_layout,
                         //AndroidResources.layout.testgamedemo_ad_frame_layout,
                 }
                 ,
                 new int[] {
-                        AndroidResources.layout.testgamedemo_gl_layout,
-                        //AndroidResources.layout.testgamedemo_min3d_layout,
-                        //AndroidResources.layout.testgamedemo_gl_ad_overlay_layout,
-                        //AndroidResources.layout.testgamedemo_min3d_ad_overlay_layout,
+                        androidResources.layout.testgamedemo_gl_layout,
+                        //androidResources.layout.testgamedemo_min3d_layout,
+                        //androidResources.layout.testgamedemo_gl_ad_overlay_layout,
+                        //androidResources.layout.testgamedemo_min3d_ad_overlay_layout,
                         
-                        //AndroidResources.layout.testgamedemo_gl_ad_frame_layout,
-                        //AndroidResources.layout.testgamedemo_min3d_ad_frame_layout,
+                        //androidResources.layout.testgamedemo_gl_ad_frame_layout,
+                        //androidResources.layout.testgamedemo_min3d_ad_frame_layout,
                 }
                 ,
                 true
@@ -232,11 +234,13 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "getBackground"));
 
+        final AndroidResources androidResources = AndroidResources.getInstance();
+        
         ApplicationConfiguration reloadConfiguration = 
             ApplicationConfiguration.getInstance();
         
         Drawable drawable = this.getResources().getDrawable(
-                AndroidResources.drawable.testgamedemo_wait_256_by_256);
+                androidResources.drawable.testgamedemo_wait_256_by_256);
         
         if (reloadConfiguration.isProgressBarView())
         {
@@ -260,7 +264,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             hashtable.put(AndroidBasicTitleProgressBar.RESOURCE, new Image(bitmap));
             
             AndroidBasicTitleProgressBar.setBackground(
-                    AndroidResources.drawable.testgamedemo_wait_256_by_256
+                    androidResources.drawable.testgamedemo_wait_256_by_256
                     );
         }
    }        

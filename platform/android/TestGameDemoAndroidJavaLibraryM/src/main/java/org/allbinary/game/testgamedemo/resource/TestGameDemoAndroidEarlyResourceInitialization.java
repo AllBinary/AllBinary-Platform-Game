@@ -27,17 +27,19 @@ extends ResourceInitialization
 
         ResourceUtil resourceUtil = ResourceUtil.getInstance();
 
+        AndroidResources androidResources = AndroidResources.getInstance();
+        
         resourceUtil.addResource(MidletIcon.RESOURCE, Integer
-                .valueOf(AndroidResources.drawable.testgamedemo_icon));
+                .valueOf(androidResources.drawable.testgamedemo_icon));
 
         resourceUtil.addResource(SelectSound.getInstance().getResource(), Integer
-                .valueOf(AndroidResources.raw.select));
+                .valueOf(androidResources.raw.select));
 
         resourceUtil.addResource(ErrorSound.getInstance().getResource(), Integer
-                .valueOf(AndroidResources.raw.error));
+                .valueOf(androidResources.raw.error));
         
         resourceUtil.addResource(TestSound.getInstance().getResource(), Integer
-                .valueOf(AndroidResources.raw.test));
+                .valueOf(androidResources.raw.test));
 
         //resourceUtil.addResource(ExplosionResources.getInstance().EXPLOSION_60_RESOURCE, Integer
           //      .valueOf(AndroidResources.raw.explosion_sprite_60_by_60));
