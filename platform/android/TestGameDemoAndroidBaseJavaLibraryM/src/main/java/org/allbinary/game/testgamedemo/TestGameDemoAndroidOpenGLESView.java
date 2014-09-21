@@ -1,6 +1,6 @@
 package org.allbinary.game.testgamedemo;
 
-import allbinary.android.view.AllBinaryMidletOpenGLSurfaceView;
+import org.allbinary.android.view.AllBinaryMidletOpenGLSurfaceView;
 import android.content.Context;
 import android.util.AttributeSet;
 

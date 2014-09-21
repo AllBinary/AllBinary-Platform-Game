@@ -13,7 +13,7 @@
 */
 package org.allbinary.media.audio;
 
-import allbinary.media.audio.SoundsFactoryInterface;
+import org.allbinary.media.audio.SoundsFactoryInterface;
 
 public class TestGameDemoSoundsFactoryFactory
 {

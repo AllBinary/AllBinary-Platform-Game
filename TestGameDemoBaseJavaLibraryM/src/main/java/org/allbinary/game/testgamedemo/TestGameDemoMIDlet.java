@@ -20,24 +20,25 @@ import org.allbinary.game.testgamedemo.canvas.TestGameDemoStartCanvas;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
 
-import abcs.logic.basic.string.CommonStrings;
-import abcs.logic.communication.log.LogFactory;
-import abcs.logic.communication.log.LogUtil;
-import abcs.logic.communication.log.PreLogUtil;
-import allbinary.game.GameInfo;
-import allbinary.game.GameMode;
-import allbinary.game.GameTypeFactory;
-import allbinary.game.PlayerTypesFactory;
-import allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
-import allbinary.game.layer.AllBinaryGameLayerManager;
-import allbinary.game.midlet.LicenseLevelUtil;
-import allbinary.game.midlet.LicenseLoadingTypeFactory;
-import allbinary.game.midlet.SpecialDemoGameMidlet;
-import allbinary.game.paint.help.HelpPaintable;
-import allbinary.game.score.BasicHighScoresFactory;
-import allbinary.game.score.HighScoresPaintable;
-import allbinary.game.score.displayable.HighScoresCanvas;
-import allbinary.media.audio.AllBinaryMediaManagerShutdown;
+import org.allbinary.logic.basic.string.CommonStrings;
+import org.allbinary.logic.communication.log.LogFactory;
+import org.allbinary.logic.communication.log.LogUtil;
+import org.allbinary.logic.communication.log.PreLogUtil;
+import org.allbinary.game.GameInfo;
+import org.allbinary.game.GameMode;
+import org.allbinary.game.GameTypeFactory;
+import org.allbinary.game.PlayerTypesFactory;
+import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
+import org.allbinary.game.layer.AllBinaryGameLayerManager;
+import org.allbinary.game.midlet.LicenseLevelUtil;
+import org.allbinary.game.midlet.LicenseLoadingTypeFactory;
+import org.allbinary.game.midlet.SpecialDemoGameMidlet;
+import org.allbinary.game.paint.help.HelpPaintable;
+import org.allbinary.game.score.BasicHighScoresFactory;
+import org.allbinary.game.score.HighScoresPaintable;
+import org.allbinary.game.score.displayable.HighScoresCanvas;
+import org.allbinary.media.audio.AllBinaryMediaManagerShutdown;
+import org.allbinary.media.audio.EarlySoundsFactoryFactory;
 
 /**
  * @author user
@@ -107,6 +108,8 @@ public class TestGameDemoMIDlet extends
         LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface"));
 
+        AllBinaryMediaManagerShutdown.shutdown(
+           EarlySoundsFactoryFactory.getInstance());
         AllBinaryMediaManagerShutdown.shutdown(
            TestGameDemoSoundsFactoryFactory.getInstance());
 

@@ -15,12 +15,12 @@ package org.allbinary.game.testgamedemo.configuration;
 
 import org.allbinary.util.BasicArrayList;
 
-import allbinary.game.configuration.GameConfigurationCentral;
-import allbinary.game.configuration.GameConfigurationSingleton;
-import allbinary.game.configuration.feature.GameFeatureChoiceGroups;
-import allbinary.game.configuration.feature.GameFeatureFactory;
-import allbinary.game.configuration.feature.SensorFeatureFactory;
-import allbinary.init.InitInterface;
+import org.allbinary.game.configuration.GameConfigurationCentral;
+import org.allbinary.game.configuration.GameConfigurationSingleton;
+import org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
+import org.allbinary.game.configuration.feature.GameFeatureFactory;
+import org.allbinary.game.configuration.feature.SensorFeatureFactory;
+import org.allbinary.init.InitInterface;
 
 public class TestGameDemoGameFeatures implements InitInterface
 {    

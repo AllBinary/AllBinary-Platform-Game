@@ -4,8 +4,8 @@
  */
 package playn.core;
 
-import allbinary.midlet.MidletFactoryInterface;
 import javax.microedition.midlet.MIDlet;
+import org.allbinary.midlet.MidletFactoryInterface;
 
 /**
  *

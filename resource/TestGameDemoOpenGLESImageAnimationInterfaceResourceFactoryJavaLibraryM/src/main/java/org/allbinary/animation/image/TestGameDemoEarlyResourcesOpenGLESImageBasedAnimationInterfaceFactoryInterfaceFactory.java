@@ -16,8 +16,8 @@ package org.allbinary.animation.image;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.image.opengles.OpenGLImageCacheFactory;
 
-import allbinary.game.configuration.feature.Features;
-import allbinary.game.configuration.feature.GraphicsFeatureFactory;
+import org.allbinary.game.configuration.feature.Features;
+import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
 
 public class TestGameDemoEarlyResourcesOpenGLESImageBasedAnimationInterfaceFactoryInterfaceFactory
     extends TestGameDemoEarlyResourcesImageBasedAnimationInterfaceFactoryInterfaceFactory

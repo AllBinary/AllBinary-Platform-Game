@@ -13,8 +13,8 @@
 */
 package org.allbinary.game.testgamedemo.init;
 
-import allbinary.game.init.CommonGameInitialization;
-import allbinary.game.resource.ResourceInitialization;
+import org.allbinary.game.init.CommonGameInitialization;
+import org.allbinary.game.resource.ResourceInitialization;
 
 public class TestGameDemoStaticInitializer
 extends CommonGameInitialization

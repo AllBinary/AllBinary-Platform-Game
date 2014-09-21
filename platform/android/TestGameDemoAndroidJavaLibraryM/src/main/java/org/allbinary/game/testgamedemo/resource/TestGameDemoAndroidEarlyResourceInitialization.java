@@ -11,11 +11,11 @@ package org.allbinary.game.testgamedemo.resource;
 import org.allbinary.AndroidResources;
 import org.allbinary.media.audio.TestSound;
 
-import allbinary.data.resource.ResourceUtil;
-import allbinary.game.resource.ResourceInitialization;
-import allbinary.media.audio.ErrorSound;
-import allbinary.media.audio.SelectSound;
-import allbinary.midlet.MidletIcon;
+import org.allbinary.data.resource.ResourceUtil;
+import org.allbinary.game.resource.ResourceInitialization;
+import org.allbinary.media.audio.ErrorSound;
+import org.allbinary.media.audio.SelectSound;
+import org.allbinary.midlet.MidletIcon;
 
 public class TestGameDemoAndroidEarlyResourceInitialization 
 extends ResourceInitialization

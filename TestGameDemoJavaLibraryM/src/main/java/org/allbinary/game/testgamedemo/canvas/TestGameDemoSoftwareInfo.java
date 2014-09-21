@@ -13,7 +13,7 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
-import abcs.logic.system.SoftwareInformation;
+import org.allbinary.logic.system.SoftwareInformation;
 
 public class TestGameDemoSoftwareInfo
 {

@@ -13,7 +13,7 @@
 */
 package org.allbinary.game.testgamedemo.resource;
 
-import allbinary.game.resource.ResourceInitialization;
+import org.allbinary.game.resource.ResourceInitialization;
 
 /*
  *  Note that errors may occur even though your importing R correctly

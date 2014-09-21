@@ -1,8 +1,8 @@
 package org.allbinary.media.audio;
 
 
-import allbinary.media.audio.BaseSoundsFactory;
-import allbinary.media.audio.Sound;
+import org.allbinary.media.audio.BaseSoundsFactory;
+import org.allbinary.media.audio.Sound;
 
 public class TestGameDemoSoundsFactory
 extends BaseSoundsFactory

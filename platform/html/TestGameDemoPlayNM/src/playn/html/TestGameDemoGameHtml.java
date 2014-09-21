@@ -17,7 +17,6 @@ package playn.html;
 
 import org.allbinary.playn.AllBinaryPlayNGame;
 import org.allbinary.playn.AllBinaryPlayNGameRunnable;
-import org.allbinary.playn.processors.MidletStartupProcessor;
 import org.allbinary.util.BasicArrayList;
 import playn.core.PlayN;
 import playn.core.TestGameDemoMidletFactory;

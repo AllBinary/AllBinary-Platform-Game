@@ -8,7 +8,7 @@ package org.allbinary.game.testgamedemo.resource;
  *  Remark out for independent Activities
  */
 
-import allbinary.android.input.motion.button.TouchButtonAndroidResources;
+import org.allbinary.android.input.motion.button.TouchButtonAndroidResources;
 import org.allbinary.game.testgamedemo.init.TestGameDemoResourceInitialization;
 
 public class TestGameDemoAndroidResourceInitialization 

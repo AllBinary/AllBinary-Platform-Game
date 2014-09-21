@@ -13,10 +13,10 @@
 */
 package org.allbinary.game.testgamedemo.init;
 
-import allbinary.game.init.BasicBuildGameInitializerFactory;
-import allbinary.game.init.GameInitializationInterface;
-import allbinary.game.init.GameInitializationInterfaceFactoryInterface;
-import allbinary.game.resource.ResourceInitialization;
+import org.allbinary.game.init.BasicBuildGameInitializerFactory;
+import org.allbinary.game.init.GameInitializationInterface;
+import org.allbinary.game.init.GameInitializationInterfaceFactoryInterface;
+import org.allbinary.game.resource.ResourceInitialization;
 import org.allbinary.game.testgamedemo.resource.TestGameDemoJ2MEEarlyResourceInitialization;
 
 /**

@@ -13,8 +13,8 @@
 */
 package org.allbinary.game.testgamedemo.input;
 
-import allbinary.game.input.GameKeyFactory;
-import allbinary.game.input.mapping.GameInputMapping;
+import org.allbinary.game.input.GameKeyFactory;
+import org.allbinary.game.input.mapping.GameInputMapping;
 
 public class TestGameDemoGameInputMappingFactory
 {

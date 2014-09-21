@@ -1,14 +1,14 @@
 
-import abcs.logic.basic.string.CommonStrings;
-import abcs.logic.communication.log.LogFactory;
-import abcs.logic.communication.log.LogUtil;
-import allbinary.game.configuration.GameConfigurationCentral;
-import allbinary.game.configuration.feature.Features;
-import allbinary.game.configuration.feature.GameFeatureFactory;
-import allbinary.game.configuration.feature.GraphicsFeatureFactory;
-import allbinary.game.configuration.feature.InputFeatureFactory;
-import allbinary.game.configuration.feature.SensorFeatureFactory;
-import allbinary.logic.math.SmallIntegerSingletonFactory;
+import org.allbinary.logic.basic.string.CommonStrings;
+import org.allbinary.logic.communication.log.LogFactory;
+import org.allbinary.logic.communication.log.LogUtil;
+import org.allbinary.game.configuration.GameConfigurationCentral;
+import org.allbinary.game.configuration.feature.Features;
+import org.allbinary.game.configuration.feature.GameFeatureFactory;
+import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
+import org.allbinary.game.configuration.feature.InputFeatureFactory;
+import org.allbinary.game.configuration.feature.SensorFeatureFactory;
+import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 
 public class TestGameDemoMIDlet

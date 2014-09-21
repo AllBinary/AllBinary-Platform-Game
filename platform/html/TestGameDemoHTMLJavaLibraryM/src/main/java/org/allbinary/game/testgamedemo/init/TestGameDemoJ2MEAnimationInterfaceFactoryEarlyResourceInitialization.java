@@ -16,8 +16,8 @@ package org.allbinary.game.testgamedemo.init;
 import org.allbinary.animation.image.TestGameDemoEarlyResourcesImageBasedAnimationInterfaceFactoryInterfaceFactory;
 import org.allbinary.animation.image.TestGameDemoEarlyResourcesOpenGLESImageBasedAnimationInterfaceFactoryInterfaceFactory;
 
-import allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
-import allbinary.game.resource.ResourceInitialization;
+import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
+import org.allbinary.game.resource.ResourceInitialization;
 
 public class TestGameDemoJ2MEAnimationInterfaceFactoryEarlyResourceInitialization
 extends ResourceInitialization

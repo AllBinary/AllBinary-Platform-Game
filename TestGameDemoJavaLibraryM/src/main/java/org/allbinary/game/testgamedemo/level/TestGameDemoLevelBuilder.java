@@ -13,11 +13,11 @@
 */
 package org.allbinary.game.testgamedemo.level;
 
-import allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterfaceFactory;
-import allbinary.game.displayable.canvas.AllBinaryGameCanvas;
-import allbinary.layer.AllBinaryLayer;
-import allbinary.layer.LayerInterfaceFactory;
-import allbinary.layer.LayerInterfaceVisitor;
+import org.allbinary.game.ai.ArtificialIntelligenceInterfaceFactoryInterfaceFactory;
+import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas;
+import org.allbinary.layer.AllBinaryLayer;
+import org.allbinary.layer.LayerInterfaceFactory;
+import org.allbinary.layer.LayerInterfaceVisitor;
 
 public class TestGameDemoLevelBuilder implements LayerInterfaceVisitor
 {

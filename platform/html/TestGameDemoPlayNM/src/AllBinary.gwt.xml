@@ -16,20 +16,7 @@
 -->
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit trunk//EN" "http://google-web-toolkit.googlecode.com/svn/trunk/distro-source/core/src/gwt-module.dtd">
 <module>
-    
-  <source path='abcs'>
-    <!-- Exclude non-GWT-compatible classes -->
-    <exclude name='**/*Test.java' />
-  </source>
-  <source path='com/abcs'>
-    <!-- Exclude non-GWT-compatible classes -->
-    <exclude name='**/*Test.java' />
-  </source>
-  
-  <source path='allbinary'>
-    <!-- Exclude non-GWT-compatible classes -->
-    <exclude name='**/*Test.java' />
-  </source>
+
   <source path='org/allbinary'>
     <!-- Exclude non-GWT-compatible classes -->
     <exclude name='**/*Test.java' />

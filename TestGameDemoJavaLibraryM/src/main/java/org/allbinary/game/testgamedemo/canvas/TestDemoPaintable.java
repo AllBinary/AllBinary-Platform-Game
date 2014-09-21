@@ -13,11 +13,11 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
-import allbinary.game.paint.GameScrollMenuPaintable;
-import allbinary.game.paint.MainGameDemoStatePaintable;
-import allbinary.game.paint.OwnershipPaintable;
-import allbinary.graphics.color.BasicColorFactory;
-import allbinary.graphics.paint.Paintable;
+import org.allbinary.game.paint.GameScrollMenuPaintable;
+import org.allbinary.game.paint.MainGameDemoStatePaintable;
+import org.allbinary.game.paint.OwnershipPaintable;
+import org.allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.graphics.paint.Paintable;
 
 /**
  *

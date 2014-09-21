@@ -16,11 +16,11 @@ package org.allbinary.animation.image;
 import org.allbinary.game.resource.ResourceLoadingLevelFactory;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 
-import allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
-import allbinary.game.configuration.feature.Features;
-import allbinary.game.configuration.feature.GraphicsFeatureFactory;
-import allbinary.image.ImageCache;
-import allbinary.image.ImageCacheFactory;
+import org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
+import org.allbinary.game.configuration.feature.Features;
+import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
+import org.allbinary.image.ImageCache;
+import org.allbinary.image.ImageCacheFactory;
 
 public class TestGameDemoEarlyResourcesImageBasedAnimationInterfaceFactoryInterfaceFactory
         extends BaseResourceAnimationInterfaceFactoryInterfaceFactory

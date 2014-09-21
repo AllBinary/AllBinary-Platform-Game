@@ -13,9 +13,9 @@
 */
 package org.allbinary.game.testgamedemo.layer;
 
-import allbinary.game.GameInfo;
-import allbinary.game.layer.AllBinaryGameLayerManager;
-import allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.game.GameInfo;
+import org.allbinary.game.layer.AllBinaryGameLayerManager;
+import org.allbinary.graphics.color.BasicColorFactory;
 
 public class TestGameDemoLayerManager extends AllBinaryGameLayerManager
 {

@@ -17,10 +17,10 @@ import javax.microedition.lcdui.Graphics;
 
 import org.allbinary.game.testgamedemo.input.TestGameDemoGameInputMappingFactory;
 
-import allbinary.animation.AnimationInterface;
-import allbinary.game.paint.help.HelpPaintable;
-import allbinary.game.paint.help.InputMappingHelpPaintable;
-import allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.animation.AnimationInterface;
+import org.allbinary.game.paint.help.HelpPaintable;
+import org.allbinary.game.paint.help.InputMappingHelpPaintable;
+import org.allbinary.graphics.color.BasicColorFactory;
 
 public class TestGameDemoInputMappingHelpPaintable 
     extends InputMappingHelpPaintable

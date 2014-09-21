@@ -18,21 +18,21 @@ import javax.microedition.lcdui.CommandListener;
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 
-import abcs.logic.communication.log.PreLogUtil;
-import allbinary.game.GameInfo;
-import allbinary.game.GameMode;
-import allbinary.game.GameTypeFactory;
-import allbinary.game.PlayerTypesFactory;
-import allbinary.game.configuration.GameSpeed;
-import allbinary.game.displayable.canvas.DemoCanvas;
-import allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
-import allbinary.game.layer.AllBinaryGameLayerManager;
-import allbinary.game.paint.ColorFillPaintableFactory;
-import allbinary.game.score.BasicHighScoresFactory;
-import allbinary.graphics.color.BasicColorFactory;
-import allbinary.graphics.form.FormPaintable;
-import allbinary.graphics.paint.NullInitUpdatePaintable;
-import allbinary.graphics.paint.NullPaintable;
+import org.allbinary.logic.communication.log.PreLogUtil;
+import org.allbinary.game.GameInfo;
+import org.allbinary.game.GameMode;
+import org.allbinary.game.GameTypeFactory;
+import org.allbinary.game.PlayerTypesFactory;
+import org.allbinary.game.configuration.GameSpeed;
+import org.allbinary.game.displayable.canvas.DemoCanvas;
+import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;
+import org.allbinary.game.layer.AllBinaryGameLayerManager;
+import org.allbinary.game.paint.ColorFillPaintableFactory;
+import org.allbinary.game.score.BasicHighScoresFactory;
+import org.allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.graphics.form.FormPaintable;
+import org.allbinary.graphics.paint.NullInitUpdatePaintable;
+import org.allbinary.graphics.paint.NullPaintable;
 
 public class TestGameDemoStartCanvas extends DemoCanvas
 {

@@ -1,7 +1,7 @@
 package org.allbinary.game.testgamedemo.init;
 
-import allbinary.game.resource.ResourceInitialization;
-import allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import org.allbinary.game.resource.ResourceInitialization;
+import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import javax.microedition.lcdui.CommandListener;
 import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
 

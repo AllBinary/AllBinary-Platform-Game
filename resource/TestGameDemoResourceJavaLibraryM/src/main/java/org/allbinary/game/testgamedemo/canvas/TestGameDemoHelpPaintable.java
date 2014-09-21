@@ -13,8 +13,8 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
-import allbinary.game.paint.help.HelpPaintable;
-import allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.game.paint.help.HelpPaintable;
+import org.allbinary.graphics.color.BasicColorFactory;
 
 public class TestGameDemoHelpPaintable extends HelpPaintable
 {

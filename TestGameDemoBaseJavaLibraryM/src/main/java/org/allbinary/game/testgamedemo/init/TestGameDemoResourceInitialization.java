@@ -13,7 +13,7 @@
 */
 package org.allbinary.game.testgamedemo.init;
 
-import allbinary.game.resource.ResourceInitialization;
+import org.allbinary.game.resource.ResourceInitialization;
 
 public class TestGameDemoResourceInitialization 
     extends ResourceInitialization

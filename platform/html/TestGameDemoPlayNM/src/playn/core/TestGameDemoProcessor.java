@@ -4,18 +4,18 @@
  */
 package playn.core;
 
-import allbinary.canvas.Processor;
-import allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-import allbinary.input.motion.button.TouchButtonBlankResource;
-import allbinary.input.motion.button.TouchButtonDownResource;
-import allbinary.input.motion.button.TouchButtonGenericActionResource;
-import allbinary.input.motion.button.TouchButtonStartResource;
-import allbinary.input.motion.button.TouchButtonStrafeLeftResource;
-import allbinary.input.motion.button.TouchButtonStrafeRightResource;
-import allbinary.input.motion.button.TouchButtonTurnLeftResource;
-import allbinary.input.motion.button.TouchButtonTurnRightResource;
-import allbinary.input.motion.button.TouchButtonUpResource;
-import allbinary.input.motion.button.TouchScreenFactory;
+import org.allbinary.canvas.Processor;
+import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import org.allbinary.input.motion.button.TouchButtonBlankResource;
+import org.allbinary.input.motion.button.TouchButtonDownResource;
+import org.allbinary.input.motion.button.TouchButtonGenericActionResource;
+import org.allbinary.input.motion.button.TouchButtonStartResource;
+import org.allbinary.input.motion.button.TouchButtonStrafeLeftResource;
+import org.allbinary.input.motion.button.TouchButtonStrafeRightResource;
+import org.allbinary.input.motion.button.TouchButtonTurnLeftResource;
+import org.allbinary.input.motion.button.TouchButtonTurnRightResource;
+import org.allbinary.input.motion.button.TouchButtonUpResource;
+import org.allbinary.input.motion.button.TouchScreenFactory;
 import org.allbinary.playn.processors.GameHtmlHasLoadedResourcesProcessor;
 import org.allbinary.playn.processors.GameHtmlLoadResourcesProcessor;
 import org.allbinary.playn.processors.MidletStartupProcessor;

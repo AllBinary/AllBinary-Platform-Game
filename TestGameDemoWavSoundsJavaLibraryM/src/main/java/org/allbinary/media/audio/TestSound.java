@@ -16,8 +16,8 @@
  */
 package org.allbinary.media.audio;
 
-import allbinary.media.audio.CompositeSound;
-import allbinary.media.audio.Sound;
+import org.allbinary.media.audio.CompositeSound;
+import org.allbinary.media.audio.Sound;
 
 public class TestSound extends CompositeSound
 {

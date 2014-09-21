@@ -13,12 +13,12 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
-import allbinary.animation.ColorLessVectorAnimation;
-import allbinary.animation.IndexedAnimation;
-import allbinary.animation.VectorExplosionGenerator;
-import allbinary.animation.special.TitleAnimation;
-import allbinary.graphics.color.BasicColor;
-import allbinary.graphics.color.BasicColorFactory;
+import org.allbinary.animation.ColorLessVectorAnimation;
+import org.allbinary.animation.IndexedAnimation;
+import org.allbinary.animation.VectorExplosionGenerator;
+import org.allbinary.animation.special.TitleAnimation;
+import org.allbinary.graphics.color.BasicColor;
+import org.allbinary.graphics.color.BasicColorFactory;
 
 public class TitleAnimationFactory
 {

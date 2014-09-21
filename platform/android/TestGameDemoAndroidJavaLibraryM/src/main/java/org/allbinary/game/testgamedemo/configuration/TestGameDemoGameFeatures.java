@@ -3,12 +3,12 @@ package org.allbinary.game.testgamedemo.configuration;
 import org.allbinary.input.gyro.OrientationData;
 import org.allbinary.util.BasicArrayList;
 
-import allbinary.game.configuration.GameConfigurationCentral;
-import allbinary.game.configuration.GameConfigurationSingleton;
-import allbinary.game.configuration.feature.GameFeatureChoiceGroups;
-import allbinary.game.configuration.feature.GameFeatureFactory;
-import allbinary.game.configuration.feature.SensorFeatureFactory;
-import allbinary.init.Init;
+import org.allbinary.game.configuration.GameConfigurationCentral;
+import org.allbinary.game.configuration.GameConfigurationSingleton;
+import org.allbinary.game.configuration.feature.GameFeatureChoiceGroups;
+import org.allbinary.game.configuration.feature.GameFeatureFactory;
+import org.allbinary.game.configuration.feature.SensorFeatureFactory;
+import org.allbinary.init.Init;
 
 public class TestGameDemoGameFeatures extends Init
 {
