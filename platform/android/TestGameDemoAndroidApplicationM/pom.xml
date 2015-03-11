@@ -22,6 +22,28 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
+            <artifactId>J2MEGameMidletAsActivityJavaLibrary</artifactId>        
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>J2MEMidletAsActivityJavaLibrary</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>AndroidResourceLibrary</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>FileLicenseInitInfoJavaLibrary</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
             <artifactId>XmlRpcJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -52,7 +74,7 @@
         <dependency>
             <groupId>tv.ouya</groupId>
             <artifactId>ouya</artifactId>
-            <version>1.0.13-SNAPSHOT</version>
+            <version>2.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -121,7 +143,7 @@
                 </configuration>
             </plugin>
         
-<!-- If proguard for the android-maven-plugin fails for work then use below -->
+            <!-- If proguard for the android-maven-plugin fails for work then use below -->
             <!--
             <plugin>
                 <groupId>com.pyx4me</groupId>

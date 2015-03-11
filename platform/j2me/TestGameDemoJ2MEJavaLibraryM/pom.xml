@@ -110,7 +110,7 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
         
-        <!-- Only to get maven to download it -->
+        <!-- Only to get maven to download it unless alread in repo from build -->
         <dependency>
             <groupId>net.sf.antenna</groupId>
             <artifactId>antenna</artifactId>
