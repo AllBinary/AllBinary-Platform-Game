@@ -8,7 +8,6 @@
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
-        <relativePath>../../../</relativePath>
     </parent>
 
     <artifactId>TestGameDemoJ2SEPlatformP</artifactId>

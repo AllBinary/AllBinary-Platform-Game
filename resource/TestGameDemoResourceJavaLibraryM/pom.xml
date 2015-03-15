@@ -4,11 +4,10 @@
 
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
-        <artifactId>TestGameDemo</artifactId>
+        <artifactId>TestGameDemoParent</artifactId>
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
-        <relativePath>../../</relativePath>
     </parent>
 
     <artifactId>TestGameDemoResourceJavaLibrary</artifactId>
