@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
     <parent>
         <groupId>org.allbinary.gwt.forplayn</groupId>
         <artifactId>AllBinaryPlaynGWT</artifactId>
@@ -10,13 +11,13 @@
         <version>1.0.0-SNAPSHOT</version>
         <!-- AllBinary Platform Version End -->
     </parent>
-  
+    
     <groupId>org.allbinary.game.testgamedemo</groupId>
     <artifactId>TestGameDemoPlayNWar</artifactId>
-    <!-- AllBinary Platform Version Start -->
+    <!-- TestGameDemo Version Start -->
     <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
-  
+    <!-- TestGameDemo Version End -->
+        
     <name>TestGameDemoPlayNWar</name>
     <packaging>war</packaging>
 
@@ -26,6 +27,8 @@
 
         <buildLabel>${version}</buildLabel>
         <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+        <testgamedemo.version>1.0.0-SNAPSHOT</testgamedemo.version>
+        <allbinary.platform.version>1.0.0-SNAPSHOT</allbinary.platform.version>
 
     </properties>
 
@@ -34,9 +37,9 @@
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPlayN</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+            <!-- Game Version Start -->
+            <version>${testgamedemo.version}</version>
+            <!-- Game Version Start -->
         </dependency>
 
         <dependency>
@@ -45,12 +48,25 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     
+    <!--
+        <dependency>
+            <groupId>com.allen-sauer.gwt.log</groupId>
+            <artifactId>gwt-log</artifactId>
+            <version>3.3.2</version>
+        </dependency>
         <dependency>
             <groupId>allen_sauer</groupId>
             <artifactId>gwt-log</artifactId>
             <version>3.1.4</version>
         </dependency>
-    
+        
+        -->
+        <dependency>
+            <groupId>com.allen-sauer.gwt.log</groupId>
+            <artifactId>gwt-log</artifactId>
+            <version>3.1.6</version>
+        </dependency>
+                    
     </dependencies>
 
     <build>
@@ -81,7 +97,7 @@
                         WEB-INF/lib/asm-3.1.jar,
                         WEB-INF/lib/guava-r09.jar,
                         WEB-INF/lib/gwt-log-3.1.4.jar,
-                        WEB-INF/lib/gwt-user-2.4.0.jar,
+                        WEB-INF/lib/gwt-user-2.6.1.jar,
                         WEB-INF/lib/gwt-voices-2.1.2.jar,
                         WEB-INF/lib/jlayer-1.0.1.jar,
                         WEB-INF/lib/playn-core-1.0-SNAPSHOT.jar,

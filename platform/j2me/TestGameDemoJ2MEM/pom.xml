@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.allbinary.game.testgamedemo</groupId>
+
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemoParent</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+
     <artifactId>TestGameDemoJ2ME</artifactId>
     <packaging>jar</packaging>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
 
     <name>TestGameDemoJ2ME</name>
     <url>http://www.allbinary.com/</url>
@@ -37,7 +42,7 @@
             <artifactId>LoggingRemoteException</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
             <optional>true</optional>
         </dependency>
@@ -46,7 +51,7 @@
             <groupId>org.allbinary</groupId>
             <artifactId>AllBinaryOnJ2MEPlatformJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -60,7 +65,7 @@
             <artifactId>TestGameDemoAndroidAdvertisementJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -68,7 +73,7 @@
             <groupId>org.allbinary.game.multiplayer</groupId>
             <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -81,7 +86,7 @@
                 <artifactId>GameLicensingInAppPurchaseJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -93,7 +98,7 @@
             <artifactId>TouchButtonMappingJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -105,7 +110,7 @@
             <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
         
@@ -116,33 +121,21 @@
             <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
             <artifactId>TestGameDemoTouchJavaLibrary</artifactId>
             -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
         </dependency>
                 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoPCClientInfoJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoJ2MEJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <!--        

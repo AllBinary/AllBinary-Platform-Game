@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.allbinary.gwt.forplayn</groupId>
         <artifactId>AllBinaryPlaynGWT</artifactId>
@@ -14,9 +15,11 @@
     <groupId>org.allbinary.game.testgamedemo</groupId>
     <artifactId>TestGameDemoHTMLTemp</artifactId>
     <name>TestGameDemoHTMLTemp</name>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+
+    <properties>
+        <buildLabel>${version}</buildLabel>
+        <allbinary.platform.version>1.0.0-SNAPSHOT</allbinary.platform.version>
+    </properties>
 
     <dependencies>
                 
@@ -34,7 +37,7 @@
             <groupId>org.microemu</groupId>
             <artifactId>microemu-playn</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
             <exclusions>
                 <exclusion>
@@ -47,9 +50,9 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ABDKPlaynJavaLibrary</artifactId>
-                <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>    
     
     </dependencies>

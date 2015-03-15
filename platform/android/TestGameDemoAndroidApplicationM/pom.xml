@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <groupId>org.allbinary.game.testgamedemo</groupId>
+
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemoParent</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>TestGameDemoAndroidApplication</artifactId>
     <packaging>apk</packaging>
-    <!-- AllBinary Platform Version Start -->
-    <version>1.0.0-SNAPSHOT</version>
-    <!-- AllBinary Platform Version End -->
 
     <name>TestGameDemoAndroidApplication</name>
     <url>http://www.allbinary.com/</url>
@@ -24,7 +29,7 @@
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEGameMidletAsActivityJavaLibrary</artifactId>        
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
             <exclusions>
                 <exclusion>
@@ -45,23 +50,23 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>XmlRpcJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
             <exclusions>
                 <exclusion>
                     <artifactId>SimpleCryptLibrary</artifactId>
                     <groupId>org.allbinary</groupId>
                 </exclusion>
             </exclusions>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>BouncyCastleDESJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->            
         </dependency>
                         
         <dependency>

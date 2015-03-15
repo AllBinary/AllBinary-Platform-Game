@@ -1,27 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.allbinary.game.testgamedemo</groupId>
-  <artifactId>TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibrary</artifactId>
-  <packaging>jar</packaging>
-  <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <name>TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibrary</name>
-  <url>http://www.allbinary.com/</url>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>AllBinary Snapshots Nexus</name>
-            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>AllBinary Releases Nexus</name>
-            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemo</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+
+    <artifactId>TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibrary</artifactId>
+    <packaging>jar</packaging>
+
+    <name>TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibrary</name>
+    <url>http://www.allbinary.com/</url>
 
     <properties>
         <buildLabel>${version}</buildLabel>
@@ -40,9 +33,8 @@
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLNoneJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
 
@@ -50,9 +42,8 @@
             <groupId>org.allbinary</groupId>
             <artifactId>ImageCacheJ2MEJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
 
@@ -60,19 +51,14 @@
             <groupId>org.allbinary</groupId>
             <artifactId>TempIntegrationJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-
             <optional>true</optional>
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
         </dependency>
 
     </dependencies>
