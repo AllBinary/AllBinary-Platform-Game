@@ -44,8 +44,7 @@
                     <artifactId>FormJavaLibrary</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        
+        </dependency>        
         -->
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -79,8 +78,7 @@
                 </exclusion>
 
             </exclusions>
-        </dependency>
-                
+        </dependency>                
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEGameMidletAsActivityJavaLibrary</artifactId>        
