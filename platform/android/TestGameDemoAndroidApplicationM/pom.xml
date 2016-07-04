@@ -334,6 +334,7 @@
                     <groupId>org.allbinary</groupId>
                     <artifactId>AndroidAPI5AndUpJavaLibrary</artifactId>
                 </exclusion>
+                <!--
                 <exclusion>
                     <groupId>org.allbinary</groupId>
                     <artifactId>MotionInputAPI5AndUpAndroidJavaLibrary</artifactId>
@@ -342,6 +343,7 @@
                     <groupId>org.allbinary</groupId>
                     <artifactId>MotionInputThroughAPI4AndroidJavaLibrary</artifactId>
                 </exclusion>
+                -->
                 <exclusion>
                     <groupId>org.allbinary</groupId>
                     <artifactId>AllBinaryJ2MELibrary</artifactId>
@@ -404,7 +406,7 @@
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->            
         </dependency>
-                        
+
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-javase</artifactId>
@@ -435,12 +437,11 @@
     </dependencies>
 
     <build>
-
-        <!-- Not working older: maven-android-plugin -->        
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <!-- Not working older: maven-android-plugin -->        
+                    <groupId>com.simpligility.maven.plugins</groupId>
                     <artifactId>android-maven-plugin</artifactId>
                     <extensions>true</extensions>
                 </plugin>
@@ -459,16 +460,18 @@
             </plugin>
 
             <plugin>
-                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <!-- 
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 3.5.1 worked with an older android sdk 
                 3.6.0 worked for a while as well 
                 3.8.2 works but you need to build in Eclipse first for NetBeans to work
                 since Eclipse has or gets the proper dependencies
                 -->
+                <groupId>com.simpligility.maven.plugins</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <version>3.8.2</version>
+                <version>4.4.2</version>
                 <configuration>
+                    <ignoreBuildWarnings>true</ignoreBuildWarnings>
                     <sdk>
                         <!-- 5 is fine but is not installed by default -->
                         <platform>19</platform>

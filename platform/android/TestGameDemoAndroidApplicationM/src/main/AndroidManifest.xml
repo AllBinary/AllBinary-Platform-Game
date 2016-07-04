@@ -35,6 +35,18 @@
 
     <uses-sdk android:minSdkVersion="1" />
 
+    <uses-permission android:name="com.android.vending.BILLING" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    
     <!-- android:xlargeScreens="true" Note: Is automatically true for sdk 14+, 
     but if you add it then you must use android:targetSdkVersion for when 
     xlargeScreens was added. So, by not having it you can support sdk 1-14 but 
@@ -55,8 +67,8 @@
 
     <application android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon" >
         <activity android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon"
-                          android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
-                          android:configChanges="keyboardHidden|orientation" >
+                  android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
+                  android:configChanges="keyboardHidden|orientation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -64,14 +76,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />  
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     
 </manifest> 

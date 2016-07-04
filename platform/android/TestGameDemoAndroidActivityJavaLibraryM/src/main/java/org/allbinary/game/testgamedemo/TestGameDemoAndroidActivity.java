@@ -99,6 +99,10 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, AndroidStrings.getInstance().CREATE));
 
+            //final String UNLOCKED = "unlock_testgamedemo_levels";
+            //InApplicationPurchaseFactory.getInstance().init(this, bundle);
+            //InApplicationPurchaseFactory.getInstance().add(new LockableFeature(UNLOCKED));
+            
             super.onCreate(icicle);
 
             if (this.isStartable())

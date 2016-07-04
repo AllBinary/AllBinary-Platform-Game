@@ -18,8 +18,8 @@
 
     <properties>
 
-        <outputPath>../TestGameDemoAndroidApplicationM\res\raw</outputPath>
-        <outputPath2>../TestGameDemoAndroidApplicationM\res\drawable</outputPath2>
+        <outputPath>../TestGameDemoAndroidApplicationM\src\main\res\raw</outputPath>
+        <outputPath2>../TestGameDemoAndroidApplicationM\src\main\res\drawable</outputPath2>
         <inputPath>..\..\..\Resources\images\release\</inputPath>
         <inputPath2>..\..\..\Resources\images\wait\</inputPath2>
         <inputPath3>..\..\..\Resources\sounds\ogg\</inputPath3>
@@ -148,7 +148,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.ogg, **\/*.png</includes>
-                            <outputDirectory>../TestGameDemoAndroidApplicationM\res\raw\</outputDirectory>
+                            <outputDirectory>../TestGameDemoAndroidApplicationM\src\main\res\raw\</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                         </configuration>
                     </execution>
