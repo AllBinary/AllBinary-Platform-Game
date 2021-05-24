@@ -258,8 +258,8 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             DisplayInfoSingleton displayInfo = DisplayInfoSingleton.getInstance();
             
             View view = this.getRootView();
-            displayInfo.setLastWidth(view.getWidth());
-            displayInfo.setLastHeight(view.getHeight());
+            //displayInfo.setLastWidth(view.getWidth());
+            //displayInfo.setLastHeight(view.getHeight());
             
             Bitmap bitmap =((BitmapDrawable)drawable).getBitmap();
 
