@@ -17,7 +17,7 @@
     <url>http://www.allbinary.com/</url>
 
     <properties>
-        <android.sdk.version>4.1.1.4</android.sdk.version>
+        <android.sdk.version>11</android.sdk.version>
         <!--
         <android.sdk.path></android.sdk.path>
         -->
@@ -449,6 +449,7 @@
                     <!-- Not working older: maven-android-plugin -->        
                     <groupId>com.simpligility.maven.plugins</groupId>
                     <artifactId>android-maven-plugin</artifactId>
+                    <version>4.6.0</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
@@ -485,7 +486,7 @@
                 -->
                 <groupId>com.simpligility.maven.plugins</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <version>4.5.0</version>
+                <version>4.6.0</version>
                 <configuration>
                     <!--
                     <release>true</release>
@@ -495,7 +496,7 @@
                     -->
                     <sdk>
                         <!-- 5 is fine but is not installed by default -->
-                        <platform>19</platform>
+                        <platform>29</platform>
                     </sdk>
                     <proguard>
                         <skip>false</skip>
