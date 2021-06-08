@@ -39,6 +39,7 @@
         -->
         
         <module>../TestGameDemoBaseJavaLibraryM</module>
+        <module>../TestGameDemoThreedBaseJavaLibraryM</module>
         <module>../TestGameDemoGameAIJavaLibraryM</module>
         <module>../resource/TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
         <module>../resource/TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>

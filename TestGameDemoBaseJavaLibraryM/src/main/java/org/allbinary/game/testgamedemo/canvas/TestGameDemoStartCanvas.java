@@ -54,7 +54,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
                 );
 
         this.setSpecialAnimationInterface(
-                TitleAnimationFactory.getInstance());
+                TestGameDemoTitleAnimationFactory.getInstance());
 
         this.setDefaultPaintableInterface(
                 ColorFillPaintableFactory.getInstance(BasicColorFactory.getInstance().RED));
