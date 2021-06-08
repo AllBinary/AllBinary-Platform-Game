@@ -14,11 +14,13 @@ import org.allbinary.logic.communication.log.PreLogUtil;
 public class TestGameDemoAndroidMin3dView 
 extends AllBinaryMidletMin3dSurfaceView
 {
+    private final String TAG = "TestGameDemoAndroidMin3dView";
+    
     public TestGameDemoAndroidMin3dView(Context context, AttributeSet attrs)
     {
         super(context, attrs);
 
-        PreLogUtil.put(CommonStrings.getInstance().START, this, CommonStrings.getInstance().CONSTRUCTOR);
+        PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
         
         SceneController sceneController = 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();

@@ -9,10 +9,12 @@ import org.allbinary.logic.communication.log.PreLogUtil;
 public class TestGameDemoAndroidOpenGLESView 
 extends AllBinaryMidletOpenGLSurfaceView
 {	
+    private final String TAG = "TestGameDemoAndroidOpenGLESView";
+    
 	public TestGameDemoAndroidOpenGLESView(
 	        Context context, AttributeSet attrs) {
 		super(context, attrs);
                 
-                PreLogUtil.put(CommonStrings.getInstance().START, this, CommonStrings.getInstance().CONSTRUCTOR);
+                PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
 	}
 }

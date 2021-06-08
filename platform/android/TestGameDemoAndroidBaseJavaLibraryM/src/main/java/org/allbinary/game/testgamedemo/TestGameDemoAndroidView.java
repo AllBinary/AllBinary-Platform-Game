@@ -8,9 +8,11 @@ import org.allbinary.logic.communication.log.PreLogUtil;
 
 public class TestGameDemoAndroidView extends AllBinaryMidletView
 {	
+    private final String TAG = "TestGameDemoAndroidView";
+    
 	public TestGameDemoAndroidView(Context context, AttributeSet attrs) {
 		super(context, attrs);
                 
-                PreLogUtil.put(CommonStrings.getInstance().START, this, CommonStrings.getInstance().CONSTRUCTOR);
+                PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
 	}
 }

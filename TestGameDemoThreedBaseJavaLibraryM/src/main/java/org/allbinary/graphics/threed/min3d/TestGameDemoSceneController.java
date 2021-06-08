@@ -36,10 +36,14 @@ import org.allbinary.graphics.threed.min3d.renderer.Object3dContainerUtil;
 public class TestGameDemoSceneController 
 extends AllBinaryGameSceneController
 {
+    private final String TAG = "TestGameDemoSceneController";
+    
     public TestGameDemoSceneController()
     {
         // super(new RendererFactory());
         super(new Min3dAllBinaryRendererFactory(), new VehicleCameraFactory(), new AllBinarySceneFactory(), true);
+        
+        PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
     }
 
     private boolean initialized;
