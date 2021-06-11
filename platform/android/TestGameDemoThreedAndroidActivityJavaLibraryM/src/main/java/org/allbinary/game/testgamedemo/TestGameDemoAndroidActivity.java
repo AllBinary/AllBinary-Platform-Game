@@ -31,8 +31,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import org.allbinary.android.device.OpenGLESGraphicsFactory;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+import org.microemu.android.device.AndroidDisplayOpenGLESGraphicsFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
@@ -80,12 +82,15 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         final OpenGLFeatureFactory openGLFeatureFactory = 
             OpenGLFeatureFactory.getInstance();
         
-        features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
-        //features.addDefault(openGLFeatureFactory.OPENGL_3D);
         //features.addDefault(openGLFeatureFactory.OPENGL_2D);
+        //features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
+        features.addDefault(openGLFeatureFactory.OPENGL_3D);
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
         
+        OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayOpenGLESGraphicsFactory());
+        //OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
+                
         final AndroidResources androidResources = AndroidResources.getInstance();
         
         this.initViewIds(
@@ -112,7 +117,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 ,
                 false //GameAdStateFactory.getInstance().isEnabled()
                 );
-
+        
         this.setRootViewId(this.getViewId());
     }
 

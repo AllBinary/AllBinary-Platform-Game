@@ -5,7 +5,7 @@
 
     <org.allbinary.game.testgamedemo.TestGameDemoAndroidOpenGLESView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/zeptoracer_gl"
+        android:id="@+id/testgamedemo_gl"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 

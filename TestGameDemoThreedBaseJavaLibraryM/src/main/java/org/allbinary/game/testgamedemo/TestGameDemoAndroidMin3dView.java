@@ -2,12 +2,12 @@ package org.allbinary.game.testgamedemo;
 
 import min3d.core.SceneController;
 
-import org.allbinary.android.view.AllBinaryMidletMin3dSurfaceView;
-import org.allbinary.graphics.opengles.OpenGLThreadUtil;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
+import org.allbinary.android.view.AllBinaryMidletMin3dSurfaceView;
+import org.allbinary.graphics.opengles.OpenGLThreadUtil;
 import org.allbinary.logic.basic.string.CommonStrings;
 import org.allbinary.logic.communication.log.PreLogUtil;
 
