@@ -22,6 +22,7 @@ import min3d.core.TextureManager;
 import min3d.objectPrimitives.Rectangle;
 import min3d.parser.ModelType;
 import min3d.parser.ModelTypeFactory;
+import min3d.vos.CameraFactory;
 import min3d.vos.light.Light;
 import org.allbinary.AndroidResources;
 import org.allbinary.android.AndroidInfoFactory;
@@ -32,6 +33,7 @@ import org.allbinary.game.layer.SimpleVehicleFollowCameraLayer;
 import org.allbinary.graphics.opengles.OpenGLCapabilities;
 import org.allbinary.graphics.threed.min3d.renderer.Min3dAllBinaryRendererFactory;
 import org.allbinary.graphics.threed.min3d.renderer.Object3dContainerUtil;
+import org.allbinary.graphics.threed.min3d.renderer.RendererFactory;
 
 public class TestGameDemoSceneController 
 extends AllBinaryGameSceneController
@@ -41,7 +43,9 @@ extends AllBinaryGameSceneController
     public TestGameDemoSceneController()
     {
         // super(new RendererFactory());
-        super(new Min3dAllBinaryRendererFactory(), new VehicleCameraFactory(), new AllBinarySceneFactory(), true);
+        //super(new Min3dAllBinaryRendererFactory(), new VehicleCameraFactory(), new AllBinarySceneFactory(), true);
+        super(new Min3dAllBinaryRendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
+        //super(new RendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
         
         PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
     }
@@ -53,8 +57,8 @@ extends AllBinaryGameSceneController
     int index;
     
 
-    private final TextureListFactory textureListFactory = TextureListFactory.getInstance();
-    private final Min3dSceneResourcesFactory min3dSceneResourcesFactory = Min3dSceneResourcesFactory.getInstance();
+    //private final TextureListFactory textureListFactory = TextureListFactory.getInstance();
+    //private final Min3dSceneResourcesFactory min3dSceneResourcesFactory = Min3dSceneResourcesFactory.getInstance();
 
     @Override
     public void initScene(GL10 gl)
@@ -74,7 +78,7 @@ extends AllBinaryGameSceneController
             ResourceUtil resourceUtil = ResourceUtil.getInstance();
             
             //When I can get resources fixed for opengl then I reload without loading models again.
-            //if(!this.initialized)
+            //if(!this.initialized) 
             //{
               //  this.initialized = true;
             //}
@@ -198,57 +202,6 @@ extends AllBinaryGameSceneController
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, METHOD_NAME, e));
         }
-    }
-
-    protected void addMapCell(GL10 gl, Object3d trackObject3dContainer, String textureName)
-    throws Exception
-    {
-        ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
-
-        progressCanvas.addEarlyPortion(portion, loadingString, index++);
-
-        textureListFactory.loadTexture(gl, textureName);
-
-        Object3dContainerUtil.getInstance().replaceTextures(
-                trackObject3dContainer, textureName);
-        min3dSceneResourcesFactory.add(textureName, trackObject3dContainer);
-    }
-
-    private Object3d vehicleObject3dContainer;
-    
-    protected void loadVehicleThreedResources(GL10 gl) 
-            throws Exception
-    {
-        final int portion = 120;
-
-        int index = 1;
-
-        ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
-
-        //Min3dSceneResourcesFactory min3dSceneResourcesFactory = 
-            //Min3dSceneResourcesFactory.getInstance();
-
-        //ModelTypeFactory modelTypeFactory = ModelTypeFactory.getInstance();
-        //ModelType OBJ = ModelTypeFactory.getInstance().OBJ;
-
-        //Boolean FALSE = BooleanFactory.getInstance().FALSE;
-        //ThreedLoaderFactory threedLoaderFactory = ThreedLoaderFactory.getInstance();
-
-        progressCanvas.addEarlyPortion(portion, loadingString, index++);
-        
-        //Object3d otherVehicleObject3dContainer = vehicleObject3dContainer.cloneImmutable();
-
-        /*
-        String textureName = vehicleResources.BODY;
-
-        textureListFactory.loadTexture(gl, textureName);
-
-        Object3dContainerUtil.getInstance().replaceTextures(
-                otherVehicleObject3dContainer, textureName);
-
-        min3dSceneResourcesFactory.add(
-                vehicleResources.BODY, otherVehicleObject3dContainer);        
-        */
     }
     
     //private PlayerVehicleLayer playerVehicleLayer;
