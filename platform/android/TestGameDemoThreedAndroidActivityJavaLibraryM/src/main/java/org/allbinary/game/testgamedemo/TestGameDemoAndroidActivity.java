@@ -265,7 +265,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
     public void setBackgrounds() throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "getBackground"));
+        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "setBackground"));
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         
