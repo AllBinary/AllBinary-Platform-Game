@@ -111,10 +111,10 @@ implements ColorChangeListener
 
         int index = size - 1;
 
-        CameraLayer cameraLayer = testGameDemoSceneController.getCameraLayer();
+        //CameraLayer cameraLayer = testGameDemoSceneController.getCameraLayer();
         
-        if(cameraLayer != null)
-        {
+        //if(cameraLayer != null)
+        //{
             int halfHeight = (graphics.getClipHeight() >> 3) / 3 * 2;
             
         //for (int index = 0; index < size; index++)
@@ -154,6 +154,6 @@ implements ColorChangeListener
                     //ay,
                     az);
         //}
-        }
+        //}
     }
 }
