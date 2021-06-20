@@ -15,7 +15,6 @@ import org.allbinary.game.displayable.canvas.TitleResource;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoTitleAnimationFactory;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-import org.allbinary.logic.basic.string.StringUtil;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 
@@ -26,7 +25,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 {
     public TestGameDemoEarlyResourcesOpenGLThreedBasedAnimationInterfaceFactoryInterfaceFactory()
     {
-        super("Early OpenGL Vector Animations");
+        super("Early OpenGL Animations");
     }
 
     public void init(int level) throws Exception
