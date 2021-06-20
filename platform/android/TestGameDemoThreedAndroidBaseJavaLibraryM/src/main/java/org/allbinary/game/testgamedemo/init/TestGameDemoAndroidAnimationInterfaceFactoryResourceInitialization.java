@@ -33,8 +33,8 @@ extends ResourceInitialization
         //featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 //new TestGameDemoImageArrayBasedAnimationInterfaceFactoryInterfaceFactory());
 
-        //featuredAnimationInterfaceFactoryInterfaceFactory.add(
-                //new TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory());
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
+                new TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory());
 
         featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactoryInterfaceFactory());

@@ -5,7 +5,8 @@ import org.allbinary.graphics.threed.min3d.TestGameDemoSceneController;
 
 public class TestGameDemoAllBinarySceneControllerFactory
 {
-    private static final AllBinarySceneController instance = new TestGameDemoSceneController();
+    private static final AllBinarySceneController instance = 
+            new TestGameDemoSceneController();
 
     public static final AllBinarySceneController getInstance()
     {
