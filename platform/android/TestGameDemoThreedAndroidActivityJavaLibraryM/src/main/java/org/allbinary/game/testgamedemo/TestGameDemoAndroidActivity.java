@@ -83,8 +83,8 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             OpenGLFeatureFactory.getInstance();
         
         //features.addDefault(openGLFeatureFactory.OPENGL_2D);
-        //features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
-        features.addDefault(openGLFeatureFactory.OPENGL_3D);
+        features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
+        //features.addDefault(openGLFeatureFactory.OPENGL_3D);
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
         
