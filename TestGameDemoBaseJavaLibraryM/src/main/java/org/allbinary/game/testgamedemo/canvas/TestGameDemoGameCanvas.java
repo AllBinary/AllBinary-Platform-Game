@@ -337,6 +337,8 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     
     public void draw(Graphics graphics)
     {
+        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "draw"));
+        
         this.clear(graphics);
 
         this.getBasicColorUtil().setBasicColor(graphics, gameLayerManager.getForegroundBasicColor());
