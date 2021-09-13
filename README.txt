@@ -19,7 +19,7 @@ Please see the LICENSE file in the root of the repository.
 
 Where is the other code?
 
-It depends on the AllBinary Platform and it thirdparty libraries.
+It depends on the AllBinary Platform and thirdparty libraries.
 
 Who is responsible for all this shit?
 
@@ -27,7 +27,8 @@ Travis Berthelot travisberthelot@hotmail.com
 
 What is the AllBinary Plaform Game?
 
-The AllBinary Platform Game is the simplest game for the AllBinary Platform.
+The AllBinary Platform Game is the simplest game state management example for the 
+AllBinary Platform.
 
 It has builds for Android, J2ME, HTML5, and J2SE.
 (Allowing it to run on BlackBerry, Tizen, Android, Moblin, IPhone, Linux, Windows, 
