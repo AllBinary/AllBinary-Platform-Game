@@ -36,8 +36,8 @@ public class TestGameDemoTitleAnimationFactory
     public final TitleAnimation getInstance(IndexedAnimation[] animationInterfaceArray) throws Exception
     {   
         final BasicColor[] basicColorArray = new BasicColor[2];
-        basicColorArray[0] = BasicColorFactory.getInstance().GREEN;
-        basicColorArray[1] = BasicColorFactory.getInstance().GREY;
+        basicColorArray[0] = BasicColorFactory.getInstance().PURPLE;
+        basicColorArray[1] = BasicColorFactory.getInstance().BLACK;
         
         final int[] deltaXArray = new int[2];
         deltaXArray[0] = 0;

@@ -28,8 +28,8 @@ public class TestGameDemoTitleAnimationFactory
         final IndexedAnimation[] animationInterfaceArray = new IndexedAnimation[2];
         
         final BasicColor[] basicColorArray = new BasicColor[2];
-        basicColorArray[0] = BasicColorFactory.getInstance().GREEN;
-        basicColorArray[1] = BasicColorFactory.getInstance().GREY;
+        basicColorArray[0] = BasicColorFactory.getInstance().YELLOW;
+        basicColorArray[1] = BasicColorFactory.getInstance().YELLOW;
         
         final int[] deltaXArray = new int[2];
         deltaXArray[0] = 0;

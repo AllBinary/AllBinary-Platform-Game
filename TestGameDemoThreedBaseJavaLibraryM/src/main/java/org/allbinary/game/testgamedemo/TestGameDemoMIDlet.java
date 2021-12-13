@@ -60,7 +60,7 @@ public class TestGameDemoMIDlet extends
        return TestGameDemoInputMappingHelpPaintable.getInstance();
    }
    
-   protected GameCanvasRunnableInterface createDemoGameCanvasRunnableInterface() throws Exception
+   public GameCanvasRunnableInterface createDemoGameCanvasRunnableInterface() throws Exception
    {
       return new TestGameDemoStartCanvas(this);
    }

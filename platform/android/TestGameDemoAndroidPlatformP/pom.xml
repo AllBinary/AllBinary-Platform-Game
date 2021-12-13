@@ -33,7 +33,9 @@
         
         <module>../TestGameDemoAndroidM</module>
         <module>../TestGameDemoAndroidApplicationM</module>
-        
+
+        <!--
+        -->
         <module>../TestGameDemoThreedAndroidPlatformP</module>
 
     </modules>

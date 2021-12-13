@@ -34,6 +34,7 @@ import android.view.View;
 import org.allbinary.android.device.OpenGLESGraphicsFactory;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+import org.microemu.android.device.AndroidDisplayMin3dGraphicsFactory;
 import org.microemu.android.device.AndroidDisplayOpenGLESGraphicsFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity

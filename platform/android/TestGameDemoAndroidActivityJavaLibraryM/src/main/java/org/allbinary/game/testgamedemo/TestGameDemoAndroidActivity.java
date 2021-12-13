@@ -31,6 +31,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import org.allbinary.android.device.OpenGLESGraphicsFactory;
+import org.allbinary.graphics.opengles.OpenGLConfiguration;
+import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
+import org.microemu.android.device.AndroidDisplayOpenGLESGraphicsFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
@@ -40,7 +44,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         try
         {
-            GameAdState gameAdState = 
+            final GameAdState gameAdState = 
                 GameAdStateFactory.getInstance().getInstance(
                 		TestGameDemoSoftwareInfo.getInstance());
 
@@ -52,6 +56,15 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         }
     }
 
+//    protected void initOpenGL()
+//    throws Exception
+//    {
+//        final OpenGLConfiguration openGLConfiguration = 
+//            OpenGLConfiguration.getInstance();
+//        openGLConfiguration.setOpenGL(true);
+//        openGLConfiguration.write();        
+//    }
+    
     protected void init()
     {
         super.init();
@@ -62,6 +75,18 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     protected void initViewIds() 
     throws Exception
     {
+//        this.initOpenGL();
+//
+//        final Features features = Features.getInstance();
+//
+//        final OpenGLFeatureFactory openGLFeatureFactory
+//                = OpenGLFeatureFactory.getInstance();
+//
+//        features.addDefault(openGLFeatureFactory.OPENGL_SURFACE_VIEW);
+//        features.addDefault(openGLFeatureFactory.OPENGL_2D);
+//
+//        OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayOpenGLESGraphicsFactory());
+        
         final AndroidResources androidResources = AndroidResources.getInstance();
         
         this.initViewIds(
@@ -81,14 +106,13 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                         //androidResources.layout.testgamedemo_min3d_layout,
                         //androidResources.layout.testgamedemo_gl_ad_overlay_layout,
                         //androidResources.layout.testgamedemo_min3d_ad_overlay_layout,
-                        
                         //androidResources.layout.testgamedemo_gl_ad_frame_layout,
                         //androidResources.layout.testgamedemo_min3d_ad_frame_layout,
                 }
                 ,
-                true
+                false
                 );
-
+        
         this.setRootViewId(this.getViewId());
     }
 
