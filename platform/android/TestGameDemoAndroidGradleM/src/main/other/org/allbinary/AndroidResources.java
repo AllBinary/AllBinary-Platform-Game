@@ -4,12 +4,12 @@ import org.allbinary.game.testgamedemo.R;
 
 public class AndroidResources
 {
-    private static final AndroidResources instance = new AndroidResources();
+    private static final org.allbinary.AndroidResources instance = new org.allbinary.AndroidResources();
 
     /**
      * @return the instance
      */
-    public static AndroidResources getInstance()
+    public static org.allbinary.AndroidResources getInstance()
     {
         return instance;
     }
@@ -19,9 +19,10 @@ public class AndroidResources
         public final int testgamedemo_wait_256_by_256 = R.drawable.testgamedemo_wait_256_by_256;
     }
 
-    public Rdrawable drawable = new Rdrawable();
+    public org.allbinary.AndroidResources.Rdrawable drawable = new org.allbinary.AndroidResources.Rdrawable();
 
     public class Rid {
+        public final int custom_web_view = R.id.custom_web_view;
         public final int testgamedemo = R.id.testgamedemo;
         public final int testgamedemo_gl = R.id.testgamedemo_gl;
         public final int ad_area_bottom = R.id.ad_area_bottom;
@@ -30,17 +31,20 @@ public class AndroidResources
         public final int ad_area_top = R.id.ad_area_top;
     }
 
-    public Rid id = new Rid();
+    public org.allbinary.AndroidResources.Rid id = new org.allbinary.AndroidResources.Rid();
 
     public class Rlayout {
+        public final int webview_layout = R.layout.webview_layout;
         public final int testgamedemo_ad_overlay_layout = R.layout.testgamedemo_ad_overlay_layout;
         public final int testgamedemo_gl_layout = R.layout.testgamedemo_gl_layout;
         public final int testgamedemo_layout = R.layout.testgamedemo_layout;
     }
 
-    public Rlayout layout = new Rlayout();
+    public org.allbinary.AndroidResources.Rlayout layout = new org.allbinary.AndroidResources.Rlayout();
 
     public class Rraw {
+        public final int about = R.raw.about;
+        public final int privacy_policy = R.raw.privacy_policy;
         public final int begin = R.raw.begin;
         public final int error = R.raw.error;
         public final int explosion = R.raw.explosion;
@@ -77,7 +81,7 @@ public class AndroidResources
         public final int youwin = R.raw.youwin;
     }
 
-    public Rraw raw = new Rraw();
+    public org.allbinary.AndroidResources.Rraw raw = new org.allbinary.AndroidResources.Rraw();
 
 //    public class Rstring {
 //        public final int grey_stripe_id = R.string.grey_stripe_id;

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.allbinary.game.testgamedemo"
-    android:versionName="1.1.9" android:versionCode="1" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <!--
     //No soft keys
@@ -74,13 +72,19 @@
     <application android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon" >
         <activity android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon"
                   android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
-                  android:configChanges="keyboardHidden|orientation" >
+                  android:configChanges="keyboardHidden|orientation" android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="tv.ouya.intent.category.APP"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="org.allbinary.android.activity.WebViewActivity"
+            android:exported="true" >
+        </activity>
+
     </application>
-    
+
 </manifest> 
