@@ -73,22 +73,6 @@
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
 
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <!-- 
-                <version>2.5.1</version>
-                <version>2.3.2</version>
-                -->
-                <configuration> 
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <compilerArgument>-Xlint:all</compilerArgument>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
-                </configuration>
-            </plugin>
             
             <!-- The Server does not need these as they are really just for GWT client compilation -->
             <plugin>
@@ -97,8 +81,7 @@
                 <version>2.1.1</version>
                 <configuration>
                     <packagingExcludes>
-                        WEB-INF/lib/MiniSpaceWarsHTMLMinimalTemp-1.0-SNAPSHOT.jar,
-                        WEB-INF/lib/MiniSpaceWarVectorCore-1.0-SNAPSHOT.jar,
+                        WEB-INF/lib/TestGameDemoHTMLTemp-1.0-SNAPSHOT.jar,
                         WEB-INF/lib/ABDKPlaynJavaLibrary-1.0-SNAPSHOT.jar,
                         WEB-INF/lib/microemu-playn-1.jar,
                         WEB-INF/lib/asm-3.1.jar,

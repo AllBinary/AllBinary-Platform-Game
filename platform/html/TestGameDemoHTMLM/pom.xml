@@ -108,6 +108,18 @@
         </dependency>
         
         <dependency>
+            <groupId>org.allbinary.input</groupId>
+            <artifactId>TouchButtonResourceOpenGLESAnimationJavaLibrary</artifactId>
+            <!--
+            <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
+            <artifactId>TouchButtonResourceAnimationJavaLibrary</artifactId>
+            -->
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+                
+        <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoNoTouchJavaLibrary</artifactId>
             <!--
@@ -149,6 +161,7 @@
     <build>
 
         <plugins>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -165,7 +178,6 @@
                     <showDeprecation>true</showDeprecation>
                 </configuration>
             </plugin>
-
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
