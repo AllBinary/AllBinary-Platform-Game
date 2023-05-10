@@ -48,39 +48,6 @@
         -->
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>FormJSEJavaLibrary</artifactId>        
-            <version>${allbinary.platform.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>FormBaseJavaLibrary</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>GameInputLibrary</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>GameSoundsJavaLibrary</artifactId>
-                </exclusion>
-
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>AllBinaryJ2MELibrary</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>EventJ2MELibrary</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.allbinary</groupId>
-                    <artifactId>J2MEJavaUtilLibrary</artifactId>                
-                </exclusion>
-
-            </exclusions>
-        </dependency>                
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>J2MEGameMidletAsActivityJavaLibrary</artifactId>        
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
@@ -100,12 +67,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEMidletAsActivityJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
             <exclusions>
                 <exclusion>
                     <groupId>org.allbinary</groupId>
@@ -137,6 +103,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        -->
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>J2MEMidletAsViewJavaLibrary</artifactId>
@@ -496,7 +463,7 @@
                     -->
                     <sdk>
                         <!-- 5 is fine but is not installed by default -->
-                        <platform>29</platform>
+                        <platform>33</platform>
                     </sdk>
                     <proguard>
                         <skip>true</skip>

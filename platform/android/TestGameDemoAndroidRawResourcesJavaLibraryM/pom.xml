@@ -24,6 +24,7 @@
         <inputPath2>..\..\..\Resources\images\wait\</inputPath2>
         <inputPath3>..\..\..\Resources\sounds\ogg\</inputPath3>
         <inputPath4>..\..\..\Resources\partner\</inputPath4>
+        <inputPath5>.\src\main\resources\</inputPath5>
         
     </properties>
 
@@ -125,6 +126,10 @@
                                 </resource>
                                 <resource>
                                     <directory>${inputPath4}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>${inputPath5}</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>              
