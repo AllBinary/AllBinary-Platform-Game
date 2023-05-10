@@ -32,6 +32,7 @@
         <module>../TestGameDemoNoTouchJavaLibraryM</module>
         <module>../TestGameDemoTouchJavaLibraryM</module>
         <module>../platform/j2me/TestGameDemoJ2MEJavaLibraryM</module>
+        <module>../platform/android/TestGameDemoThreedAndroidResourcesTempJavaLibraryM</module>
         <!--
         <module>../platform/j2se/TestGameDemoJ2SEJavaLibraryM</module>
         <module>../platform/html/TestGameDemoHTMLJavaLibraryM</module>
