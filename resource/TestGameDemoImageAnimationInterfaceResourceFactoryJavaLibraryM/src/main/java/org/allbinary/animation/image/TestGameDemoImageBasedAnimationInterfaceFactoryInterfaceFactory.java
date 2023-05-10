@@ -22,6 +22,7 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import org.allbinary.image.ImageCache;
 import org.allbinary.image.ImageCacheFactory;
+import org.allbinary.logic.basic.string.StringMaker;
 
 public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         extends BaseResourceAnimationInterfaceFactoryInterfaceFactory
@@ -51,18 +52,21 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         }
 
         final int portion = 120;
-        final String loadingString = this.toString() + " Loading: ";
+        final StringMaker stringMaker = new StringMaker();
+        final String loadingString = stringMaker.append(this.toString()).append(" Loading: ").toString();
         
         int index = 0;
 
-        ProgressCanvas progressCanvas = 
+        final ProgressCanvas progressCanvas = 
             ProgressCanvasFactory.getInstance();
 
-        progressCanvas.addPortion(portion, loadingString + index++);
+        stringMaker.delete(0, stringMaker.length());
+        progressCanvas.addPortion(portion, stringMaker.append(loadingString).append(index++).toString());
 
         this.addRectangles();
-                
-        progressCanvas.addPortion(portion, loadingString + index++);
+
+        stringMaker.delete(0, stringMaker.length());
+        progressCanvas.addPortion(portion, stringMaker.append(loadingString).append(index++).toString());
 
         //Image EXPLOSION_IMAGE = imageCache.get(
           //      ExplosionResources.getInstance().EXPLOSION_60_RESOURCE);
@@ -70,7 +74,7 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         //int scaleDenominator = 2;
         //int explosionFrameSize = (60 * GameConfigurationCentral.getInstance().SCALE.getValue().intValue()) / scaleDenominator;
 
-        //LogUtil.put(LogFactory.getInstance("Explosiont: " + explosionFrameSize + " " + explosionFrameSize/2 + " " + explosionFrameSize/4, this, CommonStrings.getInstance().INIT));
+        //LogUtil.put(LogFactory.getInstance("Explosiont: ").append(explosionFrameSize).append(" ").append(explosionFrameSize/2).append(" ").append(explosionFrameSize/4, this, CommonStrings.getInstance().INIT));
         //90 x 360
 
         //this.add(ExplosionResources.getInstance().EXPLOSION_60_RESOURCE, 

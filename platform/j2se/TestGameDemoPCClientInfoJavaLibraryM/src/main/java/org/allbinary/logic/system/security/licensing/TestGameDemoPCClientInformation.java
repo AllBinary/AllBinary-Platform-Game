@@ -13,9 +13,9 @@
 */
 package org.allbinary.logic.system.security.licensing;
 
-import org.allbinary.logic.system.security.licensing.AbeClientInformation;
 import org.allbinary.logic.basic.string.CommonSeps;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
+import org.allbinary.logic.basic.string.StringMaker;
 
 
 public class TestGameDemoPCClientInformation
@@ -25,11 +25,10 @@ extends AbeClientInformation
     public TestGameDemoPCClientInformation()
     {
         super(
-                TestGameDemoSoftwareInfo.getInstance().getName() + PC_DESC,
+                new StringMaker().append(TestGameDemoSoftwareInfo.getInstance().getName()).append(PC_DESC).toString(),
                 TestGameDemoSoftwareInfo.getInstance().getVersion(),
-                TestGameDemoSoftwareInfo.getInstance().getName() + PC_DESC +
-                CommonSeps.getInstance().SPACE + 
-                TestGameDemoSoftwareInfo.getInstance().getVersion()
+                new StringMaker().append(TestGameDemoSoftwareInfo.getInstance().getName()).append(PC_DESC)
+                        .append(CommonSeps.getInstance().SPACE).append(TestGameDemoSoftwareInfo.getInstance().getVersion()).toString()
                 );
     }
 }
