@@ -31,7 +31,10 @@
         <module>../TestGameDemoTouchHTMLM</module>
         -->
 
+        <!--
+        Uses older source version
         <module>../TestGameDemoPlayNWarM</module>
+        -->
     
     </modules>
 

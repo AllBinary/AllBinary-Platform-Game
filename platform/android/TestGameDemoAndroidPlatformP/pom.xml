@@ -32,7 +32,10 @@
         <module>../TestGameDemoAndroidClientInfoJavaLibraryM</module>
         
         <module>../TestGameDemoAndroidM</module>
+        <!--
+        Uses older source version
         <module>../TestGameDemoAndroidApplicationM</module>
+        -->
 
         <!--
         -->
