@@ -63,7 +63,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
                         TitleResource.RESOURCE_TITLE).getInstance());        
 
         this.setDefaultPaintableInterface(
-                ColorFillPaintableFactory.getInstance(BasicColorFactory.getInstance().RED));
+                ColorFillPaintableFactory.getInstance(BasicColorFactory.getInstance().RED, true));
     }
 
     protected int getNextRandom()
