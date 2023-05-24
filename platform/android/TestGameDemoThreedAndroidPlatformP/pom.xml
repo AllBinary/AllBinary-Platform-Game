@@ -40,6 +40,8 @@
         -->
         
         <module>../TestGameDemoThreedAndroidM</module>
+        <!--
+        -->
         <module>../TestGameDemoThreedAndroidApplicationM</module>
         
     </modules>
