@@ -167,7 +167,7 @@ extends AllBinaryGameSceneController
               //titleThreeObject3dContainer.getScale().y = 
                   //titleThreeObject3dContainer.getScale().z = 3f;
 
-          min3dSceneResourcesFactory.add(titleThreedResources.RESOURCE_TITLE_THREE, titleThreeObject3dContainer);
+          min3dSceneResourcesFactory.add(titleThreedResources.RESOURCE_TITLE_THREE, new Object3d[] {titleThreeObject3dContainer});
                   
             progressCanvas.addEarlyPortion(portion, loadingString, index++);
 
@@ -223,11 +223,11 @@ extends AllBinaryGameSceneController
 //              
 //              ((AllBinaryScene) scene).getThreedLayerManagerListener().getList().add(simpleGameLayer);
             
-            final Object3d titleThreeObject3dContainer = min3dSceneResourcesFactory.get(titleThreedResources.RESOURCE_TITLE_THREE);
+            final Object3d[] titleThreeObject3dContainerArray = min3dSceneResourcesFactory.get(titleThreedResources.RESOURCE_TITLE_THREE);
             
               final Group groupInterface = BasicGroupFactory.getInstance().GOOD;
               final AnimationInterfaceFactoryInterface animationInterfaceFactoryInterface = 
-                      new ThreedAnimationSingletonFactory(titleThreeObject3dContainer);
+                      new ThreedAnimationSingletonFactory(titleThreeObject3dContainerArray[0]);
               final int width = 20;
               final int height = 20;
               final Rectangle layerInfo = new Rectangle(PointFactory.getInstance().ZERO_ZERO, width, height);
@@ -237,7 +237,7 @@ extends AllBinaryGameSceneController
                       animationInterfaceFactoryInterface,
                       layerInfo, new StaticViewPosition(0,0,0));
 
-              titleThreeObject3dContainer.getRotationOrigin().y -= 90;
+              titleThreeObject3dContainerArray[0].getRotationOrigin().y -= 90;
               
               testGameDemoLayerManager.append(simpleGameLayer);
             
