@@ -77,7 +77,8 @@
     <application android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon" >
         <activity android:label="@string/testgamedemo_app_name" android:icon="@drawable/testgamedemo_icon"
                   android:name="org.allbinary.game.testgamedemo.TestGameDemoAndroidActivity"
-                  android:configChanges="keyboardHidden|orientation" >
+                  android:configChanges="keyboardHidden|orientation" 
+                  android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -85,6 +86,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="org.allbinary.android.activity.WebViewActivity"
+            android:exported="true" >
+        </activity>
+        
     </application>
     
 </manifest> 

@@ -102,11 +102,10 @@
                     <source>1.7</source>
                     <target>1.7</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
                     <compilerArguments>
                         <bootclasspath>${wtk.midpapi}</bootclasspath>
                     </compilerArguments>
+                    <showWarnings>false</showWarnings>
                 </configuration>
                 <!-- j2me configuration 
                 <configuration>
@@ -154,11 +153,11 @@
                             <resources>          
                                 <resource>
                                     <directory>${inputPath}</directory>
-                                    <filtering>true</filtering>
+                                    <filtering>false</filtering>
                                 </resource>
                                 <resource>
                                     <directory>${inputPath2}</directory>
-                                    <filtering>true</filtering>
+                                    <filtering>false</filtering>
                                 </resource>
 
                             </resources>              
