@@ -19,6 +19,7 @@ import org.allbinary.media.audio.EarlySoundsFactoryFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
+import org.allbinary.playn.input.PlayNToAllBinaryKeyInputUtil;
 
 public class TestGameDemo
     extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
@@ -27,6 +28,7 @@ implements Keyboard.Listener,
 Pointer.Listener
 {
     private final int DEVICE_ID = 0;
+    private final PlayNToAllBinaryKeyInputUtil playNToAllBinaryKeyInputUtil = PlayNToAllBinaryKeyInputUtil.getInstance();
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
 
     public TestGameDemo()
@@ -130,18 +132,38 @@ Pointer.Listener
         }
     }
     
-    public void onKeyDown(Keyboard.Event event)
-    {
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "onKeyDown"));
+    //TWB - Added for custom playn 1.0.3
+    @Override
+    public void onKeyTyped(Keyboard.TypedEvent event) {
         
-        this.getCurrentDisplayable().keyPressed(event.keyCode());
+        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.typedChar(), this, "onKeyTyped"));
+        
+        //this.getCurrentDisplayable().keyRepeated(event.keyCode());
     }
 
+    @Override
+    public void onKeyDown(Keyboard.Event event)
+    {
+        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyDown"));
+    
+        final Key key = event.key();        
+        final int abKey = this.playNToAllBinaryKeyInputUtil.PLAYN_KEY_ORDINAL_TO_CANVAS_KEY[key.ordinal()];
+        if(abKey != -1) {
+            this.getCurrentDisplayable().keyPressed(abKey);
+        }
+    }
+
+    @Override
     public void onKeyUp(Keyboard.Event event)
     {
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "onKeyUp"));
+        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyUp"));
         
-        this.getCurrentDisplayable().keyReleased(event.keyCode());
+        final Key key = event.key();
+
+        final int abKey = this.playNToAllBinaryKeyInputUtil.PLAYN_KEY_ORDINAL_TO_CANVAS_KEY[key.ordinal()];
+        if(abKey != -1) {
+            this.getCurrentDisplayable().keyReleased(abKey);
+        }
     }
 
     public void onPointerStart(Pointer.Event mouseEvent)

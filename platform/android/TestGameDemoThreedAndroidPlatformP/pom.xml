@@ -25,6 +25,8 @@
 
     <modules>
 
+        <module>../../../resource/TestGameDemoOpenGLThreedAnimationResourceJavaLibraryM</module>
+        
         <!--
         <module>../TestGameDemoThreedAndroidRawResourcesJavaLibraryM</module>
         <module>../TestGameDemoThreedAndroidResourcesTempJavaLibraryM</module>
