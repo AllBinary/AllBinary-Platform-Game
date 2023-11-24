@@ -22,7 +22,7 @@ import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import org.allbinary.image.ImageCache;
 import org.allbinary.image.ImageCacheFactory;
-import org.allbinary.logic.basic.string.StringMaker;
+import org.allbinary.logic.string.StringMaker;
 
 public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         extends BaseResourceAnimationInterfaceFactoryInterfaceFactory

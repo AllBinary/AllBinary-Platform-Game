@@ -1,5 +1,5 @@
 
-import org.allbinary.logic.basic.string.CommonStrings;
+import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
@@ -14,7 +14,7 @@ import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
 import org.allbinary.input.motion.gesture.observer.GameMotionGestureListener;
 import org.allbinary.input.motion.gesture.observer.MotionGestureReceiveInterfaceFactory;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
-import org.allbinary.media.audio.EarlySoundsFactoryFactory;
+import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
@@ -113,7 +113,7 @@ public class TestGameDemoMIDlet
     {
         try
         {
-            new Sounds(EarlySoundsFactoryFactory.getInstance()).stopAll();
+            new Sounds(EarlySoundsFactory.getInstance()).stopAll();
             new Sounds(new TestGameDemoSoundsFactory()).stopAll();
         }
         catch (Exception e)

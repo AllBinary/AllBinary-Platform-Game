@@ -14,7 +14,7 @@ import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
 
-import org.allbinary.logic.basic.string.CommonStrings;
+import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;

@@ -13,9 +13,9 @@
 */
 package org.allbinary.logic.system.security.licensing;
 
-import org.allbinary.logic.basic.string.CommonSeps;
+import org.allbinary.logic.string.CommonSeps;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
-import org.allbinary.logic.basic.string.StringMaker;
+import org.allbinary.logic.string.StringMaker;
 
 
 public class TestGameDemoPCClientInformation

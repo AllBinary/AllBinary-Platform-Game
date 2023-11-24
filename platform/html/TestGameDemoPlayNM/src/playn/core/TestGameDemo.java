@@ -1,6 +1,6 @@
 package playn.core;
 
-import org.allbinary.logic.basic.string.CommonStrings;
+import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
@@ -15,7 +15,7 @@ import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler;
 import org.allbinary.input.motion.gesture.observer.GameMotionGestureListener;
 import org.allbinary.input.motion.gesture.observer.MotionGestureReceiveInterfaceFactory;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
-import org.allbinary.media.audio.EarlySoundsFactoryFactory;
+import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
@@ -123,7 +123,7 @@ Pointer.Listener
     {
         try
         {
-            new Sounds(EarlySoundsFactoryFactory.getInstance()).stopAll();
+            new Sounds(EarlySoundsFactory.getInstance()).stopAll();
             new Sounds(TestGameDemoSoundsFactoryFactory.getInstance()).stopAll();
         }
         catch (Exception e)
