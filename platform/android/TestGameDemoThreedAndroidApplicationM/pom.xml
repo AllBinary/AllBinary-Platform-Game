@@ -358,7 +358,10 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
+            <artifactId>YourXmlRpcJavaLibrary</artifactId>
+<!--
             <artifactId>XmlRpcJavaLibrary</artifactId>
+-->
             <exclusions>
                 <exclusion>
                     <artifactId>SimpleCryptLibrary</artifactId>
