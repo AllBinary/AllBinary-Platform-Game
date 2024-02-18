@@ -11,7 +11,7 @@
 * Created By: Travis Berthelot
 * 
 */
-package org.allbinary.game.testgamedemo.canvas;
+package org.allbinary.game.canvas;
 
 import org.allbinary.logic.system.SoftwareInformation;
 

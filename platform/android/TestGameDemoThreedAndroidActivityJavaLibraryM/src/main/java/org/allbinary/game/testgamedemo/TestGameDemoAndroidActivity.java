@@ -12,7 +12,7 @@ import org.allbinary.android.activity.game.GameMidletActivity;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
-import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 
 import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;

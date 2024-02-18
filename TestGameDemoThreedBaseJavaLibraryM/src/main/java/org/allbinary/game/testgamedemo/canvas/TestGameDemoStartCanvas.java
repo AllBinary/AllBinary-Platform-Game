@@ -13,6 +13,7 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import javax.microedition.lcdui.CommandListener;
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
 import org.allbinary.animation.special.SpecialAnimation;

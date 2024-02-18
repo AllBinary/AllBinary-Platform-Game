@@ -15,7 +15,7 @@ package org.allbinary.game.testgamedemo;
 
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoGameCanvas;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoInputMappingHelpPaintable;
-import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoStartCanvas;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;

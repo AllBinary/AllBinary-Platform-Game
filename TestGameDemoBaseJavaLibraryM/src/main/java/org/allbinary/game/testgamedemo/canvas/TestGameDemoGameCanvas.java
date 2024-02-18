@@ -33,6 +33,7 @@ import org.allbinary.ai.OptimizedArtificialIntelligenceLayerProcessorForCollidab
 import org.allbinary.game.GameInfo;
 import org.allbinary.game.GameTypeFactory;
 import org.allbinary.game.IntermissionFactory;
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.game.collision.OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer;
 import org.allbinary.game.configuration.GameSpeed;
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener;

@@ -40,11 +40,6 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoJavaLibrary</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>

@@ -23,6 +23,7 @@ import org.allbinary.game.GameInfo;
 import org.allbinary.game.GameMode;
 import org.allbinary.game.GameTypeFactory;
 import org.allbinary.game.PlayerTypesFactory;
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.game.configuration.GameSpeed;
 import org.allbinary.game.displayable.canvas.DemoCanvas;
 import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface;

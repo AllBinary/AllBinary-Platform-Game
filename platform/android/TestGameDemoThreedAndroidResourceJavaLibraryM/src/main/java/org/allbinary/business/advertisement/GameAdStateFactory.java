@@ -1,7 +1,7 @@
 package org.allbinary.business.advertisement;
 
 import org.allbinary.game.GameAdState;
-import org.allbinary.game.testgamedemo.canvas.TestGameDemoSoftwareInfo;
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 
 import org.allbinary.logic.system.SoftwareInformation;
 
