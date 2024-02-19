@@ -366,7 +366,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     {
         this.clear(graphics);
 
-        this.getBasicColorUtil().setBasicColor(graphics, gameLayerManager.getForegroundBasicColor());
+        this.basicSetColorUtil.setBasicColor(graphics, gameLayerManager.getForegroundBasicColor());
 
         //graphics.drawString(TEXT, 0, halfHeight, 0);
 
