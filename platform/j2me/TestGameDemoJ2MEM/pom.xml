@@ -103,6 +103,14 @@
         </dependency>
 
         <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameScoresLocalJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
             <groupId>org.allbinary.input</groupId>
             <artifactId>NoTouchButtonResourceAnimationJavaLibrary</artifactId>
             <!--
