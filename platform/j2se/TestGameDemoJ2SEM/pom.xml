@@ -79,6 +79,13 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
+            <artifactId>GameScoresRemoteAndLocalLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
             <artifactId>XmlRpcJavaLibrary</artifactId>
 <!--
             <artifactId>XmlRpcJavaLibrary</artifactId>
