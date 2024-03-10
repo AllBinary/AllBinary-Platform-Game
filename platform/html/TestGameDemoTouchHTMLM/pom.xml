@@ -125,23 +125,17 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-<!--        <dependency>
+        <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>YourXmlRpcJavaLibrary</artifactId>
--->
+            <artifactId>GameScoresLocalLibrary</artifactId>
 <!--
-            <artifactId>XmlRpcJavaLibrary</artifactId>
+            <artifactId>GameScoresRemoteAndLocalJavaLibrary</artifactId>
+            <artifactId>GameScoresLocalLibrary</artifactId>
 -->
-<!--            <exclusions>
-                <exclusion>
-                    <artifactId>SimpleCryptLibrary</artifactId>
-                    <groupId>org.allbinary</groupId>
-                </exclusion>
-            </exclusions>-->
             <!-- AllBinary Platform Version Start -->
-<!--            <version>${allbinary.platform.version}</version>-->
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-<!--        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>

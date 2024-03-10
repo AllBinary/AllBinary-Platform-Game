@@ -30,7 +30,11 @@
         <module>../j2me/TestGameDemoJ2MEPlatformP</module>
         <module>../j2se/TestGameDemoJ2SEPlatformP</module>
         <module>../html/TestGameDemoHTMLPlatformP</module>
+        
+        <!--
+        //Needs the nexus
         <module>../android/TestGameDemoAndroidPlatformP</module>
+        -->
         
     </modules>
 

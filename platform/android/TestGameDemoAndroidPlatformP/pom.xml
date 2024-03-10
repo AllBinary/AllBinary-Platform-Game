@@ -38,8 +38,9 @@
         -->
 
         <!--
-        -->
+        //Needs the nexus
         <module>../TestGameDemoThreedAndroidPlatformP</module>
+        -->
 
     </modules>
 
