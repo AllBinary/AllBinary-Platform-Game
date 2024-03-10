@@ -87,7 +87,7 @@
             <artifactId>TestGameDemoWavSoundsJavaLibrary</artifactId>
         </dependency>
         
-        <!-- Only to get maven to download it unless already in repo from build -->
+        <!-- This is only to get the download or manual install for the application to build -->
         <dependency>
             <groupId>net.sf.antenna</groupId>
             <artifactId>antenna</artifactId>

@@ -20,6 +20,14 @@
 
 4.  Clone and build the parent pom: https://github.com/AllBinary/AllBinary-Platform-Game-Parent.git
 
+5.  Down and install antenna for the J2ME build: https://antenna.sourceforge.io
 
-5.  Clone and build the example: https://github.com/AllBinary/AllBinary-Platform-Game.git
+        <dependency>
+            <groupId>net.sf.antenna</groupId>
+            <artifactId>antenna</artifactId>
+            <version>1.2.1-beta-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+
+6.  Clone and build the example: https://github.com/AllBinary/AllBinary-Platform-Game.git
 
