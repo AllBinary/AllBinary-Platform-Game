@@ -1,17 +1,25 @@
-1.  Make the AllBinary Game Plaform Client libraries accessable by following the 
+1.  Make the AllBinary Game Plaform Client libraries accessible with following the 
     instructions at the following page:
 
     https://github.com/AllBinary/AllBinary-Platform/blob/master/HOW_TO_BUILD_OR_ACCESS_GAME_PLATFORM_CLIENTS.txt
+
 
 2.  WTK must be installed and WTK_HOME path set for the J2ME build
 
     WTK 3.4 has been found at: 
 
-    http://www.oracle.com/technetwork/java/javame/javamobile/download/sdk/index.html
+    https://www.oracle.com/technetwork/java/javame/javamobile/download/sdk/index.html
 
     Warning: WTK/SDK 8 does not support a graphics API yet and is not supported.
 
 
 3.  Android SDK must be installed and ANDROID_HOME path set for the Android build.
 
-    You Can find the Android SDK at: http://developer.android.com/sdk/index.html
+    You Can find the Android SDK at: https://developer.android.com/sdk/index.html
+
+
+4.  Clone and build the parent pom: https://github.com/AllBinary/AllBinary-Platform-Game-Parent.git
+
+
+5.  Clone and build the example: https://github.com/AllBinary/AllBinary-Platform-Game.git
+
