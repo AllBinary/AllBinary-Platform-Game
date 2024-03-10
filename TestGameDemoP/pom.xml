@@ -43,8 +43,8 @@
 
         <!--
         //Needs the nexus
-        <module>../TestGameDemoThreedBaseJavaLibraryM</module>
         -->
+        <module>../TestGameDemoThreedBaseJavaLibraryM</module>
 
         <module>../TestGameDemoGameAIJavaLibraryM</module>
         <module>../resource/TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>

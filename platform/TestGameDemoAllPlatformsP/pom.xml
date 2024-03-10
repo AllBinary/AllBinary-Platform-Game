@@ -32,9 +32,9 @@
         
         <!--
         //Needs the nexus
+        -->
         <module>../html/TestGameDemoHTMLPlatformP</module>
         <module>../android/TestGameDemoAndroidPlatformP</module>
-        -->
         
     </modules>
 

@@ -127,10 +127,10 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>GameScoresLocalLibrary</artifactId>
+            <artifactId>GameScoresLocalJavaLibrary</artifactId>
 <!--
             <artifactId>GameScoresRemoteAndLocalJavaLibrary</artifactId>
-            <artifactId>GameScoresLocalLibrary</artifactId>
+            <artifactId>GameScoresLocalJavaLibrary</artifactId>
 -->
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
