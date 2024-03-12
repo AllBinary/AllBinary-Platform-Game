@@ -59,6 +59,7 @@ import org.allbinary.graphics.displayable.command.MyCommandsFactory;
 import org.allbinary.input.motion.button.BaseTouchInput;
 import org.allbinary.input.motion.button.TestGameDemoNeededTouchButtonsBuilder;
 import org.allbinary.input.motion.button.TestGameDemoTouchButtonsBuilder;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import org.allbinary.media.AllBinaryVibration;
 import org.allbinary.media.audio.AllBinaryMediaManager;
 import org.allbinary.media.audio.PlayerQueue;
@@ -72,20 +73,24 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     private final int portion = 4;
     
-    public TestGameDemoGameCanvas(CommandListener commandListener,
-            AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
+    private final AbeClientInformationInterface abeClientInformation;
+    
+    public TestGameDemoGameCanvas(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener,
+            final AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
     {
         super(commandListener, allBinaryGameLayerManager, 
-                new BasicHighScoresFactory(TestGameDemoSoftwareInfo.getInstance()),
+                new BasicHighScoresFactory(abeClientInformation, TestGameDemoSoftwareInfo.getInstance()),
                 new TestGameDemoStaticInitializerFactory(),
            //new BasicBuildGameInitializerFactory(),
            false);
+        
+        this.abeClientInformation = abeClientInformation;
     }
 
-    public TestGameDemoGameCanvas(AllBinaryGameLayerManager allBinaryGameLayerManager)
+    public TestGameDemoGameCanvas(final AbeClientInformationInterface abeClientInformation, final AllBinaryGameLayerManager allBinaryGameLayerManager)
     throws Exception
     {
-        this(null, allBinaryGameLayerManager);
+        this(abeClientInformation, null, allBinaryGameLayerManager);
     }
     
     protected void initSpecialPaint()
@@ -128,16 +133,16 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         }
     }
 
-    protected synchronized void initConfigurable()
+    protected synchronized void initConfigurable(final AbeClientInformationInterface abeClientInformation)
     {
         try
         {
 
-        	ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
+            final ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
 
             if (ChangedGameFeatureListener.getInstance().isChanged())
             {
-                super.initConfigurable();
+                super.initConfigurable(abeClientInformation);
 
                 progressCanvas.addPortion(portion, "Group Manager");
                 GroupLayerManagerListener.getInstance().init(3);
@@ -168,7 +173,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         try
         {
             final int portion = 60;
-            super.init();
+            super.init(this.abeClientInformation);
 
             if (!this.isRunning())
             {

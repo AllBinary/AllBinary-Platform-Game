@@ -13,9 +13,7 @@
 */
 package org.allbinary.logic.system.security.licensing;
 
-import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
-
-public class AbeClientInformationInterfaceFactory
+public class TestGameDemoClientInformationInterfaceFactory
 {
     private static final AbeClientInformationInterface SINGLETON = 
         new TestGameDemoPCClientInformation();

@@ -1,6 +1,6 @@
 package org.allbinary.logic.system.security.licensing;
 
-public class AbeClientInformationInterfaceFactory
+public class TestGameDemoClientInformationInterfaceFactory
 {
     private static final AbeClientInformationInterface SINGLETON = 
         new TestGameDemoAndroidMobileClientInformation();

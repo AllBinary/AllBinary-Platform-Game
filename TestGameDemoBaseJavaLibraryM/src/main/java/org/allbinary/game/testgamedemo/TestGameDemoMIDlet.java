@@ -37,6 +37,7 @@ import org.allbinary.game.paint.help.HelpPaintable;
 import org.allbinary.game.score.BasicHighScoresFactory;
 import org.allbinary.game.score.HighScoresPaintable;
 import org.allbinary.game.score.displayable.HighScoresCanvas;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import org.allbinary.media.audio.AllBinaryMediaManagerShutdown;
 import org.allbinary.media.audio.EarlySoundsFactory;
 
@@ -47,9 +48,9 @@ public class TestGameDemoMIDlet extends
    SpecialDemoGameMidlet
    //DemoGameMidlet
 {
-   public TestGameDemoMIDlet()
+   public TestGameDemoMIDlet(final AbeClientInformationInterface abeClientInformation)
    {
-       super(LicenseLoadingTypeFactory.getIntance().OTHER);
+       super(abeClientInformation, LicenseLoadingTypeFactory.getIntance().OTHER);
        //this.setSaveGameForm(SaveGameForm.getInstance(this, "Save Game"));
    }
    
@@ -62,13 +63,13 @@ public class TestGameDemoMIDlet extends
    
    public GameCanvasRunnableInterface createDemoGameCanvasRunnableInterface() throws Exception
    {
-      return new TestGameDemoStartCanvas(this);
+      return new TestGameDemoStartCanvas(this.abeClientInformation, this);
    }
 
    protected GameCanvasRunnableInterface createGameCanvasRunnableInterface(
-		   AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
+		   final AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
    {
-	   return new TestGameDemoGameCanvas(this, allBinaryGameLayerManager);
+	   return new TestGameDemoGameCanvas(this.abeClientInformation, this, allBinaryGameLayerManager);
    }
    
    protected HighScoresCanvas createHighScoresCanvas() throws Exception
@@ -76,7 +77,7 @@ public class TestGameDemoMIDlet extends
        return new HighScoresCanvas(this,
                this.createGameLayerManager(),
                new HighScoresPaintable(),
-               new BasicHighScoresFactory(TestGameDemoSoftwareInfo.getInstance()));
+               new BasicHighScoresFactory(this.abeClientInformation, TestGameDemoSoftwareInfo.getInstance()));
    }
 
    public int getHighestLevel()

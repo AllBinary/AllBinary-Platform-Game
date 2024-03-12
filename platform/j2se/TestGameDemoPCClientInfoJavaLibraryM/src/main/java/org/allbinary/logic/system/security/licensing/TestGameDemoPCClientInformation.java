@@ -17,7 +17,6 @@ import org.allbinary.logic.string.CommonSeps;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.logic.string.StringMaker;
 
-
 public class TestGameDemoPCClientInformation
 extends AbeClientInformation
 {
@@ -28,7 +27,8 @@ extends AbeClientInformation
                 new StringMaker().append(TestGameDemoSoftwareInfo.getInstance().getName()).append(PC_DESC).toString(),
                 TestGameDemoSoftwareInfo.getInstance().getVersion(),
                 new StringMaker().append(TestGameDemoSoftwareInfo.getInstance().getName()).append(PC_DESC)
-                        .append(CommonSeps.getInstance().SPACE).append(TestGameDemoSoftwareInfo.getInstance().getVersion()).toString()
+                        .append(CommonSeps.getInstance().SPACE).append(TestGameDemoSoftwareInfo.getInstance().getVersion()).toString(),
+                TestGameDemoSoftwareInfo.getInstance().toShortString()
                 );
     }
 }

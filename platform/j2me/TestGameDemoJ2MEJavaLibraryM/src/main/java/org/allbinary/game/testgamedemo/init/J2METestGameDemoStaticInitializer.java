@@ -13,10 +13,12 @@
 */
 package org.allbinary.game.testgamedemo.init;
 
+import javax.microedition.lcdui.CommandListener;
+
 import org.allbinary.game.resource.ResourceInitialization;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-import javax.microedition.lcdui.CommandListener;
 import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 
 public class J2METestGameDemoStaticInitializer
     extends TestGameDemoStaticInitializer
@@ -24,12 +26,12 @@ public class J2METestGameDemoStaticInitializer
     private boolean platformGameInitialized;
     
     public J2METestGameDemoStaticInitializer(
-            ResourceInitialization[] resourceInitializationArray, int portion)
+            final ResourceInitialization[] resourceInitializationArray, final int portion)
     {
         super(resourceInitializationArray, portion);
     }
 
-    public void initKey(int portion) throws Exception
+    public void initKey(final int portion) throws Exception
     {
         super.initKey(portion);
         
@@ -37,9 +39,10 @@ public class J2METestGameDemoStaticInitializer
         //ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
     }
 
-    public void init(CommandListener commandListener, int level) throws Exception
+    //@Override
+    public void init(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener, final int level) throws Exception
     {
-        super.init(commandListener, level);
+        super.init(abeClientInformation, commandListener, level);
 
         if(this.isPlatformGameInitialized())
         {

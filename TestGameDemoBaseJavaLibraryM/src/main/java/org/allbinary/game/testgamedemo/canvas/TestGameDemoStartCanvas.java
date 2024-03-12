@@ -34,14 +34,16 @@ import org.allbinary.graphics.color.BasicColorFactory;
 import org.allbinary.graphics.form.FormPaintable;
 import org.allbinary.graphics.paint.NullInitUpdatePaintable;
 import org.allbinary.graphics.paint.NullPaintable;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 
 public class TestGameDemoStartCanvas extends DemoCanvas
 {
     private final int WAIT = ((GameSpeed.getInstance().getDelay() * 3) >> 1);
 
-    public TestGameDemoStartCanvas(CommandListener commandListener) throws Exception
+    public TestGameDemoStartCanvas(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener) throws Exception
     {
-        super(commandListener, new BasicHighScoresFactory(TestGameDemoSoftwareInfo.getInstance()),
+        super(abeClientInformation, commandListener, 
+            new BasicHighScoresFactory(abeClientInformation, TestGameDemoSoftwareInfo.getInstance()),
                 NullPaintable.getInstance(), NullInitUpdatePaintable.getInstance(),
                 new TestGameDemoStaticInitializerFactory(), false);
 
@@ -78,6 +80,6 @@ public class TestGameDemoStartCanvas extends DemoCanvas
 
     public GameCanvasRunnableInterface createRunnable(int randomValue) throws Exception
     {
-        return new TestGameDemoGameCanvas(this.createGameLayerManager(this.getNextRandom()));
+        return new TestGameDemoGameCanvas(this.abeClientInformation, this.createGameLayerManager(this.getNextRandom()));
     }
 }

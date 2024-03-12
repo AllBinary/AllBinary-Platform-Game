@@ -19,7 +19,7 @@ public class TestGameDemoSoftwareInfo
 {
     //This should change in next Android Release by moving AndroidMobile info only the client info
     private static final SoftwareInformation SINGLETON = 
-        new SoftwareInformation("TestDemoGame", "1.2.0");
+        new SoftwareInformation("TestDemoGame", "1.2.0", "TG");
     
     public static SoftwareInformation getInstance()
     {
