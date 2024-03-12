@@ -1,9 +1,11 @@
 package org.allbinary.game.testgamedemo.init;
 
+import javax.microedition.lcdui.CommandListener;
+
 import org.allbinary.game.resource.ResourceInitialization;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
-import javax.microedition.lcdui.CommandListener;
 import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 
 public class TestGameDemoAndroidStaticInitializer 
 extends TestGameDemoStaticInitializer
@@ -11,7 +13,7 @@ extends TestGameDemoStaticInitializer
     private boolean platformGameInitialized;
     
     public TestGameDemoAndroidStaticInitializer(
-            ResourceInitialization[] resourceInitializationArray, int portion)
+            final ResourceInitialization[] resourceInitializationArray, final int portion)
     {
         super(resourceInitializationArray, portion);
     }
@@ -23,9 +25,9 @@ extends TestGameDemoStaticInitializer
         //ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
     }
 
-    public void init(CommandListener commandListener, int level) throws Exception
+    public void init(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener, final int level) throws Exception
     {
-        super.init(commandListener, level);
+        super.init(abeClientInformation, commandListener, level);
 
         if(this.isPlatformGameInitialized())
         {

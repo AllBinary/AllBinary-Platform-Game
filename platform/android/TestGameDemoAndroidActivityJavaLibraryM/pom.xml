@@ -74,6 +74,11 @@
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
+            <artifactId>TestGameDemoAndroidClientInfoJavaLibrary</artifactId>
+        </dependency>      
+
+        <dependency>
+            <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoBaseJavaLibrary</artifactId>
         </dependency>      
         

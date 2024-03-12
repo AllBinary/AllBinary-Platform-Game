@@ -13,7 +13,8 @@ public class TestGameDemoAndroidMobileClientInformation extends
                 TestGameDemoSoftwareInfo.getInstance().getVersion(),
                 TestGameDemoSoftwareInfo.getInstance().getName() + ANDROID_DESC + 
                 CommonSeps.getInstance().SPACE + 
-                TestGameDemoSoftwareInfo.getInstance().getVersion()
+                TestGameDemoSoftwareInfo.getInstance().getVersion(),
+                TestGameDemoSoftwareInfo.getInstance().toShortString()
                 );
     }
 }

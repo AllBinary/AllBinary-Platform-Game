@@ -31,15 +31,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import org.allbinary.android.device.OpenGLESGraphicsFactory;
-import org.allbinary.graphics.opengles.OpenGLConfiguration;
-import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
-import org.microemu.android.device.AndroidDisplayOpenGLESGraphicsFactory;
+import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
+
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
     public TestGameDemoAndroidActivity()
     {
+        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
+        
         //super(new ProgressHelper(AndroidResources.id.progressbar));
 
         try

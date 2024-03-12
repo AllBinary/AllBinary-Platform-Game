@@ -34,13 +34,15 @@ import android.view.View;
 import org.allbinary.android.device.OpenGLESGraphicsFactory;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
-import org.microemu.android.device.AndroidDisplayMin3dGraphicsFactory;
+import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.microemu.android.device.AndroidDisplayOpenGLESGraphicsFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
     public TestGameDemoAndroidActivity()
     {
+        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
+        
         //super(new ProgressHelper(AndroidResources.id.progressbar));
 
         try

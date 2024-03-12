@@ -19,6 +19,7 @@ import org.allbinary.media.audio.Sounds;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import org.allbinary.game.init.DefaultGameInitializationListener;
+import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
 
 public class TestGameDemoMIDlet
@@ -29,6 +30,8 @@ public class TestGameDemoMIDlet
 
     public TestGameDemoMIDlet()
     {
+        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
+        
         BasicMotionGesturesHandler motionGesturesHandler =
             motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 

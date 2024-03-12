@@ -5,18 +5,19 @@ import javax.microedition.lcdui.CommandListener;
 import org.allbinary.game.resource.ResourceInitialization;
 import org.allbinary.game.testgamedemo.configuration.TestGameDemoGameFeatures;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 
 public class TestGameDemoBaseAndroidStaticInitializer extends TestGameDemoStaticInitializer
 {
     private boolean androidGameInitialized;
     
     public TestGameDemoBaseAndroidStaticInitializer(
-            ResourceInitialization[] resourceInitializationArray, int portion)
+            final ResourceInitialization[] resourceInitializationArray, int portion)
     {
         super(resourceInitializationArray, portion);
     }
 
-    public void initKey(int portion) throws Exception
+    public void initKey(final int portion) throws Exception
     {
         super.initKey(portion);
         
@@ -24,9 +25,9 @@ public class TestGameDemoBaseAndroidStaticInitializer extends TestGameDemoStatic
         ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
     }
 
-    public void init(CommandListener commandListener, int level) throws Exception
+    public void init(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener, final int level) throws Exception
     {
-        super.init(commandListener, level);
+        super.init(abeClientInformation, commandListener, level);
 
         if(this.isAndroidGameInitialized())
         {
@@ -41,7 +42,7 @@ public class TestGameDemoBaseAndroidStaticInitializer extends TestGameDemoStatic
         ProgressCanvasFactory.getInstance().addPortion(50, "Game Options");
     }
     
-    protected void setAndroidGameInitialized(boolean androidGameInitialized)
+    protected void setAndroidGameInitialized(final boolean androidGameInitialized)
     {
         this.androidGameInitialized = androidGameInitialized;
     }
