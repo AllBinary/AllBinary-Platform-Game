@@ -20,6 +20,8 @@ import org.allbinary.logic.string.StringMaker;
 public class TestGameDemoPCClientInformation
 extends AbeClientInformation
 {
+    protected static final TestGameDemoPCClientInformation instance = new TestGameDemoPCClientInformation();
+    
     private final static String PC_DESC = "PC";
     public TestGameDemoPCClientInformation()
     {

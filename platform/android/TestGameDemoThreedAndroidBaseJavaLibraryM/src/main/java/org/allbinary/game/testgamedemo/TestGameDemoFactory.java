@@ -13,7 +13,7 @@ public class TestGameDemoFactory extends MidletFactoryInterface
     {
         if(SINGLETON == null)
         {
-            SINGLETON = new TestGameDemoMIDlet(TestGameDemoClientInformationInterfaceFactory.getInstance());
+            SINGLETON = new TestGameDemoMIDlet(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
         }
         return SINGLETON;
     }

@@ -11,14 +11,9 @@ public class TestGameDemoClientInformationInterfaceFactory extends ClientInforma
         return instance;
     }
     
-    private ClientInformation clientInformation;
-
     public ClientInformation getInstance()
     {
-        if(this.clientInformation == null) {
-            clientInformation = new TestGameDemoAndroidMobileClientInformation();
-        }
-        return clientInformation;
+        return TestGameDemoAndroidMobileClientInformation.instance;
     }
     
 }

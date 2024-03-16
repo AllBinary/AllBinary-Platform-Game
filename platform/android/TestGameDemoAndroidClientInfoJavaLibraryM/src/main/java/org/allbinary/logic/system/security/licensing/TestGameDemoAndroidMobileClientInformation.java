@@ -7,6 +7,8 @@ import org.allbinary.logic.string.CommonSeps;
 public class TestGameDemoAndroidMobileClientInformation 
 extends MobileClientInformation
 {
+    protected static final TestGameDemoAndroidMobileClientInformation instance = new TestGameDemoAndroidMobileClientInformation();
+    
     public TestGameDemoAndroidMobileClientInformation()
     {
         super(
