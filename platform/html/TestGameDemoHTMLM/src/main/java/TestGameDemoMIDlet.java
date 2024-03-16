@@ -17,7 +17,7 @@ public class TestGameDemoMIDlet
 {
     public TestGameDemoMIDlet()
     {
-        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
+        super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
         
         new DefaultGameInitializationListener();
     }

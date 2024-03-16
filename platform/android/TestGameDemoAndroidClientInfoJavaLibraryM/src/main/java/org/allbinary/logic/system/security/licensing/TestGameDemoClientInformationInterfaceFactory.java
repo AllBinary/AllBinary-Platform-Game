@@ -1,12 +1,24 @@
 package org.allbinary.logic.system.security.licensing;
 
-public class TestGameDemoClientInformationInterfaceFactory
+public class TestGameDemoClientInformationInterfaceFactory extends ClientInformationFactory
 {
-    private static final AbeClientInformationInterface SINGLETON = 
-        new TestGameDemoAndroidMobileClientInformation();
+    private static final ClientInformationFactory instance = new TestGameDemoClientInformationInterfaceFactory();
 
-    public static AbeClientInformationInterface getInstance()
-    {
-        return SINGLETON;
+    /**
+     * @return the instance
+     */
+    public static ClientInformationFactory getFactoryInstance() {
+        return instance;
     }
+    
+    private ClientInformation clientInformation;
+
+    public ClientInformation getInstance()
+    {
+        if(this.clientInformation == null) {
+            clientInformation = new TestGameDemoAndroidMobileClientInformation();
+        }
+        return clientInformation;
+    }
+    
 }

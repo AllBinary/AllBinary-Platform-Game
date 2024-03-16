@@ -10,14 +10,14 @@ import org.allbinary.game.configuration.feature.InputFeatureFactory;
 import org.allbinary.game.configuration.feature.SensorFeatureFactory;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.game.init.DefaultGameInitializationListener;
-import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
+import org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
 {
-    public TestGameDemoMIDlet()
+    public TestGameDemoMIDlet(final ClientInformationFactory clientInformationFactory)
     {
-        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
+        super(clientInformationFactory);
         
         new DefaultGameInitializationListener();
     }

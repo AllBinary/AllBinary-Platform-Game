@@ -37,7 +37,7 @@ import org.allbinary.game.paint.help.HelpPaintable;
 import org.allbinary.game.score.BasicHighScoresFactory;
 import org.allbinary.game.score.HighScoresPaintable;
 import org.allbinary.game.score.displayable.HighScoresCanvas;
-import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
+import org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import org.allbinary.media.audio.AllBinaryMediaManagerShutdown;
 import org.allbinary.media.audio.EarlySoundsFactory;
 
@@ -48,9 +48,9 @@ public class TestGameDemoMIDlet extends
    SpecialDemoGameMidlet
    //DemoGameMidlet
 {
-   public TestGameDemoMIDlet(final AbeClientInformationInterface abeClientInformation)
+   public TestGameDemoMIDlet(final ClientInformationFactory clientInformationFactory)
    {
-       super(abeClientInformation, LicenseLoadingTypeFactory.getIntance().OTHER);
+       super(clientInformationFactory, LicenseLoadingTypeFactory.getIntance().OTHER);
        //this.setSaveGameForm(SaveGameForm.getInstance(this, "Save Game"));
    }
    

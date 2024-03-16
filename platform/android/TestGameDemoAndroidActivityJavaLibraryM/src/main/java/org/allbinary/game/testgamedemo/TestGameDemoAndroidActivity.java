@@ -31,15 +31,12 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
-
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
+    
     public TestGameDemoAndroidActivity()
-    {
-        super(TestGameDemoClientInformationInterfaceFactory.getInstance());
-        
+    {   
         //super(new ProgressHelper(AndroidResources.id.progressbar));
 
         try
