@@ -32,6 +32,7 @@ public final class R {
         public static final int testgamedemo_min3d_layout=0x7f030005;
     }
     public static final class raw {
+        public static final int error=0x7f040000;
         public static final int threed_obj=0x7f040029;
         public static final int licenseinitdata=0x7f040008;
         public static final int locked_demo_game_feature_128_by_128=0x7f040009;

@@ -2,10 +2,10 @@ package org.allbinary.game.testgamedemo;
 
 import min3d.core.SceneController;
 
-
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
+
 import org.allbinary.android.view.AllBinaryMidletMin3dSurfaceView;
 import org.allbinary.graphics.opengles.OpenGLThreadUtil;
 import org.allbinary.logic.string.CommonStrings;
@@ -25,7 +25,7 @@ extends AllBinaryMidletMin3dSurfaceView
         SceneController sceneController = 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();
 
-        this.setRenderer(sceneController.getRenderer());
+        this.setRenderer((GLSurfaceView.Renderer) sceneController.getRenderer());
 
         this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
 

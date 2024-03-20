@@ -1,11 +1,13 @@
 package org.allbinary.graphics.threed.min3d;
 
-import org.allbinary.data.resource.ResourceUtil;
-import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+
 import min3d.core.SceneController;
+
+import org.allbinary.data.resource.ResourceUtil;
+import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import org.allbinary.android.AndroidStrings;
 import org.allbinary.android.device.OpenGLESGraphicsFactory;
 import org.allbinary.android.view.OptimizedGLSurfaceView;
