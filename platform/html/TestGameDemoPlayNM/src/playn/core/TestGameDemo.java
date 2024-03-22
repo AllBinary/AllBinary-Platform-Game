@@ -18,6 +18,7 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
+import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
 import org.allbinary.playn.input.PlayNToAllBinaryKeyInputUtil;
 
@@ -33,6 +34,8 @@ Pointer.Listener
 
     public TestGameDemo()
     {
+        super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
+        
         BasicMotionGesturesHandler motionGesturesHandler =
             motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 
