@@ -1,6 +1,5 @@
 package org.allbinary.animation.image;
 
-import org.allbinary.animation.ThreedAnimationSingletonFactory;
 import org.allbinary.game.resource.ResourceLoadingLevelFactory;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.graphics.threed.min3d.Min3dSceneResourcesFactory;
@@ -9,6 +8,7 @@ import org.allbinary.graphics.threed.min3d.TitleThreedResources;
 import org.allbinary.animation.IndexedAnimation;
 import org.allbinary.animation.SingletonAnimationInterfaceFactory;
 import org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
+import org.allbinary.animation.threed.ThreedAnimationSingletonFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
 import org.allbinary.game.displayable.canvas.TitleResource;

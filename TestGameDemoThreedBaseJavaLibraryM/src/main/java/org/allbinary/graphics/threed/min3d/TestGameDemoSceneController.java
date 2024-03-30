@@ -20,7 +20,7 @@ import min3d.vos.CameraFactory;
 import min3d.vos.light.Light;
 import org.allbinary.AndroidResources;
 import org.allbinary.animation.AnimationInterfaceFactoryInterface;
-import org.allbinary.animation.ThreedAnimationSingletonFactory;
+import org.allbinary.animation.threed.ThreedAnimationSingletonFactory;
 import org.allbinary.game.identification.BasicGroupFactory;
 import org.allbinary.game.identification.Group;
 import org.allbinary.game.layer.SimpleGameLayer;

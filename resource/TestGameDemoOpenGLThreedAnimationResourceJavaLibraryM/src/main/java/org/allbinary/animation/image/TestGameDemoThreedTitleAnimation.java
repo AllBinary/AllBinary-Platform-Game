@@ -18,13 +18,12 @@ package org.allbinary.animation.image;
 
 import javax.microedition.lcdui.Graphics;
 
-import org.allbinary.animation.ThreedAnimation;
-import org.allbinary.game.layer.CameraLayer;
 import org.allbinary.game.testgamedemo.TestGameDemoAllBinarySceneControllerFactory;
 import org.allbinary.graphics.threed.min3d.TestGameDemoSceneController;
 
 import org.allbinary.animation.IndexedAnimation;
 import org.allbinary.animation.special.TitleAnimation;
+import org.allbinary.animation.threed.ThreedAnimation;
 import org.allbinary.graphics.color.BasicColor;
 import org.allbinary.graphics.color.ColorChangeEvent;
 import org.allbinary.graphics.color.ColorChangeListener;
