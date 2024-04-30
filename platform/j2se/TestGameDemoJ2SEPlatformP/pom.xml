@@ -31,6 +31,8 @@
         <module>../TestGameDemoJ2SEJavaLibraryM</module>
         <module>../TestGameDemoJ2SEM</module>
         <module>../TestGameDemoJ2SEApplicationM</module>
+        <module>../TestGameDemoJ2SSWTEM</module>
+        <module>../TestGameDemoJ2SESWTApplicationM</module>
         
         <!--
         <module>../TestGameDemoTouchJ2M=SE</module>
