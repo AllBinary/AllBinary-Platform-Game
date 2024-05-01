@@ -19,7 +19,7 @@
     <properties>
         <inputPath2>src\main\java\</inputPath2>
         <inputPath>target\dependency\</inputPath>
-        <outputPath>..\TestGameDemoJ2SESWTApplicationM\src\main\java\</outputPath>
+        <outputPath>..\TestGameDemoJ2SEWithSWTApplicationM\src\main\java\</outputPath>
     </properties>
 
     <dependencies>
@@ -293,7 +293,6 @@
                         </goals>
                         <configuration>
                             <excludeArtifactIds>BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc</excludeArtifactIds>
-<!--                            ,org.eclipse.swt.win32.win32.x86_64-->
                             <classifier>sources</classifier>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
