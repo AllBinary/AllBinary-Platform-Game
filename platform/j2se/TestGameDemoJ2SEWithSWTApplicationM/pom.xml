@@ -10,10 +10,10 @@
         <!-- Game Version Start -->
     </parent>
 
-    <artifactId>TestGameDemoJ2SESWTApplication</artifactId>
+    <artifactId>TestGameDemoJ2SEWithSWTApplication</artifactId>
     <packaging>jar</packaging>
 
-    <name>TestGameDemoJ2SESWTApplication</name>
+    <name>TestGameDemoJ2SEWithSWTApplication</name>
     <url>http://www.allbinary.com/</url>
 
     <properties>
