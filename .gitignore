@@ -9,8 +9,10 @@ gen/
 /platform/j2me/TestGameDemoJ2MEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEM/src//main/resources
-/platform/j2se/TestGameDemoJ2SESWTApplicationM/src/
-/platform/j2se/TestGameDemoJ2SESWTM/src/main/resources
+/platform/j2se/TestGameDemoJ2SEWithSWTApplicationM/src/
+/platform/j2se/TestGameDemoJ2SEWithSWTM/src/main/resources
+/platform/avian/TestGameDemoAvianApplicationM/src/
+/platform/avian/TestGameDemoAvianM/src/main/resources
 /platform/android/TestGameDemoAndroidApplicationM/src/main/java/
 /platform/html/TestGameDemoHTMLTempM/src
 /platform/html/TestGameDemoPlayNM/src/playn/core/GraphicsTestGame.java

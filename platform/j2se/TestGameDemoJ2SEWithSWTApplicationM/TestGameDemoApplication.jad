@@ -1,6 +1,6 @@
 MIDlet-1: TestGameDemoMIDlet,/image/image.png,TestGameDemoMIDlet
 MIDlet-Jar-Size: 400000
-MIDlet-Jar-URL: ./target/TestGameDemoJ2SESWTApplication-1.0.0-SNAPSHOT.jar
+MIDlet-Jar-URL: ./target/TestGameDemoJ2SEWithSWTApplication-1.0.0-SNAPSHOT.jar
 MIDlet-Name: TestGameDemoMIDlet
 MIDlet-Vendor: Vendor
 MIDlet-Version: 2.0
