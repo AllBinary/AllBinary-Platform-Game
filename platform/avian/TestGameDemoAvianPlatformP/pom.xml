@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
- 
+
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
         <artifactId>TestGameDemoParent</artifactId>
@@ -10,33 +10,30 @@
         <!-- Game Version Start -->
     </parent>
 
-    <artifactId>TestGameDemoAllPlatformsP</artifactId>
+    <artifactId>TestGameDemoAvianPlatformP</artifactId>
     <packaging>pom</packaging>
 
-    <name>TestGameDemoAllPlatformsP</name>
+    <name>TestGameDemoAvianPlatformP</name>
     <url>http://www.allbinary.com/</url>
 
     <properties>
         <buildLabel>${version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
     </properties>
 
     <modules>
-
-        <!--
-        
-        -->
-        <module>../../TestGameDemoP</module>
-
-        <module>../j2me/TestGameDemoJ2MEPlatformP</module>
-        <module>../j2se/TestGameDemoJ2SEPlatformP</module>
         
         <!--
-        //Needs the nexus
+        Shared
+        <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
         -->
-        <module>../html/TestGameDemoHTMLPlatformP</module>
-        <module>../android/TestGameDemoAndroidPlatformP</module>
-        <module>../avian/TestGameDemoAvianPlatformP</module>
         
+        <module>../TestGameDemoAvianM</module>
+        <module>../TestGameDemoAvianApplicationM</module>
+        
+        <!--
+        <module>../TestGameDemoTouchJ2MSE</module>
+        -->
     </modules>
 
 </project>

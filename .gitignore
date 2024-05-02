@@ -5,6 +5,12 @@
 target/
 bin/
 gen/
+swt-awt-win32-4430.dll
+swt-gdip-win32-4430.dll
+swt-wgl-win32-4430.dll
+swt-win32-4430.dll
+swt-xulrunner24-win32-4430.dll
+swt-xulrunner-win32-4430.dll
 
 /platform/j2me/TestGameDemoJ2MEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEApplicationM/src/
