@@ -28,7 +28,7 @@
         
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>TempIntegrationJavaLibrary</artifactId>
+            <artifactId>ProgressJ2MEJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -106,14 +106,6 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
 
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>AllBinaryAndroidProgressJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-                
         <dependency>
             <groupId>org.allbinary.game.threed</groupId>
             <artifactId>AllBinaryToMin3dJavaLibrary</artifactId>
