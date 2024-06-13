@@ -146,9 +146,8 @@ public class TestGameDemoMIDlet
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mousePressed"));
-            this.motionRecognizer.processStartMotionEvent(
-                x, y, this.DEVICE_ID, button);
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START + button, this, "mousePressed"));
+            this.motionRecognizer.processStartMotionEvent(x, y, this.DEVICE_ID, button);
         }
         catch (Exception e)
         {
@@ -161,9 +160,9 @@ public class TestGameDemoMIDlet
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseReleased"));
-            this.motionRecognizer.processEndMotionEvent(
-                x, y, this.DEVICE_ID, button);
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START + button, this, "mouseReleased"));
+            this.dragged = false;
+            this.motionRecognizer.processEndMotionEvent(x, y, this.DEVICE_ID, button);
         }
         catch (Exception e)
         {
@@ -182,18 +181,33 @@ public class TestGameDemoMIDlet
     }
 
     //public void mouseMoved(MouseEvent mouseEvent)
+    public void mouseMoved(final int x, final int y, final int button)
     {
-        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseMoved"));
+        try
+        {
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseMoved"));
+            if(this.dragged) {
+                this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, button);
+            } else {
+                this.motionRecognizer.processMovedMotionEvent(x, y, DEVICE_ID, button);
+            }
+        }
+        catch (Exception e)
+        {
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "mouseMoved", e));
+        }
     }
 
+    private boolean dragged = false;
+    
     //public void mouseDragged(MouseEvent mouseEvent)
     public void mouseDragged(final int x, final int y, final int button)
     {
         try
         {
             //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseDragged"));
-            this.motionRecognizer.processDraggedMotionEvent(
-                x, y, this.DEVICE_ID, button);
+            this.dragged = true;
+            this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, button);
         }
         catch (Exception e)
         {
@@ -258,6 +272,5 @@ public class TestGameDemoMIDlet
     }
     };
      */
-    
     
 }
