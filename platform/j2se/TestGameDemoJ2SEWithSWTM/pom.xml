@@ -18,8 +18,10 @@
 
     <properties>
         <inputPath2>src\main\java\</inputPath2>
+        <inputPath3>src\main\resources\</inputPath3>
         <inputPath>target\dependency\</inputPath>
         <outputPath>..\TestGameDemoJ2SEWithSWTApplicationM\src\main\java\</outputPath>
+        <outputPath2>..\TestGameDemoJ2SEWithSWTApplicationM\src\main\resources\</outputPath2>
     </properties>
 
     <dependencies>
@@ -50,7 +52,49 @@
                     <groupId>org.allbinary</groupId>
                     <artifactId>J2SEMediaMIDPMinimalJavaLibrary</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>J2SEForJ2MEJavaLibrary</artifactId>
+                </exclusion>
             </exclusions>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SWTJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SWTToJ2MELibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLNoneJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLNoneOtherJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
@@ -286,7 +330,6 @@
                 </configuration>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -329,7 +372,7 @@
                 <version>2.4.3</version>
                 <executions>
                     <execution>
-                        <id>copy-resources</id>
+                        <id>copy-sources</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -343,6 +386,35 @@
                                 </resource>
                                 <resource>
                                     <directory>${inputPath2}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                                <!--
+                                <resource>
+                                  <directory>${inputPath3}</directory>
+                                  <filtering>false</filtering>
+                                </resource>
+                                -->                
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath2}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputPath3}</directory>
                                     <filtering>false</filtering>
                                 </resource>
                                 <!--

@@ -85,6 +85,6 @@ public class TestGameDemoStartCanvas extends DemoCanvas
 
     public GameCanvasRunnableInterface createRunnable(int randomValue) throws Exception
     {
-        return new TestGameDemoGameCanvas(this.abeClientInformation, this.createGameLayerManager(this.getNextRandom()));
+        return new TestGameDemoGameCanvas(this.abeClientInformation, null, this.createGameLayerManager(this.getNextRandom()));
     }
 }

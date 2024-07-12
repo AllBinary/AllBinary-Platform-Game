@@ -74,7 +74,9 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     private final int WAIT = GameSpeed.getInstance().getDelay();
 
     private final int portion = 4;
-    
+
+    private final AbeClientInformationInterface abeClientInformation;
+
     public TestGameDemoGameCanvas(
         final AbeClientInformationInterface abeClientInformation,
         final CommandListener commandListener,
@@ -85,12 +87,8 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
                 new TestGameDemoStaticInitializerFactory(),
            //new BasicBuildGameInitializerFactory(),
            false);
-    }
-
-    public TestGameDemoGameCanvas(final AbeClientInformationInterface abeClientInformation, final AllBinaryGameLayerManager allBinaryGameLayerManager)
-    throws Exception
-    {
-        this(abeClientInformation, null, allBinaryGameLayerManager);
+        
+        this.abeClientInformation = abeClientInformation;
     }
     
     protected void initSpecialPaint()
@@ -169,12 +167,12 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         }
     }
 
-    protected void threadInit(final AbeClientInformationInterface abeClientInformation) throws Exception
+    protected void threadInit() throws Exception
     {
         try
         {
             final int portion = 60;
-            super.init(abeClientInformation);
+            super.init(this.abeClientInformation);
 
             if (!this.isRunning())
             {

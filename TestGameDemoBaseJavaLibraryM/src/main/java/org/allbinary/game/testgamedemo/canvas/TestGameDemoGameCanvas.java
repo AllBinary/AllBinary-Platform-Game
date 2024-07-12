@@ -86,12 +86,6 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         
         this.abeClientInformation = abeClientInformation;
     }
-
-    public TestGameDemoGameCanvas(final AbeClientInformationInterface abeClientInformation, final AllBinaryGameLayerManager allBinaryGameLayerManager)
-    throws Exception
-    {
-        this(abeClientInformation, null, allBinaryGameLayerManager);
-    }
     
     protected void initSpecialPaint()
     {
@@ -153,7 +147,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
                 ChangedGameFeatureListener.getInstance().setChanged(false);
 
-                if (!this.isRunning())
+                if (!this.isRunningInAnotherThread())
                 {
                     return;
                 }
@@ -175,14 +169,14 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
             final int portion = 60;
             super.init(this.abeClientInformation);
 
-            if (!this.isRunning())
+            if (!this.isRunningInAnotherThread())
             {
                 return;
             }
 
             if (!this.isInitialized())
             {
-                if (!this.isRunning())
+                if (!this.isRunningInAnotherThread())
                 {
                     return;
                 }
@@ -236,6 +230,10 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     public void buildGame(boolean isProgress) throws Exception
     {
+        if (!this.isRunningInAnotherThread()) {
+            return;
+        }
+        
         this.loadResources(gameLayerManager.getGameInfo().getCurrentLevel());
         
         ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
@@ -258,7 +256,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         SecondaryPlayerQueueFactory.getInstance().clear();
         gameLayerManager.cleanup();
 
-        if (!this.isRunning())
+        if (!this.isRunningInAnotherThread())
         {
             return;
         }
@@ -281,7 +279,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
         //DestroyedEventHandler.getInstance().addListener((EventListenerInterface) playerLayer);
 
-        if (!this.isRunning())
+        if (!this.isRunningInAnotherThread())
         {
             return;
         }

@@ -7,7 +7,6 @@ import javax.microedition.lcdui.Image;
 import org.allbinary.AllBinaryAndroidGameInitializationUtil;
 import org.allbinary.AndroidResources;
 import org.allbinary.android.AndroidStrings;
-import org.allbinary.android.activity.InitEmulatorFactory;
 import org.allbinary.android.activity.game.GameMidletActivity;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
@@ -31,6 +30,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import org.allbinary.emulator.InitEmulatorFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
