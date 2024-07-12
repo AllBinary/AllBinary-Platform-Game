@@ -33,3 +33,6 @@ swt-xulrunner-win32-4430.dll
 /platform/android/TestGameDemoThreedAndroidApplicationM/src/main/java/
 /platform/android/TestGameDemoThreedAndroidApplicationM/src/main/res/drawable/
 /platform/android/TestGameDemoThreedAndroidApplicationM/src/main/res/raw/
+/platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/java/
+/platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/res/drawable/
+/platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/res/raw/
