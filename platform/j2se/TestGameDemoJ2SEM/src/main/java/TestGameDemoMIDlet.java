@@ -16,10 +16,7 @@ import org.allbinary.input.motion.gesture.observer.MotionGestureReceiveInterface
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseWheelEvent;
 import org.allbinary.game.init.DefaultGameInitializationListener;
-import org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
 
@@ -126,12 +123,13 @@ public class TestGameDemoMIDlet
         }
     }
     
-    public void mouseClicked(MouseEvent mouseEvent)
+    //public void mouseClicked(MouseEvent mouseEvent)
+    public void mouseClicked(final int x, final int y, final int button)
     {
         /*
         try
         {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseClicked"));
+        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseClicked"));
         motionGestureRecognizer.processPressedMotionEvent(
         PointFactory.getInstance(mouseEvent.getX(), mouseEvent.getY()),
         mouseEvent.getButton());
@@ -143,72 +141,84 @@ public class TestGameDemoMIDlet
          */
     }
 
-    public void mousePressed(MouseEvent mouseEvent)
+    //public void mousePressed(MouseEvent mouseEvent)
+    public void mousePressed(final int x, final int y, final int button)
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mousePressed"));
-            this.motionRecognizer.processStartMotionEvent(
-                mouseEvent.getX(), mouseEvent.getY(),
-                DEVICE_ID,
-                mouseEvent.getButton());
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START + button, this, "mousePressed"));
+            this.motionRecognizer.processStartMotionEvent(x, y, this.DEVICE_ID, button);
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "mousePressed", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "mousePressed", e));
         }
     }
 
-    public void mouseReleased(MouseEvent mouseEvent)
+    //public void mouseReleased(MouseEvent mouseEvent)
+    public void mouseReleased(final int x, final int y, final int button)
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseReleased"));
-            this.motionRecognizer.processEndMotionEvent(
-                mouseEvent.getX(), mouseEvent.getY(),
-                    DEVICE_ID,
-                mouseEvent.getButton());
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START + button, this, "mouseReleased"));
+            this.dragged = false;
+            this.motionRecognizer.processEndMotionEvent(x, y, this.DEVICE_ID, button);
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "mouseReleased", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "mouseReleased", e));
         }
     }
 
-    public void mouseEntered(MouseEvent mouseEvent)
+    //public void mouseEntered(MouseEvent mouseEvent)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseEntered"));
+        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseEntered"));
     }
 
-    public void mouseExited(MouseEvent mouseEvent)
+    //public void mouseExited(MouseEvent mouseEvent)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseExited"));
+        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseExited"));
     }
 
-    public void mouseMoved(MouseEvent mouseEvent)
-    {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseMoved"));
-    }
-
-    public void mouseDragged(MouseEvent mouseEvent)
+    //public void mouseMoved(MouseEvent mouseEvent)
+    public void mouseMoved(final int x, final int y, final int button)
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseDragged"));
-            this.motionRecognizer.processDraggedMotionEvent(
-                mouseEvent.getX(), mouseEvent.getY(),
-                    DEVICE_ID,
-                mouseEvent.getButton());
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseMoved"));
+            if(this.dragged) {
+                this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, button);
+            } else {
+                this.motionRecognizer.processMovedMotionEvent(x, y, DEVICE_ID, button);
+            }
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "mouseDragged", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "mouseMoved", e));
         }
     }
 
-    public void mouseWheelMoved(MouseWheelEvent mouseEvent)
+    private boolean dragged = false;
+    
+    //public void mouseDragged(MouseEvent mouseEvent)
+    public void mouseDragged(final int x, final int y, final int button)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseWheelMoved"));
+        try
+        {
+            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseDragged"));
+            this.dragged = true;
+            this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, button);
+        }
+        catch (Exception e)
+        {
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "mouseDragged", e));
+        }
+    }
+
+    //public void mouseWheelMoved(MouseWheelEvent mouseEvent)
+    public void mouseWheelMoved(final int x, final int y, final int button)
+    {
+        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseWheelMoved"));
     }
 
     /*
@@ -217,12 +227,12 @@ public class TestGameDemoMIDlet
 
     public void mouseClicked(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseClicked"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseClicked"));
     }
 
     public void mousePressed(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mousePressed"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mousePressed"));
     }
     };
     private MouseMotionListener mouseMotionListener = new MouseMotionListener()
@@ -230,27 +240,27 @@ public class TestGameDemoMIDlet
 
     public void mouseReleased(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseReleased"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseReleased"));
     }
 
     public void mouseEntered(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseEntered"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseEntered"));
     }
 
     public void mouseExited(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseExited"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseExited"));
     }
 
     public void mouseMoved(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseMoved"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseMoved"));
     }
 
     public void mouseDragged(MouseEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseDragged"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseDragged"));
     }
     };
     private MouseWheelListener mouseWheelListener = new MouseWheelListener()
@@ -258,7 +268,7 @@ public class TestGameDemoMIDlet
 
     public void mouseWheelMoved(MouseWheelEvent mouseEvent)
     {
-    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mouseWheelMoved"));
+    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mouseWheelMoved"));
     }
     };
      */
