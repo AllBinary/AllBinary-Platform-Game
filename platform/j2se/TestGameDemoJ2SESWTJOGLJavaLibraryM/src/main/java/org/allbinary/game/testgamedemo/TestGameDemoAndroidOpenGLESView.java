@@ -1,8 +1,6 @@
 package org.allbinary.game.testgamedemo;
 
-import org.allbinary.android.view.AllBinaryMidletOpenGLSurfaceView;
-import android.content.Context;
-import android.util.AttributeSet;
+import org.allbinary.view.AllBinaryMidletOpenGLSurfaceView;
 import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.PreLogUtil;
 
@@ -11,9 +9,7 @@ extends AllBinaryMidletOpenGLSurfaceView
 {	
     private final String TAG = "TestGameDemoAndroidOpenGLESView";
     
-	public TestGameDemoAndroidOpenGLESView(
-	        Context context, AttributeSet attrs) {
-		super(context, attrs);
+	public TestGameDemoAndroidOpenGLESView() {
                 
                 PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
 	}

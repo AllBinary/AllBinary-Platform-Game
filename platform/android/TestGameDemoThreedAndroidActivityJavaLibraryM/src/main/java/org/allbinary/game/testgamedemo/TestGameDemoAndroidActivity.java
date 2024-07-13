@@ -200,9 +200,9 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         {
             LogUtil.put(LogFactory.getInstance("Init Base GameFeatures", this, "initEmulator"));
 
-            Features features = Features.getInstance();
+            final Features features = Features.getInstance();
             
-            GameConfigurationCentral gameConfigurationCentral = 
+            final GameConfigurationCentral gameConfigurationCentral = 
                 GameConfigurationCentral.getInstance();
 
             /*
@@ -232,7 +232,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                     SmallIntegerSingletonFactory.getInstance().getInstance(9));
             gameConfigurationCentral.SPEED.setDefault();
 
-            GraphicsFeatureFactory graphicsFeatureFactory = 
+            final GraphicsFeatureFactory graphicsFeatureFactory = 
                 GraphicsFeatureFactory.getInstance();
             
             features.addDefault(graphicsFeatureFactory.TRANSPARENT_IMAGE_CREATION);
@@ -253,7 +253,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             features.addDefault(
                     GameFeatureFactory.getInstance().SOUND);
 
-            SensorFeatureFactory sensorFeatureFactory = 
+            final SensorFeatureFactory sensorFeatureFactory = 
                 SensorFeatureFactory.getInstance();
 
             features.removeDefault(sensorFeatureFactory.ORIENTATION_SENSORS);
@@ -269,10 +269,10 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         
-        ApplicationConfiguration reloadConfiguration = 
+        final ApplicationConfiguration reloadConfiguration = 
             ApplicationConfiguration.getInstance();
         
-        Drawable drawable = this.getResources().getDrawable(
+        final Drawable drawable = this.getResources().getDrawable(
                 androidResources.drawable.testgamedemo_wait_256_by_256);
         
         if (reloadConfiguration.isProgressBarView())

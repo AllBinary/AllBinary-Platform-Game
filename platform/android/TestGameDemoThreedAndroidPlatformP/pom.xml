@@ -32,9 +32,6 @@
         <module>../TestGameDemoThreedAndroidResourcesTempJavaLibraryM</module>
         -->
         <module>../TestGameDemoThreedAndroidResourceJavaLibraryM</module>
-        
-        <module>../TestGameDemoThreedAndroidBaseJavaLibraryM</module>
-        <module>../TestGameDemoThreedAndroidJavaLibraryM</module>
         <module>../TestGameDemoThreedAndroidActivityJavaLibraryM</module>
         
         <!--
@@ -46,7 +43,8 @@
         Uses older source version
         <module>../TestGameDemoThreedAndroidApplicationM</module>
         -->
-        
+        <module>../TestGameDemoThreedAndroidClientInfoJavaLibraryM</module>
+        <module>../TestGameDemoThreedAndroidJavaLibraryM</module>
     </modules>
 
 </project>

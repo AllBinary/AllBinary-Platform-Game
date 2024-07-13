@@ -17,7 +17,7 @@ import org.allbinary.logic.system.SoftwareInformation;
 
 public class TestGameDemoSoftwareInfo
 {
-    //This should change in next Android Release by moving AndroidMobile info only the client info
+    //This should change in next Release by moving Mobile info only the client info
     private static final SoftwareInformation SINGLETON = 
         new SoftwareInformation("TestDemoGame", "1.2.0", "TG");
     

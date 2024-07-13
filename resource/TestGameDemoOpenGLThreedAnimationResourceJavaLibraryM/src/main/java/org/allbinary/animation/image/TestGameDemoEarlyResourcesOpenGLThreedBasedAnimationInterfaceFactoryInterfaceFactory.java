@@ -28,7 +28,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
         super("Early OpenGL Animations");
     }
 
-    public void init(int level) throws Exception
+    public void init(final int level) throws Exception
     {
         LogUtil.put(LogFactory.getInstance(this.getName(), this, "init"));
         
@@ -39,7 +39,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
             return;
         }
 
-        ResourceLoadingLevelFactory resourceLoadingLevelFactory = 
+        final ResourceLoadingLevelFactory resourceLoadingLevelFactory = 
             ResourceLoadingLevelFactory.getInstance();
 
         int portion = 120;
@@ -52,23 +52,22 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
         int index = 1;
 
-        ProgressCanvas progressCanvas =
-            ProgressCanvasFactory.getInstance();
+        final ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
 
         progressCanvas.addPortion(portion, loadingString, index++);
 
-        Min3dSceneResourcesFactory min3dSceneResourcesFactory = 
+        final Min3dSceneResourcesFactory min3dSceneResourcesFactory = 
             Min3dSceneResourcesFactory.getInstance();
         
-        IndexedAnimation[] animationInterfaceArrayTemp =
+        final IndexedAnimation[] animationInterfaceArrayTemp =
             TestGameDemoTitleAnimationFactory.getInstance().getArrayInstance();
             
-        IndexedAnimation[] animationInterfaceArray = new IndexedAnimation[3];
+        final IndexedAnimation[] animationInterfaceArray = new IndexedAnimation[3];
         
         animationInterfaceArray[0] = animationInterfaceArrayTemp[0];
         animationInterfaceArray[1] = animationInterfaceArrayTemp[1];
 
-        TitleThreedResources titleThreedResources = TitleThreedResources.getInstance();
+        final TitleThreedResources titleThreedResources = TitleThreedResources.getInstance();
 
         //final String TIRE = VehicleStrings.getInstance().TIRE;
 
@@ -95,7 +94,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
     public boolean isLoadingLevel(int level)
     {
-        ResourceLoadingLevelFactory resourceLoadingLevelFactory = 
+        final ResourceLoadingLevelFactory resourceLoadingLevelFactory = 
             ResourceLoadingLevelFactory.getInstance();
 
         if (level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel())
@@ -111,12 +110,12 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
     
     public boolean isFeature()
     {
-        Features features = Features.getInstance();
+        final Features features = Features.getInstance();
         
-        GraphicsFeatureFactory graphicsFeatureFactory = 
+        final GraphicsFeatureFactory graphicsFeatureFactory = 
             GraphicsFeatureFactory.getInstance();
         
-        OpenGLFeatureFactory openGLFeatureFactory = 
+        final OpenGLFeatureFactory openGLFeatureFactory = 
             OpenGLFeatureFactory.getInstance();
         
         if (features.isFeature(graphicsFeatureFactory.IMAGE_GRAPHICS) && 

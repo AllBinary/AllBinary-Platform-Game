@@ -11,7 +11,6 @@ import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import org.allbinary.android.AndroidStrings;
-import org.allbinary.android.view.OptimizedGLSurfaceView;
 import org.allbinary.device.OpenGLESGraphicsFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.testgamedemo.R;
@@ -19,6 +18,7 @@ import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
+import org.allbinary.view.OptimizedGLSurfaceView;
 
 /**
  * Extend this class when creating your min3d-based Activity. 

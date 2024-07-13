@@ -32,19 +32,22 @@ extends ResourceInitialization
     throws Exception
     //throws Exception
     {
+        FeaturedAnimationInterfaceFactoryInterfaceFactory featuredAnimationInterfaceFactoryInterfaceFactory = 
+                FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance();
+
         //Normal Loading Here
         
         //TWB - TouchButton
-        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory());
         
-        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory());
 
-        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory());
         
-        FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance().add(
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TestGameDemoOpenGLESImageBasedAnimationInterfaceFactoryInterfaceFactory());
     }
 }

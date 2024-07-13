@@ -3,6 +3,7 @@ import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
+import org.allbinary.device.OpenGLESGraphicsFactory;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.configuration.feature.GameFeatureFactory;
@@ -17,8 +18,11 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
+import org.allbinary.graphics.opengles.OpenGLConfiguration;
+import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
+import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
@@ -30,7 +34,7 @@ public class TestGameDemoMIDlet
     {
         super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
         
-        BasicMotionGesturesHandler motionGesturesHandler =
+        final BasicMotionGesturesHandler motionGesturesHandler =
             motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 
         motionGesturesHandler.addListener(
@@ -48,24 +52,38 @@ public class TestGameDemoMIDlet
 
             ResourceUtil.getInstance().setClassLoader(this.getClass().getClassLoader());
 
-            Features features = Features.getInstance();
+            final Features features = Features.getInstance();
 
-            GameFeatureFactory gameFeatureFactory =
+            final GameFeatureFactory gameFeatureFactory =
                 GameFeatureFactory.getInstance();
 
-            InputFeatureFactory inputFeatureFactory =
+            final InputFeatureFactory inputFeatureFactory =
                 InputFeatureFactory.getInstance();
 
-            GraphicsFeatureFactory graphicsFeatureFactory =
+            final GraphicsFeatureFactory graphicsFeatureFactory =
                 GraphicsFeatureFactory.getInstance();
 
-            SensorFeatureFactory sensorFeatureFactory =
+            final SensorFeatureFactory sensorFeatureFactory =
                     SensorFeatureFactory.getInstance();
 
+            final OpenGLFeatureFactory openGLFeatureFactory = 
+                OpenGLFeatureFactory.getInstance();
+            
+            //features.addDefault(openGLFeatureFactory.OPENGL_2D);
+            features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
+            //features.addDefault(openGLFeatureFactory.OPENGL_3D);
+            //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
+            //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
+            
+            OpenGLESGraphicsFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
+            //OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
+            
             features.removeDefault(sensorFeatureFactory.ORIENTATION_SENSORS);
             features.addDefault(sensorFeatureFactory.NO_ORIENTATION);
 
             features.addDefault(graphicsFeatureFactory.IMAGE_GRAPHICS);
+            features.addDefault(graphicsFeatureFactory.IMAGE_TO_ARRAY_GRAPHICS);
+            
             //features.addDefault(gameFeatureFactory.VECTOR_GRAPHICS);
 
             features.addDefault(graphicsFeatureFactory.SPRITE_FULL_GRAPHICS);
@@ -104,10 +122,21 @@ public class TestGameDemoMIDlet
             gameConfigurationCentral.SCALE.setDefaultValue(smallIntegerSingletonFactory.getInstance(3));
             gameConfigurationCentral.SCALE.setDefault();
 
+            this.initOpenGL();
+            
         } catch (Exception e)
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, CommonStrings.getInstance().CONSTRUCTOR, e));
         }
+    }
+
+    protected void initOpenGL()
+    throws Exception
+    {
+        final OpenGLConfiguration openGLConfiguration = OpenGLConfiguration.getInstance();
+        openGLConfiguration.init();
+        openGLConfiguration.setOpenGL(true);
+        openGLConfiguration.write();        
     }
     
     public void stopAll()

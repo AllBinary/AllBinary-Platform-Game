@@ -5,7 +5,6 @@ import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.logic.java.bool.BooleanFactory;
-import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.game.layer.AllBinaryGameLayerManager;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
@@ -18,7 +17,7 @@ import min3d.parser.ModelType;
 import min3d.parser.ModelTypeFactory;
 import min3d.vos.CameraFactory;
 import min3d.vos.light.Light;
-import org.allbinary.AndroidResources;
+import org.allbinary.ThreedResources;
 import org.allbinary.animation.AnimationInterfaceFactoryInterface;
 import org.allbinary.animation.threed.ThreedAnimationSingletonFactory;
 import org.allbinary.game.identification.BasicGroupFactory;
@@ -90,19 +89,11 @@ extends AllBinaryGameSceneController
             
             progressCanvas.addEarlyPortion(portion, loadingString, index++);
             
-            final ResourceUtil resourceUtil = ResourceUtil.getInstance();
-            
             //When I can get resources fixed for opengl then I reload without loading models again.
             //if(!this.initialized) 
             //{
               //  this.initialized = true;
             //}
-
-            //Integer genericBlock = Integer.valueOf(AndroidResources.raw.generic_obj);
-            //Integer genericDrop = Integer.valueOf(AndroidResources.raw.genericdrop_obj);
-            
-            //resourceUtil.addResource(GenericModel.RESOURCE, genericBlock);
-            //resourceUtil.addResource(GenericDropModel.RESOURCE, genericDrop);
 
             final Min3dSceneResourcesFactory min3dSceneResourcesFactory = 
                     Min3dSceneResourcesFactory.getInstance();
@@ -112,19 +103,12 @@ extends AllBinaryGameSceneController
             final ThreedLoaderFactory threedLoaderFactory = ThreedLoaderFactory.getInstance();
                         
             final TitleThreedResources titleThreedResources = TitleThreedResources.getInstance();
-
-            final AndroidResources androidResources = AndroidResources.getInstance();
             
           //Lights and resources don't need to be added again
             if(!this.initialized)
-            {              
-              resourceUtil.addResource(titleThreedResources.RESOURCE_TITLE_THREE, 
-                      Integer.valueOf(androidResources.raw.threed_obj)
-                      );
-              
-              //resourceUtil.addResource(carModelResources.SIMPLE_CAR, 
-                      //Integer.valueOf(androidResources.raw.car_obj)
-                      //);
+            {
+
+              ThreedResources.getInstance().add();
               
               progressCanvas.addEarlyPortion(portion, loadingString, index++);
 
