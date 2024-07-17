@@ -13,12 +13,8 @@
  */
 package org.microemu.app;
 
-import org.allbinary.device.OpenGLESGraphicsFactory;
+import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
-import org.allbinary.game.configuration.feature.GameFeatureFactory;
-import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
-import org.allbinary.game.configuration.feature.InputFeatureFactory;
-import org.allbinary.game.configuration.feature.SensorFeatureFactory;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
@@ -45,7 +41,7 @@ public class NativeBareMain {
             //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
             //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
 
-            OpenGLESGraphicsFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
+            OpenGLESGraphicsCompositeFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
             //OpenGLESGraphicsFactory.getInstance().set(new PlatformDisplayMin3dGraphicsFactory());
             
         } catch(Exception e) {

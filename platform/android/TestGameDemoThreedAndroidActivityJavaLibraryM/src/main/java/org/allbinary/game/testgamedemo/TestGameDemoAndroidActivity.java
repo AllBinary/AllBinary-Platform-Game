@@ -30,7 +30,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import org.allbinary.device.OpenGLESGraphicsFactory;
+import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.emulator.InitEmulatorFactory;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
@@ -88,8 +88,8 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
         //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
         
-        OpenGLESGraphicsFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
-        //OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
+        OpenGLESGraphicsCompositeFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
+        //OpenGLESGraphicsCompositeFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
                 
         final AndroidResources androidResources = AndroidResources.getInstance();
         
