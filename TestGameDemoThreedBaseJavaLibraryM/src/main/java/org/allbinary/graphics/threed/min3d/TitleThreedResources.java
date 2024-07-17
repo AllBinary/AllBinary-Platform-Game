@@ -24,5 +24,5 @@ public class TitleThreedResources
     
     public final String RESOURCE_TITLE_ONE = "title_one";
     public final String RESOURCE_TITLE_TWO = "title_two";
-    public final String RESOURCE_TITLE_THREE = "title_three";
+    public final String RESOURCE_TITLE_THREE = "threed_obj"; //"title_three";
 }

@@ -18,6 +18,7 @@ import min3d.core.SceneController;
 import org.allbinary.graphics.opengles.OpenGLThreadUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.logic.string.CommonStrings;
+import org.allbinary.view.OptimizedGLSurfaceView;
 
 /**
  *
@@ -31,12 +32,11 @@ public class TestGameDemoThreedSWTJOGLMin3dView {
         
         PreLogUtil.put(CommonStrings.getInstance().START, this, CommonStrings.getInstance().CONSTRUCTOR);
         
-        SceneController sceneController = 
-            TestGameDemoAllBinarySceneControllerFactory.getInstance();
+        final SceneController sceneController = TestGameDemoAllBinarySceneControllerFactory.getInstance();
 
         this.renderer = (Renderer) sceneController.getRenderer();
 
-        //this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+        //this.setRenderMode(OptimizedGLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
         OpenGLThreadUtil.getInstance().set(this);    
         

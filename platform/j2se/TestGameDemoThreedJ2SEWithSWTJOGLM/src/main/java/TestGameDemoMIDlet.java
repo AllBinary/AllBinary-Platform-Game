@@ -4,6 +4,7 @@ import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.device.OpenGLESGraphicsFactory;
+import org.allbinary.emulator.InitEmulatorFactory;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.configuration.feature.GameFeatureFactory;
@@ -18,6 +19,7 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
+import org.allbinary.game.testgamedemo.TestGameDemoJOGLMin3dView;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
@@ -30,6 +32,10 @@ public class TestGameDemoMIDlet
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
 
+    //TestGameDemoThreedSWTJOGLMin3dView?
+    //private TestGameDemoJOGLOpenGLESView testGameDemoJOGLMin3dView;
+    private TestGameDemoJOGLMin3dView testGameDemoJOGLMin3dView;
+    
     public TestGameDemoMIDlet()
     {
         super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
@@ -65,18 +71,6 @@ public class TestGameDemoMIDlet
 
             final SensorFeatureFactory sensorFeatureFactory =
                     SensorFeatureFactory.getInstance();
-
-            final OpenGLFeatureFactory openGLFeatureFactory = 
-                OpenGLFeatureFactory.getInstance();
-            
-            //features.addDefault(openGLFeatureFactory.OPENGL_2D);
-            features.addDefault(openGLFeatureFactory.OPENGL_2D_AND_3D);
-            //features.addDefault(openGLFeatureFactory.OPENGL_3D);
-            //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
-            //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
-            
-            OpenGLESGraphicsFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
-            //OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
             
             features.removeDefault(sensorFeatureFactory.ORIENTATION_SENSORS);
             features.addDefault(sensorFeatureFactory.NO_ORIENTATION);
@@ -101,10 +95,10 @@ public class TestGameDemoMIDlet
             //features.addDefault(inputFeatureFactory.SINGLE_KEY_PRESS);
             features.addDefault(inputFeatureFactory.REMOVE_DUPLICATE_KEY_PRESSES);
 
-            GameConfigurationCentral gameConfigurationCentral =
+            final GameConfigurationCentral gameConfigurationCentral =
                     GameConfigurationCentral.getInstance();
 
-            SmallIntegerSingletonFactory smallIntegerSingletonFactory = 
+            final SmallIntegerSingletonFactory smallIntegerSingletonFactory = 
                     SmallIntegerSingletonFactory.getInstance();
 
             gameConfigurationCentral.VIBRATION.setDefaultValue(smallIntegerSingletonFactory.getInstance(0));
@@ -123,7 +117,12 @@ public class TestGameDemoMIDlet
             gameConfigurationCentral.SCALE.setDefault();
 
             this.initOpenGL();
+
+            InitEmulatorFactory.getInstance().setInitEmulator(true);
             
+            //this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLOpenGLESView();
+            this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLMin3dView();
+
         } catch (Exception e)
         {
             LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, CommonStrings.getInstance().CONSTRUCTOR, e));

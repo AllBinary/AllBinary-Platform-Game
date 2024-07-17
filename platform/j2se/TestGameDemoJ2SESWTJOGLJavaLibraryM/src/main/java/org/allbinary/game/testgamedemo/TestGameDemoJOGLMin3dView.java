@@ -1,19 +1,20 @@
 package org.allbinary.game.testgamedemo;
 
+import min3d.core.Renderer;
 import min3d.core.SceneController;
 
 import org.allbinary.graphics.opengles.OpenGLThreadUtil;
-import org.allbinary.graphics.opengles.renderer.Renderer;
 import org.allbinary.j2se.view.AllBinaryMidletMin3dSurfaceView;
 import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.PreLogUtil;
+import org.allbinary.view.OptimizedGLSurfaceView;
 
-public class TestGameDemoAndroidMin3dView 
+public class TestGameDemoJOGLMin3dView 
 extends AllBinaryMidletMin3dSurfaceView
 {
-    private final String TAG = "TestGameDemoAndroidMin3dView";
+    private final String TAG = "TestGameDemoJOGLMin3dView";
     
-    public TestGameDemoAndroidMin3dView()
+    public TestGameDemoJOGLMin3dView()
     {
 
         PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
@@ -23,7 +24,7 @@ extends AllBinaryMidletMin3dSurfaceView
 
         this.setRenderer((Renderer) sceneController.getRenderer());
 
-        //this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+        this.setRenderMode(OptimizedGLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
         OpenGLThreadUtil.getInstance().set(this);
     }
