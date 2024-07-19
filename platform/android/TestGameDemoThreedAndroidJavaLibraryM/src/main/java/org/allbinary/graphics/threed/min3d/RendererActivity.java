@@ -11,7 +11,7 @@ import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import org.allbinary.android.AndroidStrings;
-import org.allbinary.device.OpenGLESGraphicsFactory;
+import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.testgamedemo.R;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
@@ -61,7 +61,7 @@ public class RendererActivity extends Activity //implements ISceneController
             //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_OBJECT3D_PROCESSOR);
             //features.addDefault(openGLFeatureFactory.OPENGL_SIMPLE_TEXTURE_PROCESSOR);
 
-            OpenGLESGraphicsFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
+            OpenGLESGraphicsCompositeFactory.getInstance().set(new PlatformOpenGLESGraphicsFactory());
             //OpenGLESGraphicsFactory.getInstance().set(new AndroidDisplayMin3dGraphicsFactory());
             
             //_glSurfaceView = new GLSurfaceView(this);

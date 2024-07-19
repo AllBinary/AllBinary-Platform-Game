@@ -1,23 +1,22 @@
 package org.allbinary.logic.system.security.licensing;
 
-import org.allbinary.logic.system.security.licensing.MobileClientInformation;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.logic.string.CommonSeps;
+import org.allbinary.logic.string.StringMaker;
+import org.allbinary.logic.system.SoftwareInformation;
 
 public class TestGameDemoAndroidMobileClientInformation 
-extends MobileClientInformation
+    extends MobileClientInformation
 {
-    protected static final TestGameDemoAndroidMobileClientInformation instance = new TestGameDemoAndroidMobileClientInformation();
+    protected static final TestGameDemoAndroidMobileClientInformation instance = new TestGameDemoAndroidMobileClientInformation(TestGameDemoSoftwareInfo.getInstance());
     
-    public TestGameDemoAndroidMobileClientInformation()
+    public TestGameDemoAndroidMobileClientInformation(final SoftwareInformation softwareInformation)
     {
         super(
-                TestGameDemoSoftwareInfo.getInstance().getName() + ANDROID_DESC,
-                TestGameDemoSoftwareInfo.getInstance().getVersion(),
-                TestGameDemoSoftwareInfo.getInstance().getName() + ANDROID_DESC +
-                CommonSeps.getInstance().SPACE + 
-                TestGameDemoSoftwareInfo.getInstance().getVersion(),
-                TestGameDemoSoftwareInfo.getInstance().toShortString()
+                new StringMaker().append(softwareInformation.getName()).append(ANDROID_DESC).toString(),
+                softwareInformation.getVersion(),
+                new StringMaker().append(softwareInformation.getName()).append(ANDROID_DESC).append(CommonSeps.getInstance().SPACE).append(softwareInformation.getVersion()).toString(),
+                softwareInformation.toShortString()
                 );
     }
 }

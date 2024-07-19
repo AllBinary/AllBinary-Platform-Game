@@ -1,14 +1,7 @@
 package org.allbinary.graphics.threed.min3d;
 
-import org.allbinary.logic.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
-import org.allbinary.logic.communication.log.LogUtil;
-import org.allbinary.logic.communication.log.PreLogUtil;
-import org.allbinary.logic.java.bool.BooleanFactory;
-import org.allbinary.game.layer.AllBinaryGameLayerManager;
-import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
-import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import javax.microedition.khronos.opengles.GL10;
+
 import min3d.core.Object3d;
 import min3d.core.Object3dContainer;
 import min3d.core.TextureManager;
@@ -17,19 +10,27 @@ import min3d.parser.ModelType;
 import min3d.parser.ModelTypeFactory;
 import min3d.vos.CameraFactory;
 import min3d.vos.light.Light;
+
 import org.allbinary.ThreedResources;
 import org.allbinary.animation.AnimationInterfaceFactoryInterface;
 import org.allbinary.animation.threed.ThreedAnimationSingletonFactory;
 import org.allbinary.game.identification.BasicGroupFactory;
 import org.allbinary.game.identification.Group;
+import org.allbinary.game.layer.AllBinaryGameLayerManager;
 import org.allbinary.game.layer.SimpleGameLayer;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 import org.allbinary.graphics.PointFactory;
 import org.allbinary.graphics.Rectangle;
+import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
+import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import org.allbinary.graphics.opengles.OpenGLCapabilities;
-import org.allbinary.view.StaticViewPosition;
-
 import org.allbinary.graphics.threed.min3d.renderer.AllBinaryToMin3dRendererFactory;
+import org.allbinary.logic.communication.log.LogFactory;
+import org.allbinary.logic.communication.log.LogUtil;
+import org.allbinary.logic.communication.log.PreLogUtil;
+import org.allbinary.logic.java.bool.BooleanFactory;
+import org.allbinary.logic.string.CommonStrings;
+import org.allbinary.view.StaticViewPosition;
 
 public class TestGameDemoSceneController 
 extends AllBinaryGameSceneController

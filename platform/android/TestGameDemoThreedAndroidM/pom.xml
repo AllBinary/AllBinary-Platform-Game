@@ -217,7 +217,7 @@
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoThreedAndroidBaseJavaLibrary</artifactId>
+            <artifactId>TestGameDemoThreedAndroidJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
