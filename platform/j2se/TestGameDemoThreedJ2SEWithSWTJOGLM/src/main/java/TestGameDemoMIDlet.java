@@ -122,6 +122,7 @@ public class TestGameDemoMIDlet
             
             //this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLOpenGLESView();
             this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLMin3dView();
+            //this.testGameDemoJOGLMin3dView.onEmulatorInitComplete(null);
 
         } catch (Exception e)
         {

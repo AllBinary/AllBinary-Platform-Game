@@ -60,7 +60,7 @@ extends AllBinaryGameSceneController
     //private final TextureListFactory textureListFactory = TextureListFactory.getInstance();
     //private final Min3dSceneResourcesFactory min3dSceneResourcesFactory = Min3dSceneResourcesFactory.getInstance();
 
-    Object3dContainer _cube;
+    //Object3dContainer _cube;
     
 	@Override 
 	public void updateScene()
@@ -70,7 +70,7 @@ extends AllBinaryGameSceneController
 		/*
 		 * Do any manipulation of scene properties or to objects in the scene here.
 		 */
-		_cube.getRotationOrigin().y++;
+		//_cube.getRotationOrigin().y++;
 	}
 
     @Override
@@ -127,14 +127,14 @@ extends AllBinaryGameSceneController
 
               PreLogUtil.put("Minimal 3d Example", this, METHOD_NAME);
             
-                _cube = new Box(1, 1, 1, null, BooleanFactory.getInstance().TRUE,
-                        BooleanFactory.getInstance().TRUE, BooleanFactory.getInstance().FALSE);
-
-                _cube.setNormalsEnabled(true);
-
-                _cube.setColorMaterialEnabled(false);
-
-                scene.addChild(_cube);              
+//                _cube = new Box(1, 1, 1, null, BooleanFactory.getInstance().TRUE,
+//                        BooleanFactory.getInstance().TRUE, BooleanFactory.getInstance().FALSE);
+//
+//                _cube.setNormalsEnabled(true);
+//
+//                _cube.setColorMaterialEnabled(false);
+//
+//                scene.addChild(_cube);              
               
               //this.initialized = true;
             }
