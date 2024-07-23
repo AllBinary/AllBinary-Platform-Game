@@ -10,18 +10,18 @@
         <!-- Game Version Start -->
     </parent>
 
-    <artifactId>TestGameDemoThreedJ2SEWithSWTJOGL</artifactId>
+    <artifactId>TestGameDemoThreedAvian</artifactId>
     <packaging>jar</packaging>
 
-    <name>TestGameDemoThreedJ2SEWithSWTJOGL</name>
+    <name>TestGameDemoThreedAvian</name>
     <url>http://www.allbinary.com/</url>
 
     <properties>
         <inputPath2>src\main\java\</inputPath2>
         <inputPath3>src\main\resources\</inputPath3>
         <inputPath>target\dependency\</inputPath>
-        <outputPath>..\TestGameDemoThreedJ2SEWithSWTJOGLApplicationM\src\main\java\</outputPath>
-        <outputPath2>..\TestGameDemoThreedJ2SEWithSWTJOGLApplicationM\src\main\resources\</outputPath2>
+        <outputPath>..\TestGameDemoThreedAvianApplicationM\src\main\java\</outputPath>
+        <outputPath2>..\TestGameDemoThreedAvianApplicationM\src\main\resources\</outputPath2>
     </properties>
 
     <dependencies>
@@ -74,7 +74,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>SWTToJ2MELibrary</artifactId>
@@ -82,14 +82,14 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
+
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLESBaseJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLESJavaLibrary</artifactId>
@@ -97,7 +97,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+                                
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>BasicPlayerJavaLibrary</artifactId>
@@ -107,7 +107,7 @@
         </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NotDeviceSpecificNoMediaMIDP1Library</artifactId>
+            <artifactId>J2SEMediaMIDPMiniAudioJavaLibrary</artifactId>
 <!--
             <artifactId>J2SEMediaMIDPJorbisJavaLibrary</artifactId>
             <artifactId>J2SEMediaMIDPMinimalJavaLibrary</artifactId>
@@ -152,7 +152,7 @@
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+        
         <dependency>
             <groupId>org.allbinary.game.multiplayer</groupId>
             <artifactId>AllBinaryGameClientBaseNullJavaLibrary</artifactId>
@@ -247,6 +247,12 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.swt</groupId>
+                    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -309,20 +315,7 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
-<!--
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>BasePreloaderFileJavaLibrary</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>        
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>FileJ2SEJavaLibrary</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
--->
-
+        
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>HardCodedLicenseInitInfoJavaLibrary</artifactId>
@@ -334,7 +327,7 @@
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-        </dependency>
+        </dependency>        
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -347,26 +340,28 @@
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-<!--        
+<!--     
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>BasicSecurityJavaLibrary</artifactId>
--->
-            <!-- AllBinary Platform Version Start -->
-            <!--<version>${allbinary.platform.version}</version>-->
-            <!-- AllBinary Platform Version End -->
-        <!--</dependency>-->
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>YourSecurityJavaLibrary</artifactId>
+            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+-->
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>YourSecurityJavaLibrary</artifactId>-->
 <!--
             <artifactId>BouncyCastleDESJavaLibrary</artifactId>
             <artifactId>YourSecurityJavaLibrary</artifactId>
 -->
-            <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
+<!--            <version>${allbinary.platform.version}</version>
         </dependency>
+-->
         <dependency>
             <groupId>sax</groupId>
             <artifactId>sax</artifactId>
@@ -376,31 +371,89 @@
 -->
 
         <dependency>
+            <groupId>games.rednblack.miniaudio</groupId>
+            <artifactId>gdx-miniaudio</artifactId>
+            <version>0.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-injected</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>J2MEExceptionLibrary</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135-no-javax</artifactId>
+<!--
+           <artifactId>microemu-jsr-135</artifactId>
+           <artifactId>microemu-jsr-135-no-javax</artifactId>
+-->            
+            <version>3.0.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>asm</groupId>
+                    <artifactId>asm-all</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.microemu</groupId>
+                    <artifactId>microemu-cldc</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.microemu</groupId>
+                    <artifactId>microemu-javase</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-javase-swt</artifactId>
+<!--        
+            <artifactId>microemu-javase-swing</artifactId>
+            <artifactId>microemu-javase-swt</artifactId>
+-->
+            <version>3.0.0-SNAPSHOT</version>
+        </dependency>
+                
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-avian-cldc</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-avian-javase</artifactId>
             <version>3.0.0-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.microemu</groupId>
-                    <artifactId>microemu-avian-javase</artifactId>
+                    <artifactId>microemu-cldc</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>asm</groupId>
+                    <artifactId>asm-all</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-javase</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-midp</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>org.jogamp.jogl</groupId>
             <artifactId>jogl-all-noawt</artifactId>
             <version>2.3.2-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.swt</groupId>
+                    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -414,6 +467,7 @@
     <build>
 
         <plugins>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -442,7 +496,8 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <excludeArtifactIds>BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc</excludeArtifactIds>
+                            <excludeArtifactIds>BouncyCastleDESJavaLibrary</excludeArtifactIds>
+<!--                            ,org.eclipse.swt.win32.win32.x86_64-->
                             <classifier>sources</classifier>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
@@ -473,7 +528,7 @@
                 <version>2.4.3</version>
                 <executions>
                     <execution>
-                        <id>copy-sources</id>
+                        <id>copy-resources</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -487,35 +542,6 @@
                                 </resource>
                                 <resource>
                                     <directory>${inputPath2}</directory>
-                                    <filtering>false</filtering>
-                                </resource>
-                                <!--
-                                <resource>
-                                  <directory>${inputPath3}</directory>
-                                  <filtering>false</filtering>
-                                </resource>
-                                -->                
-                            </resources>              
-                        </configuration>            
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${outputPath2}</outputDirectory>
-                            <resources>          
-                                <resource>
-                                    <directory>${inputPath3}</directory>
                                     <filtering>false</filtering>
                                 </resource>
                                 <!--

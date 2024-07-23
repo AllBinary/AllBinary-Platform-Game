@@ -22,6 +22,8 @@ swt-xulrunner-win32-4430.dll
 /platform/avian/TestGameDemoAvianApplicationM/src/
 /platform/avian/TestGameDemoAvianM/src/main/resources
 /platform/android/TestGameDemoAndroidApplicationM/src/main/java/
+/platform/avian/TestGameDemoThreedAvianApplicationM/src/main/java/
+/platform/avian/TestGameDemoThreedAvianApplicationM/src/main/resources
 /platform/html/TestGameDemoHTMLTempM/src
 /platform/html/TestGameDemoPlayNM/src/playn/core/GraphicsTestGame.java
 /platform/html/TestGameDemoPlayNM/src/playn/core/SoundTestGame.java

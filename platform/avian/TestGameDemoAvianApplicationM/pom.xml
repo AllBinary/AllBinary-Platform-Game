@@ -182,7 +182,7 @@
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.microemu.app.BareMain</mainClass>
+                            <mainClass>org.microemu.app.NativeBareMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

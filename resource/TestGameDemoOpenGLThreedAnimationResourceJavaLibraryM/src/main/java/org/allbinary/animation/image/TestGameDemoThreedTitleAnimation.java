@@ -94,7 +94,7 @@ implements ColorChangeListener
     
     private final ViewPosition viewPosition = new CenterViewPositionFactory().getInstance(0);
     
-    public void paintThreed(Graphics graphics, int x, int y, int z)
+    public void paintThreed(final Graphics graphics, final int x, final int y, final int z)
     {
         /*
         int dx = 0;
@@ -125,12 +125,14 @@ implements ColorChangeListener
             //{
               //  this.basicColorUtil.setBasicColor(graphics, this.basicColorArray[index]);
             //}
-            //LogUtil.put(LogFactory.getInstance("deltaX: " + deltaX + " " + x, this, "paint"));
+            //LogUtil.put(LogFactory.getInstance("deltaX: " + deltaX + " " + x, this, "paintThreed"));
 
             //this.animationInterfaceArray[index].paintThreed(graphics, deltaX, deltaY, 30);
 
-            ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[index];
+            final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[index];
 
+            //LogUtil.put(LogFactory.getInstance(threedAnimation.toString(), this, "paintThreed"));
+            
             threedAnimation.nextRotation();
             
             //PreLogUtil.put(Integer.toString(halfHeight), this, "***************");
@@ -138,7 +140,7 @@ implements ColorChangeListener
             //deltaY = (deltaY >> 3) / 3 * 2 ;
             deltaY = (deltaY >> 2);
 
-            int az = ((halfHeight - deltaY)); 
+            final int az = ((halfHeight - deltaY)); 
                     //* cameraLayer.getDistanceZ()) / 10000;
             
             //int ay = (viewPosition.getY() * cameraLayer.getDistanceZ()) / 700;

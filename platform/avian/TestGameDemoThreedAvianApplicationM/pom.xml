@@ -10,10 +10,10 @@
         <!-- Game Version Start -->
     </parent>
 
-    <artifactId>TestGameDemoThreedJ2SEWithSWTJOGLApplication</artifactId>
+    <artifactId>TestGameDemoThreedAvianApplication</artifactId>
     <packaging>jar</packaging>
 
-    <name>TestGameDemoThreedJ2SEWithSWTJOGLApplication</name>
+    <name>TestGameDemoThreedAvianApplication</name>
     <url>http://www.allbinary.com/</url>
 
     <properties>
@@ -46,17 +46,11 @@
             <groupId>org.allbinary</groupId>
             <artifactId>MicroemulatorSkinJavaLibrary</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.hamcrest</groupId>
-                    <artifactId>hamcrest-core</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
                 
         <dependency>
             <groupId>org.allbinary.game.resources</groupId>
-            <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>            
+            <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
             <!-- 
             <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>
             <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
@@ -74,6 +68,15 @@
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BouncyCastleDESJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+            <scope>provided</scope>
+        </dependency>
+        
         <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-jsr-135</artifactId>
@@ -95,21 +98,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
-        <dependency>
-            <groupId>org.jogamp.jogl</groupId>
-            <artifactId>jogl-all</artifactId>
-            <version>2.3.2</version>
-            <classifier>natives-windows-amd64</classifier>
-        </dependency>
                 
-<!--      
-        <dependency>
-            <groupId>org.jogamp.jogl</groupId>
-            <artifactId>jogl-all-mobile-main</artifactId>
-            <version>2.3.2</version>
-        </dependency>
-
+<!--
         <dependency>
             <groupId>org.jogamp.jogl</groupId>
             <artifactId>jogl-all-noawt</artifactId>
@@ -117,11 +107,17 @@
         </dependency>
 
         <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-mobile-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+                
+        <dependency>
             <groupId>org.jogamp.gluegen</groupId>
             <artifactId>gluegen</artifactId>
             <version>2.3.2</version>
         </dependency>
-                
+        
         <dependency>
             <groupId>org.jogamp.gluegen</groupId>
             <artifactId>gluegen-rt</artifactId>
@@ -134,7 +130,7 @@
             <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
             <version>4.4.2.0</version>
         </dependency>
-                
+        
     </dependencies>
  
     <build>
