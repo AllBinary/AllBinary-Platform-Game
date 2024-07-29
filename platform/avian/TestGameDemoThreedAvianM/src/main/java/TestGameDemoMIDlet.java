@@ -134,8 +134,8 @@ public class TestGameDemoMIDlet
     throws Exception
     {
         final OpenGLConfiguration openGLConfiguration = OpenGLConfiguration.getInstance();
-        openGLConfiguration.init();
         openGLConfiguration.setOpenGL(true);
+        openGLConfiguration.init();
         openGLConfiguration.write();        
     }
     

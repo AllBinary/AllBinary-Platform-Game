@@ -13,6 +13,8 @@
  */
 package org.microemu.app;
 
+import java.nio.ByteOrder;
+
 import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
@@ -29,6 +31,15 @@ public class NativeBareMain {
 
     public static void main(final String args[]) {
         
+        //Main Thread name for Avian is null by default
+        Thread.currentThread().setName("main");
+        
+        if(ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN) {
+            System.out.println("ByteOrder:BIG_ENDIAN");
+        } else {
+            System.out.println("ByteOrder:LITTLE_ENDIAN");
+        }
+
         final Features features = Features.getInstance();
 
         final OpenGLFeatureFactory openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
