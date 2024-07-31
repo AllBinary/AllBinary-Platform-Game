@@ -45,6 +45,8 @@
         -->
         <module>../TestGameDemoThreedAndroidClientInfoJavaLibraryM</module>
         <module>../TestGameDemoThreedAndroidJavaLibraryM</module>
+        
+        <module>../TestGameDemoThreedAndroidGradleM</module>
     </modules>
 
 </project>
