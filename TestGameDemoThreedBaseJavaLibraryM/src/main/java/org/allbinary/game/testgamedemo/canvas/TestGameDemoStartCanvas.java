@@ -66,6 +66,8 @@ public class TestGameDemoStartCanvas extends DemoCanvas
 
         this.setDefaultPaintableInterface(
                 ColorFillPaintableFactory.getInstance(BasicColorFactory.getInstance().RED, true));
+        
+        //TrueTypeFontUtil.getInstance().saveFontAtlasAsFile();
     }
 
     protected int getNextRandom()
