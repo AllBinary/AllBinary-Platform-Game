@@ -1,9 +1,10 @@
 
+import org.microemu.app.MidletJOGLInterface;
+
 import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
-import org.allbinary.device.OpenGLESGraphicsFactory;
 import org.allbinary.emulator.InitEmulatorFactory;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
@@ -21,13 +22,12 @@ import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 import org.allbinary.game.testgamedemo.TestGameDemoJOGLMin3dView;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
-import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
-import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
+    implements MidletJOGLInterface
 {
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
@@ -54,7 +54,7 @@ public class TestGameDemoMIDlet
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, CommonStrings.getInstance().INIT));
+            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.INIT));
 
             ResourceUtil.getInstance().setClassLoader(this.getClass().getClassLoader());
 
@@ -126,7 +126,7 @@ public class TestGameDemoMIDlet
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, CommonStrings.getInstance().CONSTRUCTOR, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
         }
     }
 
@@ -148,8 +148,12 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "stopAll", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "stopAll", e));
         }
+    }
+    
+    public void initView() {
+        this.testGameDemoJOGLMin3dView.setMidlet(this);
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)
