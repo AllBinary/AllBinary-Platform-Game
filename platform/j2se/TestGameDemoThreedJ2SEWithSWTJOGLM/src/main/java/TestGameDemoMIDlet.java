@@ -1,7 +1,6 @@
 
 import org.microemu.app.MidletJOGLInterface;
 
-import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
@@ -21,9 +20,13 @@ import org.allbinary.media.audio.EarlySoundsFactory;
 import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 import org.allbinary.game.testgamedemo.TestGameDemoJOGLMin3dView;
+import org.allbinary.game.testgamedemo.TestGameDemoJOGLOpenGLESView;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
+import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
+import org.allbinary.view.EmulatorViewInterface;
+import org.allbinary.view.OptimizedGLSurfaceView;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
@@ -32,9 +35,7 @@ public class TestGameDemoMIDlet
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
 
-    //TestGameDemoThreedSWTJOGLMin3dView?
-    //private TestGameDemoJOGLOpenGLESView testGameDemoJOGLMin3dView;
-    private TestGameDemoJOGLMin3dView testGameDemoJOGLMin3dView;
+    private OptimizedGLSurfaceView testGameDemoView;
     
     public TestGameDemoMIDlet()
     {
@@ -119,10 +120,17 @@ public class TestGameDemoMIDlet
             this.initOpenGL();
 
             InitEmulatorFactory.getInstance().setInitEmulator(true);
+
+            final OpenGLFeatureFactory openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             
-            //this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLOpenGLESView();
-            this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLMin3dView();
-            //this.testGameDemoJOGLMin3dView.onEmulatorInitComplete(null);
+            if(features.isFeature(openGLFeatureFactory.OPENGL_2D)) {
+                this.testGameDemoView = new TestGameDemoJOGLOpenGLESView();
+            } else if(features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D) || 
+                features.isFeature(openGLFeatureFactory.OPENGL_3D)) {
+                this.testGameDemoView = new TestGameDemoJOGLMin3dView();
+            }
+
+            //this.testGameDemoView.onEmulatorInitComplete(null);
 
         } catch (Exception e)
         {
@@ -138,6 +146,10 @@ public class TestGameDemoMIDlet
         openGLConfiguration.init();
         openGLConfiguration.write();        
     }
+
+    public void initView() {
+        ((EmulatorViewInterface) this.testGameDemoView).setMidlet(this);
+    }
     
     public void stopAll()
     {
@@ -150,10 +162,6 @@ public class TestGameDemoMIDlet
         {
             LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "stopAll", e));
         }
-    }
-
-    public void initView() {
-        this.testGameDemoJOGLMin3dView.setMidlet(this);
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)

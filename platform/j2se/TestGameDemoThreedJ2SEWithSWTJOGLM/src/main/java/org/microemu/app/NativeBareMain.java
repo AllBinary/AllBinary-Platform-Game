@@ -15,13 +15,14 @@ package org.microemu.app;
 
 import java.nio.ByteOrder;
 
+import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
+
 import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.string.CommonStrings;
-import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 
 /**
  *

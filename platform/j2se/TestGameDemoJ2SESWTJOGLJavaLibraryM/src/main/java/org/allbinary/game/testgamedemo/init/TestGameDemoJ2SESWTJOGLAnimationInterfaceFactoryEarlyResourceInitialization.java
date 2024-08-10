@@ -1,6 +1,7 @@
 package org.allbinary.game.testgamedemo.init;
 
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
+import org.allbinary.animation.image.TestGameDemoEarlyResourcesOpenGLBasedAnimationInterfaceFactoryInterfaceFactory;
 import org.allbinary.animation.image.TestGameDemoEarlyResourcesOpenGLThreedBasedAnimationInterfaceFactoryInterfaceFactory;
 //import org.allbinary.game.image.TestGameDemoEarlyResourcesImageArrayBasedAnimationInterfaceFactoryInterfaceFactory;
 import org.allbinary.game.resource.ResourceInitialization;
@@ -24,6 +25,8 @@ extends ResourceInitialization
 
         featuredAnimationInterfaceFactoryInterfaceFactory.add(
                 new TestGameDemoEarlyResourcesOpenGLThreedBasedAnimationInterfaceFactoryInterfaceFactory());
-        
+        featuredAnimationInterfaceFactoryInterfaceFactory.add(
+                new TestGameDemoEarlyResourcesOpenGLBasedAnimationInterfaceFactoryInterfaceFactory());
+
     }
 }

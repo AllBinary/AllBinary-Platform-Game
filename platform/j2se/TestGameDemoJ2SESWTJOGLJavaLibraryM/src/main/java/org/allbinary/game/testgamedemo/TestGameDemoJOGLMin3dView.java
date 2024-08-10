@@ -5,7 +5,6 @@ import min3d.core.SceneController;
 
 import org.allbinary.graphics.opengles.OpenGLThreadUtil;
 import org.allbinary.j2se.view.AllBinaryMidletMin3dSurfaceView;
-import org.allbinary.logic.string.CommonStrings;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.view.OptimizedGLSurfaceView;
 
@@ -17,10 +16,9 @@ extends AllBinaryMidletMin3dSurfaceView
     public TestGameDemoJOGLMin3dView()
     {
 
-        PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
+        PreLogUtil.put(commonStrings.START, TAG, commonStrings.CONSTRUCTOR);
         
-        final SceneController sceneController = 
-            TestGameDemoAllBinarySceneControllerFactory.getInstance();
+        final SceneController sceneController = TestGameDemoAllBinarySceneControllerFactory.getInstance();
 
         this.setRenderer((Renderer) sceneController.getRenderer());
 

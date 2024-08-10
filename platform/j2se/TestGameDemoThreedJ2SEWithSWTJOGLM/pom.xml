@@ -58,6 +58,10 @@
                 </exclusion>
                 <exclusion>
                     <groupId>org.allbinary</groupId>
+                    <artifactId>NoSystemJavaLibrary</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
                     <artifactId>FileLicenseInitInfoJavaLibrary</artifactId>
                 </exclusion>
                 <exclusion>
