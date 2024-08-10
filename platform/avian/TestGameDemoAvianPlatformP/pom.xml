@@ -30,7 +30,10 @@
         
         <module>../TestGameDemoAvianM</module>
         <module>../TestGameDemoAvianApplicationM</module>
-        
+
+        <module>../TestGameDemoThreedAvianM</module>
+        <module>../TestGameDemoThreedAvianApplicationM</module>
+                
         <!--
         <module>../TestGameDemoTouchJ2MSE</module>
         -->
