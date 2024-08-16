@@ -35,7 +35,7 @@ public class TestGameDemoMIDlet
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
 
-    private OptimizedGLSurfaceView testGameDemoView;
+    private OptimizedGLSurfaceView glSurfaceView;
     
     public TestGameDemoMIDlet()
     {
@@ -124,10 +124,10 @@ public class TestGameDemoMIDlet
             final OpenGLFeatureFactory openGLFeatureFactory = OpenGLFeatureFactory.getInstance();
             
             if(features.isFeature(openGLFeatureFactory.OPENGL_2D)) {
-                this.testGameDemoView = new TestGameDemoJOGLOpenGLESView();
+                this.glSurfaceView = new TestGameDemoJOGLOpenGLESView();
             } else if(features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D) || 
                 features.isFeature(openGLFeatureFactory.OPENGL_3D)) {
-                this.testGameDemoView = new TestGameDemoJOGLMin3dView();
+                this.glSurfaceView = new TestGameDemoJOGLMin3dView();
             }
 
             //this.testGameDemoView.onEmulatorInitComplete(null);
@@ -148,7 +148,12 @@ public class TestGameDemoMIDlet
     }
 
     public void initView() {
-        ((EmulatorViewInterface) this.testGameDemoView).setMidlet(this);
+        ((EmulatorViewInterface) this.glSurfaceView).setMidlet(this);
+    }
+    
+    protected void exit(boolean isProgress) {
+        this.glSurfaceView.onDetachedFromWindow();
+        super.exit(isProgress);
     }
     
     public void stopAll()
