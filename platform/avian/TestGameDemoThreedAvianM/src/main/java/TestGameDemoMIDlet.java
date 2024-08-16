@@ -34,7 +34,7 @@ public class TestGameDemoMIDlet
 
     //TestGameDemoThreedSWTJOGLMin3dView?
     //private TestGameDemoJOGLOpenGLESView testGameDemoJOGLMin3dView;
-    private TestGameDemoJOGLMin3dView testGameDemoJOGLMin3dView;
+    private TestGameDemoJOGLMin3dView glSurfaceView;
     
     public TestGameDemoMIDlet()
     {
@@ -121,7 +121,7 @@ public class TestGameDemoMIDlet
             InitEmulatorFactory.getInstance().setInitEmulator(true);
             
             //this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLOpenGLESView();
-            this.testGameDemoJOGLMin3dView = new TestGameDemoJOGLMin3dView();
+            this.glSurfaceView = new TestGameDemoJOGLMin3dView();
             //this.testGameDemoJOGLMin3dView.onEmulatorInitComplete(null);
 
         } catch (Exception e)
@@ -153,9 +153,14 @@ public class TestGameDemoMIDlet
     }
     
     public void initView() {
-        this.testGameDemoJOGLMin3dView.setMidlet(this);
+        this.glSurfaceView.setMidlet(this);
     }
-    
+
+    protected void exit(boolean isProgress) {
+        this.glSurfaceView.onDetachedFromWindow();
+        super.exit(isProgress);
+    }
+
     //public void mouseClicked(MouseEvent mouseEvent)
     public void mouseClicked(final int x, final int y, final int button)
     {
