@@ -20,7 +20,7 @@ package org.microemu.app;
 public class NativeBareMain {
 
     public static void main(final String args[]) {
-        BareMain.main2(args, "TestGameDemoMIDlet");
+        BareMain.main2(args, "TestGameDemoMIDlet", "/testgamedemo_icon.ico");
     }
 
 }
