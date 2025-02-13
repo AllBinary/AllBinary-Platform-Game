@@ -93,10 +93,10 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>false</showWarnings>
                     <compilerArguments>
                         <bootclasspath>${wtk.midpapi}</bootclasspath>
                     </compilerArguments>
-                    <showWarnings>false</showWarnings>
                 </configuration>
                 <!-- j2me configuration 
                 <configuration>

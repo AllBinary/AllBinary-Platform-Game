@@ -10,16 +10,18 @@
         <!-- Game Version Start -->
     </parent>
 
-    <artifactId>TestGameDemoJ2SE</artifactId>
+    <artifactId>TestGameDemoJ2SEWithSWTDependencies</artifactId>
     <packaging>jar</packaging>
 
-    <name>TestGameDemoJ2SE</name>
+    <name>TestGameDemoJ2SEWithSWTDependencies</name>
     <url>http://www.allbinary.com/</url>
 
     <properties>
         <inputPath2>src\main\java\</inputPath2>
+        <inputPath3>src\main\resources\</inputPath3>
         <inputPath>target\dependency\</inputPath>
-        <outputPath>..\TestGameDemoJ2SEApplicationM\src\main\java\</outputPath>
+        <outputPath>..\TestGameDemoJ2SEWithSWTApplicationDependenciesM\src\main\java\</outputPath>
+        <outputPath2>..\TestGameDemoJ2SEWithSWTApplicationDependenciesM\src\main\resources\</outputPath2>
     </properties>
 
     <dependencies>
@@ -50,24 +52,43 @@
                     <groupId>org.allbinary</groupId>
                     <artifactId>J2SEMediaMIDPMinimalJavaLibrary</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.allbinary</groupId>
+                    <artifactId>J2SEForJ2MEJavaLibrary</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ImageCacheJ2MEJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
+            <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+        
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NoSWTJavaLibrary</artifactId>
+            <artifactId>SWTJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
         
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SWTToJ2MELibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESBaseJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>        
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>OpenGLNoneJavaLibrary</artifactId>
@@ -87,6 +108,13 @@
             <artifactId>OpenGLESNullImageJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SWTWithoutJOGLJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -266,7 +294,7 @@
 
         <dependency>
             <groupId>org.allbinary.media.image</groupId>
-            <artifactId>ImageJ2SEJavaLibrary</artifactId>
+            <artifactId>ImageSwtJ2SEJavaLibrary</artifactId>
 <!--        
             <artifactId>ImageJ2SEJavaLibrary</artifactId>
             <artifactId>ImageSwtJ2SEJavaLibrary</artifactId>
@@ -278,7 +306,7 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>GameInputPCJavaLibrary</artifactId>
+            <artifactId>GameInputSwtJavaLibrary</artifactId>
 <!--        
             <artifactId>GameInputPCJavaLibrary</artifactId>
             <artifactId>GameInputSwtJavaLibrary</artifactId>
@@ -287,23 +315,76 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
+        
+<!--        
         <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-midp</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
-            <optional>true</optional>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FormJMEJavaLibrary</artifactId>        
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MicroEmulatorCustomUIJavaLibrary</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+-->
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MicroemulatorSkinJavaLibrary</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+                
+        <dependency>
+            <groupId>org.allbinary.game.resources</groupId>
+            <!-- 
+            <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>
+            <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
+            -->
+            <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.allbinary.game.resources</groupId>
+            <artifactId>GameImageLowResourcesJavaLibrary</artifactId>        
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary.game.resources</groupId>
+            <artifactId>GameImageMediumResourcesJavaLibrary</artifactId>        
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>org.microemu</groupId>
-            <artifactId>microemu-javase-swing</artifactId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-javase-swt</artifactId>
 <!--        
             <artifactId>microemu-javase-swing</artifactId>
             <artifactId>microemu-javase-swt</artifactId>
 -->
             <version>3.0.0-SNAPSHOT</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+        </dependency>
+                
+<!--    
+        <dependency>
+            <groupId>org.eclipse.swt</groupId>
+            <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+            <version>4.4.2.0</version>
+        </dependency>
+-->
 
     </dependencies>
 
@@ -327,7 +408,6 @@
                 </configuration>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -339,8 +419,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <excludeArtifactIds>BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc</excludeArtifactIds>
-<!--                            ,org.eclipse.swt.win32.win32.x86_64-->
+<!--                            <excludeArtifactIds>BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc</excludeArtifactIds>-->
                             <classifier>sources</classifier>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
@@ -371,7 +450,7 @@
                 <version>2.4.3</version>
                 <executions>
                     <execution>
-                        <id>copy-resources</id>
+                        <id>copy-sources</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -385,6 +464,35 @@
                                 </resource>
                                 <resource>
                                     <directory>${inputPath2}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                                <!--
+                                <resource>
+                                  <directory>${inputPath3}</directory>
+                                  <filtering>false</filtering>
+                                </resource>
+                                -->                
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath2}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputPath3}</directory>
                                     <filtering>false</filtering>
                                 </resource>
                                 <!--

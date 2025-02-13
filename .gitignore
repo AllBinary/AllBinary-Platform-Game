@@ -15,8 +15,10 @@ swt-xulrunner-win32-4430.dll
 /platform/j2me/TestGameDemoJ2MEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEM/src//main/resources
-/platform/j2se/TestGameDemoJ2SEWithSWTApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEWithSWTM/src/main/resources
+/platform/j2se/TestGameDemoJ2SEWithSWTApplicationM/src/
+/platform/j2se/TestGameDemoJ2SEWithSWTDependenciesM/src/main/resources
+/platform/j2se/TestGameDemoJ2SEWithSWTApplicationDependenciesM/src/
 /platform/j2se/TestGameDemoThreedJ2SEWithSWTJOGLApplicationM/src/
 /platform/j2se/TestGameDemoThreedJ2SEWithSWTJOGL/src/main/resources
 /platform/avian/TestGameDemoAvianApplicationM/src/

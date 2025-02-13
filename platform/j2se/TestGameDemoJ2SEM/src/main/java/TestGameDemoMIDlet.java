@@ -22,6 +22,7 @@ import org.allbinary.media.audio.TestGameDemoSoundsFactory;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
+    //implements MidletJOGLInterface
 {
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();

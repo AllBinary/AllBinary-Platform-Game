@@ -1,0 +1,1 @@
+-j2sefont --device org/allbinary/device/arcade/eighthundred_by_foureighty/device.xml TestGameDemoApplication.jad

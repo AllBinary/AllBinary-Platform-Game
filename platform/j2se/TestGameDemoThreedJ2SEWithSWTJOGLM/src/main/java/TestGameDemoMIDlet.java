@@ -147,15 +147,6 @@ public class TestGameDemoMIDlet
         openGLConfiguration.write();        
     }
 
-    public void initView() {
-        ((EmulatorViewInterface) this.glSurfaceView).setMidlet(this);
-    }
-    
-    protected void exit(boolean isProgress) {
-        this.glSurfaceView.onDetachedFromWindow();
-        super.exit(isProgress);
-    }
-    
     public void stopAll()
     {
         try
@@ -167,6 +158,15 @@ public class TestGameDemoMIDlet
         {
             LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "stopAll", e));
         }
+    }
+    
+    public void initView() {
+        ((EmulatorViewInterface) this.glSurfaceView).setMidlet(this);
+    }
+    
+    protected void exit(boolean isProgress) {
+        this.glSurfaceView.onDetachedFromWindow();
+        super.exit(isProgress);
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)

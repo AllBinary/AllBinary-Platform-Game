@@ -19,9 +19,11 @@ import org.allbinary.media.audio.Sounds;
 import org.allbinary.game.init.DefaultGameInitializationListener;
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 import org.allbinary.media.audio.TestGameDemoSoundsFactory;
+import org.microemu.app.MidletJOGLInterface;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
+    implements MidletJOGLInterface
 {
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
