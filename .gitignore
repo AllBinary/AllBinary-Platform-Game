@@ -12,6 +12,8 @@ swt-win32-4430.dll
 swt-xulrunner24-win32-4430.dll
 swt-xulrunner-win32-4430.dll
 
+/platform/kmp/TestGameDemoKMPWithSWTM/src/main/resources
+/platform/kmp/TestGameDemoKMPWithSWTApplicationM/src/
 /platform/j2me/TestGameDemoJ2MEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEApplicationM/src/
 /platform/j2se/TestGameDemoJ2SEM/src//main/resources
