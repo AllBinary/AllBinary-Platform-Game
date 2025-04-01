@@ -6,14 +6,13 @@ import javax.microedition.lcdui.Image;
 
 import org.allbinary.AllBinaryAndroidGameInitializationUtil;
 import org.allbinary.AndroidResources;
-import org.allbinary.android.AndroidStrings;
 import org.allbinary.android.activity.game.GameMidletActivity;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 
-import org.allbinary.logic.string.CommonStrings;
+import org.allbinary.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
@@ -52,7 +51,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, CommonStrings.getInstance().CONSTRUCTOR, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
         }
     }
 
@@ -126,7 +125,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, AndroidStrings.getInstance().CREATE));
+            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStateStrings.CREATE));
 
             //final String UNLOCKED = "unlock_testgamedemo_levels";
             //InApplicationPurchaseFactory.getInstance().init(this, bundle);
@@ -139,10 +138,10 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 this.setBackgrounds();
             }
 
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().END, this, AndroidStrings.getInstance().CREATE));
+            LogUtil.put(LogFactory.getInstance(commonStrings.END, this, commonStateStrings.CREATE));
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, AndroidStrings.getInstance().CREATE, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e));
         }
     }
 
@@ -150,16 +149,16 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, AndroidStrings.getInstance().START));
+            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStateStrings.START));
 
             super.onStart();
 
             super.onStart(new TestGameDemoMIDletFactory());
 
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().END, this, AndroidStrings.getInstance().START));
+            LogUtil.put(LogFactory.getInstance(commonStrings.END, this, commonStateStrings.START));
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, AndroidStrings.getInstance().START, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.START, e));
         }
     }
 
@@ -172,17 +171,17 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             {
                 try
                 {
-                    LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, CommonStrings.getInstance().RUN));
+                    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.RUN));
 
                     AllBinaryMidletOpenGLESView view = (AllBinaryMidletOpenGLESView)
                     TestGameDemoAndroidActivity.this.getView();
                     view.onEvent(eventObject);
                     
-                    LogUtil.put(LogFactory.getInstance("End Runnable", this, CommonStrings.getInstance().RUN));
+                    LogUtil.put(LogFactory.getInstance("End Runnable", this, commonStrings.RUN));
                 }
                 catch (Exception e)
                 {
-                    LogUtil.put(LogFactory.getInstance("Execption", this, CommonStrings.getInstance().RUN, e));
+                    LogUtil.put(LogFactory.getInstance("Execption", this, commonStrings.RUN, e));
                 }
 
             }
@@ -265,7 +264,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
     public void setBackgrounds() throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "setBackground"));
+        LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "setBackground"));
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         

@@ -29,7 +29,7 @@ import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.logic.java.bool.BooleanFactory;
-import org.allbinary.logic.string.CommonStrings;
+import org.allbinary.string.CommonStrings;
 import org.allbinary.view.StaticViewPosition;
 
 public class TestGameDemoSceneController 
@@ -45,7 +45,7 @@ extends AllBinaryGameSceneController
         //super(new RendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
         //super(new CompositeMin3dRendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
         ////super(new Min3dAllBinaryRendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
-        super(new AllBinaryToMin3dRendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), true);
+        super(new AllBinaryToMin3dRendererFactory(), new CameraFactory(), new AllBinarySceneFactory(), false, false);
         
         PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
     }

@@ -15,7 +15,7 @@ import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.testgamedemo.R;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
-import org.allbinary.logic.string.CommonStrings;
+import org.allbinary.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.view.OptimizedGLSurfaceView;
