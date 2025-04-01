@@ -10,7 +10,6 @@ import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
 
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.graphics.displayable.DisplayInfoSingleton;
-import org.allbinary.android.AndroidStrings;
 import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.testgamedemo.R;
@@ -18,6 +17,7 @@ import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.string.CommonStrings;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
+import org.allbinary.string.CommonStateStrings;
 import org.allbinary.view.OptimizedGLSurfaceView;
 
 /**
@@ -32,6 +32,9 @@ import org.allbinary.view.OptimizedGLSurfaceView;
  */
 public class RendererActivity extends Activity //implements ISceneController
 {
+    protected final CommonStrings commonStrings = CommonStrings.getInstance();
+    protected final CommonStateStrings commonStateStrings = CommonStateStrings.getInstance();
+    
     //protected GLSurfaceView _glSurfaceView;
     protected OptimizedGLSurfaceView _glSurfaceView;
 	
@@ -72,7 +75,7 @@ public class RendererActivity extends Activity //implements ISceneController
 
             //TWB
             DisplayInfoSingleton displayInfo = DisplayInfoSingleton.getInstance();
-            displayInfo.setLastSize(_glSurfaceView.getWidth(), _glSurfaceView.getHeight(), AndroidStrings.getInstance().CREATE);
+            displayInfo.setLastSize(_glSurfaceView.getWidth(), _glSurfaceView.getHeight(), commonStateStrings.CREATE);
             //End - TWB
 
             //glSurfaceViewConfig();
@@ -83,7 +86,7 @@ public class RendererActivity extends Activity //implements ISceneController
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, AndroidStrings.getInstance().CREATE, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e));
         }
     }
 	
