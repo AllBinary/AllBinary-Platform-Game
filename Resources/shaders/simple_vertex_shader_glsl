@@ -1,0 +1,16 @@
+#if __VERSION__ >= 130
+  #define attribute in
+  #define varying out
+#endif
+#ifdef GL_ES 
+precision mediump float; 
+precision mediump int; 
+#endif 
+attribute vec3  a_Position; 
+attribute vec4  a_Color; 
+varying vec4    v_Color; 
+void main(void) 
+{ 
+  v_Color = a_Color; 
+  gl_Position = gl_ModelViewProjectionMatrix * vec4(a_Position, 1.0); 
+} 

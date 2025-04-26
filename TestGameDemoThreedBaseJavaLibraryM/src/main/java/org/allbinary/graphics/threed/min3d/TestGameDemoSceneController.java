@@ -3,9 +3,7 @@ package org.allbinary.graphics.threed.min3d;
 import javax.microedition.khronos.opengles.GL10;
 
 import min3d.core.Object3d;
-import min3d.core.Object3dContainer;
 import min3d.core.TextureManager;
-import min3d.objectPrimitives.Box;
 import min3d.parser.ModelType;
 import min3d.parser.ModelTypeFactory;
 import min3d.vos.CameraFactory;
@@ -24,6 +22,7 @@ import org.allbinary.graphics.Rectangle;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import org.allbinary.graphics.opengles.OpenGLCapabilities;
+import org.allbinary.graphics.opengles.shader.AppRendererShaderUpdaterFactory;
 import org.allbinary.graphics.threed.min3d.renderer.AllBinaryToMin3dRendererFactory;
 import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
@@ -147,7 +146,9 @@ extends AllBinaryGameSceneController
             
           final Object3d titleThreeObject3dContainer = threedLoaderFactory.getObject3dInstance(
                   titleThreedResources.RESOURCE_TITLE_THREE, gl, glInstanceVersion, OBJ, FALSE);
-          
+
+          titleThreeObject3dContainer.setShaderComposite(AppRendererShaderUpdaterFactory.getInstance().shaderCompositeArray[0]);
+
           //titleThreeObject3dContainer.getScale().x = 
               //titleThreeObject3dContainer.getScale().y = 
                   //titleThreeObject3dContainer.getScale().z = 3f;
