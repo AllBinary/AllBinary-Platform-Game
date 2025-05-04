@@ -1,0 +1,19 @@
+#version 130
+//#version 300 es
+in vec3 position; // input vertex position from mesh
+in vec2 texcoord; // input vertex texture coordinate from mesh
+//in vec3 normal;   // input vertex normal from mesh
+
+// uniform variables are exposed as node slots
+//niform mat4 projection; //description="camera projection matrix"
+//niform mat4 modelview; // description="modelview transformation"
+
+out vec2 tc; // output texture coordinate of vertex
+out vec3 fn; // output fragment normal of vertex
+
+void main(){
+  tc = texcoord;
+  //gl_Position = projection * modelview * vec4(position, 1.0);
+  gl_Position = gl_ModelViewProjectionMatrix * vec4(position, 1.0);
+
+}

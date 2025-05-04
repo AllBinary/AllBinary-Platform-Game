@@ -1,0 +1,19 @@
+#version 130
+//#version 300 es
+precision highp float;
+out vec4 outColor;
+in vec2 tc; // texture coordinate of pixel (interpolated)
+
+uniform sampler2D myTexture; // wrap_s="REPEAT" wrap_t="REPEAT"
+
+void main() {
+  //vec4 gamma = vec4(1.0 / 2.2);
+  //gamma.w = 1.0;
+  //outputColor = pow(texture(colorTexture, colorCoord), gamma);
+  //outputColor = texture(colorTexture, colorCoord);
+  //outputColor = vec4(1, 0, 0, 1);
+
+  vec4 texColor  = texture(myTexture, tc);
+  outColor = vec4(0.0, 1.0, 0.0, 1.0) * texColor;
+  //outColor = texColor;
+}

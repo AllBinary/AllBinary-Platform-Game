@@ -34,6 +34,8 @@ public final class R {
     public static final class raw {
         public static final int error=0x7f040000;
         public static final int threed_obj=0x7f040029;
+        public static final int simple_vertex_shader_gsn_glsl=0x7f030099;
+        public static final int simple_texture_fragment_shader_gsn_glsl=0x7f030098;        
         public static final int licenseinitdata=0x7f040008;
         public static final int locked_demo_game_feature_128_by_128=0x7f040009;
         public static final int locked_demo_game_feature_64_by_64=0x7f04000a;

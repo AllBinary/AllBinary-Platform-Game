@@ -52,6 +52,8 @@ public class AndroidResources
         public final int privacy_policy = R.raw.privacy_policy;
         public final int begin = R.raw.begin;
         public final int error = R.raw.error;
+        public final int simple_vertex_shader_gsn_glsl = R.raw.simple_vertex_shader_gsn_glsl;
+        public final int simple_texture_fragment_shader_gsn_glsl = R.raw.simple_texture_fragment_shader_gsn_glsl;
         public final int explosion = R.raw.explosion;
         public final int test = R.raw.test;
         public final int licenseinitdata = R.raw.licenseinitdata;
