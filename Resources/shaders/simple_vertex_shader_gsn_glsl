@@ -1,4 +1,4 @@
-#version 130
+__VERSION__
 //#version 300 es
 in vec3 position; // input vertex position from mesh
 in vec2 texcoord; // input vertex texture coordinate from mesh

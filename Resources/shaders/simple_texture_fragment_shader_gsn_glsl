@@ -1,4 +1,4 @@
-#version 130
+__VERSION__
 //#version 300 es
 precision highp float;
 out vec4 outColor;
