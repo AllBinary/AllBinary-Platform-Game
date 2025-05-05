@@ -22,6 +22,7 @@ import org.allbinary.graphics.Rectangle;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas;
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory;
 import org.allbinary.graphics.opengles.OpenGLCapabilities;
+import org.allbinary.graphics.opengles.OpenGLVersionValidator;
 import org.allbinary.graphics.opengles.shader.AppRendererShaderUpdaterFactory;
 import org.allbinary.graphics.threed.min3d.renderer.AllBinaryToMin3dRendererFactory;
 import org.allbinary.logic.communication.log.LogFactory;
@@ -147,7 +148,7 @@ extends AllBinaryGameSceneController
           final Object3d titleThreeObject3dContainer = threedLoaderFactory.getObject3dInstance(
                   titleThreedResources.RESOURCE_TITLE_THREE, gl, glInstanceVersion, OBJ, FALSE);
 
-          titleThreeObject3dContainer.setShaderComposite(AppRendererShaderUpdaterFactory.getInstance().shaderCompositeArray[0]);
+          OpenGLVersionValidator.getInstance().setShaderComposite(AppRendererShaderUpdaterFactory.getInstance().shaderCompositeArray[0], titleThreeObject3dContainer);
 
           //titleThreeObject3dContainer.getScale().x = 
               //titleThreeObject3dContainer.getScale().y = 
