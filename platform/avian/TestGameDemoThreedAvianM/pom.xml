@@ -20,8 +20,13 @@
         <inputPath2>src\main\java\</inputPath2>
         <inputPath3>src\main\resources\</inputPath3>
         <inputPath>target\dependency\</inputPath>
+        <outputPath3>..\..\..\..\..\..\..\..\..\..\avian\testgamedemothreed\org.allbinary\src\</outputPath3>
         <outputPath>..\TestGameDemoThreedAvianApplicationM\src\main\java\</outputPath>
         <outputPath2>..\TestGameDemoThreedAvianApplicationM\src\main\resources\</outputPath2>
+        
+        <inputAvianPath>..\..\..\..\..\..\..\..\..\..\avian\testgamedemothreed</inputAvianPath>
+        <inputFile>game.properties</inputFile>
+        
     </properties>
 
     <dependencies>
@@ -536,10 +541,38 @@
                         <fileset>
                             <directory>${outputPath}</directory>
                         </fileset>
+                        <fileset>
+                            <directory>${outputPath3}</directory>
+                        </fileset>
                     </filesets>
                 </configuration>
             </plugin>
       
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-game.properties</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath3}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputAvianPath}</directory>
+                                    <includes>
+                                        <include>${inputFile}</include>
+                                    </includes>
+                                </resource>
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.4.3</version>
@@ -565,6 +598,39 @@
                                 <resource>
                                   <directory>${inputPath3}</directory>
                                   <filtering>false</filtering>
+                                </resource>
+                                -->                
+                            </resources>              
+                        </configuration>            
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <id>copy-sources-avian</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${outputPath3}</outputDirectory>
+                            <resources>          
+                                <resource>
+                                    <directory>${inputPath}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>${inputPath2}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <!--
+                                <resource>
+                                  <directory>${inputPath3}</directory>
+                                  <filtering>true</filtering>
                                 </resource>
                                 -->                
                             </resources>              

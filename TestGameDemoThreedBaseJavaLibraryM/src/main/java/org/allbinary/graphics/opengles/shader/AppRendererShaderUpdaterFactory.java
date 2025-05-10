@@ -14,7 +14,6 @@
 package org.allbinary.graphics.opengles.shader;
 
 import java.io.InputStream;
-import java.util.List;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 import opengles.SemanticStrings;
@@ -30,6 +29,7 @@ import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.io.file.SimpleFileUtil;
 import org.allbinary.logic.string.StringUtil;
+import org.allbinary.util.BasicArrayList;
 
 /**
  *
@@ -213,8 +213,8 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
         try {
             LogUtil.put(LogFactory.getInstance(resource, this, this.rendererStrings.ON_SURFACE_CREATED));
             final InputStream inputStream = resourceUtil.getResourceAsStream(resource);
-            final List<String> stringList = shader.shaderStringList = simpleFileUtil.loadFileAsList(inputStream, max, byteArray1, 1);
-            String[] shaderAsStringArray = stringList.toArray(new String[stringList.size()]);
+            final BasicArrayList stringList = shader.shaderStringList = simpleFileUtil.loadFileAsList(inputStream, max, byteArray1, 1);
+            String[] shaderAsStringArray = (String[]) stringList.toArray(new String[stringList.size()]);
             shader.shaderAsString = this.simpleFileUtil.createStringFromArrayOfStrings(shaderAsStringArray);
             //LogUtil.put(LogFactory.getInstance("shaderAsString: " + shader.shaderAsString, this, this.rendererStrings.ON_SURFACE_CREATED));
             shader.shaderHandle = shaderManager.loadShader(gl, resource, shader.shaderStringList, shaderType);

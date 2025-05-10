@@ -44,6 +44,7 @@
         <!--
         //Needs the nexus
         -->
+        <module>../platform/j2se/TestGameDemoThreedJ2SEResourceJavaLibraryM</module>
         <module>../TestGameDemoThreedBaseJavaLibraryM</module>
 
         <module>../TestGameDemoGameAIJavaLibraryM</module>
