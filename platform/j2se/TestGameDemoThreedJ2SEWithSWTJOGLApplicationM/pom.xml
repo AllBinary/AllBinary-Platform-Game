@@ -88,20 +88,14 @@
             <artifactId>microemu-javase-swt</artifactId>
 -->
             <version>3.0.0-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.microemu</groupId>
-                    <artifactId>microemu-avian-javase</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         
-        <dependency>
+<!--        <dependency>
             <groupId>org.jogamp.jogl</groupId>
             <artifactId>jogl-all</artifactId>
             <version>2.3.2</version>
             <classifier>natives-windows-amd64</classifier>
-        </dependency>
+        </dependency>-->
                 
 <!--      
         <dependency>

@@ -28,6 +28,8 @@
         <module>../TestGameDemoPCClientInfoJavaLibraryM</module>
         -->
         
+        <module>../../TestGameDemoJOGLResourcesJavaLibraryM</module>
+        
         <module>../TestGameDemoJ2SEJavaLibraryM</module>
         <module>../TestGameDemoJ2SEM</module>
         <module>../TestGameDemoJ2SEApplicationM</module>
