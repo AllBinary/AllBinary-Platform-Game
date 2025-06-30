@@ -23,7 +23,7 @@ extends ResourceInitialization
     {
         super.init();
         
-        PreLogUtil.put(CommonStrings.getInstance().START, this, CommonStrings.getInstance().INIT);
+        PreLogUtil.put(commonStrings.START, this, commonStrings.INIT);
         
         final ResourceUtil resourceUtil = ResourceUtil.getInstance();
         

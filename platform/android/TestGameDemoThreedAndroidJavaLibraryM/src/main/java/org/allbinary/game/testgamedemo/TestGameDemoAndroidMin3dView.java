@@ -20,7 +20,8 @@ extends AllBinaryMidletMin3dSurfaceView
     {
         super(context, attrs);
 
-        PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
+        final CommonStrings commonStrings = CommonStrings.getInstance();
+        PreLogUtil.put(commonStrings.START, TAG, commonStrings.CONSTRUCTOR);
         
         SceneController sceneController = 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();

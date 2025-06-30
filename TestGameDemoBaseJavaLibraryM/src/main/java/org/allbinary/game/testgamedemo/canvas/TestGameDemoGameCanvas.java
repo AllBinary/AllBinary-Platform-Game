@@ -97,7 +97,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     public void mediaInit() throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "mediaInit"));
+        LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mediaInit"));
         AllBinaryMediaManager.init(TestGameDemoSoundsFactoryFactory.getInstance());
     }
 
@@ -158,7 +158,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
             
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "initConfigurable", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "initConfigurable", e));
         }
     }
 
@@ -224,7 +224,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "_init", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "_init", e));
         }
     }
 
@@ -341,7 +341,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     
     public void draw(Graphics graphics)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, "draw"));
+        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "draw"));
         
         this.clear(graphics);
 

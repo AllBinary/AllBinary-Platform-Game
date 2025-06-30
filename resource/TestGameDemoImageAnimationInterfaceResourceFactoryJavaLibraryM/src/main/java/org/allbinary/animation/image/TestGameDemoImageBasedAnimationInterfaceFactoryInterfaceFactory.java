@@ -74,7 +74,7 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         //int scaleDenominator = 2;
         //int explosionFrameSize = (60 * GameConfigurationCentral.getInstance().SCALE.getValue().intValue()) / scaleDenominator;
 
-        //LogUtil.put(LogFactory.getInstance("Explosiont: ").append(explosionFrameSize).append(" ").append(explosionFrameSize/2).append(" ").append(explosionFrameSize/4, this, CommonStrings.getInstance().INIT));
+        //LogUtil.put(LogFactory.getInstance("Explosiont: ").append(explosionFrameSize).append(" ").append(explosionFrameSize/2).append(" ").append(explosionFrameSize/4, this, commonStrings.INIT));
         //90 x 360
 
         //this.add(ExplosionResources.getInstance().EXPLOSION_60_RESOURCE, 

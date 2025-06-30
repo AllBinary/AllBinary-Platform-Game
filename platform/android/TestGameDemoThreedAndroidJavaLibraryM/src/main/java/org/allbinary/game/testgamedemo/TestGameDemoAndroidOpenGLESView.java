@@ -16,6 +16,7 @@ extends AllBinaryMidletOpenGLSurfaceView
 	        Context context, AttributeSet attrs) {
 		super(context, attrs);
                 
-                PreLogUtil.put(CommonStrings.getInstance().START, TAG, CommonStrings.getInstance().CONSTRUCTOR);
+                final CommonStrings commonStrings = CommonStrings.getInstance();
+                PreLogUtil.put(commonStrings.START, TAG, commonStrings.CONSTRUCTOR);
 	}
 }

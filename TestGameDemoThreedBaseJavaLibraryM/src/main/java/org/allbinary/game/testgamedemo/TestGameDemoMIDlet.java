@@ -105,9 +105,9 @@ public class TestGameDemoMIDlet extends
 
    protected void mediaShutdown() throws Exception
    {
-        //PreLogUtil.put(CommonStrings.getInstance().START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");
+        //PreLogUtil.put(commonStrings.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");
 
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this,
+        LogUtil.put(LogFactory.getInstance(commonStrings.START, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface"));
 
         AllBinaryMediaManagerShutdown.shutdown(
@@ -115,7 +115,7 @@ public class TestGameDemoMIDlet extends
         AllBinaryMediaManagerShutdown.shutdown(
            TestGameDemoSoundsFactoryFactory.getInstance());
 
-        LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().END, this,
+        LogUtil.put(LogFactory.getInstance(commonStrings.END, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface"));
    }
 }

@@ -45,7 +45,7 @@ public class TestGameDemoMIDlet
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().START, this, CommonStrings.getInstance().INIT));
+            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.INIT));
 
             ResourceUtil.getInstance().setClassLoader(this.getClass().getClassLoader());
 
@@ -107,7 +107,7 @@ public class TestGameDemoMIDlet
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, CommonStrings.getInstance().CONSTRUCTOR, e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
         }
     }
     
@@ -120,7 +120,7 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(CommonStrings.getInstance().EXCEPTION, this, "stopAll", e));
+            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "stopAll", e));
         }
     }
     
