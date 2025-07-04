@@ -36,7 +36,7 @@
         \WTK\8_0
         -->
 <!--        <WTK_HOME>\WTK\3_4\</WTK_HOME>-->
-        <WTK_HOME>../../../../AllBinary-Platform-Integration\embedded\j2me\WTK\3_4\</WTK_HOME>
+<!--        <WTK_HOME>../../../../AllBinary-Platform-Integration\embedded\j2me\WTK\3_4\</WTK_HOME>-->
 
         <outputPath>.\target\classes\</outputPath>
         <inputPath>..\..\..\Resources\images\release\</inputPath>
