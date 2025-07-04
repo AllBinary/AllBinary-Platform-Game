@@ -1,12 +1,16 @@
-1.  Make the AllBinary Game Plaform Client libraries accessible with following the 
-    instructions at the following page:
+1.  Make the AllBinary Plaform accessible with following the instructions at the following page:
 
     https://github.com/AllBinary/AllBinary-Platform/blob/master/HOW_TO_BUILD_OR_ACCESS_GAME_PLATFORM_CLIENTS.txt
+    
+2.  Make the AllBinary Platform Integration accessible by running clean install in the following Repo:
+
+    https://github.com/AllBinary/AllBinary-Platform-Integration
 
 
-2.  WTK must be installed and WTK_HOME path set for the J2ME build
-
-    WTK 3.4 has been found at: 
+2.  Set WTK_HOME path (Used for the J2ME build):
+   
+    Option 1: set the path to: <YOUR_PATH>\AllBinary-Platform-Integration\embedded\j2me\WTK\3_4
+    Option 2: Install WTK 3.4 from: 
 
     https://www.oracle.com/technetwork/java/javame/javamobile/download/sdk/index.html
 
@@ -20,6 +24,7 @@
 
 4.  Clone and build the parent pom: https://github.com/AllBinary/AllBinary-Platform-Game-Parent.git
 
+
 5.  Down and install antenna for the J2ME build: https://antenna.sourceforge.io
 
         <dependency>
@@ -28,6 +33,7 @@
             <version>1.2.1-beta-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
+
 
 6.  Clone and build the example: https://github.com/AllBinary/AllBinary-Platform-Game.git
 
