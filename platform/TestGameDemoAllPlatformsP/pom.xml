@@ -26,6 +26,7 @@
         
         -->
         <module>../../TestGameDemoP</module>
+<!--        <module>../../TestGameDemoThreedP</module>-->
 
         <module>../j2me/TestGameDemoJ2MEPlatformP</module>
         <module>../j2se/TestGameDemoJ2SEPlatformP</module>

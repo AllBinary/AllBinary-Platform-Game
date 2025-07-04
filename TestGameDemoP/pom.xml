@@ -32,7 +32,6 @@
         <module>../TestGameDemoNoTouchJavaLibraryM</module>
         <module>../TestGameDemoTouchJavaLibraryM</module>
         <module>../platform/j2me/TestGameDemoJ2MEJavaLibraryM</module>
-        <module>../platform/android/TestGameDemoThreedAndroidResourcesTempJavaLibraryM</module>
         <!--
         <module>../platform/j2se/TestGameDemoJ2SEJavaLibraryM</module>
         <module>../platform/html/TestGameDemoHTMLJavaLibraryM</module>
@@ -44,14 +43,11 @@
         <!--
         //Needs the nexus
         -->
-        <module>../platform/j2se/TestGameDemoThreedJ2SEResourceJavaLibraryM</module>
-        <module>../TestGameDemoThreedBaseJavaLibraryM</module>
 
         <module>../TestGameDemoGameAIJavaLibraryM</module>
         <module>../resource/TestGameDemoImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
         <module>../resource/TestGameDemoOpenGLESImageAnimationInterfaceResourceFactoryJavaLibraryM</module>
-<!--        <module>../resource/TestGameDemoOpenGLThreedAnimationResourceJavaLibraryM</module>-->
-        
+                
         <module>../platform/j2se/TestGameDemoPCClientInfoJavaLibraryM</module>
 
     </modules>

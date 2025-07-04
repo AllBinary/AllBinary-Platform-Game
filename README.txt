@@ -19,7 +19,8 @@ Please see the LICENSE file in the root of the repository.
 
 Where is the other code?
 
-It depends on the AllBinary Platform and thirdparty libraries.
+It depends on the https://github.com/AllBinary/AllBinary-Platform and 
+https://github.com/AllBinary/AllBinary-Platform-Integration
 
 Who is responsible for all this shit?
 
