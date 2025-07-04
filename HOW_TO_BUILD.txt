@@ -7,8 +7,9 @@
     https://github.com/AllBinary/AllBinary-Platform-Integration
 
 
-2.  Set WTK_HOME path (Used for the J2ME build):
+2.  Use/Set WTK_HOME path (Used for the J2ME build):
    
+    Option 0: (Do nothing) The default WTK_HOME path is set inside the pom.xml for TestGameDemoJ2MEApplication
     Option 1: set the path to: <YOUR_PATH>\AllBinary-Platform-Integration\embedded\j2me\WTK\3_4
     Option 2: Install WTK 3.4 from: 
 
