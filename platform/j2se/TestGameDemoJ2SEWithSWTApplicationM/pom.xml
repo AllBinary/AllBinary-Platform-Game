@@ -50,11 +50,11 @@
                 
         <dependency>
             <groupId>org.allbinary.game.resources</groupId>
+            <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>
             <!-- 
             <artifactId>GameSoundsWavResourcesJavaLibrary</artifactId>
             <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
             -->
-            <artifactId>GameSoundsJ2SEOggResourcesJavaLibrary</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>        
         <dependency>
