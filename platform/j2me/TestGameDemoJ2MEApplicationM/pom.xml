@@ -192,6 +192,8 @@
                     </dependency>                   
                 </dependencies>
                 <configuration>
+                    <!-- Set to true to disable preverification for non Windows builds when you want to use WTK 3.4 jars -->
+                    <!-- <skip>true</skip> -->
                     <midletVendor>AllBinary</midletVendor>
                     <wtkHome>${WTK_HOME}</wtkHome>
                     <proguard>false</proguard>
@@ -210,7 +212,7 @@
                             <icon>/testgamedemo_icon.png</icon>
                             <class>TestGameDemoMIDlet</class>
                         </MIDlet>
-                    </midlets>
+                    </midlets>                    
                 </configuration>
             </plugin>
 

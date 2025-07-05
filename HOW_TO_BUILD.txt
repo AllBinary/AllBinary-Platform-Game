@@ -18,6 +18,8 @@
     Then set the WTK_HOME to the WTK install path.
 
     Warning: WTK/SDK 8 does not support a graphics API yet and is not supported.
+    Warning: Disable the preverify if not building on Windows unless trying to support 
+             a pre 3.4 WTK that support other platforms.
 
 
 3.  Android SDK must be installed and ANDROID_HOME path set for the Android build.
