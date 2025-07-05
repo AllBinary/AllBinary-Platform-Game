@@ -33,10 +33,10 @@
         <module>../TestGameDemoJ2SEJavaLibraryM</module>
         <module>../TestGameDemoJ2SEM</module>
         <module>../TestGameDemoJ2SEApplicationM</module>
-        
+        <!--        
         <module>../TestGameDemoJ2SEWithSWTM</module>
         <module>../TestGameDemoJ2SEWithSWTApplicationM</module>
-
+        -->
         <!--    
         <module>../TestGameDemoJ2SESWTJOGLJavaLibraryM</module>
         
