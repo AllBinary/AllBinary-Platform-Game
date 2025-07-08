@@ -69,6 +69,8 @@ import org.allbinary.time.TimeDelayHelper;
 
 public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final int WAIT = GameSpeed.getInstance().getDelay();
 
     private final int portion = 4;
@@ -97,7 +99,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     public void mediaInit() throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "mediaInit"));
+        logUtil.put(commonStrings.START, this, "mediaInit");
         AllBinaryMediaManager.init(TestGameDemoSoundsFactoryFactory.getInstance());
     }
 
@@ -158,7 +160,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
             
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "initConfigurable", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "initConfigurable", e);
         }
     }
 
@@ -224,7 +226,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "_init", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "_init", e);
         }
     }
 
@@ -341,7 +343,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     
     public void draw(Graphics graphics)
     {
-        //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "draw"));
+        //logUtil.put(commonStrings.START, this, "draw");
         
         this.clear(graphics);
 

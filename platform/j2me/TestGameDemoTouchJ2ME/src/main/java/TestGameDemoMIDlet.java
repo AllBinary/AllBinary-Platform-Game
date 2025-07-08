@@ -21,6 +21,7 @@ public class TestGameDemoMIDlet
 
     protected void init()
     {
+        final LogUtil logUtil = LogUtil.getInstance();
         try
         {
             LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.INIT));

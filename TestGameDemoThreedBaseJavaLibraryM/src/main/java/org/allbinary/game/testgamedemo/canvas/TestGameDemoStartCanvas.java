@@ -41,6 +41,8 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 
 public class TestGameDemoStartCanvas extends DemoCanvas
 {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final int WAIT = ((GameSpeed.getInstance().getDelay() * 3) >> 1);
 
     public TestGameDemoStartCanvas(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener) throws Exception

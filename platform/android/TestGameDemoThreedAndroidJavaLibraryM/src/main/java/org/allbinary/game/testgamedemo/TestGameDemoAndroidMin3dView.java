@@ -14,6 +14,8 @@ import org.allbinary.view.AllBinaryMidletMin3dSurfaceView;
 public class TestGameDemoAndroidMin3dView 
 extends AllBinaryMidletMin3dSurfaceView
 {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final String TAG = "TestGameDemoAndroidMin3dView";
     
     public TestGameDemoAndroidMin3dView(Context context, AttributeSet attrs)

@@ -28,6 +28,8 @@ import org.microemu.opengles.device.PlatformOpenGLESGraphicsFactory;
  * @author User
  */
 public class NativeBareMain {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
 
     public static void main(final String args[]) {
         
@@ -56,8 +58,9 @@ public class NativeBareMain {
             //OpenGLESGraphicsFactory.getInstance().set(new PlatformDisplayMin3dGraphicsFactory());
             
         } catch(Exception e) {
+            final LogUtil logUtil = LogUtil.getInstance();
             final CommonStrings commonStrings = CommonStrings.getInstance();
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, features, commonStrings.PROCESS, e));
+            logUtil.put(commonStrings.EXCEPTION, features, commonStrings.PROCESS, e);
         }
         
         BareMain.main2(args, "TestGameDemoMIDlet", "/testgamedemo_icon.ico");

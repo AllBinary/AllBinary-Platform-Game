@@ -7,7 +7,9 @@ import org.allbinary.string.CommonStrings;
 import org.allbinary.logic.communication.log.PreLogUtil;
 
 public class TestGameDemoAndroidView extends AllBinaryMidletView
-{	
+{
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+	
     private final String TAG = "TestGameDemoAndroidView";
     
 	public TestGameDemoAndroidView(Context context, AttributeSet attrs) {

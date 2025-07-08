@@ -33,6 +33,8 @@ import org.allbinary.emulator.InitEmulatorFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     
     public TestGameDemoAndroidActivity()
     {   
@@ -48,7 +50,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
         }
     }
 
@@ -117,7 +119,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStateStrings.CREATE));
+            logUtil.put(commonStrings.START, this, commonStateStrings.CREATE);
 
             //final String UNLOCKED = "unlock_testgamedemo_levels";
             //InApplicationPurchaseFactory.getInstance().init(this, bundle);
@@ -130,10 +132,10 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 this.setBackgrounds();
             }
 
-            LogUtil.put(LogFactory.getInstance(commonStrings.END, this, commonStateStrings.CREATE));
+            logUtil.put(commonStrings.END, this, commonStateStrings.CREATE);
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e);
         }
     }
 
@@ -141,16 +143,16 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStateStrings.START));
+            logUtil.put(commonStrings.START, this, commonStateStrings.START);
 
             super.onStart();
 
             super.onStart(new TestGameDemoMIDletFactory());
 
-            LogUtil.put(LogFactory.getInstance(commonStrings.END, this, commonStateStrings.START));
+            logUtil.put(commonStrings.END, this, commonStateStrings.START);
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.START, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.START, e);
         }
     }
 
@@ -163,17 +165,17 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             {
                 try
                 {
-                    LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.RUN));
+                    logUtil.put(commonStrings.START, this, commonStrings.RUN);
 
                     AllBinaryMidletOpenGLESView view = (AllBinaryMidletOpenGLESView)
                     TestGameDemoAndroidActivity.this.getView();
                     view.onEvent(eventObject);
                     
-                    LogUtil.put(LogFactory.getInstance("End Runnable", this, commonStrings.RUN));
+                    logUtil.put("End Runnable", this, commonStrings.RUN);
                 }
                 catch (Exception e)
                 {
-                    LogUtil.put(LogFactory.getInstance("Execption", this, commonStrings.RUN, e));
+                    logUtil.put("Execption", this, commonStrings.RUN, e);
                 }
 
             }
@@ -189,7 +191,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         if (!InitEmulatorFactory.getInstance().isInitEmulator())
         {
-            LogUtil.put(LogFactory.getInstance("Init Base GameFeatures", this, "initEmulator"));
+            logUtil.put("Init Base GameFeatures", this, "initEmulator");
 
             Features features = Features.getInstance();
             
@@ -256,7 +258,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
     public void setBackgrounds() throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "getBackground"));
+        logUtil.put(commonStrings.START, this, "getBackground");
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         

@@ -11,6 +11,8 @@ import org.allbinary.midlet.MidletIcon;
 public class TestGameDemoJ2SESWTJOGLEarlyResourceInitialization
 extends ResourceInitialization
 {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
     public TestGameDemoJ2SESWTJOGLEarlyResourceInitialization()
     {
     }

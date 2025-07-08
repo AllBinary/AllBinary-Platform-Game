@@ -36,6 +36,8 @@ import org.allbinary.util.BasicArrayList;
  * @author User
  */
 public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
 
     protected static final AppRendererShaderUpdaterFactory instance = new AppRendererShaderUpdaterFactory();
 
@@ -161,7 +163,7 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
         
         final int size = shaderCompositeArray.length;
         
-        //LogUtil.put(LogFactory.getInstance("Load Shaders: " + size, this, renderStrings.ON_SURFACE_CREATED));
+        //logUtil.put("Load Shaders: " + size, this, renderStrings.ON_SURFACE_CREATED);
 
 //        shaderCompositeArray[0].textureEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
 //        shaderCompositeArray[0].textureDisableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
@@ -180,7 +182,7 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
         shaderCompositeArray[gsnIndex].uniformTextureUnitOpenGLProcessor = new UniformShaderOpenGLProcessor(shaderCompositeArray[gsnIndex]);
 
         if (shaderManager == ShaderManager.getInstance()) {
-            LogUtil.put(LogFactory.getInstance("Shaders already loaded", this, renderStrings.ON_SURFACE_CREATED));
+            logUtil.put("Shaders already loaded", this, renderStrings.ON_SURFACE_CREATED);
         } else {
 
             final OpenGLVersionValidator openGLVersionValidator = OpenGLVersionValidator.getInstance();
@@ -195,11 +197,11 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
                     shader.shaderName = appShaderResources.getFragmentShader(index);
                     this.loadShader(gl, shader, shaderManager.GL_FRAGMENT_SHADER, max, byteArray1);
                     shaderComposite.init(gl);
-                    LogUtil.put(LogFactory.getInstance("shader programHandle: " + shaderComposite.programHandle, this, this.rendererStrings.ON_SURFACE_CREATED));
+                    logUtil.put("shader programHandle: " + shaderComposite.programHandle, this, this.rendererStrings.ON_SURFACE_CREATED);
 
                     shaderComposite.compositeShaderUpdater.onSurfaceCreated(gl, eglConfig, shaderComposite.programHandle);
                 } else {
-                    LogUtil.put(LogFactory.getInstance("shader is not available: " + index, this, this.rendererStrings.ON_SURFACE_CREATED));
+                    logUtil.put("shader is not available: " + index, this, this.rendererStrings.ON_SURFACE_CREATED);
                 }
             }
         }
@@ -211,16 +213,16 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
                     
         String resource = shader.shaderName;
         try {
-            LogUtil.put(LogFactory.getInstance(resource, this, this.rendererStrings.ON_SURFACE_CREATED));
+            logUtil.put(resource, this, this.rendererStrings.ON_SURFACE_CREATED);
             final InputStream inputStream = resourceUtil.getResourceAsStream(resource);
             final BasicArrayList stringList = shader.shaderStringList = simpleFileUtil.loadFileAsList(inputStream, max, byteArray1, 1);
             String[] shaderAsStringArray = (String[]) stringList.toArray(new String[stringList.size()]);
             shader.shaderAsString = this.simpleFileUtil.createStringFromArrayOfStrings(shaderAsStringArray);
-            //LogUtil.put(LogFactory.getInstance("shaderAsString: " + shader.shaderAsString, this, this.rendererStrings.ON_SURFACE_CREATED));
+            //logUtil.put("shaderAsString: " + shader.shaderAsString, this, this.rendererStrings.ON_SURFACE_CREATED);
             shader.shaderHandle = shaderManager.loadShader(gl, resource, shader.shaderStringList, shaderType);
-            LogUtil.put(LogFactory.getInstance("shaderHandle: " + shader.shaderHandle, this, this.rendererStrings.ON_SURFACE_CREATED));
+            logUtil.put("shaderHandle: " + shader.shaderHandle, this, this.rendererStrings.ON_SURFACE_CREATED);
         } catch (Exception e) {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION + resource, this, this.rendererStrings.ON_SURFACE_CREATED, e));
+            logUtil.put(commonStrings.EXCEPTION + resource, this, this.rendererStrings.ON_SURFACE_CREATED, e);
         }
     }
     

@@ -13,6 +13,8 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     public TestGameDemoMIDlet()
     {
         new DefaultGameInitializationListener();
@@ -20,9 +22,10 @@ public class TestGameDemoMIDlet
 
     protected void init()
     {
+        final LogUtil logUtil = LogUtil.getInstance();
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.INIT));
+            logUtil.put(commonStrings.START, this, commonStrings.INIT);
 
             //ResourceUtil.setClassLoader(this.getClass().getClassLoader());
 
@@ -84,7 +87,7 @@ public class TestGameDemoMIDlet
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
         }
     }
 }

@@ -32,6 +32,8 @@ import org.allbinary.view.OptimizedGLSurfaceView;
  */
 public class RendererActivity extends Activity //implements ISceneController
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     protected final CommonStrings commonStrings = CommonStrings.getInstance();
     protected final CommonStateStrings commonStateStrings = CommonStateStrings.getInstance();
     
@@ -86,7 +88,7 @@ public class RendererActivity extends Activity //implements ISceneController
 
         } catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e);
         }
     }
 	

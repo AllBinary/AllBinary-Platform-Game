@@ -22,6 +22,8 @@ import org.allbinary.input.gyro.SensorGameUpdateProcessor;
 public class TestGameDemoNeededTouchButtonsBuilder
 extends BaseTouchInput
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     private static final TestGameDemoNeededTouchButtonsBuilder instance = 
             new TestGameDemoNeededTouchButtonsBuilder();
     
@@ -33,6 +35,6 @@ extends BaseTouchInput
     
     public void build()
     {
-       LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "build"));
+       logUtil.put(commonStrings.START, this, "build");
     }
 }

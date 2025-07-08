@@ -14,6 +14,8 @@ import org.allbinary.midlet.MidletIcon;
 public class TestGameDemoAndroidEarlyResourceInitialization
 extends ResourceInitialization
 {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
     public TestGameDemoAndroidEarlyResourceInitialization()
     {
     }

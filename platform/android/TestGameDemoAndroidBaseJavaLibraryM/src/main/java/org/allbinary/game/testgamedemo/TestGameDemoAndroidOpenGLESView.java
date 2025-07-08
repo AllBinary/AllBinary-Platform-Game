@@ -9,7 +9,9 @@ import org.allbinary.view.AllBinaryMidletOpenGLSurfaceView;
 
 public class TestGameDemoAndroidOpenGLESView 
 extends AllBinaryMidletOpenGLSurfaceView
-{	
+{
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+	
     private final String TAG = "TestGameDemoAndroidOpenGLESView";
     
 	public TestGameDemoAndroidOpenGLESView(

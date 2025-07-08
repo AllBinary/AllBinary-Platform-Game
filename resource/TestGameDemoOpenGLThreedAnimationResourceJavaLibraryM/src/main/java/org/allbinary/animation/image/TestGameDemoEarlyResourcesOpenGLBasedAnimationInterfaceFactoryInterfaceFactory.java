@@ -17,6 +17,8 @@ extends
 //ZeptoRacerEarlyResourcesImageArrayBasedAnimationInterfaceFactoryInterfaceFactory
 BaseResourceAnimationInterfaceFactoryInterfaceFactory
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     public TestGameDemoEarlyResourcesOpenGLBasedAnimationInterfaceFactoryInterfaceFactory()
     {
         super("Early OpenGL Animations");
@@ -24,7 +26,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
     public void init(final int level) throws Exception
     {
-        LogUtil.put(LogFactory.getInstance(this.getName(), this, "init"));
+        logUtil.put(this.getName(), this, "init");
         
         //this.init(OpenGLImageCacheFactory.getInstance(), level);
 
@@ -75,7 +77,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
         if (level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel())
         {
-            LogUtil.put(LogFactory.getInstance(this.getName(), this, "isLoadingLevel"));
+            logUtil.put(this.getName(), this, "isLoadingLevel");
             return true;
         }
         else
@@ -100,7 +102,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
             !(features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D) || features.isFeature(openGLFeatureFactory.OPENGL_3D))
             )
         {
-            LogUtil.put(LogFactory.getInstance(this.getName(), this, "isFeature"));
+            logUtil.put(this.getName(), this, "isFeature");
             return true;
         } else
         {

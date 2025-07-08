@@ -35,6 +35,8 @@ import org.allbinary.view.StaticViewPosition;
 public class TestGameDemoSceneController 
 extends AllBinaryGameSceneController
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final String TAG = "TestGameDemoSceneController";
 
     private final OpenGLCapabilities openGLCapabilities = OpenGLCapabilities.getInstance();
@@ -174,7 +176,7 @@ extends AllBinaryGameSceneController
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, METHOD_NAME, e));
+            logUtil.put(commonStrings.EXCEPTION, this, METHOD_NAME, e);
         }
     }
 
@@ -252,7 +254,7 @@ extends AllBinaryGameSceneController
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "buildScene", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "buildScene", e);
         }
     }
 

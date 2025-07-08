@@ -38,6 +38,8 @@ public class TestGameDemoThreedTitleAnimation
 extends TitleAnimation 
 implements ColorChangeListener
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     private int color = ColorFromEventUtil.getInstance().COLOR_INT;
     
     //private final CameraLayer cameraLayer;
@@ -51,7 +53,7 @@ implements ColorChangeListener
     {
         super(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width);
         
-        LogUtil.put(LogFactory.getInstance("Constructor", this, this.getClass().getName()));
+        logUtil.put("Constructor", this, this.getClass().getName());
         
         testGameDemoSceneController = (TestGameDemoSceneController) 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();
@@ -60,7 +62,7 @@ implements ColorChangeListener
     public void onEvent(AllBinaryEventObject eventObject)
     {
         BasicColor basicColor = ((ColorChangeEvent) eventObject).getBasicColor(); 
-        //LogUtil.put(LogFactory.getInstance("Color Change Event: " + basicColor.getName(), this, "onEvent"));
+        //logUtil.put("Color Change Event: " + basicColor.getName(), this, "onEvent");
         this.color = basicColor.intValue();
     }
     
@@ -87,7 +89,7 @@ implements ColorChangeListener
             {
                 this.basicSetColorUtil.setBasicColor(graphics, this.basicColorArray[index]);
             }
-            //LogUtil.put(LogFactory.getInstance("deltaX: " + deltaX + " " + x, this, "paint"));
+            //logUtil.put("deltaX: " + deltaX + " " + x, this, "paint");
             this.animationInterfaceArray[index].paint(graphics, deltaX, deltaY);
         }
     }
@@ -125,13 +127,13 @@ implements ColorChangeListener
             //{
               //  this.basicColorUtil.setBasicColor(graphics, this.basicColorArray[index]);
             //}
-            //LogUtil.put(LogFactory.getInstance("deltaX: " + deltaX + " " + x, this, "paintThreed"));
+            //logUtil.put("deltaX: " + deltaX + " " + x, this, "paintThreed");
 
             //this.animationInterfaceArray[index].paintThreed(graphics, deltaX, deltaY, 30);
 
             final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[index];
 
-            //LogUtil.put(LogFactory.getInstance(threedAnimation.toString(), this, "paintThreed"));
+            //logUtil.put(threedAnimation.toString(), this, "paintThreed");
             
             threedAnimation.nextRotation();
             

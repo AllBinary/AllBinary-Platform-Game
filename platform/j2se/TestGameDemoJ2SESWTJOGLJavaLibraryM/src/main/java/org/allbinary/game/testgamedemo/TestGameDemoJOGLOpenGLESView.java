@@ -7,7 +7,9 @@ import org.allbinary.view.OptimizedGLSurfaceView;
 
 public class TestGameDemoJOGLOpenGLESView 
 extends AllBinaryMidletOpenGLSurfaceView
-{	
+{
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+	
     private final String TAG = "TestGameDemoJOGLOpenGLESView";
     
 	public TestGameDemoJOGLOpenGLESView() {

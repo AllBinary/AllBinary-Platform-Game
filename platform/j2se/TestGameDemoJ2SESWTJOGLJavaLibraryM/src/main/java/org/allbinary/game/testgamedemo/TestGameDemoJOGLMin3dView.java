@@ -11,6 +11,8 @@ import org.allbinary.view.OptimizedGLSurfaceView;
 public class TestGameDemoJOGLMin3dView 
 extends AllBinaryMidletMin3dSurfaceView
 {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final String TAG = "TestGameDemoJOGLMin3dView";
     
     public TestGameDemoJOGLMin3dView()

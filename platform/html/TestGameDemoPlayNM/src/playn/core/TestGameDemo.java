@@ -28,6 +28,8 @@ implements Keyboard.Listener,
 //Mouse.Listener, 
 Pointer.Listener
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
     private final int DEVICE_ID = 0;
     private final PlayNToAllBinaryKeyInputUtil playNToAllBinaryKeyInputUtil = PlayNToAllBinaryKeyInputUtil.getInstance();
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
@@ -54,7 +56,7 @@ Pointer.Listener
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, commonStrings.INIT));
+            logUtil.put(commonStrings.START, this, commonStrings.INIT);
 
             Features features = Features.getInstance();
 
@@ -118,7 +120,7 @@ Pointer.Listener
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e));
+            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
         }
     }
 
@@ -131,7 +133,7 @@ Pointer.Listener
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "stopAll", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "stopAll", e);
         }
     }
     
@@ -139,7 +141,7 @@ Pointer.Listener
     @Override
     public void onKeyTyped(Keyboard.TypedEvent event) {
         
-        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.typedChar(), this, "onKeyTyped"));
+        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.typedChar(), this, "onKeyTyped");
         
         //this.getCurrentDisplayable().keyRepeated(event.keyCode());
     }
@@ -147,7 +149,7 @@ Pointer.Listener
     @Override
     public void onKeyDown(Keyboard.Event event)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyDown"));
+        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyDown");
     
         final Key key = event.key();        
         final int abKey = this.playNToAllBinaryKeyInputUtil.PLAYN_KEY_ORDINAL_TO_CANVAS_KEY[key.ordinal()];
@@ -159,7 +161,7 @@ Pointer.Listener
     @Override
     public void onKeyUp(Keyboard.Event event)
     {
-        //LogUtil.put(LogFactory.getInstance(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyUp"));
+        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyUp");
         
         final Key key = event.key();
 
@@ -173,14 +175,14 @@ Pointer.Listener
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "onPointerStart"));
+            logUtil.put(commonStrings.START, this, "onPointerStart");
             this.motionRecognizer.processStartMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "onPointerStart", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "onPointerStart", e);
         }
     }
 
@@ -188,14 +190,14 @@ Pointer.Listener
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "onPointerEnd"));
+            logUtil.put(commonStrings.START, this, "onPointerEnd");
             this.motionRecognizer.processEndMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "onPointerEnd", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "onPointerEnd", e);
         }
     }
 
@@ -203,14 +205,14 @@ Pointer.Listener
     {
         try
         {
-            //LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "onPointerDrag"));
+            //logUtil.put(commonStrings.START, this, "onPointerDrag");
             this.motionRecognizer.processDraggedMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "onPointerDrag", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "onPointerDrag", e);
         }
     }
 
@@ -219,14 +221,14 @@ Pointer.Listener
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "onMouseDown"));
+            logUtil.put(commonStrings.START, this, "onMouseDown");
             this.motionRecognizer.processStartMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(),
                 mouseEvent.button());
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "onMouseDown", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "onMouseDown", e);
         }
     }
 
@@ -234,14 +236,14 @@ Pointer.Listener
     {
         try
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.START, this, "onMouseUp"));
+            logUtil.put(commonStrings.START, this, "onMouseUp");
             this.motionRecognizer.processEndMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(),
                 mouseEvent.button());
         }
         catch (Exception e)
         {
-            LogUtil.put(LogFactory.getInstance(commonStrings.EXCEPTION, this, "onMouseUp", e));
+            logUtil.put(commonStrings.EXCEPTION, this, "onMouseUp", e);
         }
     }
 

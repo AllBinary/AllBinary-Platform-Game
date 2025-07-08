@@ -49,6 +49,8 @@ public class TestGameDemoMIDlet extends
    SpecialDemoGameMidlet
    //DemoGameMidlet
 {
+    protected final LogUtil logUtil = LogUtil.getInstance();
+
    public TestGameDemoMIDlet(final ClientInformationFactory clientInformationFactory)
    {
        super(clientInformationFactory, LicenseLoadingTypeFactory.getIntance().OTHER);
@@ -107,15 +109,15 @@ public class TestGameDemoMIDlet extends
    {
         //PreLogUtil.put(commonStrings.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");
 
-        LogUtil.put(LogFactory.getInstance(commonStrings.START, this,
-                "mediaShutdown - postStopGameCanvasRunnableInterface"));
+        logUtil.put(commonStrings.START, this,
+                "mediaShutdown - postStopGameCanvasRunnableInterface");
 
         AllBinaryMediaManagerShutdown.shutdown(
            EarlySoundsFactory.getInstance());
         AllBinaryMediaManagerShutdown.shutdown(
            TestGameDemoSoundsFactoryFactory.getInstance());
 
-        LogUtil.put(LogFactory.getInstance(commonStrings.END, this,
-                "mediaShutdown - postStopGameCanvasRunnableInterface"));
+        logUtil.put(commonStrings.END, this,
+                "mediaShutdown - postStopGameCanvasRunnableInterface");
    }
 }
