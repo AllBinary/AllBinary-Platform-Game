@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.allbinary.game.zeptoracer</groupId>
+    <groupId>org.allbinary.game.testgamedemo</groupId>
     <artifactId>TestGameDemoJOGLResourcesJavaLibrary</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
@@ -68,7 +68,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.png, **\/*.html</includes>
-                            <outputDirectory>../j2se/TestGameDemoJ2SEWithSWTApplicationM/src/main/resources/</outputDirectory>
+                            <outputDirectory>../j2se/TestGameDemoJ2SEWithSWTJOGLM/src/main/resources/</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <overWriteSnapshots>true</overWriteSnapshots>
                             <overWriteReleases>true</overWriteReleases>
@@ -88,7 +88,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.png, **\/*.html</includes>
-                            <outputDirectory>../j2se/TestGameDemoThreedJ2SEWithSWTJOGLApplicationM/src/main/resources/</outputDirectory>
+                            <outputDirectory>../j2se/TestGameDemoThreedJ2SEWithSWTJOGLM/src/main/resources/</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <overWriteSnapshots>true</overWriteSnapshots>
                             <overWriteReleases>true</overWriteReleases>
@@ -109,7 +109,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.png, **\/*.html</includes>
-                            <outputDirectory>../avian/TestGameDemoAvianApplicationM/src/main/resources/</outputDirectory>
+                            <outputDirectory>../avian/TestGameDemoAvianM/src/main/resources/</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <overWriteSnapshots>true</overWriteSnapshots>
                             <overWriteReleases>true</overWriteReleases>
@@ -129,7 +129,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.png, **\/*.html</includes>
-                            <outputDirectory>../avian/TestGameDemoThreedAvianApplicationM/src/main/resources/</outputDirectory>
+                            <outputDirectory>../avian/TestGameDemoThreedAvianM/src/main/resources/</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <overWriteSnapshots>true</overWriteSnapshots>
                             <overWriteReleases>true</overWriteReleases>

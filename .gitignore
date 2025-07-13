@@ -5,6 +5,7 @@
 target/
 bin/
 gen/
+font*.png
 swt-awt-win32-4430.dll
 swt-gdip-win32-4430.dll
 swt-wgl-win32-4430.dll
