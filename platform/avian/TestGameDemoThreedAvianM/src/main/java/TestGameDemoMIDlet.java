@@ -29,7 +29,6 @@ public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
     implements MidletJOGLInterface
 {
-    protected final LogUtil logUtil = LogUtil.getInstance();
 
     private final int DEVICE_ID = 0;
     private AllMotionRecognizer motionRecognizer = new AllMotionRecognizer();
