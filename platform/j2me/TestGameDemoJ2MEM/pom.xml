@@ -308,7 +308,31 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <basedir>../TestGameDemoJ2MEApplicationM/src/main/java/</basedir>
+                    <filesToInclude>**/*.java</filesToInclude>
+                    <replacements>
+                        <replacement>
+                            <token>&lt;Object&gt;</token>
+                            <value></value>
+                        </replacement>
+                    </replacements>  
+                </configuration>
+            </plugin>
+                          
         </plugins>
 
     </build>
