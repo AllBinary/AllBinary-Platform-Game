@@ -25,7 +25,7 @@
         <module>../platform/android/TestGameDemoThreedAndroidResourcesTempJavaLibraryM</module>
         <module>../platform/j2se/TestGameDemoThreedJ2SEResourceJavaLibraryM</module>
         <module>../TestGameDemoThreedBaseJavaLibraryM</module>        
-<!--        <module>../resource/TestGameDemoOpenGLThreedAnimationResourceJavaLibraryM</module>-->
+        <module>../resource/TestGameDemoOpenGLThreedAnimationResourceJavaLibraryM</module>
 
     </modules>
 

@@ -293,7 +293,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             
             Bitmap bitmap =((BitmapDrawable)drawable).getBitmap();
 
-            Hashtable hashtable = ImageCacheFactory.getInstance().getHashtable();
+            Hashtable hashtable = ImageCacheFactory.getInstance().getHashtableP();
             
             hashtable.put(AndroidBasicTitleProgressBar.RESOURCE, new Image(bitmap));
             

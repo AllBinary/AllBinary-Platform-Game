@@ -322,12 +322,28 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <basedir>../TestGameDemoJ2MEApplicationM/src/main/java/</basedir>
+                    <basedir>${basedir}/../TestGameDemoJ2MEApplicationM/src/main/java/</basedir>
                     <filesToInclude>**/*.java</filesToInclude>
                     <replacements>
                         <replacement>
                             <token>&lt;Object&gt;</token>
                             <value></value>
+                        </replacement>
+                        <replacement>
+                            <token>&lt;String, String&gt;</token>
+                            <value></value>
+                        </replacement>
+                        <replacement>
+                            <token>@Override</token>
+                            <value></value>
+                        </replacement>
+                        <replacement>
+                            <token>= NullRecordStore.NULL_RECORD_STORE</token>
+                            <value>= null</value>
+                        </replacement>
+                        <replacement>
+                            <token>NullRecordStore extends RecordStore</token>
+                            <value>NullRecordStore</value>
                         </replacement>
                     </replacements>  
                 </configuration>

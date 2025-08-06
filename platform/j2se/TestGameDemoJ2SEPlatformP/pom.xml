@@ -36,12 +36,12 @@
         
         <module>../TestGameDemoJ2SEWithSWTM</module>
         <module>../TestGameDemoJ2SEWithSWTApplicationM</module>
-<!--        
+        
         <module>../TestGameDemoJ2SESWTJOGLJavaLibraryM</module>
         
         <module>../TestGameDemoThreedJ2SEWithSWTJOGLM</module>
         <module>../TestGameDemoThreedJ2SEWithSWTJOGLApplicationM</module>
--->
+
                 
         <!--
         <module>../TestGameDemoTouchJ2SE</module>

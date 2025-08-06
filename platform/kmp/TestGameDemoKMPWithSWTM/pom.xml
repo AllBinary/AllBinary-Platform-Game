@@ -88,22 +88,6 @@
         
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>SWTJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>SWTToJ2MELibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>OpenGLESBaseJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -125,37 +109,9 @@
         </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLESNullImageJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>SWTWithoutJOGLJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>BasicPlayerJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>J2SEMediaMIDPJorbisJavaLibraryKt</artifactId>
-<!--
-            <artifactId>J2SEMediaMIDPJorbisJavaLibraryKt</artifactId>
-            <artifactId>J2SEMediaMIDPMinimalJavaLibraryKt</artifactId>
-            <artifactId>J2SEMediaMIDPMiniAudioJavaLibraryKt</artifactId>
-            <artifactId>NotDeviceSpecificNoMediaMIDP1LibraryKt</artifactId>
--->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
@@ -192,18 +148,6 @@
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GameScoresLocalJavaLibraryKt</artifactId>
-<!--
-            <artifactId>GameScoresRemoteAndLocalJavaLibraryKt</artifactId>
-            <artifactId>GameScoresLocalJavaLibraryKt</artifactId>
--->
-            <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>YourXmlRpcJavaLibraryKt</artifactId>
@@ -234,22 +178,9 @@
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
-        </dependency>
-        <dependency>
-            <groupId>sax</groupId>
-            <artifactId>saxKt</artifactId>
-            <version>2.0.1</version>
         </dependency>        
 <!--
 -->
-
-        <dependency>
-            <groupId>org.allbinary.game.multiplayer</groupId>
-            <artifactId>AllBinaryGameClientBaseNullJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -277,82 +208,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.allbinary.input</groupId>
-            <artifactId>TouchButtonResourceAnimationJavaLibraryKt</artifactId>
-            <!--
-            <artifactId>NoTouchButtonResourceAnimationJavaLibraryKt</artifactId>
-            <artifactId>TouchButtonResourceAnimationJavaLibraryKt</artifactId>
-            -->
-            <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoTouchJavaLibraryKt</artifactId>
-            <!--
-            <artifactId>TestGameDemoNoTouchJavaLibraryKt</artifactId>
-            <artifactId>TestGameDemoTouchJavaLibraryKt</artifactId>
-            -->
-            <version>${allbinary.platform.version}</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoPCClientInfoJavaLibraryKt</artifactId>
-            <version>${allbinary.platform.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoJ2SEJavaLibraryKt</artifactId>
-            <version>${allbinary.platform.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.game.testgamedemo</groupId>
-            <artifactId>TestGameDemoBaseJavaLibraryKt</artifactId>
-            <version>${allbinary.platform.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary.media.image</groupId>
-            <artifactId>ImageSwtJ2SEJavaLibraryKt</artifactId>
-<!--        
-            <artifactId>ImageJ2SEJavaLibraryKt</artifactId>
-            <artifactId>ImageSwtJ2SEJavaLibraryKt</artifactId>
--->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>GameInputSwtJavaLibraryKt</artifactId>
-<!--        
-            <artifactId>GameInputPCJavaLibraryKt</artifactId>
-            <artifactId>GameInputSwtJavaLibraryKt</artifactId>
--->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-
-        <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-javase-swtKt</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midpKt</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
+            <version>2.0.4</version>
             <optional>true</optional>
         </dependency>
-
+        
     </dependencies>
 
     <build>
@@ -407,7 +268,8 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <excludeArtifactIds>BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc</excludeArtifactIds>
+                            <excludeArtifactIds>kotlin-stdlib</excludeArtifactIds>
+<!--                            BouncyCastleDESJavaLibrary,microemu-midp,microemu-cldc-->
                             <classifier>sources</classifier>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                             <!--
