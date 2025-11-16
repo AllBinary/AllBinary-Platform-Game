@@ -25,11 +25,9 @@ import org.allbinary.graphics.opengles.OpenGLCapabilities;
 import org.allbinary.graphics.opengles.OpenGLVersionValidator;
 import org.allbinary.graphics.opengles.shader.AppRendererShaderUpdaterFactory;
 import org.allbinary.graphics.threed.min3d.renderer.AllBinaryToMin3dRendererFactory;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.logic.java.bool.BooleanFactory;
-import org.allbinary.string.CommonStrings;
 import org.allbinary.view.StaticViewPosition;
 
 public class TestGameDemoSceneController 

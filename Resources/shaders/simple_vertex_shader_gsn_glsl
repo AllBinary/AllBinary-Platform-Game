@@ -14,6 +14,8 @@ out vec3 fn; // output fragment normal of vertex
 void main(){
   tc = texcoord;
   //gl_Position = projection * modelview * vec4(position, 1.0);
+  //l_ProjectionMatrix
+  //l_ModelViewMatrix
   gl_Position = gl_ModelViewProjectionMatrix * vec4(position, 1.0);
 
 }
