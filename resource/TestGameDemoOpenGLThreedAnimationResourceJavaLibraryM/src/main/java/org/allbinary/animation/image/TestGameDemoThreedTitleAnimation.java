@@ -28,9 +28,9 @@ import org.allbinary.graphics.color.BasicColor;
 import org.allbinary.graphics.color.ColorChangeEvent;
 import org.allbinary.graphics.color.ColorChangeListener;
 import org.allbinary.logic.util.event.AllBinaryEventObject;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.media.graphics.geography.map.ColorFromEventUtil;
+import org.allbinary.string.CommonStrings;
 import org.allbinary.view.CenterViewPositionFactory;
 import org.allbinary.view.ViewPosition;
 
@@ -53,7 +53,7 @@ implements ColorChangeListener
     {
         super(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width);
         
-        logUtil.put("Constructor", this, this.getClass().getName());
+        logUtil.put(CommonStrings.getInstance().CONSTRUCTOR, this, this.getClass().getName());
         
         testGameDemoSceneController = (TestGameDemoSceneController) 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();
@@ -64,6 +64,19 @@ implements ColorChangeListener
         BasicColor basicColor = ((ColorChangeEvent) eventObject).getBasicColorP(); 
         //logUtil.put("Color Change Event: " + basicColor.getName(), this, "onEvent");
         this.color = basicColor.intValue();
+    }
+    
+    @Override
+    public void nextFrame()
+    {
+        super.nextFrame();
+        
+        final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[2];
+
+        //logUtil.put(threedAnimation.toString(), this, "nextFrame");
+            
+        threedAnimation.nextRotation();
+        
     }
     
     public void paint(Graphics graphics, int ax, int ay)
@@ -130,12 +143,6 @@ implements ColorChangeListener
             //logUtil.put("deltaX: " + deltaX + " " + x, this, "paintThreed");
 
             //this.animationInterfaceArray[index].paintThreed(graphics, deltaX, deltaY, 30);
-
-            final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[index];
-
-            //logUtil.put(threedAnimation.toString(), this, "paintThreed");
-            
-            threedAnimation.nextRotation();
             
             //PreLogUtil.put(Integer.toString(halfHeight), this, "***************");
             
