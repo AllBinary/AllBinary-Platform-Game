@@ -13,14 +13,13 @@
 */
 package org.allbinary.game.testgamedemo.canvas;
 
-import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import javax.microedition.lcdui.CommandListener;
+
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory;
 import org.allbinary.animation.special.SpecialAnimation;
-
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
-
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.game.GameInfo;
 import org.allbinary.game.GameMode;
@@ -91,4 +90,14 @@ public class TestGameDemoStartCanvas extends DemoCanvas
     {
         return new TestGameDemoGameCanvas(this.abeClientInformation, null, this.createGameLayerManager(this.getNextRandom()));
     }
+    
+    protected void processGame() throws Exception
+    {
+        this.gameRunnable.run();
+
+        this.getSpecialAnimationInterface().nextFrame();
+        
+        this.process();
+    }
+    
 }

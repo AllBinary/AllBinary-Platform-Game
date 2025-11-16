@@ -27,6 +27,7 @@ import org.allbinary.animation.threed.ThreedAnimation;
 import org.allbinary.graphics.color.BasicColor;
 import org.allbinary.graphics.color.ColorChangeEvent;
 import org.allbinary.graphics.color.ColorChangeListener;
+import org.allbinary.graphics.displayable.CanvasStrings;
 import org.allbinary.logic.util.event.AllBinaryEventObject;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.media.graphics.geography.map.ColorFromEventUtil;
@@ -73,7 +74,9 @@ implements ColorChangeListener
         
         final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[2];
 
-        //logUtil.put(threedAnimation.toString(), this, "nextFrame");
+        if(threedAnimation.getFrame() % 20 == 0) {
+            logUtil.put(threedAnimation.toString(), this, "nextFrame");
+        }
             
         threedAnimation.nextRotation();
         
@@ -125,6 +128,11 @@ implements ColorChangeListener
 
         int index = sizeP - 1;
 
+        final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[2];
+        if(threedAnimation.getFrame() % 35 == 0) {
+            logUtil.put(threedAnimation.toString(), this, CanvasStrings.getInstance().PAINT);
+        }
+        
         //CameraLayer cameraLayer = testGameDemoSceneController.getCameraLayer();
         
         //if(cameraLayer != null)
