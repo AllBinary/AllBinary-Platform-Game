@@ -25,7 +25,6 @@ import org.allbinary.graphics.opengles.OpenGLCapabilities;
 import org.allbinary.graphics.opengles.OpenGLVersionValidator;
 import org.allbinary.graphics.opengles.renderer.RendererStrings;
 import org.allbinary.graphics.threed.min3d.PlatformAppShaderResources;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.io.file.SimpleFileUtil;
 import org.allbinary.logic.string.StringUtil;
@@ -143,10 +142,20 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
 //                        
 //        },        
 
+//        new PlatformShaderComposite(
+//            openGLCapabilities.VERSION_3_0, 
+//        new Shader[]{ new Shader(), new Shader()},
+//        new SimpleCompositeShaderUpdater(StringUtil.getInstance().getArrayInstance(), new String[]{"myTexture"}, new String[] { semanticStrings.POSITION, semanticStrings.COLOR, semanticStrings.NORMAL, semanticStrings.TEXCOORD}),
+//        SimpleShaderInitializer.getInstance(),
+//        ModelViewProjection.getInstance(),
+//        null,
+//        null),
+
         new PlatformShaderComposite(
             openGLCapabilities.VERSION_3_0, 
         new Shader[]{ new Shader(), new Shader()},
-        new SimpleCompositeShaderUpdater(StringUtil.getInstance().getArrayInstance(), new String[]{"myTexture"}, new String[] { semanticStrings.POSITION, semanticStrings.COLOR, semanticStrings.NORMAL, semanticStrings.TEXCOORD}),
+
+        new SimpleCompositeShaderUpdater(StringUtil.getInstance().getArrayInstance(), new String[]{"lightPos", "lightColor", "cameraPos", "myTexture"}, new String[] { semanticStrings.POSITION, semanticStrings.COLOR, semanticStrings.NORMAL, semanticStrings.TEXCOORD}),
         SimpleShaderInitializer.getInstance(),
         ModelViewProjection.getInstance(),
         null,
@@ -176,10 +185,17 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
 //        shaderCompositeArray[2].colorDisableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
 //        shaderCompositeArray[2].uniformTextureUnitOpenGLProcessor = new UniformShaderOpenGLProcessor(shaderCompositeArray[2]);
 
-        final int gsnIndex = 0;
-        shaderCompositeArray[gsnIndex].colorEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
-        shaderCompositeArray[gsnIndex].colorDisableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
-        shaderCompositeArray[gsnIndex].uniformTextureUnitOpenGLProcessor = new UniformShaderOpenGLProcessor(shaderCompositeArray[gsnIndex]);
+        ShaderComposite shaderComposite = shaderCompositeArray[0];
+        //shaderComposite.colorEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
+        //shaderComposite.colorDisableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
+        //shaderComposite.uniformTextureUnitOpenGLProcessor = new UniformShaderOpenGLProcessor(shaderComposite, 0);
+
+        shaderComposite.colorEnableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
+        shaderComposite.colorDisableVertexAttribArrayOpenGLProcessor = NullOpenGLProcessorFactory.getInstance();
+        shaderComposite.uniformLightPositionOpenGLProcessor = new UniformLightPositionOpenGLProcessor(shaderComposite, 0);
+        shaderComposite.uniformLightColorOpenGLProcessor = new UniformLightColorOpenGLProcessor(shaderComposite, 1);
+        shaderComposite.uniformCameraPositionOpenGLProcessor = new UniformCameraPositionOpenGLProcessor(shaderComposite, 2);
+        shaderComposite.uniformTextureUnitOpenGLProcessor = new UniformTextureOpenGLProcessor(shaderComposite, 3);
 
         if (shaderManager == ShaderManager.getInstance()) {
             logUtil.put("Shaders already loaded", this, renderStrings.ON_SURFACE_CREATED);
@@ -187,7 +203,7 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
 
             final OpenGLVersionValidator openGLVersionValidator = OpenGLVersionValidator.getInstance();
             for (int index = 0; index < size; index++) {
-                final ShaderComposite shaderComposite = shaderCompositeArray[index];
+                shaderComposite = shaderCompositeArray[index];
 
                 if (openGLVersionValidator.isAvailable(shaderComposite.requiresOpenGLVersion)) {
                     Shader shader = shaderComposite.shaderArray[0];

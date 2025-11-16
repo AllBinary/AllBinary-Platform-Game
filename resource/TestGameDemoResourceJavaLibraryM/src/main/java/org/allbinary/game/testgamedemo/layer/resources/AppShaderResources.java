@@ -45,11 +45,13 @@ public class AppShaderResources {
  
     //public final String SIMPLE_VERTEX_SHADER_3 = "screen_coords_vertex_shader_glsl";
     //public final String SIMPLE_VERTEX_SHADER_5 = "projection_vertex_shader_glsl";
-    public final String SIMPLE_VERTEX_SHADER_GSN = "simple_vertex_shader_gsn_glsl";
+//    public final String SIMPLE_VERTEX_SHADER_GSN = "simple_vertex_shader_gsn_glsl";
+    public final String LIKE2_FIXED_PIPLINE_LIGHTING_VERTEX_SHADER = "like2_fixed_pipeline_lighting_vertex_shader_glsl";
     
 //    public final String SIMPLE_TEXTURE_FRAGMENT_SHADER_3 = "simple_texture_no_gamma_fragment_shader_glsl";
 //    public final String SIMPLE_TEXTURE_FRAGMENT_SHADER_4 = "simple_texture_gamma_fragment_shader_glsl";
-    public final String SIMPLE_TEXTURE_FRAGMENT_SHADER_GSN = "simple_texture_fragment_shader_gsn_glsl";
+//    public final String SIMPLE_TEXTURE_FRAGMENT_SHADER_GSN = "simple_texture_fragment_shader_gsn_glsl";
+    public final String LIKE2_FIXED_PIPLINE_LIGHTING_FRAGMENT_SHADER = "like2_fixed_pipeline_lighting_fragment_shader_glsl";
     
 //    public final String DEPTH_FRAGMENT_SHADER = "default_fragment_depth_shader_glsl";
 //    public final String FOG_LIGHT0_FRAGMENT_SHADER = "default_fragment_foglight0_shader_glsl";
@@ -94,7 +96,8 @@ public class AppShaderResources {
 //        //SIMPLE_VERTEX_SHADER_3,
 //        //SIMPLE_VERTEX_SHADER_3,
 //        SIMPLE_VERTEX_SHADER_5,
-        SIMPLE_VERTEX_SHADER_GSN
+        //SIMPLE_VERTEX_SHADER_GSN
+        LIKE2_FIXED_PIPLINE_LIGHTING_VERTEX_SHADER
     };
     
     private final String[] FRAGMENT_ARRAY = {
@@ -103,7 +106,8 @@ public class AppShaderResources {
 //        //SIMPLE_TEXTURE_FRAGMENT_SHADER_3,
 //        //SIMPLE_TEXTURE_FRAGMENT_SHADER_4,
 //        SIMPLE_TEXTURE_FRAGMENT_SHADER_4,
-        SIMPLE_TEXTURE_FRAGMENT_SHADER_GSN
+        //SIMPLE_TEXTURE_FRAGMENT_SHADER_GSN
+        LIKE2_FIXED_PIPLINE_LIGHTING_FRAGMENT_SHADER
     };
     
     public String getVertexShader(final int shaderIndex) {
