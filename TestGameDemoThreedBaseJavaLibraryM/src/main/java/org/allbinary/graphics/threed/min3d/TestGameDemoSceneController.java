@@ -148,7 +148,7 @@ extends AllBinaryGameSceneController
           final Object3d titleThreeObject3dContainer = threedLoaderFactory.getObject3dInstance(
                   titleThreedResources.RESOURCE_TITLE_THREE, gl, glInstanceVersion, OBJ, FALSE);
 
-          OpenGLVersionValidator.getInstance().setShaderComposite(AppRendererShaderUpdaterFactory.getInstance().shaderCompositeArray[0], titleThreeObject3dContainer);
+          AppRendererShaderUpdaterFactory.getInstance().setShaderComposite(titleThreeObject3dContainer);
 
           //titleThreeObject3dContainer.getScale().x = 
               //titleThreeObject3dContainer.getScale().y = 
