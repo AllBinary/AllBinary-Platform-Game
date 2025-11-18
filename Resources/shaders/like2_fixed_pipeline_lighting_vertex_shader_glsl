@@ -22,7 +22,8 @@ void main()
     FragPos = eye_space_pos.xyz;
 
     //Normal = mat3(transpose(inverse(model))) * normal;
-    Normal = gl_NormalMatrix * gl_Normal;
+    Normal = gl_NormalMatrix * normal;
+    //Normal = gl_NormalMatrix * gl_Normal;
 
     TexCoord = texcoord;
 
