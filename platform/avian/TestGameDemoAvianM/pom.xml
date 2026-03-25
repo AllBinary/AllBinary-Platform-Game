@@ -69,6 +69,14 @@
             <!-- AllBinary Platform Version End -->
         </dependency>
         <dependency>
+            <groupId>org.allbinary.game</groupId>
+            <artifactId>GameResourceNoneJavaLibrary</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+        
+        <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AvianToJ2MELibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
