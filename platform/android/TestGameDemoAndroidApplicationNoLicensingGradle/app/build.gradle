@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 36
-    buildToolsVersion = "36.1.0"
+    compileSdkVersion 37
+    buildToolsVersion = "37.0.0"
 
     defaultConfig {
         applicationId "org.allbinary.game.testgamedemo"
         minSdkVersion 4
-        targetSdkVersion 36
+        targetSdkVersion 37
         versionCode 40
         versionName "1.2.17"
 

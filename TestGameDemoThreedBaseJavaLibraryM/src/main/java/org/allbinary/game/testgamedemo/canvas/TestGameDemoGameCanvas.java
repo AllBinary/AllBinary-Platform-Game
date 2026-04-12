@@ -103,7 +103,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     public void mediaInit() throws Exception
     {
-        logUtil.put(commonStrings.START, this, "mediaInit");
+        logUtil.putF(commonStrings.START, this, "mediaInit");
         AllBinaryMediaManager.init(TestGameDemoSoundsFactoryFactory.getInstance());
     }
 

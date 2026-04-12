@@ -116,7 +116,7 @@ extends AllBinaryGameSceneController
               final Light light = new Light();
 
               //light.ambient.setAll(128,128,128, 255);
-              light.ambient.commitToFloatBuffer();
+              //light.ambient.commitToFloatBuffer();
 
               if(scene.getLights().size() > 0)
               {

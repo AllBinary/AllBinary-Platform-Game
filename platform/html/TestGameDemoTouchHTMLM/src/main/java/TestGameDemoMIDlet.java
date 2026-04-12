@@ -25,7 +25,7 @@ public class TestGameDemoMIDlet
         final LogUtil logUtil = LogUtil.getInstance();
         try
         {
-            logUtil.put(commonStrings.START, this, commonStrings.INIT);
+            logUtil.putF(commonStrings.START, this, commonStrings.INIT);
 
             //ResourceUtil.setClassLoader(this.getClass().getClassLoader());
 

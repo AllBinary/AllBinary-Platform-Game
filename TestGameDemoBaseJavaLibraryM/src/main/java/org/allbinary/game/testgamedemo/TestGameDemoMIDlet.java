@@ -108,7 +108,7 @@ public class TestGameDemoMIDlet extends
    {
         //PreLogUtil.put(commonStrings.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");
 
-        logUtil.put(commonStrings.START, this,
+        logUtil.putF(commonStrings.START, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface");
 
         AllBinaryMediaManagerShutdown.shutdown(
@@ -116,7 +116,7 @@ public class TestGameDemoMIDlet extends
         AllBinaryMediaManagerShutdown.shutdown(
            TestGameDemoSoundsFactoryFactory.getInstance());
 
-        logUtil.put(commonStrings.END, this,
+        logUtil.putF(commonStrings.END, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface");
    }
 }

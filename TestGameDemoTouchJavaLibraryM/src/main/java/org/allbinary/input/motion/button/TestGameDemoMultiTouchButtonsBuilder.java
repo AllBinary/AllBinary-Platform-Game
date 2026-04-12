@@ -44,7 +44,7 @@ extends BaseTouchInput
     {
         try
         {
-            logUtil.put(commonStrings.START, this, commonStrings.CONSTRUCTOR);
+            logUtil.putF(commonStrings.START, this, commonStrings.CONSTRUCTOR);
 
             final BasicArrayList list = new BasicArrayList();
 

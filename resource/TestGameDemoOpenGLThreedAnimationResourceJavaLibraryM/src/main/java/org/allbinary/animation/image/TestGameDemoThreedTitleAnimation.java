@@ -54,7 +54,7 @@ implements ColorChangeListener
     {
         super(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width);
         
-        logUtil.put(CommonStrings.getInstance().CONSTRUCTOR, this, this.getClass().getName());
+        logUtil.putF(CommonStrings.getInstance().CONSTRUCTOR, this, this.getClass().getName());
         
         testGameDemoSceneController = (TestGameDemoSceneController) 
             TestGameDemoAllBinarySceneControllerFactory.getInstance();
@@ -63,7 +63,7 @@ implements ColorChangeListener
     public void onEvent(AllBinaryEventObject eventObject)
     {
         BasicColor basicColor = ((ColorChangeEvent) eventObject).getBasicColorP(); 
-        //logUtil.put("Color Change Event: " + basicColor.getName(), this, "onEvent");
+        //logUtil.putF("Color Change Event: " + basicColor.getName(), this, "onEvent");
         this.color = basicColor.intValue();
     }
     
@@ -75,7 +75,7 @@ implements ColorChangeListener
         final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[2];
 
         if(threedAnimation.getFrame() % 20 == 0) {
-            logUtil.put(threedAnimation.toString(), this, "nextFrame");
+            logUtil.putF(threedAnimation.toString(), this, "nextFrame");
         }
             
         threedAnimation.nextRotation();
@@ -105,7 +105,7 @@ implements ColorChangeListener
             {
                 this.basicSetColorUtil.setBasicColorP(graphics, this.basicColorArray[index]);
             }
-            //logUtil.put("deltaX: " + deltaX + " " + x, this, "paint");
+            //logUtil.putF("deltaX: " + deltaX + " " + x, this, "paint");
             this.animationInterfaceArray[index].paint(graphics, deltaX, deltaY);
         }
     }
@@ -130,7 +130,7 @@ implements ColorChangeListener
 
         final ThreedAnimation threedAnimation = (ThreedAnimation) this.animationInterfaceArray[2];
         if(threedAnimation.getFrame() % 35 == 0) {
-            logUtil.put(threedAnimation.toString(), this, CanvasStrings.getInstance().PAINT);
+            logUtil.putF(threedAnimation.toString(), this, CanvasStrings.getInstance().PAINT);
         }
         
         //CameraLayer cameraLayer = testGameDemoSceneController.getCameraLayer();
@@ -148,7 +148,7 @@ implements ColorChangeListener
             //{
               //  this.basicColorUtil.setBasicColor(graphics, this.basicColorArray[index]);
             //}
-            //logUtil.put("deltaX: " + deltaX + " " + x, this, "paintThreed");
+            //logUtil.putF("deltaX: " + deltaX + " " + x, this, "paintThreed");
 
             //this.animationInterfaceArray[index].paintThreed(graphics, deltaX, deltaY, 30);
             

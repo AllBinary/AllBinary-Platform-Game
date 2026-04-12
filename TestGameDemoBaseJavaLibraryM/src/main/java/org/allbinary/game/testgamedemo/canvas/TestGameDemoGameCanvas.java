@@ -99,7 +99,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     public void mediaInit() throws Exception
     {
-        logUtil.put(commonStrings.START, this, "mediaInit");
+        logUtil.putF(commonStrings.START, this, "mediaInit");
         AllBinaryMediaManager.init(TestGameDemoSoundsFactoryFactory.getInstance());
     }
 
@@ -343,7 +343,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     
     public void draw(Graphics graphics)
     {
-        //logUtil.put(commonStrings.START, this, "draw");
+        //logUtil.putF(commonStrings.START, this, "draw");
         
         this.clear(graphics);
 

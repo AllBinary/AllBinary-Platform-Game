@@ -127,7 +127,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            logUtil.put(commonStrings.START, this, commonStateStrings.CREATE);
+            logUtil.putF(commonStrings.START, this, commonStateStrings.CREATE);
 
             //final String UNLOCKED = "unlock_testgamedemo_levels";
             //InApplicationPurchaseFactory.getInstance().init(this, bundle);
@@ -140,7 +140,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 this.setBackgrounds();
             }
 
-            logUtil.put(commonStrings.END, this, commonStateStrings.CREATE);
+            logUtil.putF(commonStrings.END, this, commonStateStrings.CREATE);
         } catch (Exception e)
         {
             logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e);
@@ -151,13 +151,13 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            logUtil.put(commonStrings.START, this, commonStateStrings.START);
+            logUtil.putF(commonStrings.START, this, commonStateStrings.START);
 
             super.onStart();
 
             super.onStart(new TestGameDemoMIDletFactory());
 
-            logUtil.put(commonStrings.END, this, commonStateStrings.START);
+            logUtil.putF(commonStrings.END, this, commonStateStrings.START);
         } catch (Exception e)
         {
             logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.START, e);
@@ -173,13 +173,13 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             {
                 try
                 {
-                    logUtil.put(commonStrings.START, this, commonStrings.RUN);
+                    logUtil.putF(commonStrings.START, this, commonStrings.RUN);
 
                     AllBinaryMidletOpenGLESView view = (AllBinaryMidletOpenGLESView)
                     TestGameDemoAndroidActivity.this.getView();
                     view.onEvent(eventObject);
                     
-                    logUtil.put("End Runnable", this, commonStrings.RUN);
+                    logUtil.putF("End Runnable", this, commonStrings.RUN);
                 }
                 catch (Exception e)
                 {
@@ -199,7 +199,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         if (!InitEmulatorFactory.getInstance().isInitEmulator())
         {
-            logUtil.put("Init Base GameFeatures", this, "initEmulator");
+            logUtil.putF("Init Base GameFeatures", this, "initEmulator");
 
             final Features features = Features.getInstance();
             
@@ -266,7 +266,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
     public void setBackgrounds() throws Exception
     {
-        logUtil.put(commonStrings.START, this, "setBackground");
+        logUtil.putF(commonStrings.START, this, "setBackground");
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         

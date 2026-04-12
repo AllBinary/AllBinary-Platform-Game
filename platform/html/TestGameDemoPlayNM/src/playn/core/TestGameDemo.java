@@ -56,7 +56,7 @@ Pointer.Listener
     {
         try
         {
-            logUtil.put(commonStrings.START, this, commonStrings.INIT);
+            logUtil.putF(commonStrings.START, this, commonStrings.INIT);
 
             Features features = Features.getInstance();
 
@@ -141,7 +141,7 @@ Pointer.Listener
     @Override
     public void onKeyTyped(Keyboard.TypedEvent event) {
         
-        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.typedChar(), this, "onKeyTyped");
+        //logUtil.putF(CommonLabels.getInstance().START_LABEL + event.typedChar(), this, "onKeyTyped");
         
         //this.getCurrentDisplayable().keyRepeated(event.keyCode());
     }
@@ -149,7 +149,7 @@ Pointer.Listener
     @Override
     public void onKeyDown(Keyboard.Event event)
     {
-        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyDown");
+        //logUtil.putF(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyDown");
     
         final Key key = event.key();        
         final int abKey = this.playNToAllBinaryKeyInputUtil.PLAYN_KEY_ORDINAL_TO_CANVAS_KEY[key.ordinal()];
@@ -161,7 +161,7 @@ Pointer.Listener
     @Override
     public void onKeyUp(Keyboard.Event event)
     {
-        //logUtil.put(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyUp");
+        //logUtil.putF(CommonLabels.getInstance().START_LABEL + event.key(), this, "onKeyUp");
         
         final Key key = event.key();
 
@@ -175,7 +175,7 @@ Pointer.Listener
     {
         try
         {
-            logUtil.put(commonStrings.START, this, "onPointerStart");
+            logUtil.putF(commonStrings.START, this, "onPointerStart");
             this.motionRecognizer.processStartMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
@@ -190,7 +190,7 @@ Pointer.Listener
     {
         try
         {
-            logUtil.put(commonStrings.START, this, "onPointerEnd");
+            logUtil.putF(commonStrings.START, this, "onPointerEnd");
             this.motionRecognizer.processEndMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
@@ -205,7 +205,7 @@ Pointer.Listener
     {
         try
         {
-            //logUtil.put(commonStrings.START, this, "onPointerDrag");
+            //logUtil.putF(commonStrings.START, this, "onPointerDrag");
             this.motionRecognizer.processDraggedMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(), this.DEVICE_ID, 
                 0);
@@ -221,7 +221,7 @@ Pointer.Listener
     {
         try
         {
-            logUtil.put(commonStrings.START, this, "onMouseDown");
+            logUtil.putF(commonStrings.START, this, "onMouseDown");
             this.motionRecognizer.processStartMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(),
                 mouseEvent.button());
@@ -236,7 +236,7 @@ Pointer.Listener
     {
         try
         {
-            logUtil.put(commonStrings.START, this, "onMouseUp");
+            logUtil.putF(commonStrings.START, this, "onMouseUp");
             this.motionRecognizer.processEndMotionEvent(
                 (int) mouseEvent.x(), (int) mouseEvent.y(),
                 mouseEvent.button());

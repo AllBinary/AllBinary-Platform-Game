@@ -63,12 +63,12 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
             ProgressCanvasFactory.getInstance();
 
         stringMaker.delete(0, stringMaker.length());
-        progressCanvas.addPortion(portion, stringMaker.append(loadingString).append(index++).toString());
+        progressCanvas.addPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
 
         this.addRectangles();
 
         stringMaker.delete(0, stringMaker.length());
-        progressCanvas.addPortion(portion, stringMaker.append(loadingString).append(index++).toString());
+        progressCanvas.addPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
 
         //Image EXPLOSION_IMAGE = imageCache.get(
           //      ExplosionResources.getInstance().EXPLOSION_60_RESOURCE);
@@ -76,7 +76,7 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
         //int scaleDenominator = 2;
         //int explosionFrameSize = (60 * GameConfigurationCentral.getInstance().SCALE.getValue().intValue()) / scaleDenominator;
 
-        //logUtil.put("Explosiont: ").append(explosionFrameSize).append(" ").append(explosionFrameSize/2).append(" ").append(explosionFrameSize/4, this, commonStrings.INIT);
+        //logUtil.putF("Explosiont: ").append(explosionFrameSize).append(" ").append(explosionFrameSize/2).append(" ").append(explosionFrameSize/4, this, commonStrings.INIT);
         //90 x 360
 
         //this.add(ExplosionResources.getInstance().EXPLOSION_60_RESOURCE, 
