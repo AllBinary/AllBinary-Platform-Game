@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemoParent</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+            
+    <artifactId>TestGameDemoAndroidPlatformLibsP</artifactId>
+    <packaging>pom</packaging>
+
+    <name>TestGameDemoAndroidPlatformLibsP</name>
+    <url>http://www.allbinary.com/</url>
+
+    <modules>
+
+        
+        <module>../TestGameDemoAndroidResourceJavaLibraryM</module>
+        <module>../TestGameDemoAndroidRawResourcesJavaLibraryM</module>
+        <module>../TestGameDemoAndroidResourcesTempJavaLibraryM</module>
+        
+        <module>../TestGameDemoAndroidJavaLibraryM</module>
+        <module>../TestGameDemoAndroidBaseJavaLibraryM</module>
+        <module>../TestGameDemoAndroidActivityJavaLibraryM</module>
+        
+        <module>../TestGameDemoAndroidSoundsJavaLibraryM</module>
+        
+        <module>../TestGameDemoAndroidClientInfoJavaLibraryM</module>
+        
+        <module>../TestGameDemoAndroidM</module>
+        <!--
+        Uses older source version
+        <module>../TestGameDemoAndroidApplicationM</module>
+        -->
+
+<!--        <module>../TestGameDemoAndroidGradleM</module>-->
+
+        <!--
+        //Needs the nexus
+        -->
+        <module>../TestGameDemoThreedAndroidPlatformLibsP</module>
+
+    </modules>
+
+</project>
