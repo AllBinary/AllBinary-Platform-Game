@@ -19,6 +19,7 @@ import org.allbinary.playn.AllBinaryPlayNGame;
 import org.allbinary.playn.AllBinaryPlayNGameRunnable;
 import org.allbinary.playn.processors.MidletStartupProcessor;
 import org.allbinary.util.BasicArrayList;
+import org.allbinary.util.BasicArrayListD;
 import playn.core.PlayN;
 import playn.core.TestGameDemoMidletFactory;
 
@@ -28,7 +29,7 @@ public class TestGameDemoJ2SE {
     JavaPlatform platform = JavaPlatform.register();
     platform.assetManager().setPathPrefix("testgamedemo/res/");
     
-    final BasicArrayList list = new BasicArrayList();
+    final BasicArrayList list = new BasicArrayListD();
     list.add(new MidletStartupProcessor(list));
     final AllBinaryPlayNGameRunnable gameRunnable = 
             new AllBinaryPlayNGameRunnable(list);

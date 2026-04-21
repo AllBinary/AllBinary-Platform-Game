@@ -18,6 +18,7 @@ package playn.html;
 import org.allbinary.playn.AllBinaryPlayNGame;
 import org.allbinary.playn.AllBinaryPlayNGameRunnable;
 import org.allbinary.util.BasicArrayList;
+import org.allbinary.util.BasicArrayListD;
 import playn.core.PlayN;
 import playn.core.TestGameDemoMidletFactory;
 import playn.core.TestGameDemoProcessor;
@@ -30,7 +31,7 @@ public class TestGameDemoGameHtml extends HtmlGame {
     platform.assetManager().setPathPrefix("testgamedemo/res/");
     
     
-    final BasicArrayList list = new BasicArrayList();
+    final BasicArrayList list = new BasicArrayListD();
     
     list.add(new TestGameDemoProcessor(list));
 
