@@ -18,6 +18,7 @@ package org.allbinary.animation.image;
 
 import javax.microedition.lcdui.Graphics;
 
+import org.allbinary.animation.IndexedAnimationBehavior;
 import org.allbinary.game.testgamedemo.TestGameDemoAllBinarySceneControllerFactory;
 import org.allbinary.graphics.threed.min3d.TestGameDemoSceneController;
 
@@ -52,7 +53,7 @@ implements ColorChangeListener
             int[] dxArray, int[] dyArray, int y, int width) 
     throws Exception
     {
-        super(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width);
+        super(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, new IndexedAnimationBehavior(1, 250));
         
         logUtil.putF(CommonStrings.getInstance().CONSTRUCTOR, this, this.getClass().getName());
         
@@ -82,7 +83,7 @@ implements ColorChangeListener
         
     }
     
-    public void paint(Graphics graphics, int ax, int ay)
+    public void paintXY(Graphics graphics, int ax, int ay)
     {
         graphics.setColor(color);
         
@@ -106,7 +107,7 @@ implements ColorChangeListener
                 this.basicSetColorUtil.setBasicColorP(graphics, this.basicColorArray[index]);
             }
             //logUtil.putF("deltaX: " + deltaX + " " + x, this, "paint");
-            this.animationInterfaceArray[index].paint(graphics, deltaX, deltaY);
+            this.animationInterfaceArray[index].paintXY(graphics, deltaX, deltaY);
         }
     }
     

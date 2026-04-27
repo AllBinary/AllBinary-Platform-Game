@@ -18,7 +18,7 @@
 
     <modules>
 
-        
+        <module>../TestGameDemoAndroidAdvertisementJavaLibraryM</module>
         <module>../TestGameDemoAndroidResourceJavaLibraryM</module>
         <module>../TestGameDemoAndroidRawResourcesJavaLibraryM</module>
         <module>../TestGameDemoAndroidResourcesTempJavaLibraryM</module>

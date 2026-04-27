@@ -13,6 +13,9 @@
 */
 package org.allbinary.game.testgamedemo;
 
+import org.allbinary.game.midlet.LicenseCheckRunnableFactory;
+import org.allbinary.game.midlet.LicensedDemoSetupFactory;
+import org.allbinary.game.score.HighScoresCanvasNoInputProcessorFactory;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoGameCanvas;
 import org.allbinary.game.testgamedemo.canvas.TestGameDemoInputMappingHelpPaintable;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
@@ -52,7 +55,7 @@ public class TestGameDemoMIDlet extends
 
    public TestGameDemoMIDlet(final ClientInformationFactory clientInformationFactory)
    {
-       super(clientInformationFactory, LicenseLoadingTypeFactory.getIntance().OTHER);
+       super(clientInformationFactory, LicenseLoadingTypeFactory.getIntance().OTHER, new LicensedDemoSetupFactory(), new LicenseCheckRunnableFactory());
        //this.setSaveGameForm(SaveGameForm.getInstance(this, "Save Game"));
    }
    
@@ -68,7 +71,7 @@ public class TestGameDemoMIDlet extends
       return new TestGameDemoStartCanvas(this.abeClientInformation, this);
    }
 
-   protected GameCanvasRunnableInterface createGameCanvasRunnableInterface(
+   protected GameCanvasRunnableInterface createGameCanvasRunnable(
 		   final AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
    {
 	   return new TestGameDemoGameCanvas(this.abeClientInformation, this, allBinaryGameLayerManager);
@@ -78,8 +81,10 @@ public class TestGameDemoMIDlet extends
    {
        return new HighScoresCanvas(this,
                this.createGameLayerManager(),
+               this.createGameLayerManager().getGameInfo(),
                new HighScoresPaintable(),
-               new BasicHighScoresFactory(this.abeClientInformation, TestGameDemoSoftwareInfo.getInstance()));
+               new BasicHighScoresFactory(this.abeClientInformation, TestGameDemoSoftwareInfo.getInstance()),
+               new HighScoresCanvasNoInputProcessorFactory());
    }
 
    public int getHighestLevel()

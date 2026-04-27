@@ -1,5 +1,7 @@
 package org.allbinary.animation.image;
 
+import java.util.Hashtable;
+
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 import org.allbinary.graphics.threed.min3d.Min3dSceneResourcesFactory;
 import org.allbinary.image.opengles.OpenGLImageCacheFactory;
@@ -19,7 +21,7 @@ public class TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactory
 {
     public TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactoryInterfaceFactory()
     {
-        super("OpenGL Image Animations");
+        super("OpenGL Image Animations", new Hashtable(), new Hashtable(), new Hashtable());
     }
 
     private int index = 1;

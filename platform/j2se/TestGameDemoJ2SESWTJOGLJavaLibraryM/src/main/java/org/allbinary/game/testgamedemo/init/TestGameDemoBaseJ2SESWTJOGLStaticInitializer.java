@@ -22,7 +22,7 @@ public class TestGameDemoBaseJ2SESWTJOGLStaticInitializer extends TestGameDemoSt
         super.initKey(portion);
         
         //AndroidGameKey.init();
-        ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
+        ProgressCanvasFactory.getInstance().addNormalPortion(50, "Game Keys");
     }
 
     public void init(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener, final int level) throws Exception
@@ -39,7 +39,7 @@ public class TestGameDemoBaseJ2SESWTJOGLStaticInitializer extends TestGameDemoSt
         new TestGameDemoGameFeatures().init();
 
         //GameOptionsForm.init(commandListener, new TestGameDemoGameFeatures(), "Game Options");
-        ProgressCanvasFactory.getInstance().addPortion(50, "Game Options");
+        ProgressCanvasFactory.getInstance().addNormalPortion(50, "Game Options");
     }
     
     protected void setAndroidGameInitialized(final boolean androidGameInitialized)

@@ -12,8 +12,6 @@ import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
@@ -43,7 +41,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         try
         {
             final GameAdState gameAdState = 
-                GameAdStateFactory.getInstance().getInstance(
+                GameAdStateFactory.getInstance().getInstanceForApp(
                 		TestGameDemoSoftwareInfo.getInstance());
 
             gameAdState.setOkayToShowAds(true);
@@ -210,7 +208,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             */
 
             gameConfigurationCentral.VIBRATION.setDefaultValue(
-                    SmallIntegerSingletonFactory.getInstance().getInstance(1));
+                    SmallIntegerSingletonFactory.getInstance().getAt(1));
             gameConfigurationCentral.VIBRATION.setDefault();
 
             /*
@@ -222,7 +220,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             */
 
             gameConfigurationCentral.SPEED.setDefaultValue(
-                    SmallIntegerSingletonFactory.getInstance().getInstance(9));
+                    SmallIntegerSingletonFactory.getInstance().getAt(9));
             gameConfigurationCentral.SPEED.setDefault();
 
             GraphicsFeatureFactory graphicsFeatureFactory = 
@@ -289,7 +287,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
             
             hashtable.put(AndroidBasicTitleProgressBar.RESOURCE, new Image(bitmap));
             
-            AndroidBasicTitleProgressBar.setBackground(
+            AndroidBasicTitleProgressBar.setBackgroundResource(
                     androidResources.drawable.testgamedemo_wait_256_by_256
                     );
         }

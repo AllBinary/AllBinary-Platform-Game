@@ -41,7 +41,7 @@ public class TestGameDemoInputMappingHelpPaintable
     }
 
     //Remove hack after resource factory supports Paintable
-    public void paint(Graphics graphics, int x, int y)
+    public void paintXY(Graphics graphics, int x, int y)
     {
         
     }

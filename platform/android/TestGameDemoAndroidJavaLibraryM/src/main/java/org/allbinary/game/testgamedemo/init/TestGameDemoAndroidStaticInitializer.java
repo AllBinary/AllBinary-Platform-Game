@@ -36,7 +36,7 @@ extends TestGameDemoStaticInitializer
         
         this.setPlatformGameInitialized(true);
         
-        ProgressCanvasFactory.getInstance().addPortion(50, "Game Options");
+        ProgressCanvasFactory.getInstance().addNormalPortion(50, "Game Options");
         
         new TestGameDemoGameFeatures().init();
         //GameOptionsForm.init(commandListener, new TestGameDemoGameFeatures(), "Game Options");

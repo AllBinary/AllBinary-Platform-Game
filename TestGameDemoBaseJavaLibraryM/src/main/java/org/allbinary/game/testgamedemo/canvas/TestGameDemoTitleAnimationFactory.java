@@ -56,7 +56,7 @@ public class TestGameDemoTitleAnimationFactory
 
         animationInterfaceArray[1] = new ColorLessVectorAnimation(points, AnimationBehavior.getInstance());
         
-        return new TitleAnimation(animationInterfaceArray, 
+        return TitleAnimation.create(animationInterfaceArray,
                 basicColorArray, deltaXArray, deltaYArray, 15, 120);
     }
 }

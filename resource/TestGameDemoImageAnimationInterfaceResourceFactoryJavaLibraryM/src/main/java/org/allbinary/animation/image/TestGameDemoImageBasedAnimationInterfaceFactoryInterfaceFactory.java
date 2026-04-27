@@ -13,6 +13,8 @@
 */
 package org.allbinary.animation.image;
 
+import java.util.Hashtable;
+
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
 
 import org.allbinary.animation.resource.BaseResourceAnimationInterfaceFactoryInterfaceFactory;
@@ -31,21 +33,21 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
 
     public TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory()
     {
-        super("Image Animations");
+        super("Image Animations", new Hashtable(), new Hashtable(), new Hashtable());
     }
 
     public TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory(String name)
     {
-        super(name);
+        super(name, new Hashtable(), new Hashtable(), new Hashtable());
     }
     
     public void init(int level)
     throws Exception
     {
-        this.init(ImageCacheFactory.getInstance(), level);
+        this.initImageCache(ImageCacheFactory.getInstance(), level);
     }
 
-    protected void init(ImageCache imageCache, int level)
+    protected void initImageCache(ImageCache imageCache, int level)
     throws Exception
     {
         if(this.isInitialized())
@@ -63,12 +65,12 @@ public class TestGameDemoImageBasedAnimationInterfaceFactoryInterfaceFactory
             ProgressCanvasFactory.getInstance();
 
         stringMaker.delete(0, stringMaker.length());
-        progressCanvas.addPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
+        progressCanvas.addNormalPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
 
         this.addRectangles();
 
         stringMaker.delete(0, stringMaker.length());
-        progressCanvas.addPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
+        progressCanvas.addNormalPortion(portion, stringMaker.append(loadingString).appendint(index++).toString());
 
         //Image EXPLOSION_IMAGE = imageCache.get(
           //      ExplosionResources.getInstance().EXPLOSION_60_RESOURCE);

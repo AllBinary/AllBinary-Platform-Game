@@ -1,5 +1,7 @@
 package org.allbinary.animation.image;
 
+import java.util.Hashtable;
+
 import org.allbinary.animation.NullSpecialAnimationFactory;
 import org.allbinary.game.resource.ResourceLoadingLevelFactory;
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory;
@@ -21,7 +23,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
     public TestGameDemoEarlyResourcesOpenGLBasedAnimationInterfaceFactoryInterfaceFactory()
     {
-        super("Early OpenGL Animations");
+        super("Early OpenGL Animations", new Hashtable(), new Hashtable(), new Hashtable());
     }
 
     public void init(final int level) throws Exception

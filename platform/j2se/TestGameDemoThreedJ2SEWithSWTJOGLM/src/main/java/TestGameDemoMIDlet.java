@@ -1,7 +1,6 @@
 
 import org.microemu.app.MidletJOGLInterface;
 
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.emulator.InitEmulatorFactory;
@@ -105,19 +104,19 @@ public class TestGameDemoMIDlet
             final SmallIntegerSingletonFactory smallIntegerSingletonFactory = 
                     SmallIntegerSingletonFactory.getInstance();
 
-            gameConfigurationCentral.VIBRATION.setDefaultValue(smallIntegerSingletonFactory.getInstance(0));
+            gameConfigurationCentral.VIBRATION.setDefaultValue(smallIntegerSingletonFactory.getAt(0));
             gameConfigurationCentral.VIBRATION.setDefault();
 
-            gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefaultValue(smallIntegerSingletonFactory.getInstance(4));
+            gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefaultValue(smallIntegerSingletonFactory.getAt(4));
             gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefault();
 
-            gameConfigurationCentral.SPEED.setDefaultValue(smallIntegerSingletonFactory.getInstance(9));
+            gameConfigurationCentral.SPEED.setDefaultValue(smallIntegerSingletonFactory.getAt(9));
             gameConfigurationCentral.SPEED.setDefault();
 
-            gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefaultValue(smallIntegerSingletonFactory.getInstance(0));
+            gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefaultValue(smallIntegerSingletonFactory.getAt(0));
             gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefault();
 
-            gameConfigurationCentral.SCALE.setDefaultValue(smallIntegerSingletonFactory.getInstance(3));
+            gameConfigurationCentral.SCALE.setDefaultValue(smallIntegerSingletonFactory.getAt(3));
             gameConfigurationCentral.SCALE.setDefault();
 
             this.initOpenGL();
