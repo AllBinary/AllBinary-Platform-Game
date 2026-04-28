@@ -24,8 +24,8 @@
 
         <module>../TestGameDemoHTMLJavaLibraryM</module>
         <module>../TestGameDemoHTMLM</module>
-<!--        <module>../TestGameDemoHTMLTempM</module>-->
-        <module>../TestGameDemoPlayNM</module>
+<!--        <module>../TestGameDemoHTMLTempM</module>
+        <module>../TestGameDemoPlayNM</module>-->
         
         <!--
         <module>../TestGameDemoTouchHTMLM</module>

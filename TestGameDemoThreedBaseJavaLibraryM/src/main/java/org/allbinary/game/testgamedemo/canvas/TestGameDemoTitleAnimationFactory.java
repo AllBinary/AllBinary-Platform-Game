@@ -47,7 +47,7 @@ public class TestGameDemoTitleAnimationFactory
         deltaYArray[0] = 0;
         deltaYArray[1] = 30;
         
-        return TitleAnimation.create(animationInterfaceArray,
+        return TitleAnimation.createAnimation(animationInterfaceArray,
                 basicColorArray, deltaXArray, deltaYArray, 15, 120);
     }
 
