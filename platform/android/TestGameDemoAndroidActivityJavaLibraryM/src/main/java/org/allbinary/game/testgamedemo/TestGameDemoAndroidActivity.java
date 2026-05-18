@@ -285,7 +285,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
             Hashtable hashtable = ImageCacheFactory.getInstance().getHashtableP();
             
-            hashtable.put(AndroidBasicTitleProgressBar.RESOURCE, new Image(bitmap));
+            hashtable.put(AndroidBasicTitleProgressBar.RESOURCE, Image.createImageBitmap(bitmap));
             
             AndroidBasicTitleProgressBar.setBackgroundResource(
                     androidResources.drawable.testgamedemo_wait_256_by_256

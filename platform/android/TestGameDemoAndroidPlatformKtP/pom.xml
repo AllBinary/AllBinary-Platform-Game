@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemoParentKt</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+            
+    <artifactId>TestGameDemoAndroidPlatformPKt</artifactId>
+    <packaging>pom</packaging>
+
+    <name>TestGameDemoAndroidPlatformPKt</name>
+    <url>http://www.allbinary.com/</url>
+
+    <modules>
+
+        <module>../TestGameDemoAndroidAdvertisementJavaLibraryKtM</module>
+        <module>../TestGameDemoAndroidResourceJavaLibraryKtM</module>
+        <module>../TestGameDemoAndroidRawResourcesJavaLibraryKtM</module>
+        <module>../TestGameDemoAndroidResourcesTempJavaLibraryKtM</module>
+        
+        <module>../TestGameDemoAndroidJavaLibraryKtM</module>
+        <module>../TestGameDemoAndroidBaseJavaLibraryKtM</module>
+        <module>../TestGameDemoAndroidActivityJavaLibraryKtM</module>
+        
+        <module>../TestGameDemoAndroidSoundsJavaLibraryKtM</module>
+        
+        <module>../TestGameDemoAndroidClientInfoJavaLibraryKtM</module>
+        
+        <module>../TestGameDemoAndroidKtM</module>
+        <!--
+        Uses older source version
+        <module>../TestGameDemoAndroidApplicationKtM</module>
+        -->
+
+        <module>../TestGameDemoAndroidGradleKtM</module>
+
+        <!--
+        //Needs the nexus
+        -->
+        <module>../TestGameDemoThreedAndroidPlatformP</module>
+
+    </modules>
+
+</project>
+

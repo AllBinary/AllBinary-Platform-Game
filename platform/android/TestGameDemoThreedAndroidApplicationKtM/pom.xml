@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.allbinary.game.testgamedemo</groupId>
+        <artifactId>TestGameDemoParentKt</artifactId>
+        <!-- Game Version Start -->
+        <version>1.0.0-SNAPSHOT</version>
+        <!-- Game Version Start -->
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>    
+    <artifactId>TestGameDemoThreedAndroidApplicationKt</artifactId>
+    <packaging>apk</packaging>
+
+    <name>TestGameDemoThreedAndroidApplicationKt</name>
+    <url>http://www.allbinary.com/</url>
+
+    <properties>
+        <android.sdk.version>4.1.1.4</android.sdk.version>
+        <!--
+        <android.sdk.path></android.sdk.path>
+        -->
+    </properties>
+
+    <dependencies>
+
+        <!--
+        <dependency>
+            <groupId>tv.ouya</groupId>
+            <artifactId>ouyaKt</artifactId>
+            <version>2.0.1-SNAPSHOT</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>androidKt</artifactId>
+            <version>${android.sdk.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>androidKt</artifactId>
+            <version>${android.sdk.version}</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+                               
+        <!--
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>androidKt</artifactId>
+            <version>${android.sdk.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>androidKt</artifactId>
+            <version>${android.sdk.version}</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+        -->
+                               
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>2.4.0-RC</version><!-- kotlin -->
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- Not working older: maven-android-plugin -->        
+                    <groupId>com.simpligility.maven.plugins</groupId>
+                    <artifactId>android-maven-pluginKt</artifactId>
+                    <version>4.6.0</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        
+        <plugins>
+
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>2.4.0-RC</version><!-- kotlin -->
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <mainClass></mainClass>
+                </configuration>
+            </plugin>
+
+
+            <plugin>
+                <!-- 
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                3.5.1 worked with an older android sdk 
+                3.6.0 worked for a while as well 
+                3.8.2 works but you need to build in Eclipse first for NetBeans to work
+                since Eclipse has or gets the proper dependencies
+                <ignoreBuildWarnings>true</ignoreBuildWarnings>
+                4.4.2 worked
+                -->
+                <groupId>com.simpligility.maven.plugins</groupId>
+                <artifactId>android-maven-pluginKt</artifactId>
+                <version>4.6.0</version>
+                <configuration>
+                    <!--
+                    <release>true</release>
+                    -->
+                    <!-- 
+                    mvn clean deploy -Dandroid.release=true
+                    -->
+                    <sdk>
+                        <!-- 5 is fine but is not installed by default -->
+                        <platform>33</platform>
+                    </sdk>
+                    <proguard>
+                        <skip>true</skip>
+                        <!--
+                        <skip>true</skip>
+                        <skip>false</skip>
+                        -->
+                        <config>G:/mnt/bc/mydev/work/j2me/games/All_Android.pro</config>
+                    </proguard>
+                </configuration>
+            </plugin>
+        
+            <!-- If proguard for the android-maven-plugin fails for work then use below -->
+            <!--
+            <plugin>
+                <groupId>org.allbinary</groupId>
+                <artifactId>proguard-maven-pluginKt</artifactId>
+                <version>2.0.4</version>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>proguard</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <inJar>android-classes</inJar>
+                    <proguardInclude>G:/mnt/bc/mydev/work/j2me/games/All_Android.pro</proguardInclude>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.proguard</groupId>
+                        <artifactId>proguardKt</artifactId>
+                        <version>4.10</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>2.4.0-RC</version><!-- kotlin -->
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>                
+            </plugin>
+            -->
+                        
+        </plugins>
+    </build>
+
+</project>
+

@@ -45,7 +45,7 @@ public class TestGameDemoMIDlet
         final BasicMotionGesturesHandler motionGesturesHandler =
             motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 
-        motionGesturesHandler.addListener(
+        motionGesturesHandler.addListenerInterface(
             new GameMotionGestureListener(
             MotionGestureReceiveInterfaceFactory.getInstance()));    
 
