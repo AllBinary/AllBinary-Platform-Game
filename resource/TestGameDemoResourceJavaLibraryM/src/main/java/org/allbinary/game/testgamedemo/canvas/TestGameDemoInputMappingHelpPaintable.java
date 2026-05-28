@@ -41,15 +41,18 @@ public class TestGameDemoInputMappingHelpPaintable
     }
 
     //Remove hack after resource factory supports Paintable
+    @Override
     public void paintXY(Graphics graphics, int x, int y)
     {
         
     }
 
+    @Override
     public void paintThreed(Graphics graphics, int x, int y, int z)
     {
     }
     
+    @Override
     public void nextFrame() throws Exception
     {
         

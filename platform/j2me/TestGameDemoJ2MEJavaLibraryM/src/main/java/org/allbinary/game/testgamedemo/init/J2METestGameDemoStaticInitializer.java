@@ -31,6 +31,7 @@ public class J2METestGameDemoStaticInitializer
         super(resourceInitializationArray, portion);
     }
 
+    @Override
     public void initKey(final int portion) throws Exception
     {
         super.initKey(portion);
@@ -39,7 +40,7 @@ public class J2METestGameDemoStaticInitializer
         //ProgressCanvasFactory.getInstance().addPortion(50, "Game Keys");        
     }
 
-    //@Override
+    @Override
     public void init(final AbeClientInformationInterface abeClientInformation, final CommandListener commandListener, final int level) throws Exception
     {
         super.init(abeClientInformation, commandListener, level);

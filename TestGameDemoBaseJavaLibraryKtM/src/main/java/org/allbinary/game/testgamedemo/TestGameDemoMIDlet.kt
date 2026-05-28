@@ -57,8 +57,6 @@ import org.allbinary.media.audio.EarlySoundsFactory
 
 open public class TestGameDemoMIDlet : SpecialDemoGameMidlet {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor (clientInformationFactory: ClientInformationFactory)                        
 
                             : super(clientInformationFactory, LicenseLoadingTypeFactory.getIntance()!!.OTHER, LicensedDemoSetupFactory(), LicenseCheckRunnableFactory()){
@@ -72,7 +70,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-    open fun getHelpPaintable()
+    override fun getHelpPaintable()
         //nullable = true from not(false or (false and true)) = true
 : HelpPaintable{
 
@@ -85,7 +83,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-    open fun createDemoGameCanvasRunnableInterface()
+    override fun createDemoGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 : GameCanvasRunnableInterface{
 
@@ -98,7 +96,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-    open fun createGameCanvasRunnable(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun createGameCanvasRunnable(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 : GameCanvasRunnableInterface{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -112,7 +110,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-    open fun createHighScoresCanvas()
+    override fun createHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresCanvas{
 
@@ -123,7 +121,7 @@ public constructor (clientInformationFactory: ClientInformationFactory)
 }
 
 
-    open fun getHighestLevel()
+    override fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 PreLogUtil.put("******************Demo Level Limited To: 6", this, "getMaxLevel")
@@ -135,7 +133,7 @@ PreLogUtil.put("******************Demo Level Limited To: 6", this, "getMaxLevel"
 }
 
 
-    open fun createGameLayerManager()
+    override fun createGameLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameLayerManager{
 
@@ -151,7 +149,7 @@ PreLogUtil.put("******************Demo Level Limited To: 6", this, "getMaxLevel"
 
                 @Throws(Exception::class)
             
-    open fun mediaShutdown()
+    override fun mediaShutdown()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.putF(commonStrings!!.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface")

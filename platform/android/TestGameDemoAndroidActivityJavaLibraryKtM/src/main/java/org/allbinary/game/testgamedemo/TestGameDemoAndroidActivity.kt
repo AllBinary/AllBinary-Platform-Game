@@ -35,13 +35,20 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
+import org.allbinary.android.activity.progress.ProgressHelper
 import org.allbinary.emulator.InitEmulatorFactory
 
 open public class TestGameDemoAndroidActivity : GameMidletActivity {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor (){
+public constructor ()                        
+
+                            : super(ProgressHelper.NULL_PROGRESS_HELPER){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
 
         try {
             

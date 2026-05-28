@@ -141,9 +141,7 @@ var delta = delta
 }
 
 
-    private val aChar: Char = 
-                'Z'
-            
+    private val aChar: Char = 'Z'
 
     private val charArray: CharArray = charArrayOf('A','l','l','B','i','n','a','r','y')
 

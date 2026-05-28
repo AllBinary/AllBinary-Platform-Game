@@ -44,7 +44,7 @@ public constructor (resourceInitializationArray: Array<ResourceInitialization?>,
 
                 @Throws(Exception::class)
             
-    open fun initGame()
+    override fun initGame()
         //nullable = true from not(false or (false and true)) = true
 {
 }

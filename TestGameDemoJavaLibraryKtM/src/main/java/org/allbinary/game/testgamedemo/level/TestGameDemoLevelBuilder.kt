@@ -73,7 +73,7 @@ this.gameCanvas= gameCanvas
 
                 @Throws(Exception::class)
             
-    open fun visit(layerInterface: AllBinaryLayer)
+    override fun visit(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface

@@ -49,7 +49,7 @@ public constructor (resourceInitializationArray: Array<ResourceInitialization?>,
 
                 @Throws(Exception::class)
             
-    open fun initKey(portion: Int)
+    override fun initKey(portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var portion = portion
@@ -59,7 +59,7 @@ super.initKey(portion)
 
                 @Throws(Exception::class)
             
-    open fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
+    override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

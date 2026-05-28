@@ -58,6 +58,7 @@ public class TestGameDemoLevelBuilder implements LayerInterfaceVisitor
     {
     }
 
+    @Override
     public void visit(AllBinaryLayer layerInterface) throws Exception
     {
         layerInterface.setVisible(true);

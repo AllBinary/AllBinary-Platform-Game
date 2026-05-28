@@ -25,6 +25,7 @@ extends CommonGameInitialization
         super(resourceInitializationArray, portion);
     }    
 
+    @Override
     public void initGame()
     throws Exception
     {

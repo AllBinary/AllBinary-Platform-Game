@@ -24,7 +24,7 @@ open public class TestGameDemoSoundsFactory : BaseSoundsFactory {
         
                 @Throws(Exception::class)
             
-    open fun getSoundInterfaceArray()
+    override fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Sound?>{
 

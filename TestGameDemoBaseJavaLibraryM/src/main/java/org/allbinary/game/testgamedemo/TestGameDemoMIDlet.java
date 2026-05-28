@@ -51,7 +51,6 @@ public class TestGameDemoMIDlet extends
    SpecialDemoGameMidlet
    //DemoGameMidlet
 {
-    protected final LogUtil logUtil = LogUtil.getInstance();
 
    public TestGameDemoMIDlet(final ClientInformationFactory clientInformationFactory)
    {
@@ -59,6 +58,7 @@ public class TestGameDemoMIDlet extends
        //this.setSaveGameForm(SaveGameForm.getInstance(this, "Save Game"));
    }
    
+   @Override
    protected HelpPaintable getHelpPaintable()
    throws Exception
    {
@@ -66,17 +66,20 @@ public class TestGameDemoMIDlet extends
        return TestGameDemoInputMappingHelpPaintable.getInstance();
    }
    
+   @Override
    public GameCanvasRunnableInterface createDemoGameCanvasRunnableInterface() throws Exception
    {
       return new TestGameDemoStartCanvas(this.abeClientInformation, this);
    }
 
+   @Override
    protected GameCanvasRunnableInterface createGameCanvasRunnable(
 		   final AllBinaryGameLayerManager allBinaryGameLayerManager) throws Exception
    {
 	   return new TestGameDemoGameCanvas(this.abeClientInformation, this, allBinaryGameLayerManager);
    }
    
+   @Override
    protected HighScoresCanvas createHighScoresCanvas() throws Exception
    {
        return new HighScoresCanvas(this,
@@ -87,12 +90,14 @@ public class TestGameDemoMIDlet extends
                new HighScoresCanvasNoInputProcessorFactory());
    }
 
+   @Override
    public int getHighestLevel()
    {
 	   PreLogUtil.put("******************Demo Level Limited To: 6", this, "getMaxLevel");
        return LicenseLevelUtil.getInstance().getMaxLevel(TestGameDemoLayerManager.MAX_LEVEL, 6);
    }
 
+   @Override
    protected AllBinaryGameLayerManager createGameLayerManager()
    {
        GameInfo gameInfo = new GameInfo(
@@ -109,6 +114,7 @@ public class TestGameDemoMIDlet extends
    }
    */
 
+   @Override
    protected void mediaShutdown() throws Exception
    {
         //PreLogUtil.put(commonStrings.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");

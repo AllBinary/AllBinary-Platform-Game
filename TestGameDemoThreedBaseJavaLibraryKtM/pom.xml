@@ -192,7 +192,7 @@
 
         <dependency>
             <groupId>org.khronos</groupId>
-            <artifactId>opengl-apiKt</artifactId>
+            <artifactId>opengl-api</artifactId>
             <version>gl1.1-android-2.1_r1</version>
             <optional>true</optional>
         </dependency>
@@ -246,7 +246,6 @@
                     <mainClass></mainClass>
                 </configuration>
             </plugin>
-
 
 
 

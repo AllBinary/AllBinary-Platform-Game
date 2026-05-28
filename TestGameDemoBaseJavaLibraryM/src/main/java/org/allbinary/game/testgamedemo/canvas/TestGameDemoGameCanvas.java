@@ -69,7 +69,6 @@ import org.allbinary.time.TimeDelayHelper;
 
 public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 {
-    protected final LogUtil logUtil = LogUtil.getInstance();
 
     private final int WAIT = GameSpeed.getInstance().getDelay();
 
@@ -89,6 +88,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         this.abeClientInformation = abeClientInformation;
     }
     
+    @Override
     protected void initSpecialPaint()
     {
         super.initSpecialPaint();
@@ -97,6 +97,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
                 this, new String[] {StringUtil.getInstance().EMPTY_STRING}, new int[] {0}, BasicColorFactory.getInstance().RED, Font.getDefaultFont()));
     }
 
+    @Override
     public void mediaInit() throws Exception
     {
         logUtil.putF(commonStrings.START, this, "mediaInit");
@@ -104,6 +105,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     }
 
     //Don't Auto Hide instead update the list
+    @Override
     protected  void updateTouch()
     throws Exception
     {
@@ -129,6 +131,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         }
     }
 
+    @Override
     protected synchronized void initConfigurable(final AbeClientInformationInterface abeClientInformation)
     {
         try
@@ -164,6 +167,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         }
     }
 
+    @Override
     protected void threadInit() throws Exception
     {
         try
@@ -230,6 +234,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         }
     }
 
+    @Override
     public void buildGameInit(boolean isProgress) throws Exception
     {
         if (!this.isRunningInAnotherThread()) {
@@ -306,6 +311,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         this.setGameState(GameState.PLAYING_GAME_STATE);
     }
 
+    @Override
     public void setGameState(GameState gameState) throws Exception
     {
         super.setGameState(gameState);
@@ -341,6 +347,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     //private String soundQueue = PrimaryPlayerQueueFactory.getInstance().toString();
     
+    @Override
     public void draw(Graphics graphics)
     {
         //logUtil.putF(commonStrings.START, this, "draw");
@@ -383,6 +390,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     
     private final GameFeature soundGameFeature = GameFeatureFactory.getInstance().SOUND;
     
+    @Override
     protected void processGame() throws Exception
     {
         if (playerTimeDelayHelper.isTimeTNT())

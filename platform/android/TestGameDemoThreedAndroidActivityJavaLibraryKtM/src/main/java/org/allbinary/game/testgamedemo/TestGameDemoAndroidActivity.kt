@@ -13,9 +13,15 @@
         
 import java.util.Hashtable
 import javax.microedition.lcdui.Image
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.os.Bundle
+import android.view.View
 import org.allbinary.AllBinaryAndroidGameInitializationUtil
 import org.allbinary.AndroidResources
 import org.allbinary.android.activity.game.GameMidletActivity
+import org.allbinary.android.activity.progress.ProgressHelper
 import org.allbinary.business.advertisement.GameAdStateFactory
 import org.allbinary.configuration.ApplicationConfiguration
 import org.allbinary.game.GameAdState
@@ -30,11 +36,6 @@ import org.allbinary.graphics.canvas.transition.progress.AndroidBasicTitleProgre
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
-import android.os.Bundle
-import android.view.View
 import org.allbinary.device.OpenGLESGraphicsCompositeFactory
 import org.allbinary.emulator.InitEmulatorFactory
 import org.allbinary.graphics.opengles.OpenGLConfiguration
@@ -45,7 +46,13 @@ open public class TestGameDemoAndroidActivity : GameMidletActivity {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor (){
+public constructor ()                        
+
+                            : super(ProgressHelper.NULL_PROGRESS_HELPER){
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
 
         try {
             

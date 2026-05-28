@@ -23,7 +23,7 @@ import org.allbinary.game.testgamedemo.layer.resources.AppShaderResources;
  */
 public class PlatformAppShaderResources {
     
-    protected static final PlatformAppShaderResources instance = new PlatformAppShaderResources();
+    private static final PlatformAppShaderResources instance = new PlatformAppShaderResources();
 
     /**
      * @return the instance

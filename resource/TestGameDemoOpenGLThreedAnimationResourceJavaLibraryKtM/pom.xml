@@ -10,12 +10,12 @@
     <name>TestGameDemoOpenGLThreedAnimationResourceJavaLibraryKt</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-        <dependency>
+<!--        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -164,8 +164,8 @@
         
         <dependency>
             <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
-            <version>1.6_r2</version>
+            <artifactId>android</artifactId>
+            <version>11.0</version>
             <scope>provided</scope>
         </dependency>          
         <dependency>

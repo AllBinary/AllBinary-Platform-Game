@@ -36,13 +36,15 @@ public class TestGameDemoGameResourcesImageBasedAnimationInterfaceFactoryInterfa
     {
         super(name, new Hashtable(), new Hashtable(), new Hashtable());
     }
-    
+
+    @Override    
     public void init(int level)
     throws Exception
     {
         this.initImageCache(ImageCacheFactory.getInstance(), level);
     }
 
+    @Override
     protected void initImageCache(ImageCache imageCache, int level)
     throws Exception
     {
@@ -64,6 +66,7 @@ public class TestGameDemoGameResourcesImageBasedAnimationInterfaceFactoryInterfa
         super.init(level);
     }
     
+    @Override
     public boolean isLoadingLevel(int level)
     {
         if(level == ResourceLoadingLevelFactory.getInstance().LOAD_GAME.getLevel())
@@ -76,6 +79,7 @@ public class TestGameDemoGameResourcesImageBasedAnimationInterfaceFactoryInterfa
         }
     }
     
+    @Override
     public boolean isFeature()
     {
         Features features = Features.getInstance();

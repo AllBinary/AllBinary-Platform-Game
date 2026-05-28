@@ -80,8 +80,6 @@ import org.allbinary.time.TimeDelayHelper
 open public class TestGameDemoGameCanvas : AllBinaryGameCanvas {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val WAIT: Int = GameSpeed.getInstance()!!.getDelay()!!
 
     private val portion: Int = 4
@@ -101,7 +99,7 @@ this.abeClientInformation= abeClientInformation
 }
 
 
-    open fun initSpecialPaint()
+    override fun initSpecialPaint()
         //nullable = true from not(false or (false and true)) = true
 {
 super.initSpecialPaint()
@@ -111,7 +109,7 @@ this.setStartIntermissionPaintable(StartIntermissionPaintable(this, arrayOf(Stri
 
                 @Throws(Exception::class)
             
-    open fun mediaInit()
+    override fun mediaInit()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.putF(commonStrings!!.START, this, "mediaInit")
@@ -121,7 +119,7 @@ AllBinaryMediaManager.init(TestGameDemoSoundsFactoryFactory.getInstance())
 
                 @Throws(Exception::class)
             
-    open fun updateTouch()
+    override fun updateTouch()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -160,7 +158,7 @@ this.updateCurrentTouchInputFactory(nextTouchInputFactory)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun initConfigurable(abeClientInformation: AbeClientInformationInterface)
+    override fun initConfigurable(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -210,7 +208,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "initConfigurable", e)
 
                 @Throws(Exception::class)
             
-    open fun threadInit()
+    override fun threadInit()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -317,7 +315,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "_init", e)
 
                 @Throws(Exception::class)
             
-    open fun buildGameInit(isProgress: Boolean)
+    override fun buildGameInit(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isProgress = isProgress
@@ -404,7 +402,7 @@ this.setGameState(GameState.PLAYING_GAME_STATE)
 
                 @Throws(Exception::class)
             
-    open fun setGameState(gameState: GameState)
+    override fun setGameState(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameState = gameState
@@ -445,7 +443,7 @@ super.setGameState(gameState)
 
     private val halfHeight: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfHeight()!!
 
-    open fun draw(graphics: Graphics)
+    override fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -475,7 +473,7 @@ this.getTouchPaintableP()!!.paint(graphics)
 
                 @Throws(Exception::class)
             
-    open fun processGame()
+    override fun processGame()
         //nullable = true from not(false or (false and true)) = true
 {
 

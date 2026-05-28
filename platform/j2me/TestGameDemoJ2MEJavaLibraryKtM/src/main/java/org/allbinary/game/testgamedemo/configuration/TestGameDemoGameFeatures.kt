@@ -47,7 +47,7 @@ public constructor ()
 }
 
 
-    open fun init()
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

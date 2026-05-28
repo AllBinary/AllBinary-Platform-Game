@@ -14,10 +14,10 @@
 package org.allbinary.game.testgamedemo.canvas;
 
 import javax.microedition.lcdui.CommandListener;
+import javax.microedition.lcdui.NullCommandListener;
 
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
-
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.game.GameInfo;
 import org.allbinary.game.GameMode;
@@ -52,6 +52,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         this.setWait(WAIT);
     }
 
+    @Override
     public void initPostPaint() throws Exception
     {
         this.setBasicGameDemoPaintable(
@@ -65,6 +66,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
                 ColorFillPaintableFactory.getInstance().getInstance(BasicColorFactory.getInstance().RED, false));
     }
 
+    @Override
     protected int getNextRandom()
     {
     	PreLogUtil.put("******************Demo Next Random Is Always 1", this, "getNextRandom");
@@ -72,6 +74,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         return 1;
     }
 
+    @Override
     protected AllBinaryGameLayerManager createGameLayerManager(int randomValue) throws Exception
     {
         GameInfo gameInfo = new GameInfo(GameTypeFactory.getInstance().BOT, GameMode.SERVER, PlayerTypesFactory
@@ -80,8 +83,9 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         return new TestGameDemoLayerManager(gameInfo);
     }
 
+    @Override
     public GameCanvasRunnableInterface createRunnable(int randomValue) throws Exception
     {
-        return new TestGameDemoGameCanvas(this.abeClientInformation, null, this.createGameLayerManager(this.getNextRandom()));
+        return new TestGameDemoGameCanvas(this.abeClientInformation, NullCommandListener.NULL_COMMAND_LISTENER, this.createGameLayerManager(this.getNextRandom()));
     }
 }

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.CommandListener
+import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -65,7 +66,7 @@ this.setWait(WAIT)
 
                 @Throws(Exception::class)
             
-    open fun initPostPaint()
+    override fun initPostPaint()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setBasicGameDemoPaintable(TestDemoPaintable(FormPaintable(this.getMenuForm())))
@@ -74,7 +75,7 @@ this.setDefaultPaintableInterface(ColorFillPaintableFactory.getInstance()!!.getI
 }
 
 
-    open fun getNextRandom()
+    override fun getNextRandom()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 PreLogUtil.put("******************Demo Next Random Is Always 1", this, "getNextRandom")
@@ -88,7 +89,7 @@ PreLogUtil.put("******************Demo Next Random Is Always 1", this, "getNextR
 
                 @Throws(Exception::class)
             
-    open fun createGameLayerManager(randomValue: Int)
+    override fun createGameLayerManager(randomValue: Int)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryGameLayerManager{
 var randomValue = randomValue
@@ -105,7 +106,7 @@ var randomValue = randomValue
 
                 @Throws(Exception::class)
             
-    open fun createRunnable(randomValue: Int)
+    override fun createRunnable(randomValue: Int)
         //nullable = true from not(false or (false and false)) = true
 : GameCanvasRunnableInterface{
 var randomValue = randomValue
@@ -113,8 +114,7 @@ var randomValue = randomValue
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TestGameDemoGameCanvas(this.abeClientInformation, 
-                            null, this.createGameLayerManager(this.getNextRandom()))
+                        return TestGameDemoGameCanvas(this.abeClientInformation, NullCommandListener.NULL_COMMAND_LISTENER, this.createGameLayerManager(this.getNextRandom()))
 }
 
 

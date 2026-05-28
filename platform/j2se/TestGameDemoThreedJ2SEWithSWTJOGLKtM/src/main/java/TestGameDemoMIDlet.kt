@@ -191,7 +191,7 @@ glSurfaceView.
 {
 var isProgress = isProgress
 this.glSurfaceView!!.onDetachedFromWindow()
-super.exit(isProgress)
+super.exitProgress(isProgress)
 }
 
 

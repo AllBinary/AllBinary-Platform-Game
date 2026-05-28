@@ -27,14 +27,16 @@ public class TestGameDemoOpenGLESImageBasedAnimationInterfaceFactoryInterfaceFac
         super("OpenGL Image Animations");
     }
 
+    @Override
     public void init(int level) throws Exception
     {
         super.initImageCache(OpenGLImageCacheFactory.getInstance(), level);
     }
     
+    @Override
     public boolean isFeature()
     {
-        Features features = Features.getInstance();
+        final Features features = Features.getInstance();
         
         if (features.isFeature(
                 GraphicsFeatureFactory.getInstance().IMAGE_GRAPHICS) &&

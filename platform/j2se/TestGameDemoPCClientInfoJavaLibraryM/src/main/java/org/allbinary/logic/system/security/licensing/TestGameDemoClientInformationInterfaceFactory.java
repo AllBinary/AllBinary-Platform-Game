@@ -24,6 +24,7 @@ public class TestGameDemoClientInformationInterfaceFactory extends ClientInforma
         return instance;
     }
     
+    @Override
     public ClientInformation getInstance()
     {
         return TestGameDemoPCClientInformation.instance;

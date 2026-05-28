@@ -22,6 +22,7 @@ public class TestGameDemoResourceInitialization
     {
     }
 
+    @Override
     public void init()
     throws Exception
     {

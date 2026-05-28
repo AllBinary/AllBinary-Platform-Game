@@ -32,6 +32,7 @@ public class TestGameDemoGameFeatures implements InitInterface
         
     }
     
+    @Override
     public void init()
     {
         //BasicArrayList exclusiveOrientationSensorList = new BasicArrayListD();

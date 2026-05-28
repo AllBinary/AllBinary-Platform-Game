@@ -7,6 +7,7 @@ import org.allbinary.media.audio.Sound;
 public class TestGameDemoSoundsFactory
 extends BaseSoundsFactory
 {
+    @Override
     public Sound[] getSoundInterfaceArray() throws Exception
     {
         Sound[] soundInterfaceArray = new Sound[1];

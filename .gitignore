@@ -44,3 +44,4 @@ font*.png
 /platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/res/raw/
 
 **/*KtM/**/*.xml
+**/*TsM/**/*.xml
