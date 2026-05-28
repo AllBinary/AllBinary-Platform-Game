@@ -4,14 +4,20 @@ import java.util.Hashtable;
 
 import javax.microedition.lcdui.Image;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.view.View;
+
 import org.allbinary.AllBinaryAndroidGameInitializationUtil;
 import org.allbinary.AndroidResources;
 import org.allbinary.android.activity.game.GameMidletActivity;
+import org.allbinary.android.activity.progress.ProgressHelper;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
-
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
@@ -22,11 +28,6 @@ import org.allbinary.graphics.canvas.transition.progress.AndroidBasicTitleProgre
 import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import org.allbinary.image.ImageCacheFactory;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.view.View;
 import org.allbinary.device.OpenGLESGraphicsCompositeFactory;
 import org.allbinary.emulator.InitEmulatorFactory;
 import org.allbinary.graphics.opengles.OpenGLConfiguration;
@@ -40,6 +41,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     public TestGameDemoAndroidActivity()
     {
         //super(new ProgressHelper(AndroidResources.id.progressbar));
+        super(ProgressHelper.NULL_PROGRESS_HELPER);
 
         try
         {

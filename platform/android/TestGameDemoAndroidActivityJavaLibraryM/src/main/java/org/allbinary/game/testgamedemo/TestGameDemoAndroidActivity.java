@@ -27,6 +27,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import org.allbinary.android.activity.progress.ProgressHelper;
 import org.allbinary.emulator.InitEmulatorFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
@@ -37,6 +38,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     public TestGameDemoAndroidActivity()
     {   
         //super(new ProgressHelper(AndroidResources.id.progressbar));
+        super(ProgressHelper.NULL_PROGRESS_HELPER);
 
         try
         {

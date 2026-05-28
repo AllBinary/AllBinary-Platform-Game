@@ -168,7 +168,7 @@ public class TestGameDemoMIDlet
     
     protected void exit(boolean isProgress) {
         this.glSurfaceView.onDetachedFromWindow();
-        super.exit(isProgress);
+        super.exitProgress(isProgress);
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)

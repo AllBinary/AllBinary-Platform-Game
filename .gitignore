@@ -6,12 +6,9 @@ target/
 bin/
 gen/
 font*.png
-swt-awt-win32-4430.dll
-swt-gdip-win32-4430.dll
-swt-wgl-win32-4430.dll
-swt-win32-4430.dll
-swt-xulrunner24-win32-4430.dll
-swt-xulrunner-win32-4430.dll
+
+**/*.dll
+**/*.jar
 
 /platform/kmp/TestGameDemoKMPWithSWTM/src/main/resources
 /platform/kmp/TestGameDemoKMPWithSWTApplicationM/src/
@@ -45,3 +42,5 @@ swt-xulrunner-win32-4430.dll
 /platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/java/
 /platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/res/drawable/
 /platform/android/TestGameDemoThreedAndroidApplicationNoLicensingGradle/app/src/main/res/raw/
+
+**/*KtM/**/*.xml

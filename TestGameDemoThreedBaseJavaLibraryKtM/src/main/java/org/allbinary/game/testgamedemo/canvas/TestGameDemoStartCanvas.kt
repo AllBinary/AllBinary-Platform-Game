@@ -1,0 +1,138 @@
+
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.testgamedemo.canvas
+
+
+
+
+        import java.lang.Object        
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import javax.microedition.lcdui.CommandListener
+import org.allbinary.game.canvas.TestGameDemoSoftwareInfo
+import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
+import org.allbinary.animation.special.SpecialAnimation
+import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory
+import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager
+import org.allbinary.logic.communication.log.PreLogUtil
+import org.allbinary.game.GameInfo
+import org.allbinary.game.GameMode
+import org.allbinary.game.GameTypeFactory
+import org.allbinary.game.PlayerTypesFactory
+import org.allbinary.game.configuration.GameSpeed
+import org.allbinary.game.displayable.canvas.DemoCanvas
+import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface
+import org.allbinary.game.displayable.canvas.TitleResource
+import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.paint.ColorFillPaintableFactory
+import org.allbinary.game.score.BasicHighScoresFactory
+import org.allbinary.graphics.color.BasicColorFactory
+import org.allbinary.graphics.form.FormPaintable
+import org.allbinary.graphics.paint.NullInitUpdatePaintable
+import org.allbinary.graphics.paint.NullPaintable
+import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+
+open public class TestGameDemoStartCanvas : DemoCanvas {
+        
+
+    private val WAIT: Int = ((GameSpeed.getInstance()!!.getDelay() *3) shr 1)
+public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener)                        
+
+                            : super(abeClientInformation, commandListener, BasicHighScoresFactory(abeClientInformation, TestGameDemoSoftwareInfo.getInstance()), NullPaintable.getInstance(), NullInitUpdatePaintable.getInstance(), TestGameDemoStaticInitializerFactory(), false){
+    //var abeClientInformation = abeClientInformation
+    //var commandListener = commandListener
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.setWait(WAIT)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun initPostPaint()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.setBasicGameDemoPaintable(TestDemoPaintable(FormPaintable(this.getMenuForm())))
+this.setSpecialAnimationInterface(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(TitleResource.RESOURCE_TITLE)!!.getInstance(0) as SpecialAnimation)
+this.setDefaultPaintableInterface(ColorFillPaintableFactory.getInstance()!!.getInstance(BasicColorFactory.getInstance()!!.RED, true))
+}
+
+
+    open fun getNextRandom()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+PreLogUtil.put("******************Demo Next Random Is Always 1", this, "getNextRandom")
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 1
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createGameLayerManager(randomValue: Int)
+        //nullable = true from not(false or (false and false)) = true
+: AllBinaryGameLayerManager{
+var randomValue = randomValue
+
+    var gameInfo: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.BOT, GameMode.SERVER, PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE, TestGameDemoLayerManager.MAX_LEVEL, randomValue)
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TestGameDemoLayerManager(gameInfo)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun createRunnable(randomValue: Int)
+        //nullable = true from not(false or (false and false)) = true
+: GameCanvasRunnableInterface{
+var randomValue = randomValue
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return TestGameDemoGameCanvas(this.abeClientInformation, 
+                            null, this.createGameLayerManager(this.getNextRandom()))
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun processGame()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.gameRunnable!!.run()
+this.getSpecialAnimationInterface()!!.nextFrame()
+this.process()
+}
+
+
+}
+                
+            
+
