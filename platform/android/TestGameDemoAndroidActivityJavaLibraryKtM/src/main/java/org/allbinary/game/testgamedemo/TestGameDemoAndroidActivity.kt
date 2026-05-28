@@ -13,6 +13,11 @@
         
 import java.util.Hashtable
 import javax.microedition.lcdui.Image
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.os.Bundle
+import android.view.View
 import org.allbinary.AllBinaryAndroidGameInitializationUtil
 import org.allbinary.AndroidResources
 import org.allbinary.android.activity.game.GameMidletActivity
@@ -30,18 +35,11 @@ import org.allbinary.graphics.canvas.transition.progress.AndroidBasicTitleProgre
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
-import android.os.Bundle
-import android.view.View
 import org.allbinary.android.activity.progress.ProgressHelper
 import org.allbinary.emulator.InitEmulatorFactory
 
 open public class TestGameDemoAndroidActivity : GameMidletActivity {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor ()                        
 
                             : super(ProgressHelper.NULL_PROGRESS_HELPER){
@@ -63,7 +61,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 
-    open fun init()
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 super.init()
@@ -73,7 +71,7 @@ AllBinaryAndroidGameInitializationUtil.init()
 
                 @Throws(Exception::class)
             
-    open fun initViewIds()
+    override fun initViewIds()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -110,7 +108,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.CREATE, e)
 }
 
 
-    open fun onStart()
+    override fun onStart()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -129,7 +127,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.START, e)
 
                 @Throws(Exception::class)
             
-    open fun initEmulator()
+    override fun initEmulator()
         //nullable = true from not(false or (false and true)) = true
 {
 super.initEmulator()

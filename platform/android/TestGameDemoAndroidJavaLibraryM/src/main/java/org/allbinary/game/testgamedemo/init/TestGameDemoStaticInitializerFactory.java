@@ -28,6 +28,7 @@ public class TestGameDemoStaticInitializerFactory extends BasicBuildGameInitiali
                         new TestGameDemoAndroidAnimationInterfaceFactoryResourceInitialization(),
                         }, 15);
 
+    @Override
     public GameInitializationInterface getInstance()
     {
         return STATIC;

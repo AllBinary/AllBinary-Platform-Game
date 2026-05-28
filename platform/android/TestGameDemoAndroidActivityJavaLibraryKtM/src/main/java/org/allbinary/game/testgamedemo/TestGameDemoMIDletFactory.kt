@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.midlet.MIDlet
+import javax.microedition.midlet.NullMIDlet
 import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory
 import org.allbinary.midlet.MidletFactoryInterface
 
@@ -19,9 +20,7 @@ open public class TestGameDemoMIDletFactory : MidletFactoryInterface {
         
 companion object {
             
-    private var SINGLETON: MIDlet = 
-                null
-            
+    private var SINGLETON: MIDlet = NullMIDlet.NULL_MIDLET
 
         }
             
@@ -30,7 +29,7 @@ companion object {
             {
             }            
         
-    open fun getInstance()
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MIDlet{
 

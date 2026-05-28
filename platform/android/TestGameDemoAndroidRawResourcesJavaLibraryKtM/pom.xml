@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
-        <artifactId>TestGameDemoParentKt</artifactId>
+        <artifactId>TestGameDemoParent</artifactId>
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
@@ -133,7 +133,7 @@
             </plugin>
       
             <plugin>
-                <artifactId>maven-resources-pluginKt</artifactId>
+                <artifactId>maven-resources-plugin</artifactId>
                 <version>2.4.3</version>
                 <executions>
                     <execution>
@@ -189,7 +189,7 @@
             
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-pluginKt</artifactId>
+                <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>sources</id>
@@ -199,7 +199,7 @@
                         </goals>
                         <configuration>
                             <includes>**\/*.wav, **\/*.ogg, **\/*.png</includes>
-                            <outputDirectory>../TestGameDemoAndroidApplicationM\src\main\res\raw\</outputDirectory>
+                            <outputDirectory>../TestGameDemoAndroidApplicationKtM\src\main\res\raw\</outputDirectory>
                             <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
                         </configuration>
                     </execution>

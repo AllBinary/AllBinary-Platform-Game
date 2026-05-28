@@ -18,13 +18,14 @@ public class GameAdStateFactory implements GameAdStateFactoryInterface
             new GameAdState(new TestGameDemoAdConfiguration())
             };
 
-    private GameAdState gameAdState;
+    private GameAdState gameAdState = this.gameAdStateArray[0];
 
     public GameAdState getCurrentInstance()
     {
         return this.gameAdState;
     }
     
+    @Override
     public GameAdStateBase getInstanceForApp(final SoftwareInformation softwareInformation)
     throws Exception
     {

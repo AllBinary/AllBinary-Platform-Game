@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
-        <artifactId>TestGameDemoParentKt</artifactId>
+        <artifactId>TestGameDemoParent</artifactId>
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
@@ -41,6 +41,9 @@
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoWavSoundsJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>

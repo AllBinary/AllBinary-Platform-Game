@@ -31,7 +31,7 @@ open public class TestGameDemoAndroidEarlyResourceInitialization : ResourceIniti
         
                 @Throws(Exception::class)
             
-    open fun init()
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 super.init()

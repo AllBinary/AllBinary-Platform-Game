@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
-        <artifactId>TestGameDemoParentKt</artifactId>
+        <artifactId>TestGameDemoParent</artifactId>
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
@@ -87,64 +87,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <artifactId>maven-assembly-pluginKt</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals><goal>single</goal></goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <attach>true</attach>
-                    <descriptors>
-                        <descriptor>assembly.xml</descriptor>
-                    </descriptors>
-
-                </configuration>
-            </plugin>
-            <!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-pluginKt</artifactId>
-                <configuration>
-                    <forceCreation>true</forceCreation>
-                    <archive>
-                        <manifestEntries>
-                            <Implementation-Version>${pom.version}</Implementation-Version>
-                        </manifestEntries>
-                    </archive>
-
-                    <assembly>
-                        <inclusions>
-                            <inclusion>
-                                <groupId>org.allbinary</groupId>
-                                <artifactId>J2MEExceptionModuleKt</artifactId>
-
-                                            <library>true</library>
-                            </inclusion>
-                            <inclusion>
-                                <groupId>org.allbinary</groupId>
-                                <artifactId>LogModuleKt</artifactId>
-                                <library>true</library>
-                            </inclusion>
-                        </inclusions>
-
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.microemu</groupId><artifactId>microemu-midpKt</artifactId>
-                        </exclusion>
-                        <exclusion>
-                            <groupId>org.microemu</groupId><artifactId>microemu-jsr-135Kt</artifactId>
-                        </exclusion>
-                    </exclusions>
-
-                    </assembly>
-
-                            </configuration>
-                        </plugin>
-            -->
 
         </plugins>
 

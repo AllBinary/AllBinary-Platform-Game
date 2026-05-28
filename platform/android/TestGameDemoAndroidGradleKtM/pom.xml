@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.allbinary.game.testgamedemo</groupId>
-        <artifactId>TestGameDemoParentKt</artifactId>
+        <artifactId>TestGameDemoParent</artifactId>
         <!-- Game Version Start -->
         <version>1.0.0-SNAPSHOT</version>
         <!-- Game Version Start -->
@@ -55,14 +55,14 @@
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>min3d</groupId>
-            <artifactId>Min3dForNullPlatformJavaLibraryKt</artifactId>
+            <artifactId>Min3dForNullPlatformJavaLibraryKt</artifactId>-->
 <!--            <artifactId>Min3dForAndroidPlatformJavaLibraryKt</artifactId>-->
             <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
+<!--            <version>1.0.0-SNAPSHOT</version>-->
             <!-- AllBinary Platform Version End -->
-        </dependency>
+<!--        </dependency>-->
         
         <dependency>
             <groupId>org.allbinary</groupId>
@@ -202,41 +202,65 @@
             <artifactId>TestGameDemoNoTouchJavaLibraryKt</artifactId>
             <artifactId>TestGameDemoTouchJavaLibraryKt</artifactId>
             -->            
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidClientInfoJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoBaseJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidResourceJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidActivityJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
         
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidSoundsJavaLibraryKt</artifactId>    
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
             <groupId>org.allbinary.game.testgamedemo</groupId>
             <artifactId>TestGameDemoAndroidBaseJavaLibraryKt</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
@@ -257,7 +281,8 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLESAndroidJavaLibraryKt</artifactId>
+            <artifactId>OpenGLESNoneJavaLibraryKt</artifactId>
+<!--            <artifactId>OpenGLESAndroidJavaLibraryKt</artifactId>-->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -307,7 +332,7 @@
         </dependency>
         <dependency>
             <groupId>sax</groupId>
-            <artifactId>saxKt</artifactId>
+            <artifactId>sax</artifactId>
             <version>2.0.1</version>
         </dependency>        
 
@@ -427,7 +452,7 @@ NoTransitionAnimationJavaLibrary
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-pluginKt</artifactId>
+                <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>sources</id>
@@ -449,7 +474,7 @@ NoTransitionAnimationJavaLibrary
             <!-- Delete output directory -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-pluginKt</artifactId>
+                <artifactId>maven-clean-plugin</artifactId>
                 <version>2.4.1</version>
                 <configuration>
                     <followSymLinks>false</followSymLinks>
@@ -462,7 +487,7 @@ NoTransitionAnimationJavaLibrary
             </plugin>
       
             <plugin>
-                <artifactId>maven-resources-pluginKt</artifactId>
+                <artifactId>maven-resources-plugin</artifactId>
                 <version>2.4.3</version>
                 <executions>
                     <execution>

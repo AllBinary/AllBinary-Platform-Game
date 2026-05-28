@@ -10,7 +10,6 @@ package org.allbinary.game.testgamedemo.resource;
 
 import org.allbinary.AndroidResources;
 import org.allbinary.media.audio.TestSound;
-
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.game.resource.ResourceInitialization;
 import org.allbinary.media.audio.ErrorSound;
@@ -20,14 +19,15 @@ import org.allbinary.midlet.MidletIcon;
 public class TestGameDemoAndroidEarlyResourceInitialization 
 extends ResourceInitialization
 {
+    @Override
     public void init() 
     throws Exception
     {
         super.init();
 
-        ResourceUtil resourceUtil = ResourceUtil.getInstance();
+        final ResourceUtil resourceUtil = ResourceUtil.getInstance();
 
-        AndroidResources androidResources = AndroidResources.getInstance();
+        final AndroidResources androidResources = AndroidResources.getInstance();
         
         resourceUtil.addResource(MidletIcon.RESOURCE, Integer
                 .valueOf(androidResources.drawable.testgamedemo_icon));

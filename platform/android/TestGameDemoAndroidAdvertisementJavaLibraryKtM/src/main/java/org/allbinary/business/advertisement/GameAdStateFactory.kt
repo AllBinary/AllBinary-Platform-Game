@@ -44,7 +44,7 @@ companion object {
         
     private val gameAdStateArray: Array<GameAdState?> = arrayOf(GameAdState(TestGameDemoAdConfiguration()))
 
-    private var gameAdState: GameAdState
+    private var gameAdState: GameAdState = this.gameAdStateArray[0]!!
 
     open fun getCurrentInstance()
         //nullable = true from not(false or (false and true)) = true
@@ -59,7 +59,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstanceForApp(softwareInformation: SoftwareInformation)
+    override fun getInstanceForApp(softwareInformation: SoftwareInformation)
         //nullable = true from not(false or (false and false)) = true
 : GameAdStateBase{
     //var softwareInformation = softwareInformation

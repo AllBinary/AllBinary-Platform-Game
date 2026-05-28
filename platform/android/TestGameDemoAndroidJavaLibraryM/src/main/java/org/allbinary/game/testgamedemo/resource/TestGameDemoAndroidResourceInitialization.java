@@ -14,6 +14,7 @@ import org.allbinary.game.testgamedemo.init.TestGameDemoResourceInitialization;
 public class TestGameDemoAndroidResourceInitialization 
 extends TestGameDemoResourceInitialization
 {
+    @Override
     public void init() 
     throws Exception
     {

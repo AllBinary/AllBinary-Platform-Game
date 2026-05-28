@@ -18,13 +18,14 @@ public class TestGameDemoGameFeatures extends Init
         
     }
     
+    @Override
     public void init() throws Exception
     {
         final String GRAPHICS_OPTIONS = "Graphics Options";
         
-        BasicArrayList exclusiveOrientationSensorList = new BasicArrayListD();
+        final BasicArrayList exclusiveOrientationSensorList = new BasicArrayListD();
 
-        SensorFeatureFactory sensorFeatureFactory = 
+        final SensorFeatureFactory sensorFeatureFactory = 
             SensorFeatureFactory.getInstance();
 
         exclusiveOrientationSensorList.add(
@@ -45,10 +46,10 @@ public class TestGameDemoGameFeatures extends Init
         exclusiveOrientationTypeList.add(GameFeature.PITCH_AND_ROLL);
         */
         
-        GameConfigurationSingleton gameConfigurationSingleton = 
+        final GameConfigurationSingleton gameConfigurationSingleton = 
             GameConfigurationSingleton.getInstance();
         
-        GameConfigurationCentral gameConfigurationCentral = 
+        final GameConfigurationCentral gameConfigurationCentral = 
             GameConfigurationCentral.getInstance();
 
         gameConfigurationSingleton.add(gameConfigurationCentral.VIBRATION);

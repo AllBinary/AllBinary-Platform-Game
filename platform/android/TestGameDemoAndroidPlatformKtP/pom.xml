@@ -42,7 +42,7 @@
         <!--
         //Needs the nexus
         -->
-        <module>../TestGameDemoThreedAndroidPlatformP</module>
+<!--        <module>../TestGameDemoThreedAndroidPlatformP</module>-->
 
     </modules>
 

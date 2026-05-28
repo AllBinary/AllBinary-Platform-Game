@@ -26,7 +26,7 @@
         
         -->
         <module>../../TestGameDemoKtP</module>
-        <module>../../TestGameDemoThreedKtP</module>
+<!--        <module>../../TestGameDemoThreedKtP</module>-->
 
 <!--        <module>../j2me/TestGameDemoJ2MEPlatformKtP</module>
         <module>../j2se/TestGameDemoJ2SEPlatformKtP</module>-->

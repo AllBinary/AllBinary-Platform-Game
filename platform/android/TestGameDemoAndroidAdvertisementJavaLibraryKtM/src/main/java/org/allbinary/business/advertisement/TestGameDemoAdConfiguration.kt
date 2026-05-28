@@ -29,7 +29,7 @@ public constructor ()
 }
 
 
-    open fun getValidAdSpots()
+    override fun getValidAdSpots()
         //nullable = true from not(false or (false and true)) = true
 : Array<Direction?>{
 
@@ -40,7 +40,7 @@ public constructor ()
 }
 
 
-    open fun processDemo(state: Int)
+    override fun processDemo(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
