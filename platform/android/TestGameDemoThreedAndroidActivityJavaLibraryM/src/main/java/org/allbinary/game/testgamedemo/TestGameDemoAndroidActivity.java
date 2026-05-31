@@ -94,7 +94,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 
         final AndroidResources androidResources = AndroidResources.getInstance();
         
-        this.initViewIds(
+        this.initViewIdsFromArrays(
                 new int[] {
                         androidResources.id.testgamedemo,
                         androidResources.id.testgamedemo_gl
@@ -155,7 +155,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
             super.onStart();
 
-            super.onStart(new TestGameDemoMIDletFactory());
+            super.onStartMidlet(new TestGameDemoMIDletFactory());
 
             logUtil.putF(commonStrings.END, this, commonStateStrings.START);
         } catch (Exception e)

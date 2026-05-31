@@ -17,7 +17,6 @@ import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
 import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
-import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
 import org.allbinary.game.configuration.feature.GameFeatureFactory;
@@ -87,7 +86,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         
         final AndroidResources androidResources = AndroidResources.getInstance();
         
-        this.initViewIds(
+        this.initViewIdsFromArrays(
                 new int[] {
                         androidResources.id.testgamedemo,
                         androidResources.id.testgamedemo_gl
@@ -148,7 +147,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
             super.onStart();
 
-            super.onStart(new TestGameDemoMIDletFactory());
+            super.onStartMidlet(new TestGameDemoMIDletFactory());
 
             logUtil.putF(commonStrings.END, this, commonStateStrings.START);
         } catch (Exception e)
