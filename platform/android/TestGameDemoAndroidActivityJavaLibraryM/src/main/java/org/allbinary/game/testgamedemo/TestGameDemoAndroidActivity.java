@@ -15,7 +15,6 @@ import org.allbinary.AndroidResources;
 import org.allbinary.android.activity.game.GameMidletActivity;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
-import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.game.configuration.GameConfigurationCentral;
 import org.allbinary.game.configuration.feature.Features;
@@ -27,6 +26,7 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton;
 import org.allbinary.image.ImageCacheFactory;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
 import org.allbinary.android.activity.progress.ProgressHelper;
+import org.allbinary.business.advertisement.GameAdStateBase;
 import org.allbinary.emulator.InitEmulatorFactory;
 
 public class TestGameDemoAndroidActivity extends GameMidletActivity
@@ -39,7 +39,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         try
         {
-            final GameAdState gameAdState = 
+            final GameAdStateBase gameAdState = 
                 GameAdStateFactory.getInstance().getInstanceForApp(
                 		TestGameDemoSoftwareInfo.getInstance());
 
