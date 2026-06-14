@@ -111,7 +111,8 @@
         
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLESBaseJavaLibrary</artifactId>
+            <artifactId>OpenGLESNoneJavaLibrary</artifactId>
+<!--            <artifactId>OpenGLESAndroidJavaLibrary</artifactId>-->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
@@ -257,7 +258,8 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLESAndroidJavaLibrary</artifactId>
+            <artifactId>OpenGLESNoneJavaLibrary</artifactId>
+<!--            <artifactId>OpenGLESAndroidJavaLibrary</artifactId>-->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->

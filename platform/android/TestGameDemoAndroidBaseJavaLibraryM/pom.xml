@@ -36,18 +36,20 @@
             <!-- AllBinary Platform Version End -->
             <optional>true</optional>
         </dependency>
+        
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESNoneJavaLibrary</artifactId>
+<!--            <artifactId>OpenGLESAndroidJavaLibrary</artifactId>-->
+            <!-- AllBinary Platform Version Start -->
+            <version>${allbinary.platform.version}</version>
+            <!-- AllBinary Platform Version End -->
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>ProgressAndroidJavaLibrary</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>${allbinary.platform.version}</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>
-        
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>OpenGLESAndroidJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>${allbinary.platform.version}</version>
             <!-- AllBinary Platform Version End -->
@@ -63,7 +65,7 @@
             <artifactId>TestGameDemoAndroidJavaLibrary</artifactId>
         </dependency>
         
-        <dependency>
+        <dependency>                                                 
             <groupId>org.microemu</groupId>
             <artifactId>microemu-midp</artifactId>
             <version>2.0.4</version>
