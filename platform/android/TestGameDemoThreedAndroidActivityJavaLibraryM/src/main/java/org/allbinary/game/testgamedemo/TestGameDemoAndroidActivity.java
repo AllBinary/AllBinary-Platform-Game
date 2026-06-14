@@ -14,9 +14,9 @@ import org.allbinary.AllBinaryAndroidGameInitializationUtil;
 import org.allbinary.AndroidResources;
 import org.allbinary.android.activity.game.GameMidletActivity;
 import org.allbinary.android.activity.progress.ProgressHelper;
+import org.allbinary.business.advertisement.GameAdStateBase;
 import org.allbinary.business.advertisement.GameAdStateFactory;
 import org.allbinary.configuration.ApplicationConfiguration;
-import org.allbinary.game.GameAdState;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.game.configuration.GameConfigurationCentral;
@@ -45,7 +45,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         try
         {
-            GameAdState gameAdState = 
+            GameAdStateBase gameAdState = 
                 GameAdStateFactory.getInstance().getInstanceForApp(
                 		TestGameDemoSoftwareInfo.getInstance());
 

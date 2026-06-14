@@ -34,7 +34,7 @@ import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.media.graphics.geography.map.ColorFromEventUtil;
 import org.allbinary.string.CommonStrings;
 import org.allbinary.view.CenterViewPositionFactory;
-import org.allbinary.view.ViewPosition;
+import org.allbinary.view.ViewPositionBase;
 
 public class TestGameDemoThreedTitleAnimation
 extends TitleAnimation 
@@ -111,9 +111,9 @@ implements ColorChangeListener
         }
     }
     
-    private final ViewPosition viewPosition = new CenterViewPositionFactory().getInstance(0);
+    private final ViewPositionBase viewPosition = new CenterViewPositionFactory().getInstance(0);
     
-    public void paintThreed(final Graphics graphics, final int x, final int y, final int z)
+    public void paintThreedXYZ(final Graphics graphics, final int x, final int y, final int z)
     {
         /*
         int dx = 0;
@@ -167,7 +167,7 @@ implements ColorChangeListener
             //cameraLayer.getRotationY()
             //halfHeight / 2
 
-            this.animationInterfaceArray[index].paintThreed(graphics, 
+            this.animationInterfaceArray[index].paintThreedXYZ(graphics,
                     viewPosition.getX(), 
                     viewPosition.getY(),
                     //ay,

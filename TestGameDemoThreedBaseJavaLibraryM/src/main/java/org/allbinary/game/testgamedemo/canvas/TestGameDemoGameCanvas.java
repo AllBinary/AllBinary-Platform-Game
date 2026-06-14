@@ -18,6 +18,7 @@ import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
 
+import org.allbinary.game.state.GameStateFactory;
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory;
 import org.allbinary.game.testgamedemo.level.TestGameDemoLevelBuilder;
 import org.allbinary.input.accelerometer.AccelerometerSensorFactory;
@@ -317,7 +318,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         
         // A canvas not in GameState.PLAYING_GAME_STATE will not appear in
         // democanvas
-        this.setGameState(GameState.PLAYING_GAME_STATE);
+        this.setGameState(this.gameStateFactory.PLAYING_GAME_STATE);
     }
 
     protected void cleanupGame() throws Exception
@@ -337,7 +338,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
         IntermissionFactory intermissionFactory = IntermissionFactory.getInstance();
         
-        if (this.getGameState() == GameState.PLAYING_GAME_STATE)
+        if (this.getGameState() == this.gameStateFactory.PLAYING_GAME_STATE)
         {
             this.setMainStateProcessor(this.getProcessGameProcessor());
         }

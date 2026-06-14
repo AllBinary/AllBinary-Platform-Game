@@ -44,8 +44,7 @@ public class TestGameDemoMIDlet
         final BasicMotionGesturesHandler motionGesturesHandler =
             motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 
-        motionGesturesHandler.addListener(
-            new GameMotionGestureListener(
+        motionGesturesHandler.addListenerInterface(new GameMotionGestureListener(
             MotionGestureReceiveInterfaceFactory.getInstance()));    
 
         new DefaultGameInitializationListener();
@@ -160,7 +159,7 @@ public class TestGameDemoMIDlet
 
     protected void exit(boolean isProgress) {
         this.glSurfaceView.onDetachedFromWindow();
-        super.exit(isProgress);
+        super.exitProgress(isProgress);
     }
 
     //public void mouseClicked(MouseEvent mouseEvent)
