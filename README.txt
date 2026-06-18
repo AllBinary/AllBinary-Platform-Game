@@ -1,17 +1,13 @@
-                             AllBinary Platform Game
+                      AllBinary Platform Game Template
 
 What is it?
 
-This Repository contains the main TestGame for the AllBinary Platform.
+This Repository contains a Game Template for the AllBinary Platform.
 
 What is the goal?
 
-The goal of the AllBinary Platform Game is to help games developers understand how 
+The goal of the AllBinary Platform Game Template is to help games developers understand how 
 to make games with the AllBinary Platform.
-
-What is the Current Version?
-
-1.2.0
 
 What is the License?
 
@@ -26,18 +22,9 @@ Who is responsible for this repo?
 
 Travis Berthelot travisberthelot@allbinary.com
 
-What is the AllBinary Plaform Game?
+What is the AllBinary Plaform Game Template?
 
-The AllBinary Platform Game is the simplest game state management example for the 
+The AllBinary Platform Game Template is the simplest game state management example for the 
 AllBinary Platform.
 
 It has builds for Android, J2ME, HTML5, and J2SE.
-(Allowing it to run on BlackBerry, Tizen, Android, Moblin, IPhone, Linux, Windows, 
-Solaris, Mac, and More)
-
-Future Impl:
-
-Add Flash, Avian, JET, and other build targets as I release them to the 
-AllBinary Platform.
-
-Finish 3D, OpenGLES, and Multiplayer builds
