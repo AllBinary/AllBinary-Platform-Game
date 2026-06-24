@@ -17,7 +17,6 @@ import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
 
-import org.allbinary.game.state.GameStateFactory;
 import org.allbinary.game.testgamedemo.init.TestGameDemoStaticInitializerFactory;
 import org.allbinary.game.testgamedemo.level.TestGameDemoLevelBuilder;
 import org.allbinary.input.accelerometer.AccelerometerSensorFactory;
@@ -27,7 +26,6 @@ import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
 import org.allbinary.media.audio.TestSound;
 import org.allbinary.util.BasicArrayList;
 import org.allbinary.util.BasicArrayListD;
-
 import org.allbinary.logic.string.StringUtil;
 import org.allbinary.ai.OptimizedArtificialIntelligenceLayerProcessorForCollidableLayer;
 import org.allbinary.game.GameInfo;
@@ -35,6 +33,7 @@ import org.allbinary.game.GameTypeFactory;
 import org.allbinary.game.IntermissionFactory;
 import org.allbinary.game.canvas.TestGameDemoSoftwareInfo;
 import org.allbinary.game.collision.OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer;
+import org.allbinary.game.combat.canvas.CombatGameCanvas;
 import org.allbinary.game.configuration.GameSpeed;
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener;
 import org.allbinary.game.configuration.feature.Features;
@@ -93,8 +92,20 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     {
         super.initSpecialPaint();
 
-        this.setStartIntermissionPaintable(new StartIntermissionPaintable(
-                this, new String[] {StringUtil.getInstance().EMPTY_STRING}, new int[] {0}, BasicColorFactory.getInstance().RED, Font.getDefaultFont()));
+        class TestGameDemoStartIntermissionPaintable extends StartIntermissionPaintable {
+
+            TestGameDemoStartIntermissionPaintable(final AllBinaryGameCanvas combatGameCanvas) {
+                super(combatGameCanvas, new String[] {StringUtil.getInstance().EMPTY_STRING}, BasicColorFactory.getInstance().RED, Font.getDefaultFont());
+                this.lineYOffsetArray = new int[]{0};
+            }
+
+//            @Override
+//            public void updateMeasurement(final Graphics graphics) {
+//                super.updateMeasurement(graphics);
+//            }
+        };
+        
+        this.setStartIntermissionPaintable(new TestGameDemoStartIntermissionPaintable(this));
     }
 
     @Override

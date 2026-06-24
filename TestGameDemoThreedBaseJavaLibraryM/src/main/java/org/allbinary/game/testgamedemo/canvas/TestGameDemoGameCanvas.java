@@ -98,8 +98,20 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
     {
         super.initSpecialPaint();
 
-        this.setStartIntermissionPaintable(new StartIntermissionPaintable(
-                this, new String[] {StringUtil.getInstance().EMPTY_STRING}, new int[] {0}, BasicColorFactory.getInstance().RED, Font.getDefaultFont()));
+        class TestGameDemoStartIntermissionPaintable extends StartIntermissionPaintable {
+
+            TestGameDemoStartIntermissionPaintable(final AllBinaryGameCanvas combatGameCanvas) {
+                super(combatGameCanvas, new String[] {StringUtil.getInstance().EMPTY_STRING}, BasicColorFactory.getInstance().RED, Font.getDefaultFont());
+                this.lineYOffsetArray = new int[]{0};
+            }
+
+//            @Override
+//            public void updateMeasurement(final Graphics graphics) {
+//                super.updateMeasurement(graphics);
+//            }
+        };
+        
+        this.setStartIntermissionPaintable(new TestGameDemoStartIntermissionPaintable(this));
     }
 
     public void mediaInit() throws Exception
