@@ -26,9 +26,10 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
         super("Early OpenGL Animations", new Hashtable(), new Hashtable(), new Hashtable());
     }
 
+    @Override
     public void init(final int level) throws Exception
     {
-        logUtil.putF(this.getName(), this, "init");
+        this.logUtil.putF(this.getName(), this, "init");
         
         //this.init(OpenGLImageCacheFactory.getInstance(), level);
 
@@ -72,6 +73,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
         super.init(level);
     }
 
+    @Override
     public boolean isLoadingLevel(int level)
     {
         final ResourceLoadingLevelFactory resourceLoadingLevelFactory = 
@@ -79,7 +81,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
         if (level == resourceLoadingLevelFactory.LOAD_EARLY.getLevel())
         {
-            logUtil.putF(this.getName(), this, "isLoadingLevel");
+            this.logUtil.putF(this.getName(), this, "isLoadingLevel");
             return true;
         }
         else
@@ -88,6 +90,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
         }
     }
     
+    @Override
     public boolean isFeature()
     {
         final Features features = Features.getInstance();
@@ -104,7 +107,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
             !(features.isFeature(openGLFeatureFactory.OPENGL_2D_AND_3D) || features.isFeature(openGLFeatureFactory.OPENGL_3D))
             )
         {
-            logUtil.putF(this.getName(), this, "isFeature");
+            this.logUtil.putF(this.getName(), this, "isFeature");
             return true;
         } else
         {

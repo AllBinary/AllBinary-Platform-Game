@@ -94,6 +94,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
         this.abeClientInformation = abeClientInformation;
     }
     
+    @Override
     protected void initSpecialPaint()
     {
         super.initSpecialPaint();

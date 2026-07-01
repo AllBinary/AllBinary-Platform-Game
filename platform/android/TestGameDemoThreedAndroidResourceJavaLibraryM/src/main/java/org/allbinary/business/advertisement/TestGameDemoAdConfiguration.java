@@ -21,11 +21,13 @@ public class TestGameDemoAdConfiguration extends AdConfiguration
         );        
     }
     
+    @Override
     public Direction[] getValidAdSpots()
     {
-        return directionArray;
+        return this.directionArray;
     }
 
+    @Override
     public void processDemo(int state)
     {
     }

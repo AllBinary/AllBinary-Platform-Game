@@ -21,6 +21,6 @@ public class TestGameDemoSoundsFactoryFactory
     
     public static SoundsFactoryInterface getInstance()
     {
-        return STATIC;
+        return TestGameDemoSoundsFactoryFactory.STATIC;
     }
 }

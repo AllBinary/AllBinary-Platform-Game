@@ -32,7 +32,7 @@ public class TestGameDemoMIDlet
         super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
         
         BasicMotionGesturesHandler motionGesturesHandler =
-            motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
+            this.motionRecognizer.getMotionGestureRecognizer().getMotionGesturesHandler();
 
         motionGesturesHandler.addListenerInterface(
             new GameMotionGestureListener(
@@ -41,12 +41,13 @@ public class TestGameDemoMIDlet
         new DefaultGameInitializationListener();
     }
 
+    @Override
     protected void init()
     {
         final LogUtil logUtil = LogUtil.getInstance();
         try
         {
-            logUtil.putF(commonStrings.START, this, commonStrings.INIT);
+            logUtil.putF(this.commonStrings.START, this, this.commonStrings.INIT);
 
             ResourceUtil.getInstance().setClassLoader(this.getClass().getClassLoader());
 
@@ -108,10 +109,11 @@ public class TestGameDemoMIDlet
 
         } catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
         }
     }
     
+    @Override
     public void stopAll()
     {
         try
@@ -121,11 +123,12 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, "stopAll", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "stopAll", e);
         }
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)
+    @Override
     public void mouseClicked(final int x, final int y, final int button)
     {
         /*
@@ -144,6 +147,7 @@ public class TestGameDemoMIDlet
     }
 
     //public void mousePressed(MouseEvent mouseEvent)
+    @Override
     public void mousePressed(final int x, final int y, final int button)
     {
         try
@@ -153,11 +157,12 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, "mousePressed", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "mousePressed", e);
         }
     }
 
     //public void mouseReleased(MouseEvent mouseEvent)
+    @Override
     public void mouseReleased(final int x, final int y, final int button)
     {
         try
@@ -168,7 +173,7 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, "mouseReleased", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "mouseReleased", e);
         }
     }
 
@@ -183,6 +188,7 @@ public class TestGameDemoMIDlet
     }
 
     //public void mouseMoved(MouseEvent mouseEvent)
+    @Override
     public void mouseMoved(final int x, final int y, final int button)
     {
         try
@@ -191,18 +197,19 @@ public class TestGameDemoMIDlet
             if(this.dragged) {
                 this.motionRecognizer.processDraggedMotionEvent(x, y, this.DEVICE_ID, button);
             } else {
-                this.motionRecognizer.processMovedMotionEvent(x, y, DEVICE_ID, button);
+                this.motionRecognizer.processMovedMotionEvent(x, y, this.DEVICE_ID, button);
             }
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, "mouseMoved", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "mouseMoved", e);
         }
     }
 
     private boolean dragged = false;
     
     //public void mouseDragged(MouseEvent mouseEvent)
+    @Override
     public void mouseDragged(final int x, final int y, final int button)
     {
         try
@@ -213,14 +220,23 @@ public class TestGameDemoMIDlet
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, "mouseDragged", e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "mouseDragged", e);
         }
     }
 
     //public void mouseWheelMoved(MouseWheelEvent mouseEvent)
+    @Override
     public void mouseWheelMoved(final int x, final int y, final int button)
     {
-        //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+        try
+        {
+            //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+            this.motionRecognizer.processScrolledMotionEvent(x, y, this.DEVICE_ID, button);
+        }
+        catch (Exception e)
+        {
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, "mouseWheelMoved", e);
+        }
     }
 
     /*

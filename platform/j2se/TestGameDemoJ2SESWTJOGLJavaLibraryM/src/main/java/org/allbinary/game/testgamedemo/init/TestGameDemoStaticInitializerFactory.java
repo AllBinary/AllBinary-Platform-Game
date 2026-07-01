@@ -17,8 +17,9 @@ public class TestGameDemoStaticInitializerFactory
                 },                
                 15);
 
+    @Override
     public GameInitializationInterface getInstance()
     {
-        return STATIC;
+        return TestGameDemoStaticInitializerFactory.STATIC;
     }
 }

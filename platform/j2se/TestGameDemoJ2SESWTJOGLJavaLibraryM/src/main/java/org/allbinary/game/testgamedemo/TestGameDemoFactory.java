@@ -10,6 +10,7 @@ public class TestGameDemoFactory extends MidletFactoryInterface
 {
     private static MIDlet SINGLETON = null;
     
+    @Override
     public MIDlet getInstance()
     {
         if(SINGLETON == null)

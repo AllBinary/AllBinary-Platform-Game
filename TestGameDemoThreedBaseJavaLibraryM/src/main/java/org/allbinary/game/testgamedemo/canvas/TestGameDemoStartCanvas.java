@@ -54,6 +54,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         this.setWait(WAIT);
     }
 
+    @Override
     public void initPostPaint() throws Exception
     {
         this.setBasicGameDemoPaintable(
@@ -71,6 +72,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         //TrueTypeFontUtil.getInstance().saveFontAtlasAsFile();
     }
 
+    @Override
     protected int getNextRandom()
     {
     	PreLogUtil.put("******************Demo Next Random Is Always 1", this, "getNextRandom");
@@ -78,6 +80,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         return 1;
     }
 
+    @Override
     protected AllBinaryGameLayerManager createGameLayerManager(int randomValue) throws Exception
     {
         GameInfo gameInfo = new GameInfo(GameTypeFactory.getInstance().BOT, GameMode.SERVER, PlayerTypesFactory
@@ -86,6 +89,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
         return new TestGameDemoLayerManager(gameInfo);
     }
 
+    @Override
     public GameCanvasRunnableInterface createRunnable(int randomValue) throws Exception
     {
         return new TestGameDemoGameCanvas(this.abeClientInformation, null, this.createGameLayerManager(this.getNextRandom()));

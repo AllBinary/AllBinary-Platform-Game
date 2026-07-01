@@ -5,10 +5,9 @@ import org.allbinary.game.configuration.feature.GraphicsFeatureFactory;
 import org.allbinary.game.configuration.feature.InputFeatureFactory;
 import org.allbinary.game.configuration.feature.SensorFeatureFactory;
 import org.allbinary.game.init.DefaultGameInitializationListener;
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.math.SmallIntegerSingletonFactory;
+import org.allbinary.logic.system.security.licensing.TestGameDemoClientInformationInterfaceFactory;
 
 public class TestGameDemoMIDlet
         extends org.allbinary.game.testgamedemo.TestGameDemoMIDlet
@@ -17,6 +16,8 @@ public class TestGameDemoMIDlet
 
     public TestGameDemoMIDlet()
     {
+        super(TestGameDemoClientInformationInterfaceFactory.getFactoryInstance());
+        
         new DefaultGameInitializationListener();
     }
 
@@ -29,18 +30,18 @@ public class TestGameDemoMIDlet
 
             //ResourceUtil.setClassLoader(this.getClass().getClassLoader());
 
-            Features features = Features.getInstance();
+            final Features features = Features.getInstance();
 
-            GameFeatureFactory gameFeatureFactory =
+            final GameFeatureFactory gameFeatureFactory =
                 GameFeatureFactory.getInstance();
 
-            InputFeatureFactory inputFeatureFactory =
+            final InputFeatureFactory inputFeatureFactory =
                 InputFeatureFactory.getInstance();
 
-            GraphicsFeatureFactory graphicsFeatureFactory =
+            final GraphicsFeatureFactory graphicsFeatureFactory =
                 GraphicsFeatureFactory.getInstance();
 
-            SensorFeatureFactory sensorFeatureFactory =
+            final SensorFeatureFactory sensorFeatureFactory =
                     SensorFeatureFactory.getInstance();
 
             features.removeDefault(sensorFeatureFactory.ORIENTATION_SENSORS);
@@ -64,25 +65,25 @@ public class TestGameDemoMIDlet
             //features.addDefault(inputFeatureFactory.SINGLE_KEY_PRESS);
             features.addDefault(inputFeatureFactory.REMOVE_DUPLICATE_KEY_PRESSES);
 
-            GameConfigurationCentral gameConfigurationCentral =
+            final GameConfigurationCentral gameConfigurationCentral =
                     GameConfigurationCentral.getInstance();
 
-            SmallIntegerSingletonFactory smallIntegerSingletonFactory = 
+            final SmallIntegerSingletonFactory smallIntegerSingletonFactory = 
                     SmallIntegerSingletonFactory.getInstance();
 
-            gameConfigurationCentral.VIBRATION.setDefaultValue(smallIntegerSingletonFactory.getInstance(0));
+            gameConfigurationCentral.VIBRATION.setDefaultValue(smallIntegerSingletonFactory.getAt(0));
             gameConfigurationCentral.VIBRATION.setDefault();
 
-            gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefaultValue(smallIntegerSingletonFactory.getInstance(4));
+            gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefaultValue(smallIntegerSingletonFactory.getAt(4));
             gameConfigurationCentral.SPEED_CHALLENGE_LEVEL.setDefault();
 
-            gameConfigurationCentral.SPEED.setDefaultValue(smallIntegerSingletonFactory.getInstance(9));
+            gameConfigurationCentral.SPEED.setDefaultValue(smallIntegerSingletonFactory.getAt(9));
             gameConfigurationCentral.SPEED.setDefault();
 
-            gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefaultValue(smallIntegerSingletonFactory.getInstance(0));
+            gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefaultValue(smallIntegerSingletonFactory.getAt(0));
             gameConfigurationCentral.PLAYER_INPUT_WAIT.setDefault();
 
-            gameConfigurationCentral.SCALE.setDefaultValue(smallIntegerSingletonFactory.getInstance(3));
+            gameConfigurationCentral.SCALE.setDefaultValue(smallIntegerSingletonFactory.getAt(3));
             gameConfigurationCentral.SCALE.setDefault();
 
         } catch (Exception e)

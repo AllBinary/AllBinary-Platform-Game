@@ -8,7 +8,7 @@ public class TestGameDemoClientInformationInterfaceFactory extends ClientInforma
      * @return the instance
      */
     public static ClientInformationFactory getFactoryInstance() {
-        return instance;
+        return TestGameDemoClientInformationInterfaceFactory.instance;
     }
     
     @Override

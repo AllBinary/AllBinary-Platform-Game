@@ -22,7 +22,7 @@ public class TestGameDemoHelpPaintable extends HelpPaintable
     
     public static HelpPaintable getInstance()
     {
-        return SINGLETON;
+        return TestGameDemoHelpPaintable.SINGLETON;
     }
     
     private TestGameDemoHelpPaintable()

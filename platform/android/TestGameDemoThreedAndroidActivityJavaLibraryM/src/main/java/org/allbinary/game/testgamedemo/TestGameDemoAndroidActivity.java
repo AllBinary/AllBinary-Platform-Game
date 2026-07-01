@@ -57,6 +57,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         }
     }
 
+    @Override
     protected void initOpenGL()
     throws Exception
     {
@@ -66,6 +67,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         openGLConfiguration.write();        
     }
     
+    @Override
     protected void init()
     {
         super.init();

@@ -83,6 +83,7 @@ implements ColorChangeListener
         
     }
     
+    @Override
     public void paintXY(Graphics graphics, int ax, int ay)
     {
         graphics.setColor(color);

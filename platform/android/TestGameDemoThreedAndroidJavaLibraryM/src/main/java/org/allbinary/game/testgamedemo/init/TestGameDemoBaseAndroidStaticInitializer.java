@@ -17,6 +17,7 @@ public class TestGameDemoBaseAndroidStaticInitializer extends TestGameDemoStatic
         super(resourceInitializationArray, portion);
     }
 
+    @Override
     public void initKey(final int portion) throws Exception
     {
         super.initKey(portion);

@@ -31,6 +31,6 @@ public class TestGameDemoStaticInitializerFactory extends BasicBuildGameInitiali
     @Override
     public GameInitializationInterface getInstance()
     {
-        return STATIC;
+        return TestGameDemoStaticInitializerFactory.STATIC;
     }
 }

@@ -13,9 +13,6 @@
 */
 package org.allbinary.input.motion.button;
 
-import org.allbinary.input.motion.button.BaseTouchInput;
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.input.gyro.SensorGameUpdateProcessor;
 
@@ -31,11 +28,11 @@ extends BaseTouchInput
     public static BaseTouchInput getInstance(
             SensorGameUpdateProcessor sensorGameUpdateProcessor)
     {
-        return instance;
+        return TestGameDemoTouchButtonsBuilder.instance;
     }
     
     public void build()
     {
-       logUtil.putF(commonStrings.START, this, "build");
+       this.logUtil.putF(this.commonStrings.START, this, "build");
     }
 }

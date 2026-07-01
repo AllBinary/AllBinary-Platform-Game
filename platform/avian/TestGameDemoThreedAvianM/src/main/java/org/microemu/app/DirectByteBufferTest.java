@@ -117,7 +117,7 @@ public class DirectByteBufferTest {
           b1.put(i, (byte) 42);
 
         for (int i = 0; i < size; ++i)
-          assertEquals(b1.get(i), 42);
+          DirectByteBufferTest.assertEquals(b1.get(i), 42);
         
         for (int i = 0; i < size/4; i++) 
           b1.putFloat(i*4, (float) 19.12);
@@ -128,43 +128,43 @@ public class DirectByteBufferTest {
         ByteBuffer b3 = b1.duplicate();
         for (int i = 0; i < size/4; i++)
           assertEquals(b3.getFloat(), (float) 19.12);
-        assertEquals(64, b3.position());
+        DirectByteBufferTest.assertEquals(64, b3.position());
         
         for (int i = 0; i < size/8; i++) 
           b1.putDouble(i*8, (double) 19.12);
         
         for (int i = 0; i < size/8; i++)
-          assertEquals(b1.getDouble(i*8), (double) 19.12);
+          DirectByteBufferTest.assertEquals(b1.getDouble(i*8), (double) 19.12);
         
         b3.position(0);
         
         for (int i = 0; i < size/8; i++)
-          assertEquals(b3.getDouble(i*8), (double) 19.12);
+          DirectByteBufferTest.assertEquals(b3.getDouble(i*8), (double) 19.12);
 
         for (int i = 0; i < size / 2; ++i)
           b1.putShort(i * 2, (short) -12345);
 
         for (int i = 0; i < size / 2; ++i)
-          assertEquals(b1.getShort(i * 2), -12345);
+          DirectByteBufferTest.assertEquals(b1.getShort(i * 2), -12345);
 
         for (int i = 0; i < size / 4; ++i)
           b1.putInt(i * 4, 0x12345678);
 
         for (int i = 0; i < size / 4; ++i)
-          assertEquals(b1.getInt(i * 4), 0x12345678);
+          DirectByteBufferTest.assertEquals(b1.getInt(i * 4), 0x12345678);
 
         for (int i = 0; i < size / 8; ++i)
           b1.putLong(i * 8, 0x1234567890ABCDEFL);
 
         for (int i = 0; i < size / 8; ++i)
-          assertEquals(b1.getLong(i * 8),  0x1234567890ABCDEFL);
+          DirectByteBufferTest.assertEquals(b1.getLong(i * 8),  0x1234567890ABCDEFL);
 
         ByteBuffer b2 = factory2.allocate(size);
         try {
           b2.put(b1);
 
           for (int i = 0; i < size / 8; ++i)
-            assertTrue(b2.getLong(i * 8) ==  0x1234567890ABCDEFL);
+            DirectByteBufferTest.assertTrue(b2.getLong(i * 8) ==  0x1234567890ABCDEFL);
 
         } finally {
           factory2.dispose(b2);
@@ -228,28 +228,28 @@ public class DirectByteBufferTest {
 
     try {
       ByteBuffer.allocate(1).getInt();
-      assertTrue(false);
+      DirectByteBufferTest.assertTrue(false);
     } catch (BufferUnderflowException e) {
       // cool
     }
 
     try {
       ByteBuffer.allocate(1).getInt(0);
-      assertTrue(false);
+      DirectByteBufferTest.assertTrue(false);
     } catch (IndexOutOfBoundsException e) {
       // cool
     }
 
     try {
       ByteBuffer.allocate(1).putInt(1);
-      assertTrue(false);
+      DirectByteBufferTest.assertTrue(false);
     } catch (BufferOverflowException e) {
       // cool
     }
 
     try {
       ByteBuffer.allocate(1).putInt(0, 1);
-      assertTrue(false);
+      DirectByteBufferTest.assertTrue(false);
     } catch (IndexOutOfBoundsException e) {
       // cool
     }

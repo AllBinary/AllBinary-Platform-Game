@@ -19,6 +19,6 @@ extends AllBinaryMidletOpenGLSurfaceView
 		super(context, attrs);
                 
                 final CommonStrings commonStrings = CommonStrings.getInstance();
-                PreLogUtil.put(commonStrings.START, TAG, commonStrings.CONSTRUCTOR);
+                PreLogUtil.put(commonStrings.START, this.TAG, commonStrings.CONSTRUCTOR);
 	}
 }

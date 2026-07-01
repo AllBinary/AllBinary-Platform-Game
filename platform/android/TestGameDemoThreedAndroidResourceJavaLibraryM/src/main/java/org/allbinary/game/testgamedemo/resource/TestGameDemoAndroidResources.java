@@ -14,6 +14,7 @@ public class TestGameDemoAndroidResources extends TestGameDemoBaseAndroidResourc
         return STATIC;
     }
 
+    @Override
     protected void initImages(String[] RESOURCES) throws Exception
     {
         if (Features.getInstance().isFeature(

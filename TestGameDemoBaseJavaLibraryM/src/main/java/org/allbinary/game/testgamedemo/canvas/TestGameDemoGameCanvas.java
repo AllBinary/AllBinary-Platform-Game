@@ -377,7 +377,7 @@ public class TestGameDemoGameCanvas extends AllBinaryGameCanvas
 
     	nonBotPaintable.paint(graphics);
 
-        gameSpecificPaintable.paint(graphics);    	
+        this.gameSpecificPaintable.paint(graphics);    	
 
     	gamePerformanceInitUpdatePaintable.paint(graphics);
         

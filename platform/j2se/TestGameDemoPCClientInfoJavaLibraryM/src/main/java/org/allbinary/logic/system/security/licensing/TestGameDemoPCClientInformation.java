@@ -27,9 +27,9 @@ extends AbeClientInformation
     public TestGameDemoPCClientInformation(final SoftwareInformation softwareInformation)
     {
         super(
-                new StringMaker().append(softwareInformation.getName()).append(PC_DESC).toString(),
+                new StringMaker().append(softwareInformation.getName()).append(TestGameDemoPCClientInformation.PC_DESC).toString(),
                 softwareInformation.getVersion(),
-                new StringMaker().append(softwareInformation.getName()).append(PC_DESC).append(CommonSeps.getInstance().SPACE).append(softwareInformation.getVersion()).toString(),
+                new StringMaker().append(softwareInformation.getName()).append(TestGameDemoPCClientInformation.PC_DESC).append(CommonSeps.getInstance().SPACE).append(softwareInformation.getVersion()).toString(),
                 softwareInformation.toShortString()
                 );
     }

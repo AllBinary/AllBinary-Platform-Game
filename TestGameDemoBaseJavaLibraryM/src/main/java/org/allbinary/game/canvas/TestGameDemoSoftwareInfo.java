@@ -23,6 +23,6 @@ public class TestGameDemoSoftwareInfo
     
     public static SoftwareInformation getInstance()
     {
-        return SINGLETON;
+        return TestGameDemoSoftwareInfo.SINGLETON;
     }
 }

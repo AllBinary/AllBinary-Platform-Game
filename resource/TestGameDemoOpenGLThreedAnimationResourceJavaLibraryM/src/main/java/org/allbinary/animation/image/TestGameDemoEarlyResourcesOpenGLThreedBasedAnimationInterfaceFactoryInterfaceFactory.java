@@ -31,6 +31,7 @@ BaseResourceAnimationInterfaceFactoryInterfaceFactory
         super("Early OpenGL 3D Animations", new Hashtable(), new Hashtable(), new Hashtable());
     }
 
+    @Override
     public void init(final int level) throws Exception
     {
         logUtil.putF(this.getName(), this, "init");

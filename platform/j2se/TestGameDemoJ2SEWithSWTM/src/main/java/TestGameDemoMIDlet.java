@@ -42,6 +42,7 @@ public class TestGameDemoMIDlet
         new DefaultGameInitializationListener();
     }
 
+    @Override
     protected void init()
     {
         final LogUtil logUtil = LogUtil.getInstance();
@@ -113,6 +114,7 @@ public class TestGameDemoMIDlet
         }
     }
     
+    @Override
     public void stopAll()
     {
         try
@@ -127,6 +129,7 @@ public class TestGameDemoMIDlet
     }
     
     //public void mouseClicked(MouseEvent mouseEvent)
+    @Override
     public void mouseClicked(final int x, final int y, final int button)
     {
         /*
@@ -145,6 +148,7 @@ public class TestGameDemoMIDlet
     }
 
     //public void mousePressed(MouseEvent mouseEvent)
+    @Override
     public void mousePressed(final int x, final int y, final int button)
     {
         try
@@ -221,7 +225,15 @@ public class TestGameDemoMIDlet
     //public void mouseWheelMoved(MouseWheelEvent mouseEvent)
     public void mouseWheelMoved(final int x, final int y, final int button)
     {
-        //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+        try
+        {
+            //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+            this.motionRecognizer.processScrolledMotionEvent(x, y, this.DEVICE_ID, button);
+        }
+        catch (Exception e)
+        {
+            logUtil.put(commonStrings.EXCEPTION, this, "mouseWheelMoved", e);
+        }
     }
 
     /*

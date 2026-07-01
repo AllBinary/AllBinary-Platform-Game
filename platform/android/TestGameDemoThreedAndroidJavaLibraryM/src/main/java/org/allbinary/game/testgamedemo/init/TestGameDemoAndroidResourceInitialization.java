@@ -12,6 +12,7 @@ extends TestGameDemoResourceInitialization
     {
     }
 
+    @Override
     public void init()
         throws Exception
     {

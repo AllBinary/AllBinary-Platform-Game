@@ -11,7 +11,7 @@ public class TestGameDemoThreedTitleAnimationFactory
     
     public static TestGameDemoThreedTitleAnimationFactory getIntance()
     {
-        return instance;
+        return TestGameDemoThreedTitleAnimationFactory.instance;
     }
     
     public final TitleAnimation getInstance(

@@ -17,12 +17,13 @@ extends ResourceInitialization
     {
     }
 
+    @Override
     public void init()
         throws Exception
     {
         super.init();
         
-        PreLogUtil.put(commonStrings.START, this, commonStrings.INIT);
+        PreLogUtil.put(this.commonStrings.START, this, this.commonStrings.INIT);
 
     }
 }

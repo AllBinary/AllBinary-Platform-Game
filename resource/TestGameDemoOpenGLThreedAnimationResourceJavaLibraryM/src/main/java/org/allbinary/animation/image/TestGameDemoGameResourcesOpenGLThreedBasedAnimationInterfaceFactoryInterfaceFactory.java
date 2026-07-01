@@ -26,6 +26,7 @@ public class TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactory
 
     private int index = 1;
     
+    @Override
     public void init(int level) 
     throws Exception
     {
@@ -37,11 +38,11 @@ public class TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactory
         final int portion = 120;
         final String loadingString = this.toString() + " Loading: ";
         
-        index = 1;
+        this.index = 1;
 
         ProgressCanvas progressCanvas = ProgressCanvasFactory.getInstance();
 
-        progressCanvas.addPortion(portion, loadingString, index++);
+        progressCanvas.addPortion(portion, loadingString, this.index++);
 
         //this.addRectangles();
 
@@ -49,20 +50,20 @@ public class TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactory
         Min3dSceneResourcesFactory min3dSceneResourcesFactory = 
             Min3dSceneResourcesFactory.getInstance();
 
-        progressCanvas.addPortion(portion, loadingString, index++);
+        progressCanvas.addPortion(portion, loadingString, this.index++);
 
         ExplosionResources explosionResources = ExplosionResources.getInstance();
 
         this.add(explosionResources.EXPLOSION_60_RESOURCE,
                 NullRotationAnimationFactory.getFactoryInstance());
 
-        progressCanvas.addPortion(portion, loadingString, index++);
+        progressCanvas.addPortion(portion, loadingString, this.index++);
 
         this.add(explosionResources.HALF_EXPLOSION_RESOURCE,
                 NullRotationAnimationFactory.getFactoryInstance()
         );
 
-        progressCanvas.addPortion(portion, loadingString, index++);
+        progressCanvas.addPortion(portion, loadingString, this.index++);
 
         // 3 or 5
         this.add(explosionResources.THIRD_EXPLOSION_RESOURCE,
@@ -71,11 +72,12 @@ public class TestGameDemoGameResourcesOpenGLThreedBasedAnimationInterfaceFactory
 
         AnimationInterfaceFactoryInterface[] basicAnimationInterfaceFactoryInterfaceArray;
 
-        progressCanvas.addPortion(portion, loadingString, index++);
+        progressCanvas.addPortion(portion, loadingString, this.index++);
 
         super.init(level);
     }
     
+    @Override
     public boolean isFeature()
     {
         Features features = Features.getInstance();

@@ -23,9 +23,6 @@ import org.allbinary.game.testgamedemo.canvas.TestGameDemoStartCanvas;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
 
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
-import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.game.GameInfo;
 import org.allbinary.game.GameMode;
@@ -119,7 +116,7 @@ public class TestGameDemoMIDlet extends
    {
         //PreLogUtil.put(commonStrings.START, this, "mediaShutdown - postStopGameCanvasRunnableInterface");
 
-        logUtil.putF(commonStrings.START, this,
+        this.logUtil.putF(this.commonStrings.START, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface");
 
         AllBinaryMediaManagerShutdown.shutdown(
@@ -127,7 +124,7 @@ public class TestGameDemoMIDlet extends
         AllBinaryMediaManagerShutdown.shutdown(
            TestGameDemoSoundsFactoryFactory.getInstance());
 
-        logUtil.putF(commonStrings.END, this,
+        this.logUtil.putF(this.commonStrings.END, this,
                 "mediaShutdown - postStopGameCanvasRunnableInterface");
    }
 }

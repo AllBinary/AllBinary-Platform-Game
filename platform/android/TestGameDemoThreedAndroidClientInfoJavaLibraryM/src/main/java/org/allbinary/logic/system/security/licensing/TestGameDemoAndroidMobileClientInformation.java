@@ -13,9 +13,9 @@ public class TestGameDemoAndroidMobileClientInformation
     public TestGameDemoAndroidMobileClientInformation(final SoftwareInformation softwareInformation)
     {
         super(
-                new StringMaker().append(softwareInformation.getName()).append(ANDROID_DESC).toString(), 
+                new StringMaker().append(softwareInformation.getName()).append(MobileClientInformation.ANDROID_DESC).toString(), 
                 softwareInformation.getVersion(),
-                new StringMaker().append(softwareInformation.getName()).append(ANDROID_DESC).append(CommonSeps.getInstance().SPACE).append(softwareInformation.getVersion()).toString(),
+                new StringMaker().append(softwareInformation.getName()).append(MobileClientInformation.ANDROID_DESC).append(CommonSeps.getInstance().SPACE).append(softwareInformation.getVersion()).toString(),
                 softwareInformation.toShortString()
                 );
     }

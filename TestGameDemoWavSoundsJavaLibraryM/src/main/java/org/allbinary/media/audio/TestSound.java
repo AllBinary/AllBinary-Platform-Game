@@ -30,6 +30,6 @@ public class TestSound extends CompositeSound
    
    public static Sound getInstance()
    {
-      return soundInterface;
+      return TestSound.soundInterface;
    }   
 }

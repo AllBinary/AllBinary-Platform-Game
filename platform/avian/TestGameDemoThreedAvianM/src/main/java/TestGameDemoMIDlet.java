@@ -1,8 +1,6 @@
 
 import org.microemu.app.MidletJOGLInterface;
 
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.data.resource.ResourceUtil;
 import org.allbinary.emulator.InitEmulatorFactory;
@@ -257,7 +255,15 @@ public class TestGameDemoMIDlet
     //public void mouseWheelMoved(MouseWheelEvent mouseEvent)
     public void mouseWheelMoved(final int x, final int y, final int button)
     {
-        //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+        try
+        {
+            //logUtil.putF(commonStrings.START, this, "mouseWheelMoved");
+            this.motionRecognizer.processScrolledMotionEvent(x, y, this.DEVICE_ID, button);
+        }
+        catch (Exception e)
+        {
+            logUtil.put(commonStrings.EXCEPTION, this, "mouseWheelMoved", e);
+        }
     }
 
     /*

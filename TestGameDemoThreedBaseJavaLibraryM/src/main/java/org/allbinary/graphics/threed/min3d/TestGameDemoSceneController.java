@@ -180,6 +180,7 @@ extends AllBinaryGameSceneController
 
     //private CameraLayer cameraLayer;
     
+    @Override
     public void buildScene(AllBinaryGameLayerManager layerManager) throws Exception
     {
         try

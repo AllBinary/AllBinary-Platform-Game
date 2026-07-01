@@ -34,6 +34,7 @@ extends BaseResourceAnimationInterfaceFactoryInterfaceFactory
 
     private boolean[] isInitialized = new boolean[11];
     
+    @Override
     public void init(int level) 
     throws Exception
     {
@@ -45,6 +46,7 @@ extends BaseResourceAnimationInterfaceFactoryInterfaceFactory
         
     }
     
+    @Override
     public boolean isFeature()
     {
         Features features = Features.getInstance();

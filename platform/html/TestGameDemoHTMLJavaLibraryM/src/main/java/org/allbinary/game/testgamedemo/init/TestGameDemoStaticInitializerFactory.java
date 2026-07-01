@@ -35,6 +35,7 @@ extends BasicBuildGameInitializerFactory
                         new TestGameDemoJ2MEAnimationInterfaceFactoryResourceInitialization(),
                         }, 15);
 
+    @Override
     public GameInitializationInterface getInstance()
     {
         return STATIC;

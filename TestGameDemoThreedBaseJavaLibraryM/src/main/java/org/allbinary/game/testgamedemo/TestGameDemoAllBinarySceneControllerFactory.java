@@ -10,6 +10,6 @@ public class TestGameDemoAllBinarySceneControllerFactory
 
     public static final AllBinarySceneController getInstance()
     {
-        return instance;
+        return TestGameDemoAllBinarySceneControllerFactory.instance;
     }
 }

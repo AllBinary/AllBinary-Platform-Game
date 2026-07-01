@@ -3,7 +3,6 @@ package org.allbinary.game.testgamedemo.configuration;
 import org.allbinary.input.gyro.OrientationData;
 import org.allbinary.util.BasicArrayList;
 import org.allbinary.util.BasicArrayListD;
-
 import org.allbinary.debug.DebugFactory;
 import org.allbinary.debug.NoDebug;
 import org.allbinary.game.configuration.GameConfigurationCentral;
@@ -69,7 +68,7 @@ public class TestGameDemoGameFeatures implements InitInterface
 
         GameFeatureChoiceGroups.getExclusiveInstance().get().clear();
         
-        GameFeatureChoiceGroups.getMultipleInstance().add(GRAPHICS_OPTIONS,
+        GameFeatureChoiceGroups.getMultipleInstance().add(TestGameDemoGameFeatures.GRAPHICS_OPTIONS,
                 multipleBasicArrayList);
 
         GameFeatureChoiceGroups.getExclusiveInstance().add(

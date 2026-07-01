@@ -22,12 +22,13 @@ public class TestGameDemoMIDlet
         new DefaultGameInitializationListener();
     }
 
+    @Override
     protected void init()
     {
         final LogUtil logUtil = LogUtil.getInstance();
         try
         {
-            logUtil.putF(commonStrings.START, this, commonStrings.INIT);
+            logUtil.putF(this.commonStrings.START, this, this.commonStrings.INIT);
 
             //ResourceUtil.setClassLoader(this.getClass().getClassLoader());
 
@@ -89,7 +90,7 @@ public class TestGameDemoMIDlet
 
         } catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
         }
     }
 }

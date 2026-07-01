@@ -49,7 +49,7 @@ public class TestGameDemoStartCanvas extends DemoCanvas
                 NullPaintable.getInstance(), NullInitUpdatePaintable.getInstance(),
                 new TestGameDemoStaticInitializerFactory(), false);
 
-        this.setWait(WAIT);
+        this.setWait(this.WAIT);
     }
 
     @Override

@@ -30,7 +30,7 @@ public class TestGameDemoInputMappingHelpPaintable
     
     public static HelpPaintable getInstance()
     {
-        return SINGLETON;
+        return TestGameDemoInputMappingHelpPaintable.SINGLETON;
     }
     
     private TestGameDemoInputMappingHelpPaintable()

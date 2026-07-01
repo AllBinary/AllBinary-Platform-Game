@@ -47,7 +47,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
         }
         catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, commonStrings.CONSTRUCTOR, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStrings.CONSTRUCTOR, e);
         }
     }
 
@@ -118,7 +118,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            logUtil.putF(commonStrings.START, this, commonStateStrings.CREATE);
+            this.logUtil.putF(this.commonStrings.START, this, this.commonStateStrings.CREATE);
 
             //final String UNLOCKED = "unlock_testgamedemo_levels";
             //InApplicationPurchaseFactory.getInstance().init(this, bundle);
@@ -131,10 +131,10 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
                 this.setBackgrounds();
             }
 
-            logUtil.putF(commonStrings.END, this, commonStateStrings.CREATE);
+            this.logUtil.putF(this.commonStrings.END, this, this.commonStateStrings.CREATE);
         } catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.CREATE, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStateStrings.CREATE, e);
         }
     }
 
@@ -143,16 +143,16 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
     {
         try
         {
-            logUtil.putF(commonStrings.START, this, commonStateStrings.START);
+            this.logUtil.putF(this.commonStrings.START, this, this.commonStateStrings.START);
 
             super.onStart();
 
             super.onStartMidlet(new TestGameDemoMIDletFactory());
 
-            logUtil.putF(commonStrings.END, this, commonStateStrings.START);
+            this.logUtil.putF(this.commonStrings.END, this, this.commonStateStrings.START);
         } catch (Exception e)
         {
-            logUtil.put(commonStrings.EXCEPTION, this, commonStateStrings.START, e);
+            this.logUtil.put(this.commonStrings.EXCEPTION, this, this.commonStateStrings.START, e);
         }
     }
 
@@ -192,7 +192,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
         if (!InitEmulatorFactory.getInstance().isInitEmulator())
         {
-            logUtil.putF("Init Base GameFeatures", this, "initEmulator");
+            this.logUtil.putF("Init Base GameFeatures", this, "initEmulator");
 
             Features features = Features.getInstance();
             
@@ -259,7 +259,7 @@ public class TestGameDemoAndroidActivity extends GameMidletActivity
 
     public void setBackgrounds() throws Exception
     {
-        logUtil.putF(commonStrings.START, this, "getBackground");
+        this.logUtil.putF(this.commonStrings.START, this, "getBackground");
 
         final AndroidResources androidResources = AndroidResources.getInstance();
         

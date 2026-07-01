@@ -69,7 +69,7 @@ public class TestGameDemoGameFeatures implements InitInterface
 
         GameFeatureChoiceGroups.getExclusiveInstance().get().clear();
         
-        GameFeatureChoiceGroups.getMultipleInstance().add(GRAPHICS_OPTIONS,
+        GameFeatureChoiceGroups.getMultipleInstance().add(TestGameDemoGameFeatures.GRAPHICS_OPTIONS,
                 multipleBasicArrayList);
 
         GameFeatureChoiceGroups.getExclusiveInstance().add(

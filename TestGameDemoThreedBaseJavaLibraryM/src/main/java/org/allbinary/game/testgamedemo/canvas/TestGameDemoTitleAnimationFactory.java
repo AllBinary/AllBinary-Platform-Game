@@ -30,7 +30,7 @@ public class TestGameDemoTitleAnimationFactory
      */
     public static TestGameDemoTitleAnimationFactory getInstance()
     {
-        return instance;
+        return TestGameDemoTitleAnimationFactory.instance;
     }
 
     public final TitleAnimation getInstance(IndexedAnimation[] animationInterfaceArray) throws Exception

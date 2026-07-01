@@ -65,6 +65,6 @@ public class J2METestGameDemoStaticInitializer
 
     protected boolean isPlatformGameInitialized()
     {
-        return platformGameInitialized;
+        return this.platformGameInitialized;
     }
 }

@@ -51,6 +51,6 @@ extends TestGameDemoStaticInitializer
 
     protected boolean isPlatformGameInitialized()
     {
-        return platformGameInitialized;
+        return this.platformGameInitialized;
     }
 }

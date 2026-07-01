@@ -23,8 +23,6 @@ import org.allbinary.game.testgamedemo.canvas.TestGameDemoStartCanvas;
 import org.allbinary.game.testgamedemo.layer.TestGameDemoLayerManager;
 import org.allbinary.media.audio.TestGameDemoSoundsFactoryFactory;
 
-import org.allbinary.string.CommonStrings;
-import org.allbinary.logic.communication.log.LogFactory;
 import org.allbinary.logic.communication.log.LogUtil;
 import org.allbinary.logic.communication.log.PreLogUtil;
 import org.allbinary.game.GameInfo;
@@ -40,7 +38,6 @@ import org.allbinary.game.paint.help.HelpPaintable;
 import org.allbinary.game.score.BasicHighScoresFactory;
 import org.allbinary.game.score.HighScoresPaintable;
 import org.allbinary.game.score.displayable.HighScoresCanvas;
-import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface;
 import org.allbinary.logic.system.security.licensing.ClientInformationFactory;
 import org.allbinary.media.audio.AllBinaryMediaManagerShutdown;
 import org.allbinary.media.audio.EarlySoundsFactory;
@@ -60,6 +57,7 @@ public class TestGameDemoMIDlet extends
        //this.setSaveGameForm(SaveGameForm.getInstance(this, "Save Game"));
    }
    
+   @Override
    protected HelpPaintable getHelpPaintable()
    throws Exception
    {

@@ -18,7 +18,7 @@ extends AllBinaryMidletMin3dSurfaceView
     public TestGameDemoJOGLMin3dView()
     {
 
-        PreLogUtil.put(commonStrings.START, TAG, commonStrings.CONSTRUCTOR);
+        PreLogUtil.put(this.commonStrings.START, this.TAG, this.commonStrings.CONSTRUCTOR);
         
         final SceneController sceneController = TestGameDemoAllBinarySceneControllerFactory.getInstance();
 

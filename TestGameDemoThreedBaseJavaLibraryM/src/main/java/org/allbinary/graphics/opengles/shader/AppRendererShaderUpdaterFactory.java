@@ -164,6 +164,7 @@ public class AppRendererShaderUpdaterFactory extends ShaderUpdater {
         
         };
 
+    @Override
     public void onSurfaceCreated(final GL10 gl, final EGLConfig eglConfig) {
         
         PlatformAppShaderResources.getInstance().add();
